@@ -1,0 +1,32 @@
+.main-header {
+    position: relative;
+    z-index: 1;
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+    .navbar__top {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        @include media('<tablet') {
+            padding-top: 5px;
+        }
+    }
+    .main-logo {
+        fill: white;
+        @include media('>=tablet-l') {
+            width: 173px;
+            height: 93px;
+        }
+        @include media('<tablet-l', '>=tablet') {
+            width: 140px;
+            height: 73px;
+        }
+        @include media('<tablet') {
+            width: 99px;
+            height: 53px;
+        }
+    }
+}

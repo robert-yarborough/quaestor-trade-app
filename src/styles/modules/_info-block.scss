@@ -1,0 +1,145 @@
+.info-block {
+    &__row {
+        display: flex;
+        @include media('<tablet-m') {
+            flex-direction: column;
+        }
+    }
+    &__col {
+        @include media('>=tablet-m') {
+            width: 50%;
+        }
+        &.is-image {
+            @include media('<tablet-m') {
+                order: -1;
+            }
+        }
+    }
+    &__image {
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        padding: 30px 30px 0 0;
+        @include media('<tablet-m') {
+            min-height: 500px;
+            justify-content: center;
+        }
+        @include media('<tablet') {
+            min-height: 365px;
+        }
+        img {
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+    }
+    &__content {
+        background-color: $c-str-1;
+        @include media('>=tablet-l') {
+            padding: 170px 200px 190px 120px;
+        }
+        @include media('<tablet-l', '>=tablet') {
+            padding: 80px 50px;
+        }
+        @include media('<tablet') {
+            padding: 40px 15px;
+            width: calc(100% - 20px);
+            margin: -50px auto 0;
+        }
+    }
+    &__icon {
+        margin-bottom: 40px;
+        @include media('<tablet') {
+            margin-bottom: 20px;
+        }
+        .q-icon {
+            height: 70px;
+            width: 45px;
+            fill: $c-primary;
+            @include media('<tablet') {
+                height: 38px;
+                width: 22px;
+            }
+        }
+    }
+    &__list {
+        li, p {
+            font-size: 22px;
+            line-height: 22px;
+            position: relative;
+            @include media('<tablet') {
+                font-size: 16px;
+                line-height: 16px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 40px;
+                @include media('<tablet') {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        li {
+            padding-left: 45px;
+            @include media('<tablet') {
+                padding-left: 17px;
+            }
+        }
+        .q-icon {
+            width: 26px;
+            height: 23px;
+            fill: $c-primary;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            @include media('<tablet') {
+                width: 11px;
+                height: 10px;
+                top: 2px;
+            }
+        }
+    }
+    &__description {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        @include media('<tablet') {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+    &__btn {
+        padding-top: 50px;
+    }
+    &__actions {
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        @include media('<tablet') {
+            padding-top: 30px;
+            max-width: 70%;
+        }
+        a {
+            transition: .3s opacity;
+            display: block;
+            &:first-child {
+                margin-right: 15px;
+            }
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+    &__white {
+        .info-block__content {
+            background-color: transparent;
+        }
+        .info-block__image {
+            @include media('<tablet') {
+                min-height: 1px;
+            }
+        }
+    }
+}

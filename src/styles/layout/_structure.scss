@@ -1,0 +1,107 @@
+.page-frame {
+    max-width: $sw-site + $sw-gap-desk * 2;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    @include media('>=tablet') {
+        padding-right: $sw-gap-desk;
+        padding-left: $sw-gap-desk;
+    }
+    @include media('<tablet') {
+        padding-right: $sw-gap-mob;
+        padding-left: $sw-gap-mob;
+    }
+}
+.page-frame-large {
+    max-width: $sw-site-xl + $sw-gap-desk * 2;
+    margin-right: auto;
+    margin-left: auto;
+    @include media('>=tablet') {
+        padding-right: $sw-gap-desk;
+        padding-left: $sw-gap-desk;
+    }
+    @include media('<tablet') {
+        padding-right: $sw-gap-mob;
+        padding-left: $sw-gap-mob;
+    }
+}
+.page-frame-small {
+    @extend .page-frame;
+    max-width: $sw-site-s + $sw-gap-desk * 2;
+}
+.page-frame-less {
+    @extend .page-frame;
+    max-width: $sw-site-l + $sw-gap-desk * 2;
+    &.is-reset-mobile {
+        @include media('<mobile-m') {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+.scroll-next-link {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    @include media('<tablet') {
+        display: none;
+    }
+    &:hover {
+        &:before {
+            border-color: $c-bright;
+        }
+    }
+    &:before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-top: 1px solid currentColor;
+        border-right: 1px solid currentColor;
+        transform: rotate(135deg);
+        transition: .3s border;
+    }
+}
+html {
+    &[dir="rtl"] {
+        .main-header {
+            .navbar__top {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+        .menu--lang {
+            margin-right: 0;
+            margin-left: 30px;
+            @include media('<tablet') {
+                margin-left: 15px;
+            }
+        }
+        .menu--user {
+            .q-icon {
+                margin-left: 0;
+                margin-right: 7px;
+            }
+        }
+        .main-footer {
+            &__right {
+                margin-left: 0;
+                margin-right: auto;
+            }
+            &__copyright {
+                margin-right: 0;
+                @include media('>=tablet') {
+                    margin-left: 40px;
+                }
+            }
+            .q-icon {
+                margin-left: 0;
+                @include media('>=tablet-l') {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

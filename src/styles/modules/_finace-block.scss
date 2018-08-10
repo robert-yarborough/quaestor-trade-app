@@ -1,0 +1,103 @@
+.finance-block {
+    background: linear-gradient(to right, #172e71 0%,#2f4793 100%);
+    @include media('>=tablet-l') {
+        padding: 110px 0 120px;
+    }
+    @include media('<tablet-l', '>=tablet') {
+        padding: 90px 0;
+    }
+    @include media('<tablet') {
+        padding: 50px 0;
+    }
+    .block-title {
+        color: white;
+    }
+    .block-description {
+        color: white;
+        @include media('>=tablet') {
+            margin-bottom: 60px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 25px;
+        }
+    }
+    &__inner {
+        @include media('<tablet') {
+            padding: 0 15px;
+            position: relative;
+        }
+    }
+    &__grid {
+        display: flex;
+    }
+    &__col {
+        text-align: center;
+        @include media('>=tablet') {
+            width: 20%;
+            height: auto;
+        }
+        @include media('>=tablet-l') {
+            padding: 0 30px;
+        }
+        @include media('<tablet-l', '>=tablet') {
+            padding: 0 10px;
+        }
+        @include media('<tablet') {
+            padding: 0 7px;
+        }
+    }
+    &__icon {
+        margin-bottom: 30px;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media('<tablet') {
+            margin-bottom: 15px;
+        }
+        .q-icon {
+            fill: white;
+            @include media('<tablet') {
+                max-width: 70px;
+            }
+        }
+    }
+    &__description {
+        color: white;
+        font-size: 22px;
+        line-height: 26px;
+        @include media('<tablet-l', '>=tablet') {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @include media('<tablet') {
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+    &__btn {
+        text-align: center;
+        @include media('>=tablet') {
+            padding-top: 50px;
+        }
+        @include media('<tablet') {
+            padding-top: 30px;
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        border-color: white;
+        &:hover {
+            border-color: white;
+        }
+        @include media('>=tablet') {
+            display: none;
+        }
+    }
+    .swiper-button-next {
+        right: 0;
+    }
+    .swiper-button-prev {
+        left: 0;
+    }
+}
