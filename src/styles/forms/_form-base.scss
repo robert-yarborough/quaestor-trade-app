@@ -1,0 +1,65 @@
+label {
+    &[for] {
+        cursor: pointer;
+    }
+}
+@include input-styles() {
+    max-width: 100%;
+    border: none;
+    color: $c-base;
+    background: #fff;
+    vertical-align: middle;
+    outline: none;
+    box-shadow: inset 0 0 0 1px $c-str, inset 0 0 0 1px $c-str;
+    transition: box-shadow .3s;
+    @include media('>=tablet') {
+        padding-right: 23px;
+        padding-left: 23px;
+    }
+    @include media('<tablet') {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    &:focus {
+
+    }
+    &:disabled,
+    &[disabled] {
+        opacity: 0.35;
+    }
+    &.error {
+
+    }
+    &.success {
+
+    }
+}
+@include input-styles(false) {
+    @include media('>=tablet') {
+        height: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @include media('<tablet') {
+        height: 40px;
+        padding-top: 4px;
+        padding-bottom: 6px;
+    }
+}
+@include input-styles(false, false) {
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 100px #fff inset;
+    }
+}
+textarea {
+    resize: none;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    &::-ms-expand {
+        display: none;
+    }
+}
