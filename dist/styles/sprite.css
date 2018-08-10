@@ -8,39 +8,12 @@
     display: inline-block;
     background-image: url("../images/sprites/svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 1.96875em 3.875em;
+    background-size: 0em 0em;
 }
 
 .no-svg .icon:before {
     background-image: url("../svg/sprite.png");
 }
-
-
-
-  .icon.icon-arrow-r-red:before {
-      background-position: 0em 0em;
-      width: 1.96875em;
-      height: 1.38125em;
-  }
-
-
-
-
-  .icon.icon-arrow-r-white:before {
-      background-position: 0em -1.4375em;
-      width: 1.96875em;
-      height: 1.38125em;
-  }
-
-
-
-
-  .icon.icon-search:before {
-      background-position: 0em -2.875em;
-      width: 0.946em;
-      height: 0.946em;
-  }
-
 
 
 
