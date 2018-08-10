@@ -105,5 +105,11 @@
             fill: $c-primary;
             vertical-align: middle;
         }
+        a {
+            color: $c-base;
+            &:hover {
+                color: $c-primary;
+            }
+        }
     }
 }

@@ -58,6 +58,7 @@
         max-width: 185px;
         margin-left: auto;
         margin-right: auto;
+        font-weight: 600;
         @include media('<tablet') {
             font-size: 18px;
             line-height: 18px;

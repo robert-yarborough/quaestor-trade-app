@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
   <link rel="stylesheet" href="/dist/styles/style.css">
   <title>Q8 Securities</title>
@@ -206,11 +207,11 @@
       <div class="map-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
       <div class="map-block__title">Contact information</div>
       <div class="map-block__info">
-        <p><i><svg width="14" height="20" class="q-icon q-icon-gps"><use xlink:href="#icon-gps"></use></svg></i>Boursa Kuwait, 5th Floor, Mubarak AlKabeer St.</p>
+        <p><i><svg width="14" height="20" class="q-icon q-icon-gps"><use xlink:href="#icon-gps"></use></svg></i><a target="_blank" href="https://goo.gl/maps/DUvnkwKkhVt">Boursa Kuwait, 5th Floor, Mubarak AlKabeer St.</a></p>
         <p><i><svg width="20" height="16" class="q-icon q-icon-postal"><use xlink:href="#icon-postal"></use></svg></i>Postal Code 15301, Sharq</p>
-        <p><i><svg width="14" height="22" class="q-icon q-icon-phone"><use xlink:href="#icon-phone"></use></svg></i>Tel: +965 22265590</p>
+        <p><i><svg width="14" height="22" class="q-icon q-icon-phone"><use xlink:href="#icon-phone"></use></svg></i>Tel: <a href="tel:+965 22265590">+965 22265590</a></p>
         <p><i><svg width="19" height="18" class="q-icon q-icon-fax"><use xlink:href="#icon-fax"></use></svg></i>Fax: +965 22265505</p>
-        <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>email: info@q8sec.com</p>
+        <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>email: <a href="mailto:info@q8sec.com">info@q8sec.com</a></p>
       </div>
     </div>
   </div>
