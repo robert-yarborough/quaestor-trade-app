@@ -66,6 +66,10 @@
 }
 html {
     &[dir="rtl"] {
+        text-align: right;
+        body {
+            text-align: right;
+        }
         .main-header {
             .navbar__top {
                 margin-left: 0;
@@ -83,6 +87,58 @@ html {
             .q-icon {
                 margin-left: 0;
                 margin-right: 7px;
+            }
+        }
+        .info-block {
+            .block-title {
+                margin-bottom: 35px;
+            }
+            &__list {
+                li {
+                    padding-left: 0;
+                    padding-right: 45px;
+                    @include media('<tablet') {
+                        padding-right: 17px;
+                    }
+                }
+                .q-icon {
+                    left: auto;
+                    right: 0;
+                }
+            }
+            &__actions {
+                a {
+                    &:first-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .finance-block {
+            .block-title {
+                margin-bottom: 35px;
+            }
+            .swiper-button-prev {
+                left: auto;
+                right: 0;
+                transform: rotate(135deg);
+            }
+            .swiper-button-next {
+                left: 0;
+                right: auto;
+                transform: rotate(-135deg);
+            }
+        }
+        .map-block {
+            &__info {
+                p {
+                    padding-left: 0;
+                    padding-right: 30px;
+                    i {
+                        left: auto;
+                        right: 0;
+                    }
+                }
             }
         }
         .main-footer {
