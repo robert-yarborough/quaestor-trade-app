@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
     <link rel="stylesheet" href="/dist/styles/style.css">
     <title>Q8 Securities</title>
@@ -39,7 +39,7 @@
             <div class="front-banner__title">
                 <h1>
                     ابدأ  التدول على أكثر
-                    منصات الوساطة المالية تقدمًا في الكويت
+               <b> منصات الوساطة المالية تقدمًا في الكويت</b>
                 </h1>
             </div>
             <div class="front-banner__description">
@@ -111,8 +111,8 @@
                     <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg> إدارة محفظة غير مشروطة)</li>
                 </ul>
                 <div class="info-block__actions">
-                    <a href="#" target="_blank"><img src='dist/images/app-store-badge.png' alt="app-store-badge" width="160" height="54"></a>
-                    <a href="#" target="_blank"><img src='dist/images/google-play-badge.png' alt="google-play-badge" width="203" height="79"/></a>
+                    <a href="https://itunes.apple.com/us/app/q8-broker/id1356143167?mt=8" target="_blank"><img src='dist/images/app-store-badge.png' alt="app-store-badge" width="160" height="54"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.pfsoft.q8broker&hl=en" target="_blank"><img src='dist/images/google-play-badge.png' alt="google-play-badge" width="203" height="79"/></a>
                 </div>
             </div>
         </div>
@@ -223,7 +223,7 @@
                 <p><i><svg width="14" height="20" class="q-icon q-icon-gps"><use xlink:href="#icon-gps"></use></svg></i><a target="_blank" href="https://goo.gl/maps/DUvnkwKkhVt">بورصة الكويت، الطابق الخامس، شارع مبارك الكبير</a></p>
                 <p><i><svg width="20" height="16" class="q-icon q-icon-postal"><use xlink:href="#icon-postal"></use></svg></i>الرمز البريدي 15301، شرق</p>
                 <p><i><svg width="14" height="22" class="q-icon q-icon-phone"><use xlink:href="#icon-phone"></use></svg></i>هاتف:  <a href="tel:22265590 965+">22265590 965+</a></p>
-                <p><i><svg width="19" height="18" class="q-icon q-icon-fax"><use xlink:href="#icon-fax"></use></svg></i>فاكس: +965 22265505</p>
+                <p><i><svg width="19" height="18" class="q-icon q-icon-fax"><use xlink:href="#icon-fax"></use></svg></i>فاكس: <a href="tel:22265505 965+">22265505 965+</a></p>
                 <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>البريد الإلكتروني: <a href="mailto:info@q8sec.com">info@q8sec.com</a></p>
             </div>
         </div>
@@ -235,17 +235,19 @@
         <div class="main-footer__inner">
             <div class="main-footer__powered">
                 <div class="powered-title">يدار بواسطة كويت سكيورتيز Q8 SECURITIES</div>
-                <a href="#" target="_blank"><svg class="logo q-icon"><use xlink:href="#logo-securities"></use></svg></a>
+                <a href="http://q8sec.com/" target="_blank"><svg class="logo q-icon"><use xlink:href="#logo-securities"></use></svg></a>
             </div>
             <div class="main-footer__right">
                 <div class="main-footer__copyright">
                     Q8 Broker Trademark 2018 - جميع الحقوق محفوظة
                 </div>
-                <nav class="main-footer__nav">
-                    <ul>
-                        <li><a href="#">الشروط والأحكام</a></li>
-                    </ul>
-                </nav>
+                <?php if (0) { ?>
+                    <nav class="main-footer__nav">
+                        <ul>
+                            <li><a href="#">الشروط والأحكام</a></li>
+                        </ul>
+                    </nav>
+                <?php } ?>
             </div>
         </div>
     </div>

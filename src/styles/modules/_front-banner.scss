@@ -30,6 +30,7 @@
     }
     &__title {
         margin-bottom: 20px;
+        font-weight: 300;
         @include media('>=tablet-l') {
             font-size: 68px;
             line-height: 70px;
@@ -45,9 +46,11 @@
         h1 {
             font-size: inherit;
             line-height: inherit;
+            font-weight: inherit;
         }
         b, strong {
             display: block;
+            font-weight: 700;
         }
     }
     &__description {
