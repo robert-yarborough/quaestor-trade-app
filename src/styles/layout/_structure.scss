@@ -89,6 +89,16 @@ html {
                 margin-right: 7px;
             }
         }
+        .front-banner__title {
+            @include media('>=tablet-l') {
+                line-height: 75px;
+            }
+        }
+        .block-title {
+            @include media('>=tablet-l') {
+                line-height: 60px;
+            }
+        }
         .info-block {
             .block-title {
                 margin-bottom: 35px;
