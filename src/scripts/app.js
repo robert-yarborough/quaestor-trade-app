@@ -52,12 +52,21 @@ const finance_slider_destroy = () => {
 	}
 };
 
+const animate_init = () => {
+    skrollr.init();
+};
+const animate_destroy = () => {
+    skrollr.init().destroy();
+};
+
 addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
 	if (match) {
 		finance_slider_init();
+        animate_destroy();
 	}
 	else if (match == false) {
 		finance_slider_destroy();
+        animate_init();
 	}
 });
 

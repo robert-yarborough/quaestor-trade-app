@@ -36,7 +36,10 @@
     </div>
 </header>
 <div class="front-banner block-section">
-    <div class="front-banner__inner">
+    <div class="front-banner__bg" data-top-bottom="transform: translate3d(0px, 30%, 0px);"
+         data-top="transform: translate3d(0px, 0%, 0px);"></div>
+    <div class="front-banner__inner" data-200-top="transform: translate3d(0px, 0%, 0px); opacity: 1;"
+         data-top-bottom="transform: translate3d(0px, -30%, 0px); opacity: 0;">
         <div class="page-frame">
             <div class="front-banner__title">
                 <h1>
@@ -55,7 +58,7 @@
     </div>
     <div class="js-scroll-next-link scroll-next-link"></div>
 </div>
-<div class="features-block block-section">
+<div class="features-block block-section" data-bottom-top="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;">
     <div class="page-frame">
         <div class="block-title block-center">
             Advanced features for <b>institutional trading</b>
@@ -64,21 +67,21 @@
             Q8 Broker is built for the needs of traders with complex operations and sophisticated trading strategies. Our unique offering includes:
         </div>
         <div class="features-block__grid">
-            <div class="features-block__col block-center">
+            <div class="features-block__col block-center animate-fadein-effect">
                 <div class="fb-icon">
                     <svg class="q-icon"><use xlink:href="#icon-account"></use></svg>
                 </div>
                 <div class="fb-title">MULTI-ACCOUNT MANAGEMENT</div>
                 <div class="fb-desc">Manage separate accounts from a single location</div>
             </div>
-            <div class="features-block__col block-center">
+            <div class="features-block__col block-center animate-fadein-effect">
                 <div class="fb-icon">
                     <svg class="q-icon"><use xlink:href="#icon-workspace"></use></svg>
                 </div>
                 <div class="fb-title">MULTIPLE WORKSPACES</div>
                 <div class="fb-desc">Create as many workspaces as you want, and switch between them with one click</div>
             </div>
-            <div class="features-block__col block-center">
+            <div class="features-block__col block-center animate-fadein-effect">
                 <div class="fb-icon">
                     <svg class="q-icon"><use xlink:href="#icon-basket"></use></svg>
                 </div>
@@ -130,7 +133,7 @@
         </div>
         <div class="info-block__col is-image">
             <div class="info-block__image">
-                <img src="dist/images/icons/icon-phone-graphics.jpg" alt="icon-phone" width="565" height="797" />
+                <img data-bottom-top="transform: translate3d(0, 150px, 0); opacity: 0;" data-top="transform: translate3d(0, 0px, 0); opacity: 1;" src="dist/images/icons/icon-phone-graphics.jpg" alt="icon-phone" width="565" height="797" />
             </div>
         </div>
     </div>
@@ -159,7 +162,7 @@
         </div>
     </div>
 </div>
-<div class="finance-block block-section">
+<div class="finance-block block-section" data-1000-bottom="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;">
     <div class="page-frame">
         <div class="block-title block-center">
             A trusted name <b>in Kuwaiti finance</b>
@@ -170,23 +173,23 @@
         <div class="finance-block__inner">
             <div class="swiper-container js-finance-block-slider">
                 <div class="finance-block__grid swiper-wrapper">
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="83" height="81" class="q-icon"><use xlink:href="#icon-regulated"></use></svg></div>
                         <div class="finance-block__description">Regulated by Kuwait Capital Market Authorities</div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="80" height="90" class="q-icon"><use xlink:href="#icon-member"></use></svg></div>
                         <div class="finance-block__description">Member of Boursa Kuwait</div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="83" height="92" class="q-icon"><use xlink:href="#icon-multiple"></use></svg></div>
                         <div class="finance-block__description">Multiple financial services licenses</div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="90" height="50" class="q-icon"><use xlink:href="#icon-25m"></use></svg></div>
                         <div class="finance-block__description">25M KWD in capital</div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="70" height="65" class="q-icon"><use xlink:href="#icon-professional"></use></svg></div>
                         <div class="finance-block__description">Professionals with 30+ years experience</div>
                     </div>
@@ -241,6 +244,7 @@
 </footer>
 <script src="dist/scripts/vendor.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script src="dist/scripts/app.js"></script>
 </body>
 

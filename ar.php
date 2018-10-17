@@ -34,7 +34,10 @@
     </div>
 </header>
 <div class="front-banner block-section">
-    <div class="front-banner__inner">
+    <div class="front-banner__bg" data-top-bottom="transform: translate3d(0px, 30%, 0px);"
+         data-top="transform: translate3d(0px, 0%, 0px);"></div>
+    <div class="front-banner__inner" data-200-top="transform: translate3d(0px, 0%, 0px); opacity: 1;"
+         data-top-bottom="transform: translate3d(0px, -30%, 0px); opacity: 0;">
         <div class="page-frame">
             <div class="front-banner__title">
                 <h1>
@@ -53,7 +56,7 @@
     </div>
     <div class="js-scroll-next-link scroll-next-link"></div>
 </div>
-<div class="features-block block-section">
+<div class="features-block block-section" data-bottom-top="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;">
     <div class="page-frame">
         <div class="block-title block-center">
             ميزات متقدمة  <b>للتداول المؤسسي</b>
@@ -63,7 +66,7 @@
             يشمل عرضنا المميز:
         </div>
         <div class="features-block__grid">
-            <div class="features-block__col block-center">
+            <div class="features-block__col block-center animate-fadein-effect">
                 <div class="fb-icon">
                     <svg class="q-icon"><use xlink:href="#icon-account"></use></svg>
                 </div>
@@ -72,7 +75,7 @@
                 </div>
                 <div class="fb-desc">إدارة حسابات منفصلة من مكان واحد</div>
             </div>
-            <div class="features-block__col block-center">
+            <div class="features-block__col block-center animate-fadein-effect">
                 <div class="fb-icon">
                     <svg class="q-icon"><use xlink:href="#icon-workspace"></use></svg>
                 </div>
@@ -81,7 +84,7 @@
                 </div>
                 <div class="fb-desc">إنشاء العديد من مساحات العمل كما تريد ، والتبديل بينها بنقرة واحدة</div>
             </div>
-            <div class="features-block__col block-center">
+            <div class="features-block__col block-center animate-fadein-effect">
                 <div class="fb-icon">
                     <svg class="q-icon"><use xlink:href="#icon-basket"></use></svg>
                 </div>
@@ -136,7 +139,7 @@
         </div>
         <div class="info-block__col is-image">
             <div class="info-block__image">
-                <img src="dist/images/icons/icon-phone-graphics.jpg" alt="icon-phone" width="565" height="797" />
+                <img data-bottom-top="transform: translate3d(0, 150px, 0); opacity: 0;" data-top="transform: translate3d(0, 0px, 0); opacity: 1;" src="dist/images/icons/icon-phone-graphics.jpg" alt="icon-phone" width="565" height="797" />
             </div>
         </div>
     </div>
@@ -163,7 +166,7 @@
         </div>
     </div>
 </div>
-<div class="finance-block block-section">
+<div class="finance-block block-section" data-1000-bottom="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;">
     <div class="page-frame">
         <div class="block-title block-center">
             اسم موثوق <b>في سوق المال الكويتي</b>
@@ -175,30 +178,30 @@
         <div class="finance-block__inner">
             <div class="swiper-container js-finance-block-slider" dir="rtl">
                 <div class="finance-block__grid swiper-wrapper">
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="83" height="81" class="q-icon"><use xlink:href="#icon-regulated"></use></svg></div>
                         <div class="finance-block__description">مرخص من
                             هيئة أسواق
                             المال في الكويت
                         </div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="80" height="90" class="q-icon"><use xlink:href="#icon-member"></use></svg></div>
                         <div class="finance-block__description">بورصة الكويت عضو في</div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="83" height="92" class="q-icon"><use xlink:href="#icon-multiple"></use></svg></div>
                         <div class="finance-block__description">تراخيص خدمات
                             مالية متعددة
                         </div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="90" height="50" class="q-icon"><use xlink:href="#icon-25m"></use></svg></div>
                         <div class="finance-block__description">25 مليون د.ك.
                             رأس المال المدفوع
                         </div>
                     </div>
-                    <div class="finance-block__col swiper-slide">
+                    <div class="finance-block__col swiper-slide animate-transform-effect">
                         <div class="finance-block__icon"><svg width="70" height="65" class="q-icon"><use xlink:href="#icon-professional"></use></svg></div>
                         <div class="finance-block__description">محترفون
                             بخبرة لأكثر من 30 سنة
@@ -254,6 +257,7 @@
 </footer>
 <script src="dist/scripts/vendor.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script src="dist/scripts/app.js"></script>
 </body>
 </html>

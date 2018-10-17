@@ -23,6 +23,7 @@
         display: flex;
         align-items: center;
         padding: 30px 30px 0 0;
+        overflow: hidden;
         @include media('<tablet-m') {
             min-height: 500px;
             justify-content: center;
