@@ -59,6 +59,7 @@
     }
     &__list {
         position: relative;
+        cursor: pointer;
         &.is-active {
             li.is-current {
                 a {
