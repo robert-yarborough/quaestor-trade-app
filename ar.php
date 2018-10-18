@@ -24,11 +24,13 @@
                         <li class="is-current"><a href="/ar.php">العربية</a></li>
                     </ul>
                 </div>
+                <?php if (0) { ?>
                 <div class="menu--user">
                     <ul>
                         <li><a href="#">تسجيل الدخول<svg class="q-icon"><use xlink:href="#icon-login"></use></svg></a></li>
                     </ul>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -49,9 +51,11 @@
                 تضع كويت بروكر Q8 Broker القدرة للتداول في يد كلٍ من المؤسسات والأفراد
             </div>
             <div class="front-banner__note">لا يوجد حد أدنى مطلوب للرصيد</div>
+            <?php if (0) { ?>
             <div class="front-banner__btn">
                 <a href="#" class="btn-primary__light">فتح حساب</a>
             </div>
+            <?php } ?>
         </div>
     </div>
     <div class="js-scroll-next-link scroll-next-link"></div>
@@ -134,7 +138,9 @@
                     <p>قم بإجراء تحليل متعمق بمساعدة أكثر من 50 مؤشرًا فنيًا، أو قم بتصميم تحليلك الخاص.</p>
                     <p>يمكنك بسهولة تخطيط فئات الأصول ومقارنتها واستخدام أدوات الرسم الذكي للعثور على الأنماط.</p>
                 </div>
+                <?php if (0) { ?>
                 <div class="info-block__btn"><a href="#" class="btn-primary__dark">فتح حساب</a></div>
+                <?php } ?>
             </div>
         </div>
         <div class="info-block__col is-image">
@@ -212,9 +218,11 @@
             <div class="swiper-button-prev js-fin-sl-btn-prev"></div>
             <div class="swiper-button-next js-fin-sl-btn-next"></div>
         </div>
+        <?php if (0) { ?>
         <div class="finance-block__btn">
             <a class="btn-primary__light" href="#">فتح حساب</a>
         </div>
+        <?php } ?>
     </div>
 </div>
 <div class="map-block block-section">

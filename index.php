@@ -26,11 +26,13 @@
                         <li><a href="/ar.php">العربية</a></li>
                     </ul>
                 </div>
+                <?php if (0) { ?>
                 <div class="menu--user">
                     <ul>
                         <li><a href="#">LOG IN<svg class="q-icon"><use xlink:href="#icon-login"></use></svg></a></li>
                     </ul>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -51,9 +53,11 @@
                 Sleek and reliable, Q8 Broker puts trading power in the hands of both institutions and individuals.
             </div>
             <div class="front-banner__note">No minimum balance required.</div>
+            <?php if (0) { ?>
             <div class="front-banner__btn">
                 <a href="#" class="btn-primary__light">OPEN AN ACCOUNT</a>
             </div>
+            <?php } ?>
         </div>
     </div>
     <div class="js-scroll-next-link scroll-next-link"></div>
@@ -128,7 +132,9 @@
                     <p>Perform in-depth analysis with the help of over 50 technical indicators, or design your own.</p>
                     <p>Easily chart and compare asset classes and use intelligent drawing tools to find patterns.</p>
                 </div>
+                <?php if (0) { ?>
                 <div class="info-block__btn"><a href="#" class="btn-primary__dark">OPEN AN ACCOUNT</a></div>
+                <?php } ?>
             </div>
         </div>
         <div class="info-block__col is-image">
@@ -198,9 +204,11 @@
             <div class="swiper-button-prev js-fin-sl-btn-prev"></div>
             <div class="swiper-button-next js-fin-sl-btn-next"></div>
         </div>
+        <?php if (0) { ?>
         <div class="finance-block__btn">
             <a class="btn-primary__light" href="#">OPEN AN ACCOUNT</a>
         </div>
+        <?php } ?>
     </div>
 </div>
 <div class="map-block block-section">
