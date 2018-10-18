@@ -155,9 +155,11 @@
                 <div class="block-title">
                     More exclusive options <b>only at Q8 Broker</b>
                 </div>
+                <?php if (0) { ?>
                 <div class="info-block__description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
                 </div>
+                <?php } ?>
                 <ul class="info-block__list">
                     <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Lowes fee of 1/8 per annual</li>
                     <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Non discretionary</li>
