@@ -11,6 +11,7 @@
         color: white;
     }
     li {
+        cursor: pointer;
         &:hover {
             a {
                 color: $c-bright;

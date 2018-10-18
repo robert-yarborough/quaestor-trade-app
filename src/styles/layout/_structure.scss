@@ -64,6 +64,9 @@
         transition: .3s border;
     }
 }
+.block-section {
+    overflow: hidden;
+}
 html {
     &[dir="rtl"] {
         text-align: right;
