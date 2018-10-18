@@ -235,7 +235,7 @@
                 <p><i><svg width="20" height="16" class="q-icon q-icon-postal"><use xlink:href="#icon-postal"></use></svg></i>الرمز البريدي 15301، شرق</p>
                 <p><i><svg width="14" height="22" class="q-icon q-icon-phone"><use xlink:href="#icon-phone"></use></svg></i>هاتف:  <a href="tel:22265590 965+">22265590 965+</a></p>
                 <p><i><svg width="19" height="18" class="q-icon q-icon-fax"><use xlink:href="#icon-fax"></use></svg></i>فاكس: <a href="tel:22265505 965+">22265505 965+</a></p>
-                <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>البريد الإلكتروني: <a href="mailto:info@q8sec.com">info@q8sec.com</a></p>
+                <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>البريد الإلكتروني: <a href="mailto:support@q8broker.com">support@q8broker.com</a></p>
             </div>
         </div>
     </div>

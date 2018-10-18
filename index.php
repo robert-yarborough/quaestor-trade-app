@@ -155,9 +155,11 @@
                 <div class="block-title">
                     More exclusive options <b>only at Q8 Broker</b>
                 </div>
+                <?php if (0) { ?>
                 <div class="info-block__description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
                 </div>
+                <?php } ?>
                 <ul class="info-block__list">
                     <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Lowes fee of 1/8 per annual</li>
                     <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Non discretionary</li>
@@ -221,7 +223,7 @@
                 <p><i><svg width="20" height="16" class="q-icon q-icon-postal"><use xlink:href="#icon-postal"></use></svg></i>Postal Code 15301, Sharq</p>
                 <p><i><svg width="14" height="22" class="q-icon q-icon-phone"><use xlink:href="#icon-phone"></use></svg></i>Tel: <a href="tel:+965 22265590">+965 22265590</a></p>
                 <p><i><svg width="19" height="18" class="q-icon q-icon-fax"><use xlink:href="#icon-fax"></use></svg></i>Fax: +965 22265505</p>
-                <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>email: <a href="mailto:info@q8sec.com">info@q8sec.com</a></p>
+                <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>email: <a href="mailto:support@q8broker.com">support@q8broker.com</a></p>
             </div>
         </div>
     </div>
