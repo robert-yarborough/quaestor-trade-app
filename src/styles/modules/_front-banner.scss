@@ -17,13 +17,23 @@
         margin-top: -103px;
         height: 395px;
     }
+    &--main {
+        @include media('>=tablet') {
+            height: 730px;
+        }
+        @include media('>=tablet-l') {
+            margin-top: -151px;
+        }
+        .front-banner__inner {
+            padding-top: 105px;
+        }
+    }
     &__bg {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-image: url(../images/backgrounds/bg-front-banner-1.jpg);
         background-color: $c-primary;
         background-position: center;
         background-repeat: no-repeat;

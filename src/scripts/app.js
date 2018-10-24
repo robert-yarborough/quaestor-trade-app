@@ -1,6 +1,7 @@
 import { addMqTriggers } from './plugins/media-queries';
+//import setFinanceApi from './plugins/jquery-yahoo-finance-api';
 
-let $root = $("html, body");
+let $root = $('html, body');
 
 let $menu_lang_list = $('.js-menu-lang-list');
 let $lang_drop = $('.js-menu-lang-list li:not(.is-current)');
@@ -20,6 +21,19 @@ $next_scroll_link.on({
 		let $next = $(this).closest('.block-section').next().offset().top;
 		$root.animate({scrollTop: $next}, 'slow');
 	}
+});
+
+let $h_search_toggle =$('.js-header-search-toggle');
+let $h_search_box =$('.js-header-search-box');
+
+$h_search_toggle.on({
+    click: function (e) {
+        e.preventDefault();
+        let $that = $(this);
+        let $box = $that.parent().find($h_search_box);
+        $that.toggleClass('is-active');
+        $box.toggleClass('is-opened');
+    }
 });
 
 let init_slider_class = 'slider-initialized';
@@ -71,3 +85,4 @@ addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
 });
 
 addMqTriggers();
+//setFinanceApi();

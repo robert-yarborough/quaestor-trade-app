@@ -29,6 +29,9 @@
     }
     &__grid {
         display: flex;
+        @include media('>=tablet') {
+            justify-content: center;
+        }
     }
     &__col {
         text-align: center;
