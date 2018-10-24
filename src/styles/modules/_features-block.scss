@@ -12,9 +12,13 @@
         max-width: $sw-site-l;
         margin-right: auto;
         margin-left: auto;
+        padding-top: 45px;
         @include media('>=tablet') {
             display: flex;
             justify-content: space-between;
+        }
+        @include media('<tablet') {
+            padding-top: 40px;
         }
     }
     &__col {
@@ -34,6 +38,9 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+    .block-description {
+        margin-bottom: 0;
     }
     .fb-icon {
         margin-bottom: 35px;

@@ -7,7 +7,7 @@
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
-    <link rel="stylesheet" href="/dist/styles/style.css">
+    <link rel="stylesheet" href="/dist/styles/style.css?v=1">
     <title>Q8 Securities</title>
 </head>
 
@@ -26,20 +26,18 @@
                         <li><a href="/ar.php">العربية</a></li>
                     </ul>
                 </div>
-                <?php if (0) { ?>
                 <div class="menu--user">
                     <ul>
-                        <li><a href="#">LOG IN<svg class="q-icon"><use xlink:href="#icon-login"></use></svg></a></li>
+                        <li><a href="https://web1.q8broker.com/" target="_blank">LOG IN<svg class="q-icon"><use xlink:href="#icon-login"></use></svg></a></li>
                     </ul>
                 </div>
-                <?php } ?>
             </div>
         </div>
     </div>
 </header>
 <div class="front-banner block-section">
     <div class="front-banner__bg" data-top-bottom="transform: translate3d(0px, 30%, 0px);"
-         data-top="transform: translate3d(0px, 0%, 0px);"></div>
+         data-top="transform: translate3d(0px, 0%, 0px);" style="background-image: url('dist/images/backgrounds/bg-front-banner-1.jpg')"></div>
     <div class="front-banner__inner" data-200-top="transform: translate3d(0px, 0%, 0px); opacity: 1;"
          data-top-bottom="transform: translate3d(0px, -30%, 0px); opacity: 0;">
         <div class="page-frame">
