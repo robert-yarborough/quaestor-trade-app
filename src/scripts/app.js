@@ -23,8 +23,8 @@ $next_scroll_link.on({
 	}
 });
 
-let $h_search_toggle =$('.js-header-search-toggle');
-let $h_search_box =$('.js-header-search-box');
+let $h_search_toggle =$('.js-h-search-toggle');
+let $h_search_box =$('.js-h-search-box');
 
 $h_search_toggle.on({
     click: function (e) {
@@ -33,6 +33,35 @@ $h_search_toggle.on({
         let $box = $that.parent().find($h_search_box);
         $that.toggleClass('is-active');
         $box.toggleClass('is-opened');
+    }
+});
+
+let $h_toggle_btn = $('.js-h-toggle-btn');
+let $h_toggle_close = $('.js-h-toggle-close');
+let $h_toggle_drop = $('.js-h-menu-main');
+
+$h_toggle_btn.on({
+    click: function (e) {
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+        $h_toggle_drop.toggleClass('is-opened');
+    }
+});
+$h_toggle_close.on({
+    click: function (e) {
+        e.preventDefault();
+        $(this).removeClass('is-active');
+        $h_toggle_drop.removeClass('is-opened');
+    }
+});
+
+let $h_lang_toggle = $('.js-h-lang-toggle');
+let $h_lang_drop = $('.js-h-lang-drop');
+$h_lang_toggle.on({
+    click: function (e) {
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+        $h_lang_drop.slideToggle();
     }
 });
 
@@ -73,15 +102,42 @@ const animate_destroy = () => {
     skrollr.init().destroy();
 };
 
+// Mobile:
 addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
 	if (match) {
 		finance_slider_init();
-        animate_destroy();
 	}
 	else if (match == false) {
 		finance_slider_destroy();
-        animate_init();
 	}
+});
+
+let $h_menu_links = $('.js-h-menu-links');
+let $h_menu_main = $('.js-h-menu-main');
+let $h_search = $('.js-h-search');
+
+const header_relocate_m = () => {
+    if ($h_menu_links.length) {
+        $h_menu_links.prependTo($h_menu_main);
+    }
+};
+
+const header_relocate_d = () => {
+    if ($h_menu_links.length) {
+        $h_menu_links.insertBefore($h_search);
+    }
+};
+
+// Tablet:
+addMediaQueryListener(devicesMQ.desktopMMQ, function (match) {
+    if (match) {
+        header_relocate_m();
+        animate_destroy();
+    }
+    else if (match == false) {
+        header_relocate_d();
+        animate_init();
+    }
 });
 
 addMqTriggers();

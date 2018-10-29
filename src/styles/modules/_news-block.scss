@@ -1,32 +1,60 @@
 .news-block  {
     padding: 165px 0;
+    @include media('<tablet-l') {
+        padding: 50px 0;
+    }
     &__title {
         text-align: center;
         font-size: 50px;
         font-weight: 300;
         margin-bottom: 50px;
+        @include media('<tablet-l') {
+            margin-bottom: 20px;
+            font-size: 28px;
+            line-height: 28px;
+        }
         b {
             font-weight: 700;
         }
     }
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: -5px;
-        margin-right: -5px;
+        @include media('>=tablet') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
         &--item {
-            flex-grow: 1;
-            flex-basis: 0;
-            max-width: calc(25% - 10px);
             border: 1px solid $c-str-7;
             border-radius: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
             position: relative;
             padding: 40px 35px;
             display: flex;
             flex-direction: column;
+            @include media('>=tablet-l') {
+                max-width: calc(25% - 10px);
+            }
+            @include media('<tablet-l') {
+                padding: 25px;
+            }
+            @include media('<tablet-l', '>=tablet') {
+                &:nth-child(4),
+                &:nth-child(4) ~ .news-block__list--item{
+                    display: none;
+                }
+            }
+            @include media('>=tablet') {
+                margin-left: 5px;
+                margin-right: 5px;
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+            &:not(:nth-child(1)) {
+                @include media('<tablet') {
+                    margin-top: 10px;
+                }
+            }
             &:after {
                 content: '';
                 display: block;
@@ -49,6 +77,9 @@
             font-weight: 400;
             line-height: 1.2;
             margin-bottom: 40px;
+            @include media('<tablet-l') {
+                margin-bottom: 20px;
+            }
             .q-icon {
                 fill: currentColor;
                 width: 30px;
@@ -65,6 +96,10 @@
             font-weight: 700;
             line-height: 26px;
             color: black;
+            @include media('<tablet-l') {
+                font-size: 16px;
+                line-height: 22px;
+            }
             a {
                 color: inherit;
                 &:hover {
@@ -76,9 +111,42 @@
             font-size: 11px;
             text-transform: uppercase;
             margin-top: auto;
+            @include media('<tablet-l', '>=tablet') {
+                font-size: 14px;
+            }
+            a {
+                display: inline-block;
+                position: relative;
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 7px;
+                    height: 7px;
+                    border-top: 1px solid currentColor;
+                    border-right: 1px solid currentColor;
+                    transform: rotate(45deg);
+                    margin-left: 2px;
+                    position: relative;
+                    top: -1px;
+                    white-space: nowrap;
+                }
+                &:hover {
+                    color: $c-secondary;
+                }
+            }
         }
         &__group {
             padding-bottom: 45px;
+            @include media('<tablet-l') {
+                padding-bottom: 20px;
+            }
+        }
+    }
+    &__cta {
+        text-align: center;
+        padding-top: 60px;
+        @include media('<tablet-l') {
+            padding-top: 30px;
         }
     }
 }

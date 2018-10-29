@@ -18,14 +18,28 @@
         height: 395px;
     }
     &--main {
-        @include media('>=tablet') {
-            height: 730px;
-        }
         @include media('>=tablet-l') {
             margin-top: -151px;
+            height: 730px;
+        }
+        @include media('<tablet-l', '>=tablet') {
+            height: 405px;
+            margin-top: -105px;
+        }
+        @include media('<tablet') {
+            height: 480px;
         }
         .front-banner__inner {
             padding-top: 105px;
+            @include media('<tablet-l') {
+                padding-top: 70px;
+            }
+        }
+        .front-banner__title {
+            @include media('<tablet') {
+                font-size: 32px;
+                line-height: 32px;
+            }
         }
     }
     &__bg {
@@ -57,8 +71,8 @@
             line-height: 70px;
         }
         @include media('<tablet-l', '>=tablet') {
-            font-size: 48px;
-            line-height: 48px;
+            font-size: 32px;
+            line-height: 40px;
         }
         @include media('<tablet') {
             font-size: 24px;
@@ -78,16 +92,16 @@
         font-size: 28px;
         line-height: 30px;
         margin-bottom: 15px;
-        @include media('<tablet') {
+        @include media('<tablet-l') {
             font-size: 16px;
-            line-height: 16px;
+            line-height: 24px;
         }
     }
     &__note {
         font-size: 28px;
         margin-bottom: 15px;
         font-weight: 700;
-        @include media('<tablet') {
+        @include media('<tablet-l') {
             font-size: 16px;
         }
     }
