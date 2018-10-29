@@ -15,7 +15,7 @@ const devicesMQ = {
     mobileMN,
     mqBaseTxt: 'only screen and ',
     desktopMQ: `only screen and (min-width: ${desktopN}px)`,
-    desktopMMQ: `only screen and (min-width: ${desktopNM}px)`,
+    desktopMMQ: `only screen and (max-width: ${desktopNM}px)`,
     tabletMLQ: `only screen and (max-width: ${tabletNL - 1}px)`,
     tabletMQ: `only screen and (min-width: ${tabletN}px) and (max-width: ${desktopN - 1}px)`,
     mobileMQ: `only screen and (max-width: ${tabletN - 1}px)`,

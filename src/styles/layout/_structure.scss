@@ -179,12 +179,54 @@ html {
     overflow: hidden;
     background-color: $c-str-6;
     position: relative;
+    padding: 10px 0;
+    @include media('<tablet-l') {
+        height: 40px;
+        padding: 6px 0;
+    }
+    .tickercontainer {
+        min-height: 100%;
+    }
     .stock-ticker {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        //background-color: $c-bright;
-        border-bottom: 47px dashed $c-bright;
+        * {
+            font-family: $f-base;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: black;
+        }
+        li {
+            padding: 0 22px!important;
+            display: flex;
+        }
+        .st-label {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .st-value {
+            display: inline-flex;
+            align-items: center;
+            &:after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 7px 10px 7px;
+                border-color: transparent transparent currentColor transparent;
+                display: block;
+                vertical-align: middle;
+                margin-left: 3px;
+                backface-visibility: hidden;
+            }
+            &.is-up {
+                color: $c-bright-1;
+            }
+            &.is-down {
+                color: $c-bright-2;
+                &:after {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
     }
 }

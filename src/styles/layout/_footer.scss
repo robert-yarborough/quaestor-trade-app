@@ -1,5 +1,7 @@
 .main-footer {
-    background-color: $c-str;
+    &:not(.is-light) {
+        background-color: $c-str;
+    }
     @include media('>=tablet') {
         padding: 37px 0;
     }
@@ -43,6 +45,7 @@
         @include media('<tablet') {
             font-size: 12px;
             line-height: 14px;
+            margin-bottom: 5px;
         }
     }
     &__nav {
