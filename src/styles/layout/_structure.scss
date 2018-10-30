@@ -380,6 +380,21 @@ html {
                 }
             }
         }
+        .news-block {
+            .nb-item__link {
+                a {
+                    &:after {
+                        margin-right: 3px;
+                    }
+                }
+            }
+            .nb-item__topic {
+                .q-icon {
+                    margin-right: 0;
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 }
 .stock-ticker-container {

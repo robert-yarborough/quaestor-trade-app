@@ -1,6 +1,9 @@
 .investing-block {
     background-color: $c-primary;
     padding: 125px 0 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     @include media('<tablet-l') {
         padding: 45px 0 50px;
     }

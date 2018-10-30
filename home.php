@@ -7,7 +7,7 @@
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
-    <link rel="stylesheet" href="/dist/styles/style.css">
+    <link rel="stylesheet" href="/dist/styles/style.css?v=1">
     <title>Q8 Securities | Home</title>
 </head>
 
@@ -340,7 +340,7 @@
         <div class="news-block__cta"><a class="btn-primary__dark" href="#">Read More</a></div>
     </div>
 </div>
-<div class="investing-block">
+<div class="investing-block" style="background-image: url('dist/images/backgrounds/bg-image-investing.jpg')">
     <div class="page-frame">
         <div class="block-title block-center">Start investing <b>in your future</b></div>
         <div class="block-description block-center">
@@ -391,24 +391,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script src="src/scripts/plugins/jquery.webticker.min.js"></script>
 <script src="src/scripts/plugins/stocks.js"></script>
-<script src="dist/scripts/app.js"></script>
-<script>
-    jQuery('#webTicker').webTicker();
-    var stocks = new Stocks('ERFQDZF07NY3WDQU'); // Replace with your own
+<script src="dist/scripts/app.js?v=1"></script>
+<script type="text/javascript">
+    $(document).on('ready', function () {
+       $('#webTicker').webTicker();
+    })
+
+    //var stocks = new Stocks('ERFQDZF07NY3WDQU'); // Replace with your own
 
     // Let's get the stock data of Tesla Inc for the last 10 minutes
-    async function request () {
-        var result = await stocks.sectorPerformance({
-            timespan: 'year-to-date'
-        });
-
-        //document.body.innerHTML = JSON.stringify(result);
-        //jQuery('.finance').html(JSON.stringify(result));
-        var data = JSON.stringify(result);
-        //var data = JSON.parse(p);
-        //jQuery('.finance').html(r);
-    }
-    request();
+//    async function request () {
+//        var result = await stocks.sectorPerformance({
+//            timespan: 'year-to-date'
+//        });
+//
+//        //document.body.innerHTML = JSON.stringify(result);
+//        //jQuery('.finance').html(JSON.stringify(result));
+//        var data = JSON.stringify(result);
+//        //var data = JSON.parse(p);
+//        //jQuery('.finance').html(r);
+//    }
+//    request();
 </script>
 <!--<script src="src/scripts/plugins/finance-api.js"></script>-->
 </body>

@@ -72,7 +72,7 @@ let financeSwiper;
 const finance_slider_init = () => {
 	if ($finance_slider.length && !$finance_slider.hasClass(init_slider_class)) {
 		financeSwiper = new Swiper ($finance_slider, {
-			slidesPerView: 3,
+			slidesPerView: 2,
 			speed: 750,
 			navigation: {
 				nextEl: '.js-fin-sl-btn-next',
@@ -80,7 +80,7 @@ const finance_slider_init = () => {
 			},
 			breakpoints: {
 				550: {
-					slidesPerView: 2,
+					slidesPerView: 1,
 				}
 			},
 		});

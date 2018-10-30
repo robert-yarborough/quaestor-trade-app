@@ -39,7 +39,7 @@
         .front-banner__title {
             @include media('<tablet') {
                 font-size: 32px;
-                line-height: 32px;
+                line-height: 35px;
             }
         }
     }
@@ -80,7 +80,7 @@
         }
         @include media('<tablet') {
             font-size: 24px;
-            line-height: 24px;
+            line-height: 26px;
         }
         h1 {
             font-size: inherit;
@@ -88,8 +88,10 @@
             font-weight: inherit;
         }
         b, strong {
-            display: block;
             font-weight: 700;
+            @include media('>=tablet') {
+                display: block;
+            }
         }
     }
     &__description {
@@ -99,6 +101,7 @@
         @include media('<tablet-l') {
             font-size: 16px;
             line-height: 24px;
+            margin-bottom: 5px;
         }
     }
     &__note {
@@ -107,6 +110,15 @@
         font-weight: 700;
         @include media('<tablet-l') {
             font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 25px;
+        }
+    }
+    &__btn {
+        a {
+            @include media('<tablet') {
+                width: 100%;
+            }
         }
     }
 }
