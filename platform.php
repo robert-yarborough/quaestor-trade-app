@@ -53,7 +53,7 @@
                     <div class="header-toggle-close js-h-toggle-close"></div>
                     <div class="menu--main">
                         <ul class="menu--main__list">
-                            <li><a href="/platform.php">PLATFORM</a></li>
+                            <li><a href="#">PLATFORM</a></li>
                             <li><a href="#">INVESTMENT TYPES</a></li>
                             <li><a href="#">TOOLS & EDUCATION</a></li>
                             <li><a href="#">SUPPORT</a></li>
@@ -70,42 +70,18 @@
         </div>
     </div>
 </header>
-<div class="front-banner block-section front-banner--main">
+<div class="front-banner block-section front-banner--main is-center">
     <div class="front-banner__bg" data-top-bottom="transform: translate3d(0px, 30%, 0px);"
-         data--200-top="transform: translate3d(0px, 0%, 0px);" style="background-image: url('dist/images/backgrounds/bg-front-banner-2.jpg')"></div>
+         data--200-top="transform: translate3d(0px, 0%, 0px);" style="background-image: url('dist/images/backgrounds/bg-front-banner-3.jpg')"></div>
     <div class="front-banner__inner" data-top-bottom="transform: translate3d(0px, -30%, 0px); opacity: 0;"
          data--200-top="transform: translate3d(0px, 0%, 0px); opacity: 1;">
         <div class="page-frame">
             <div class="front-banner__title">
-                <h1>
-                    Trade on the most advanced
-                    <b>brokerage platform in the Middle East</b>
-                </h1>
-            </div>
-            <div class="front-banner__description">
-                Q8 Broker is the simplest and most powerful way for<br>
-                new and experienced investors to access the markets
-            </div>
-            <div class="front-banner__note">No minimum balance required.</div>
-            <div class="front-banner__btn">
-                <a href="#" class="btn-primary__light">OPEN AN ACCOUNT</a>
+                <h1>Platform</h1>
             </div>
         </div>
     </div>
 </div>
-<div class="stock-ticker-container">
-    <ul id="webTicker" class="stock-ticker">
-        <li><span class="st-label">GFH  100</span><span class="st-value is-up">0.50%</span></li>
-        <li><span class="st-label">NBK  829 </span><span class="st-value is-down">-0.12%</span></li>
-        <li><span class="st-label">NIND  162</span><span class="st-value is-down">-0.61%</span></li>
-        <li><span class="st-label">BPCC  1,065</span><span class="st-value is-up">3.00%</span></li>
-        <li><span class="st-label">AU  210</span><span class="st-value is-up">2.44%</span></li>
-        <li><span class="st-label">GFH  100</span><span class="st-value is-up">0.50%</span></li>
-        <li><span class="st-label">GFH  100</span><span class="st-value is-up">0.50%</span></li>
-        <li><span class="st-label">GFH  100</span><span class="st-value is-up">0.50%</span></li>
-    </ul>
-</div>
-
 <div class="available-links">
     <div class="page-frame">
         <div class="available-links__inner">

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 
 <head>
     <meta charset="utf-8">
@@ -24,8 +24,8 @@
                     <div class="menu--lang__main">
                         <div class="menu--lang__main-icon js-h-lang-toggle"><svg class="q-icon"><use xlink:href="#icon-globe"></use></svg></div>
                         <ul class="menu--lang__main-list js-h-lang-drop">
-                            <li class="is-current"><a href="/">English</a></li>
-                            <li><a href="/home-ar.php">Arabic</a></li>
+                            <li><a href="/home.php">English</a></li>
+                            <li class="is-current"><a href="/home-ar.php">Arabic</a></li>
                         </ul>
                     </div>
                     <div class="menu--links js-h-menu-links">
@@ -53,7 +53,7 @@
                     <div class="header-toggle-close js-h-toggle-close"></div>
                     <div class="menu--main">
                         <ul class="menu--main__list">
-                            <li><a href="/platform.php">PLATFORM</a></li>
+                            <li><a href="#">PLATFORM</a></li>
                             <li><a href="#">INVESTMENT TYPES</a></li>
                             <li><a href="#">TOOLS & EDUCATION</a></li>
                             <li><a href="#">SUPPORT</a></li>
@@ -393,7 +393,7 @@
 <script src="src/scripts/plugins/stocks.js"></script>
 <script src="dist/scripts/app.js"></script>
 <script>
-    jQuery('#webTicker').webTicker();
+    jQuery('#webTicker').webTicker({direction: 'right'});
     var stocks = new Stocks('ERFQDZF07NY3WDQU'); // Replace with your own
 
     // Let's get the stock data of Tesla Inc for the last 10 minutes
