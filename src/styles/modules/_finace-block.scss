@@ -91,8 +91,18 @@
             padding-top: 30px;
         }
         a {
-            margin: 0 12px;
             min-width: 250px;
+            @include media('>=tablet') {
+                margin: 0 12px;
+            }
+            @include media('<tablet') {
+                width: 100%;
+            }
+            &:not(:last-child) {
+                @include media('<tablet') {
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
     .swiper-container {
