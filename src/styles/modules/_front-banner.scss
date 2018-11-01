@@ -36,6 +36,9 @@
                 padding-top: 70px;
             }
         }
+        .front-banner__description {
+            max-width: 700px;
+        }
         .front-banner__title {
             @include media('<tablet') {
                 font-size: 32px;

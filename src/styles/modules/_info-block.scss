@@ -25,7 +25,7 @@
         padding: 30px 30px 0 0;
         overflow: hidden;
         @include media('<tablet') {
-            min-height: 365px;
+            min-height: 315px;
             justify-content: center;
         }
         img {
@@ -46,15 +46,18 @@
             padding: 45px 27px;
         }
         @include media('<tablet') {
-            padding: 40px 15px;
-            width: calc(100% - 20px);
-            margin: -50px auto 0;
+            padding: 40px 20px;
+            //width: calc(100% - 20px);
+            margin: 0 auto;
         }
     }
     &__icon {
         margin-bottom: 40px;
         @include media('<tablet-l') {
             margin-bottom: 15px;
+        }
+        @include media('<tablet') {
+            display: none;
         }
         .q-icon {
             height: 70px;
@@ -130,6 +133,7 @@
                     transform: scale(.7);
                     margin-right: 10px;
                     margin-top: -10px;
+                    margin-left: -10px;
                 }
             }
             .q-icon-lock {
@@ -172,7 +176,12 @@
     &__btn {
         padding-top: 50px;
         @include media('<tablet-l') {
-            padding-top: 10px;
+            padding-top: 15px;
+        }
+        a {
+            @include media('<mobile-m') {
+                width: 100%;
+            }
         }
     }
     &__actions {
@@ -208,7 +217,9 @@
                 padding-top: 0;
             }
             .info-block__content {
-                padding-top: 110px;
+                @include media('>=tablet') {
+                    padding-top: 110px;
+                }
             }
         }
         + .features-block {
@@ -220,6 +231,9 @@
         .info-block__image {
             justify-content: flex-end;
             align-items: flex-start;
+            @include media('<tablet') {
+                padding-right: 0;
+            }
         }
     }
     &.is-top {
@@ -238,10 +252,14 @@
     }
     &.is-image--large {
         .info-block__content {
-            padding-right: 0;
+            @include media('>=tablet') {
+                padding-right: 0;
+            }
         }
         .info-block__image {
-            padding-right: 0;
+            @include media('>=tablet') {
+                padding-right: 0;
+            }
         }
         .info-block__col {
             &:not(.is-image) {

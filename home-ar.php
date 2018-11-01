@@ -7,7 +7,7 @@
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
-    <link rel="stylesheet" href="/dist/styles/style.css?v=1">
+    <link rel="stylesheet" href="/dist/styles/style.css?v=2">
     <title>Q8 Securities | Home</title>
 </head>
 
@@ -83,8 +83,7 @@
                 </h1>
             </div>
             <div class="front-banner__description">
-                Q8 Broker is the simplest and most powerful way for<br>
-                new and experienced investors to access the markets
+                Q8 Broker is the simplest and most powerful way for new and experienced investors to access the markets
             </div>
             <div class="front-banner__note">No minimum balance required.</div>
             <div class="front-banner__btn">
