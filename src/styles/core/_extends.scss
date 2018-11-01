@@ -39,10 +39,6 @@
     position: relative;
     background-color: transparent;
     font-weight: 700;
-    @include media('<tablet') {
-        font-size: 13px;
-        padding: 7px 45px 6px 12px;
-    }
     &:after {
         content: '';
         display: block;
@@ -55,11 +51,6 @@
         top: 16px;
         transform: rotate(45deg);
         transition: .3s border;
-        @include media('<tablet') {
-            width: 11px;
-            height: 11px;
-            top: 11px;
-        }
     }
 }
 %btn-dark {
