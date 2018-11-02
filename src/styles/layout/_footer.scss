@@ -78,4 +78,15 @@
             height: 36px;
         }
     }
+    .legal-disclaimer {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid $c-str;
+        padding-bottom: 30px;
+        @include media('<tablet') {
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-bottom: 15px;
+        }
+    }
 }

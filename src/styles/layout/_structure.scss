@@ -395,6 +395,33 @@ html {
                 }
             }
         }
+        .services-block {
+            .sb__links {
+                &--list {
+                    li {
+                        &:not(:last-child) {
+                            @include media('>=tablet-l') {
+                                margin-right: 0;
+                                margin-left: 12px;
+                            }
+                            @include media('<tablet-l') {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    .q-icon {
+                        margin-right: 0;
+                        margin-left: 5px;
+                    }
+                }
+                &--title {
+                    @include media('>=tablet-l') {
+                        margin-right: 0;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
     }
 }
 .stock-ticker-container {
@@ -468,6 +495,27 @@ html {
                     transform: rotate(-180deg);
                 }
             }
+        }
+    }
+}
+.decor-block {
+    position: relative;
+    background-color: $c-str-1;
+    overflow: hidden;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 690px;
+        height: 1210px;
+        left: -30px;
+        top: 80px;
+        opacity: .5;
+        pointer-events: none;
+        background-image: url('../images/icons/svg/icon-logo-large-light.svg');
+        background-repeat: no-repeat;
+        @include media('<tablet-l') {
+            display: none;
         }
     }
 }

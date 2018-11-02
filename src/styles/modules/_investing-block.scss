@@ -9,9 +9,13 @@
     }
     .block-title {
         color: white;
+        font-weight: 300;
         @include media('<tablet') {
             font-size: 32px;
             line-height: 32px;
+        }
+        b {
+            font-weight: 700;
         }
     }
     .block-description {

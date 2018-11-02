@@ -84,7 +84,7 @@
             }
             @include media('<tablet') {
                 font-size: 16px;
-                line-height: 16px;
+                line-height: 20px;
             }
             &:not(:last-child) {
                 margin-bottom: 40px;
@@ -96,7 +96,7 @@
         li {
             padding-left: 45px;
             @include media('<tablet') {
-                padding-left: 17px;
+                //padding-left: 17px;
             }
             .q-icon {
                 width: 26px;
@@ -106,9 +106,9 @@
                 left: 0;
                 top: -1px;
                 @include media('<tablet') {
-                    width: 11px;
-                    height: 10px;
-                    top: 2px;
+                    //width: 11px;
+                    //height: 10px;
+                    //top: 2px;
                 }
             }
         }
@@ -161,6 +161,12 @@
                     padding-bottom: 20px;
                     padding-left: 57px;
                 }
+            }
+        }
+        + .info-block__list {
+            padding-top: 50px;
+            @include media('<tablet') {
+                padding-top: 20px;
             }
         }
     }
@@ -217,7 +223,7 @@
                 padding-top: 0;
             }
             .info-block__content {
-                @include media('>=tablet') {
+                @include media('>=tablet-l') {
                     padding-top: 110px;
                 }
             }
@@ -231,9 +237,15 @@
         .info-block__image {
             justify-content: flex-end;
             align-items: flex-start;
+            background-position: top right;
             @include media('<tablet') {
                 padding-right: 0;
             }
+        }
+    }
+    &.is-left {
+        .info-block__image {
+            background-position: top left;
         }
     }
     &.is-top {
@@ -248,6 +260,7 @@
     &.is-image--contain {
         .info-block__image {
             background-size: contain;
+            max-height: 720px;
         }
     }
     &.is-image--large {
@@ -272,9 +285,12 @@
     }
     .block-title {
         font-weight: 300;
-        margin-bottom: 40px;
+        @include media('>=tablet') {
+            margin-bottom: 40px;
+        }
         b {
             font-weight: 700;
+            display: inline-block;
         }
     }
 }

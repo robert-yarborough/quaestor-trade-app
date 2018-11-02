@@ -33,7 +33,7 @@
         </div>
     </div>
 </header>
-<div class="front-banner block-section">
+<div class="front-banner front-banner--large block-section">
     <div class="front-banner__bg" data-top-bottom="transform: translate3d(0px, 30%, 0px);"
          data-top="transform: translate3d(0px, 0%, 0px);" style="background-image: url('dist/images/backgrounds/bg-front-banner-1.jpg')"></div>
     <div class="front-banner__inner" data-200-top="transform: translate3d(0px, 0%, 0px); opacity: 1;"

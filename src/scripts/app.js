@@ -69,6 +69,8 @@ let init_slider_class = 'slider-initialized';
 let $finance_slider = $('.js-finance-block-slider');
 let financeSwiper;
 
+let $rate_slider = $('.js-rates-block-slider');
+let rateSwiper;
 const finance_slider_init = () => {
 	if ($finance_slider.length && !$finance_slider.hasClass(init_slider_class)) {
 		financeSwiper = new Swiper ($finance_slider, {
@@ -89,13 +91,39 @@ const finance_slider_init = () => {
 };
 
 const finance_slider_destroy = () => {
-	if ($finance_slider.length && $finance_slider.hasClass(init_slider_class)) {
-		financeSwiper.destroy(false, true);
-		$finance_slider.removeClass(init_slider_class);
+    if ($finance_slider.length && $finance_slider.hasClass(init_slider_class)) {
+        financeSwiper.destroy(false, true);
+        $finance_slider.removeClass(init_slider_class);
+    }
+};
+
+const rate_slider_init = () => {
+    if ($rate_slider.length) {
+        rateSwiper = new Swiper ($rate_slider, {
+            slidesPerView: 2,
+            speed: 750,
+            navigation: {
+                nextEl: '.js-rate-sl-btn-next',
+                prevEl: '.js-rate-sl-btn-prev',
+            },
+            breakpoints: {
+                550: {
+                    slidesPerView: 1,
+                }
+            },
+        });
+        $rate_slider.addClass(init_slider_class);
+    }
+};
+
+const rate_slider_destroy = () => {
+	if ($rate_slider.length && $rate_slider.hasClass(init_slider_class)) {
+		rateSwiper.destroy(false, true);
+		$rate_slider.removeClass(init_slider_class);
 	}
 };
 
-let $feature_slider = $('.js-features-block-slider');
+let $feature_slider = $('.js-block-slider');
 let $feature_slider_wrap = $feature_slider.find('.features-block__grid');
 let $feature_slider_item = $feature_slider.find('.features-block__col');
 let $nav_prev = $('<div class="swiper-button-prev js-ft-sl-btn-prev"/>');
@@ -142,10 +170,12 @@ const animate_destroy = () => {
 addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
 	if (match) {
 		finance_slider_init();
+        rate_slider_init();
         feature_slider_init();
 	}
 	else if (match == false) {
 		finance_slider_destroy();
+        rate_slider_destroy();
         feature_slider_destroy();
 	}
 });
