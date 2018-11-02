@@ -92,6 +92,7 @@
         </div>
     </div>
 </div>
+<?php if (0) { ?>
 <div class="stock-ticker-container">
     <ul id="webTicker" class="stock-ticker">
         <li><span class="st-label">GFH  100</span><span class="st-value is-up">0.50%</span></li>
@@ -104,7 +105,7 @@
         <li><span class="st-label">GFH  100</span><span class="st-value is-up">0.50%</span></li>
     </ul>
 </div>
-
+<?php } ?>
 <div class="available-links">
     <div class="page-frame">
         <div class="available-links__inner">
@@ -174,7 +175,7 @@
         </div>
     </div>
 </div>
-<div class="features-block block-section js-features-block-slider is-slider" data-bottom-top="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;">
+<div class="features-block block-section js-block-slider is-slider" data-bottom-top="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;">
     <div class="page-frame">
         <div class="block-title block-center">
             A range of <b>investment options</b>
@@ -391,28 +392,6 @@
 <script src="src/scripts/plugins/jquery.webticker.min.js"></script>
 <script src="src/scripts/plugins/stocks.js"></script>
 <script src="dist/scripts/app.js?v=1"></script>
-<script type="text/javascript">
-    $(document).on('ready', function () {
-        $('#webTicker').webTicker();
-    })
-
-    //var stocks = new Stocks('ERFQDZF07NY3WDQU'); // Replace with your own
-
-    // Let's get the stock data of Tesla Inc for the last 10 minutes
-    //    async function request () {
-    //        var result = await stocks.sectorPerformance({
-    //            timespan: 'year-to-date'
-    //        });
-    //
-    //        //document.body.innerHTML = JSON.stringify(result);
-    //        //jQuery('.finance').html(JSON.stringify(result));
-    //        var data = JSON.stringify(result);
-    //        //var data = JSON.parse(p);
-    //        //jQuery('.finance').html(r);
-    //    }
-    //    request();
-</script>
-<!--<script src="src/scripts/plugins/finance-api.js"></script>-->
 </body>
 
 </html>

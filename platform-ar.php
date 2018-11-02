@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 
 <head>
     <meta charset="utf-8">
@@ -24,8 +24,8 @@
                     <div class="menu--lang__main">
                         <div class="menu--lang__main-icon js-h-lang-toggle"><svg class="q-icon"><use xlink:href="#icon-globe"></use></svg></div>
                         <ul class="menu--lang__main-list js-h-lang-drop">
-                            <li class="is-current"><a href="/">English</a></li>
-                            <li><a href="/platform-ar.php">Arabic</a></li>
+                            <li><a href="/platform.php">English</a></li>
+                            <li class="is-current"><a href="/platform-ar.php">Arabic</a></li>
                         </ul>
                     </div>
                     <div class="menu--links js-h-menu-links">
