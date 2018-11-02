@@ -7,8 +7,8 @@
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
-    <link rel="stylesheet" href="/dist/styles/style.css">
-    <title>Q8 Securities | Home</title>
+    <link rel="stylesheet" href="/dist/styles/style.css?v=3">
+    <title>Q8 Securities | Platform</title>
 </head>
 
 <body>
@@ -340,7 +340,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script src="src/scripts/plugins/jquery.webticker.min.js"></script>
 <script src="src/scripts/plugins/stocks.js"></script>
-<script src="dist/scripts/app.js"></script>
+<script src="dist/scripts/app.js?v=3"></script>
 </body>
 
 </html>
