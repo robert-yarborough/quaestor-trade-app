@@ -7,7 +7,7 @@
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
-    <link rel="stylesheet" href="/dist/styles/style.css?v=3">
+    <link rel="stylesheet" href="/dist/styles/style.css?v=5">
     <title>Q8 Securities | Platform</title>
 </head>
 
@@ -120,7 +120,7 @@
                             Aenean euismod bibendum laoreet. Aenean euismod bibendum.
                         </div>
                         <div class="services-block__btn">
-                            <a class="btn-primary__dark" href="#">EXPLORE DESKTOP</a>
+                            <a class="btn-primary__dark" href="#">EXPLORE WEB</a>
                         </div>
                         <div class="services-block__links">
                             <div class="sb__links--title">Available on</div>
@@ -143,7 +143,7 @@
                             Aenean euismod bibendum laoreet. Aenean euismod bibendum.
                         </div>
                         <div class="services-block__btn">
-                            <a class="btn-primary__dark" href="#">EXPLORE DESKTOP</a>
+                            <a class="btn-primary__dark" href="#">EXPLORE Mobile</a>
                         </div>
                         <div class="services-block__links">
                             <div class="sb__links--title">Available on</div>
