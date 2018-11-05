@@ -242,6 +242,18 @@
                 padding-right: 0;
             }
         }
+        .info-block__content {
+            @include media('>=tablet') {
+                padding-right: 85px;
+            }
+        }
+        .info-block__col {
+            &:not(.is-image) {
+                @include media('>=tablet-l') {
+                    padding-left: 215px;
+                }
+            }
+        }
     }
     &.is-left {
         .info-block__image {
