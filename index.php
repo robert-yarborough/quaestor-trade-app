@@ -96,7 +96,7 @@
 <div class="info-block block-section">
     <div class="info-block__row">
         <div class="info-block__col is-image">
-            <div class="info-block__image" style="background-image: url('dist/images/backgrounds/bg-image-platform.jpg')"></div>
+            <div class="info-block__image" style="background-image: url('dist/images/backgrounds/bg-image-platform-2.jpg')"></div>
         </div>
         <div class="info-block__col">
             <div class="info-block__content">
@@ -159,10 +159,9 @@
                 </div>
                 <?php } ?>
                 <ul class="info-block__list">
-                    <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Lowes fee of 1/8 per annual</li>
+                    <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Lowest portfolio fees of 1/8 % per annum</li>
                     <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Non discretionary</li>
                     <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>Direct account</li>
-                    <li><svg class="q-icon"><use xlink:href="#icon-checkmark"></use></svg>24h customer support</li>
                 </ul>
             </div>
         </div>
@@ -174,7 +173,7 @@
             A trusted name <b>in Kuwaiti finance</b>
         </div>
         <div class="block-description block-center">
-            Q8 Broker is built for the needs of traders with complex operations and sophisticated trading strategies. Our unique offering includes:
+            Q8 Broker is built for the needs of traders with complex operations and sophisticated trading strategies.
         </div>
         <div class="finance-block__inner">
             <div class="swiper-container js-finance-block-slider">
@@ -225,9 +224,7 @@
             </div>
         </div>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d869.1875535890931!2d47.975521966369364!3d29.377602140121105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85dc33e91715%3A0xcbde77a993e3474b!2sQ8+Trade!5e0!3m2!1sru!2sua!4v1533753742575"
-            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.748588152221!2d47.97770351327771!3d29.37764974476713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf84ee7ad6bbed%3A0xe39f13b634b3c0c1!2sBoursa+Kuwait!5e0!3m2!1suk!2sua!4v1541601794284" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 <footer class="main-footer" role="contentinfo">
     <div class="page-frame">
         <div class="main-footer__inner">
@@ -254,6 +251,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script src="dist/scripts/app.js"></script>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    window.__lc = window.__lc || {};
+    window.__lc.license = 10246002;
+    (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+</script>
+<noscript>
+    <a href="https://www.livechatinc.com/chat-with/10246002/">Chat with us</a>,
+    powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127749993-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-127749993-3');
+</script>
+<!-- End of Google Analytics -->
+
 </body>
 
 </html>
