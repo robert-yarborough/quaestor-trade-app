@@ -101,7 +101,7 @@
 <div class="info-block block-section">
     <div class="info-block__row">
         <div class="info-block__col is-image">
-            <div class="info-block__image" style="background-image: url('dist/images/backgrounds/bg-image-platform.jpg')"></div>
+            <div class="info-block__image" style="background-image: url('dist/images/backgrounds/bg-image-platform-2.jpg')"></div>
         </div>
         <div class="info-block__col">
             <div class="info-block__content">
@@ -265,5 +265,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script src="dist/scripts/app.js"></script>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    window.__lc = window.__lc || {};
+    window.__lc.license = 10246002;
+    (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+</script>
+<noscript>
+    <a href="https://www.livechatinc.com/chat-with/10246002/">Chat with us</a>,
+    powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127749993-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-127749993-3');
+</script>
+<!-- End of Google Analytics -->
+
 </body>
 </html>
