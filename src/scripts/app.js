@@ -65,6 +65,13 @@ $h_lang_toggle.on({
     }
 });
 
+let $chat_widget = $('#chat-widget-container');
+setTimeout(function () {
+    if($chat_widget.length) {
+        $root.addClass('is-cart');
+    }
+},3000);
+
 let init_slider_class = 'slider-initialized';
 let $finance_slider = $('.js-finance-block-slider');
 let financeSwiper;

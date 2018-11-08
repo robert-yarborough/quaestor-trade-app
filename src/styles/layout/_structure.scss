@@ -67,6 +67,15 @@
 .block-section {
     overflow: hidden;
 }
+body {
+    &.has-chat-widget {
+        .main-footer {
+            @include media('<tablet') {
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
 html {
     &[dir="rtl"] {
         text-align: right;
@@ -110,9 +119,6 @@ html {
                 li {
                     padding-left: 0;
                     padding-right: 45px;
-                    @include media('<tablet') {
-                        padding-right: 17px;
-                    }
                 }
                 .q-icon {
                     left: auto;
@@ -182,11 +188,19 @@ html {
             &__right {
                 margin-left: 0;
                 margin-right: auto;
+                @include media('<tablet') {
+                    margin-right: 0;
+                }
             }
             &__copyright {
                 margin-right: 0;
                 @include media('>tablet') {
                     margin-left: 40px;
+                }
+            }
+            .powered-title {
+                @include media('<tablet') {
+                    margin-left: 10px;
                 }
             }
             .q-icon {
