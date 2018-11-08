@@ -33,8 +33,18 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: calc(100% + 500px);
-        margin-left: -500px;
+        @include media('>=tablet-l') {
+            width: calc(100% + 710px);
+            margin-left: -710px;
+        }
+        @include media('<tablet-l') {
+            width: calc(100% + 500px);
+            margin-left: -500px;
+        }
+        @include media('<tablet') {
+            width: 100%;
+            margin-left: 0;
+        }
     }
     &__inner {
         @extend .page-frame;

@@ -6,7 +6,7 @@
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" type="image/x-icon" href="/favicon.ico?v=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
-    <link rel="stylesheet" href="/dist/styles/style.css?v=5">
+    <link rel="stylesheet" href="/dist/styles/style.css?v=6">
     <title>Q8 Securities</title>
 </head>
 <body>
@@ -237,7 +237,7 @@
             </div>
         </div>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d869.1875535890931!2d47.975521966369364!3d29.377602140121105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85dc33e91715%3A0xcbde77a993e3474b!2sQ8+Trade!5e0!3m2!1sru!2sua!4v1533753742575" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d730.8960676067617!2d47.976355218695005!3d29.377689921102657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf84ee7ad6bbed%3A0xe39f13b634b3c0c1!2sBoursa+Kuwait!5e0!3m2!1suk!2sua!4v1541672219163" width="800" height="600" frameborder="0" style="border:0" allowfullscreen>
 </div>
 <footer class="main-footer" role="contentinfo">
     <div class="page-frame">
@@ -270,6 +270,11 @@
 <script type="text/javascript">
     window.__lc = window.__lc || {};
     window.__lc.license = 10246002;
+    var LC_API = LC_API || {};
+    LC_API.on_after_load = function() {
+        var a = document.body;
+        a.classList ? a.classList.add('has-chat-widget') : a.className += ' has-chat-widget';
+    };
     (function() {
         var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
         lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
