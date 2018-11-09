@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
     <link rel="stylesheet" href="/dist/styles/style.css?v=5">
-    <title>Q8 Securities | Platform</title>
+    <title>Q8 Broker | Platform</title>
 </head>
 
 <body>
