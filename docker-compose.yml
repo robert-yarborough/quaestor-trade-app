@@ -8,6 +8,7 @@ services:
       MYSQL_DATABASE: $DB_NAME
       MYSQL_USER: $DB_USER
       MYSQL_PASSWORD: $DB_PASSWORD
+
   php:
     image: wodby/drupal-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_php"
@@ -29,8 +30,9 @@ services:
     volumes:
       - ./:/var/www/html
       - ./files:/mnt/files/
+
   nginx:
-    image: wodby/nginx:$NGINX_TAG
+    image: wodby/drupal-nginx:$NGINX_TAG
     container_name: "${PROJECT_NAME}_nginx"
     depends_on:
       - php
@@ -58,6 +60,9 @@ services:
       - "3000"
     volumes:
       - ./:/var/www/html
+  # by default, runs as 'wodby' user that leads to issues with permissions
+  # so we explicitly set the user to root
+    user: root
     command: sh -c 'yarn install && yarn run start'
 
   mailhog:
@@ -102,7 +107,6 @@ services:
     - 'traefik.port=80'
     - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL}'
 
-  # Behat
   behat:
     hostname: behat
     container_name: "${PROJECT_NAME}_behat"
@@ -117,10 +121,13 @@ services:
       - 'traefik.backend=behat'
       - 'traefik.port=80'
       - 'traefik.frontend.rule=Host:behat.${PROJECT_BASE_URL}'
-  # Selenium
+
   browser:
     hostname: browser
     container_name: "${PROJECT_NAME}_browser"
     # Pick/uncomment one
     image: selenium/standalone-chrome
     #image: selenium/standalone-firefox
+
+volumes:
+  codebase:

@@ -1,0 +1,11 @@
+base:
+  version: VERSION
+  css:
+    theme:
+      css/main.css: {}
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

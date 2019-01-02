@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 
+set -x
+
 cd ${APP_ROOT}
 
 # Export local environments variables.
 export $(cat .env | grep -v \# | xargs)
+
+sudo chmod -R 777 ${PROJECT_ROOT}
 
 # Install all dependencies.
 composer install
 
 # Install Drupal
 echo "Installing Drupal. It will take several minutes."
-vendor/bin/drush si minimal -y --db-url=mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:3306/${DB_NAME} --site-name="Drupal 8 Lightning" --site-mail="admin@example.com" --account-name="admin" --account-mail="admin@example.com" --account-pass="1111"
+vendor/bin/drush si lightning -y --db-url=mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:3306/${DB_NAME} --site-name="Drupal 8 Lightning" --site-mail="admin@example.com" --account-name="admin" --account-mail="admin@example.com" --account-pass="1111"
 
 sudo chmod -R 777 ${PROJECT_ROOT}
 
