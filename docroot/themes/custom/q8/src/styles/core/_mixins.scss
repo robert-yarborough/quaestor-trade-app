@@ -1,0 +1,63 @@
+@mixin input-styles($textarea: true, $select: true) {
+    $selectorMap: '
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="month"],
+    input[type="date"],
+    input[type="time"],
+    input[type="search"]
+    ';
+    @if ($textarea) {
+        $selectorMap: $selectorMap + ', textarea';
+    }
+    @if ($select) {
+        $selectorMap: $selectorMap + ', select';
+    }
+    #{$selectorMap} {
+        @content
+    }
+}
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+// extend just :before from css sprite
+@mixin icon-before($icon-name, $include-before: true) {
+    @if ($include-before) {
+        &:before {
+            @extend .icon:before;
+            @extend .#{$icon-name}:before;
+        }
+    } @else {
+        @extend .icon:before;
+        @extend .#{$icon-name}:before;
+    }
+}
+
+@mixin main-menu-icon($icon-name) {
+    &:before {
+        @include icon-before('#{$icon-name}-sec', false);
+    }
+    &:after {
+        @include icon-before('#{$icon-name}-prime', false);
+    }
+}

@@ -1,0 +1,125 @@
+.rates-block {
+    padding: 85px 0 100px;
+    background-color: $c-str-1;
+    @include media('<tablet-l') {
+        padding: 40px 0;
+    }
+    &__title {
+        text-align: center;
+        font-size: 50px;
+        line-height: 48px;
+        margin-bottom: 20px;
+        font-weight: 300;
+        @include media('<tablet-l') {
+            font-size: 28px;
+        }
+        b {
+            font-weight: 700;
+        }
+    }
+    &__desc {
+        text-align: center;
+        font-size: 22px;
+        line-height: 26px;
+        max-width: 915px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50px;
+        @include media('<tablet-l') {
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 30px;
+        }
+    }
+    &__inner {
+        position: relative;
+    }
+    &__list {
+        @include media('>=tablet') {
+            display: flex;
+            justify-content: center;
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+    }
+    &__item {
+        text-align: center;
+        position: relative;
+        @include media('>=tablet') {
+            margin-left: 6px;
+            margin-right: 6px;
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+        @include media('<tablet') {
+            padding: 0 10px;
+        }
+    }
+    &__icon {
+        .q-icon {
+            width: 215px;
+            height: 215px;
+            fill: $c-bright;
+            @include media('<tablet-l') {
+                width: 137px;
+                height: 137px;
+            }
+        }
+    }
+    &__content {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media('<tablet-l') {
+            top: 20px
+        }
+    }
+    &__text {
+        font-size: 22px;
+        line-height: 26px;
+        @include media('<tablet-l') {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+    &__rate {
+        color: $c-primary;
+        font-weight: 700;
+        font-size: 68px;
+        line-height: 70px;
+        margin-bottom: 10px;
+        @include media('<tablet-l') {
+            font-size: 48px;
+            line-height: normal;
+            margin-bottom: 5px;
+        }
+    }
+    &__btn {
+        text-align: center;
+        padding-top: 50px;
+        @include media('<tablet') {
+            padding-top: 30px;
+        }
+    }
+    .swiper-container  {
+        @include media('>=tablet') {
+            overflow: visible;
+        }
+    }
+    .page-frame {
+        position: relative;
+        z-index: 1;
+        @include media('<tablet') {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include media('>=tablet') {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.block-title {
+    color: $c-base;
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 600px;
+    @include media('>=tablet-l') {
+        font-size: 48px;
+        line-height: 55px;
+    }
+    @include media('<tablet-l', '>=tablet') {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    @include media('<tablet') {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    b {
+        @include media('>=tablet-l') {
+            display: block;
+        }
+    }
+}

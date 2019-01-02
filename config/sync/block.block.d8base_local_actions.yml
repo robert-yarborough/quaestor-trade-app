@@ -1,0 +1,20 @@
+uuid: 084129fe-8cec-4e1f-8922-800c6a880d95
+langcode: en
+status: true
+dependencies:
+  theme:
+    - d8base
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: d8base_local_actions
+theme: d8base
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

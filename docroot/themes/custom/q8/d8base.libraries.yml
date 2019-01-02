@@ -2,9 +2,15 @@ base:
   version: VERSION
   css:
     theme:
-      css/main.css: {}
+      css/vendor.css: {}
+      //fonts.googleapis.com/css?family=Roboto:300,400,700: { type: external }
+      //cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css: { type: external }
+      css/style.css: {}
   js:
-    js/script.js: {}
+    js/vendor.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js: { type: external }
+    //cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js: { type: external }
+    js/app.js: {}
   dependencies:
     - core/jquery
     - core/drupal

@@ -1,0 +1,320 @@
+.main-header {
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+    .navbar {
+        &__group {
+            flex-grow: 1;
+            margin-left: 70px;
+        }
+        &__top {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            @include media('<tablet') {
+                padding-top: 5px;
+            }
+            &--main {
+                display: flex;
+                align-items: center;
+                @include media('<=tablet-l') {
+                    justify-content: flex-end;
+                }
+                + .navbar__bot--main {
+                    @include media('>tablet-l') {
+                        margin-top: 7px;
+                        padding-top: 15px;
+                        border-top: 1px solid white;
+                    }
+                }
+            }
+
+        }
+        &__bot {
+            &--main {
+                @include media('>tablet-l') {
+                    display: flex;
+                    align-items: center;
+                }
+                @include media('<=tablet-l') {
+                    transition: .5s;
+                    position: fixed;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: $c-primary;
+                    padding: 50px 25px;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    overflow: auto;
+                    &:not(.is-opened) {
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateX(100%);
+                    }
+                }
+                @include media('<tablet') {
+                    padding: 90px 20px 30px;
+                }
+                .logo {
+                    @include media('>tablet-l') {
+                        display: none;
+                    }
+                    @include media('<=tablet-l') {
+                        position: absolute;
+                        left: 25px;
+                        top: 25px;
+                    }
+                    @include media('<tablet') {
+                        top: 20px;
+                        left: 20px;
+                    }
+                }
+                .menu--user {
+                    @include media('>tablet-l') {
+                        margin-left: auto;
+                    }
+                    ul {
+                        @include media('<tablet') {
+                            flex-direction: column;
+                        }
+                    }
+                    li {
+                        &:not(:last-child) {
+                            @include media('>=tablet') {
+                                margin-right: 20px;
+                            }
+                            @include media('<tablet') {
+                                margin-bottom: 10px;
+                            }
+                        }
+                        @include media('<tablet') {
+                            width: 100%;
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        line-height: 1.2;
+                        @include media('<=tablet-l') {
+                            min-width: 205px;
+                            text-align: center;
+                        }
+                        @include media('<tablet') {
+                            width: 100%;
+                        }
+                    }
+                    .is-open-account {
+                        background-color: white;
+                        color: $c-primary;
+                        transition: .3s background, .3s color, .3s box-shadow;
+                        &:hover {
+                            background-color: $c-primary;
+                            color: white;
+                            box-shadow: inset 0 0 0 1px $c-bright;
+                        }
+                    }
+                    .is-login {
+                        box-shadow: inset 0 0 0 1px white;
+                        transition: .3s box-shadow, .3s color;
+                        background-color: $c-primary;
+                        .q-icon {
+                            fill: currentColor;
+                        }
+                        &:hover {
+                            box-shadow: inset 0 0 0 1px $c-bright;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-logo {
+        fill: white;
+        @include media('>tablet-l') {
+            width: 173px;
+            height: 93px;
+        }
+        @include media('<=tablet-l') {
+            width: 99px;
+            height: 55px;
+        }
+    }
+    .header-search {
+        position: relative;
+        width: 30px;
+        height: 29px;
+        @include media('>tablet-l') {
+            margin-left: 30px;
+            top: -5px;
+        }
+        @include media('<=tablet-l') {
+            width: 25px;
+            height: 24px;
+            margin-left: 28px;
+            &:before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 24px;
+                background-color: white;
+                position: absolute;
+                left: -14px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        @include media('<tablet') {
+            display: none;
+        }
+        &__toggle {
+            position: relative;
+            display: block;
+            height: 100%;
+            .q-icon {
+                width: 100%;
+                height: 100%;
+                fill: $c-bright;
+                transition: .3s fill;
+            }
+            &:before, &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 3px;
+                height: 32px;
+                background-color: $c-bright;
+                left: 12px;
+                top: 50%;
+                margin-top: -15px;
+                opacity: 0;
+            }
+            &:before {
+                transform: rotate(-45deg);
+            }
+            &:after {
+                transform: rotate(45deg);
+            }
+            &:hover {
+                .q-icon {
+                    fill: white;
+                }
+            }
+            &.is-active {
+                .q-icon {
+                    opacity: 0;
+                }
+                &:before, &:after {
+                    opacity: 1;
+                }
+            }
+        }
+        &__box {
+            position: absolute;
+            right: 100%;
+            top: -7px;
+            margin-right: 10px;
+            min-width: 400px;
+            transition: .5s;
+            z-index: 5;
+            .q-icon {
+                width: 20px;
+                height: 19px;
+                fill: white;
+                transition: .3s fill;
+            }
+            &:not(.is-opened) {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(20px);
+                min-width: 20px;
+            }
+        }
+        &__field {
+            height: 40px;
+            background-color: $c-primary;
+            border-color: white;
+            color: white;
+            width: 100%;
+            padding-right: 50px;
+        }
+        &__action {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            opacity: 0;
+            cursor: pointer;
+            &--icon {
+                pointer-events: none;
+                position: absolute;
+                right: 15px;
+                top: 9px;
+            }
+        }
+    }
+}
+.header-toggle-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    &:before, &:after {
+        content: '';
+    }
+    &:before, &:after, span {
+        display: block;
+        background-color: $c-bright;
+        width: 100%;
+        height: 3px;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    @include media('>tablet-l') {
+        display: none;
+    }
+    @include media('<=tablet-l') {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+.header-toggle-close {
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    right: 25px;
+    top: 17px;
+    @include media('<tablet') {
+        right: 15px;
+    }
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 32px;
+        background-color: $c-bright;
+        left: 19px;
+        top: 50%;
+        margin-top: -15px;
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+    @include media('>tablet-l') {
+        display: none;
+    }
+}

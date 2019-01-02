@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{%
+  set classes = [
+  'main-header',
+  'navbar',
+  'navbar-default',
+  'region',
+  'region-' ~ region|clean_class,
+]
+%}
+
+{% if content %}
+  <div {{ attributes.addClass(classes) }}>
+    <div class="page-frame">
+      <div class="main-header__inner">
+        {{ elements.d8base_branding }}
+        <div class="navbar__group">
+          <div class="navbar__top--main">
+            <div class="menu--lang__main">
+              {{ elements.languageswitcher }}
+            </div>
+            
+            <div class="menu--links js-h-menu-links">
+              {{ elements.supernav }}
+            </div>
+            
+            <div class="header-search js-h-search">
+              <a href="#" class="header-search__toggle js-h-search-toggle"><svg class="q-icon"><use xlink:href="#icon-search"></use></svg></a>
+              <div class="header-search__box js-h-search-box">
+                <form>
+                  <input class="header-search__field" type="search" value="Search">
+                  <input class="header-search__action" type="submit" value="Search">
+                  <div class="header-search__action--icon"><svg class="q-icon"><use xlink:href="#icon-search"></use></svg></div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <div class="navbar__bot--main js-h-menu-main">
+            {{ elements.d8base_main_menu }}
+            <div class="menu--user">
+              {{ elements.d8base_account_menu }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="front-banner block-section front-banner--main is-center">
+  <div class="front-banner__bg skrollable skrollable-before" data-top-bottom="transform: translate3d(0px, 30%, 0px);" data--200-top="transform: translate3d(0px, 0%, 0px);" style="background-image: url('/{{ directory }}/images/backgrounds/bg-front-banner-3.jpg'); transform: translate3d(0px, 0%, 0px);"></div>
+  <div class="front-banner__inner skrollable skrollable-before" data-top-bottom="transform: translate3d(0px, -30%, 0px); opacity: 0;" data--200-top="transform: translate3d(0px, 0%, 0px); opacity: 1;" style="transform: translate3d(0px, 0%, 0px); opacity: 1;">
+    <div class="page-frame">
+      <div class="front-banner__title">
+        <h1>Platform</h1>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+.swiper-button-next,
+.swiper-button-prev {
+    background: none;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid $c-primary;
+    transition: .3s border;
+    margin-top: -10px;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        border-color: $c-secondary;
+    }
+}
+.swiper-button-next {
+    border-right: 2px solid $c-primary;
+    transform: rotate(45deg);
+}
+.swiper-button-prev {
+    border-left: 2px solid $c-primary;
+    transform: rotate(-45deg);
+}
+.swiper-container-rtl {
+    .swiper-button-next,
+    .swiper-button-prev {
+        background: none;
+    }
+}

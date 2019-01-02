@@ -1,0 +1,8 @@
+$breakpoints: (
+    mobile-m: 544px,
+    tablet: 768px,
+    tablet-m: 1024px,
+    tablet-l: 1224px,
+    desktop-l: 1600px,
+    desktop: $sw-site + $sw-gap-desk*2
+);
