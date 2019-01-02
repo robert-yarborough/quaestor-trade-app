@@ -1,0 +1,18 @@
+dev:
+  host: host.com
+  options:
+    command-specific:
+      sql-sync:
+        no-dump: true
+    os: Linux
+  paths:
+    files: sites/default/files
+    # Optional. Path to the drush script on the server side
+    drush-script: /var/www/httpdocs/vendor/drush/drush/drush.php
+  root: /var/www/httpdocs/docroot
+  # Site base Url
+  uri: 'http://site.com/'
+  # SSH user.
+  user: user
+  ssh:
+    options: '-p 5012'

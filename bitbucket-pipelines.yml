@@ -1,0 +1,52 @@
+image: wodby/drupal-php:7.1
+# Todo:
+# - Write an manual for acquia keys
+# - Add template for another environments (prod)
+
+options:
+  max-time: 3
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          name: Checking codestyles on the DEV branch
+          deployment: test
+          script:
+            - sh ./scripts/qa/phpcs_dev.sh
+      - step:
+          name: Push code to Acquia git
+          deployment: staging
+          script:
+            # ToDo. Clarify do we need exporting of this vars on the each step.
+            - export ACQUIA_BRANCH=dev                        # branch name Ex. Dev.
+            - export ACQUIA_ENV=dev                           # Environment name
+            - export ACQUIA_DB_NAME=dev                       # Database name
+            - sh ./scripts/deploy/push_code.sh
+      - step:
+          name: Install Composer Dependencies and Deploy to dev
+          deployment: production
+          script:
+            - sh ./scripts/deploy/composer_install.sh
+            - sh ./scripts/deploy/backup_and_import.sh
+    stage:
+      - step:
+          name: Checking codestyles on the stage branch.
+          deployment: test
+          script:
+            - sh ./scripts/qa/phpcs_dev.sh
+      - step:
+          name: Push code to Acquia git
+          deployment: staging
+          script:
+            # ToDo. Clarify do we need exporting of this vars on the each step.
+            - export ACQUIA_BRANCH=stage                        # branch name Ex. `stage`.
+            - export ACQUIA_ENV=stage                           # Environment name
+            - export ACQUIA_DB_NAME=stage                       # Database name
+            - sh ./scripts/deploy/push_code.sh
+      - step:
+          name: Install Composer Dependencies and Deploy to Stage Environment
+          deployment: production
+          script:
+            - sh ./scripts/deploy/composer_install.sh
+            - sh ./scripts/deploy/backup_and_import.sh

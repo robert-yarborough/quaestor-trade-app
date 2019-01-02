@@ -1,0 +1,7 @@
+version: "2"
+services:
+  php:
+    volumes:
+    - ./:/var/www/html
+    - <PATH_TO_YOUR_SSH_KEYS_FOLDER>:/home/wodby/.ssh # <PATH_TO_YOUR_SSH_KEYS_FOLDER> assumes system path to the folder with SSH KEYS
+    # Note: Keys should have name template id_rsa*

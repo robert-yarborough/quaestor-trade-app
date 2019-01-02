@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Deployment script for DAD projects.
+# Runs every server pull.
+
+# Die on any error.
+set -e
+
+sh scripts/qa/phpcs_dev.sh
+
+# Install all dependencies.
+composer install
+
+cd docroot
+
+echo 'Preview and import drupal configs.'
+../vendor/bin/drush config-import -y
+../vendor/bin/drush updatedb -y
+../vendor/bin/drush cache-rebuild
+
+echo 'Import content.'
+../vendor/bin/drush eval "\Drupal::service('default_content.importer')->importContent('dl_content');"
+../vendor/bin/drush entity-updates -y

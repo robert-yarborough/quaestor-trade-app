@@ -1,10 +1,24 @@
-.tmp
-bower_components
-node_modules
+# If you have never committed ".idea" folder you are not developer
+.idea/
 
-.eslintcache
-/.idea/
+# Ignore binaries.
+/bin
 
-/dist/scripts/report.html
-/dist/styles/*.map
-/gulp/config.local.js
+# Ignore non-custom parts of Drupal.
+/docroot/core
+/docroot/libraries
+/docroot/modules/contrib
+/docroot/profiles/contrib
+/docroot/themes/contrib
+/docroot/sites/default/files
+
+/docroot/sites/*/settings.php
+
+# Ignore node and npm.
+*/node_modules/*
+
+# Ignore Composer-managed dependencies.
+vendor/
+
+# Ignore local docker compose overrides.
+docker-compose.override.yml
