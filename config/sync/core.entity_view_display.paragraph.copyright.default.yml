@@ -1,0 +1,58 @@
+uuid: e0e57cb5-a501-4410-b2d9-5bd6cf3e5648
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.copyright.field_description
+    - field.field.paragraph.copyright.field_legal_disclaimer
+    - field.field.paragraph.copyright.field_link
+    - paragraphs.paragraphs_type.copyright
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_description
+        - field_link
+        - field_legal_disclaimer
+id: paragraph.copyright.default
+targetEntityType: paragraph
+bundle: copyright
+mode: default
+content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_legal_disclaimer:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

@@ -1,0 +1,20 @@
+uuid: 538b6ece-0b6c-4d68-8409-cb5f4ee9d7bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_twi_two_items
+field_name: field_twi_two_items
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

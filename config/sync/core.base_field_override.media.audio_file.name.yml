@@ -1,0 +1,20 @@
+uuid: 4ce470db-5611-4752-9f75-e4c0352c532c
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio_file
+id: media.audio_file.name
+field_name: name
+entity_type: media
+bundle: audio_file
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

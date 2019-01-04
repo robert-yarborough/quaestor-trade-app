@@ -1,0 +1,8 @@
+uuid: a3f19f0d-d754-4e61-bfb1-d8657df9b46a
+langcode: en
+status: true
+dependencies: {  }
+id: block_paragraph
+label: 'Block Paragraph'
+revision: 1
+description: ''

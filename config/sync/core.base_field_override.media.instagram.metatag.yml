@@ -1,0 +1,18 @@
+uuid: cdb9b88c-6fbb-465a-a908-069ab2256f01
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.instagram
+id: media.instagram.metatag
+field_name: metatag
+entity_type: media
+bundle: instagram
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

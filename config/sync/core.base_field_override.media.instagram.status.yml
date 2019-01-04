@@ -1,0 +1,22 @@
+uuid: 3328263c-6c43-4aae-a16a-59cd44107543
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.instagram
+id: media.instagram.status
+field_name: status
+entity_type: media
+bundle: instagram
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

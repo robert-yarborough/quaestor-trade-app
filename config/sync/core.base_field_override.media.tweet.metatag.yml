@@ -1,0 +1,18 @@
+uuid: 68dcc42b-55d3-44d3-b179-316e553bd5f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+id: media.tweet.metatag
+field_name: metatag
+entity_type: media
+bundle: tweet
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,22 @@
+uuid: 423acb07-ba42-459a-9828-112f38552490
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.banner_app_stores
+id: paragraph.banner_app_stores.status
+field_name: status
+entity_type: paragraph
+bundle: banner_app_stores
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

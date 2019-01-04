@@ -1,0 +1,19 @@
+uuid: 30f0b4d4-de54-4992-bf66-333101302cc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_subtitle
+    - paragraphs.paragraphs_type.top_banner
+id: paragraph.top_banner.field_sub_subtitle
+field_name: field_sub_subtitle
+entity_type: paragraph
+bundle: top_banner
+label: 'Sub subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

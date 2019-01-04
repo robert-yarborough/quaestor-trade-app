@@ -1,0 +1,9 @@
+uuid: 3520b7be-2227-4551-8091-df0d1b653355
+langcode: en
+status: true
+dependencies: {  }
+id: list_content
+label: 'List Content'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

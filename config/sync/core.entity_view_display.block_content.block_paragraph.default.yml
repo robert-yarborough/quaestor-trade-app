@@ -1,0 +1,25 @@
+uuid: da77c22d-d26c-4f83-b3e4-7c86bb14d67d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_paragraph
+    - field.field.block_content.block_paragraph.field_paragraph
+  module:
+    - entity_reference_revisions
+id: block_content.block_paragraph.default
+targetEntityType: block_content
+bundle: block_paragraph
+mode: default
+content:
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

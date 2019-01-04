@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      fields:
+        type:
+          label: النوع
+      filters:
+        type:
+          expose:
+            label: النوع

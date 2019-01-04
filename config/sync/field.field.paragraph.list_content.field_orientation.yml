@@ -1,0 +1,21 @@
+uuid: 7b70e18e-b92c-4b3f-acc7-d3007ba1ff99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_orientation
+    - paragraphs.paragraphs_type.list_content
+  module:
+    - options
+id: paragraph.list_content.field_orientation
+field_name: field_orientation
+entity_type: paragraph
+bundle: list_content
+label: Orientation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

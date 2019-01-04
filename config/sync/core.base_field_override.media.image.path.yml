@@ -1,0 +1,20 @@
+uuid: 0bc2515b-34e8-49d6-91b3-47b94b5acbb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - path
+id: media.image.path
+field_name: path
+entity_type: media
+bundle: image
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

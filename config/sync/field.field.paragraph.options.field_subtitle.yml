@@ -1,0 +1,21 @@
+uuid: f88b44bd-1c0b-48ff-8b2c-9eaa2e5c93e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.options
+  module:
+    - text
+id: paragraph.options.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: options
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

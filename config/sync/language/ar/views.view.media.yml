@@ -1,0 +1,14 @@
+label: ميديا
+display:
+  default:
+    display_options:
+      fields:
+        bundle:
+          label: النوع
+      filters:
+        bundle:
+          expose:
+            label: النوع
+      title: ميديا
+  media_page_list:
+    display_title: ميديا

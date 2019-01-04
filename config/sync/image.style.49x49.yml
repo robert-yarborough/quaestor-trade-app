@@ -1,0 +1,15 @@
+uuid: 5b10edec-0c94-4c36-abce-a7f759896855
+langcode: en
+status: true
+dependencies: {  }
+name: 49x49
+label: 49x49
+effects:
+  3f55bcbf-a20c-40cb-add2-bbc254dd6a77:
+    uuid: 3f55bcbf-a20c-40cb-add2-bbc254dd6a77
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 49
+      height: 49
+      anchor: center-center

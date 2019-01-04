@@ -1,0 +1,23 @@
+uuid: 6d1c7097-8da3-4711-984e-85d750aa3c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_appstore
+    - paragraphs.paragraphs_type.app_stores
+  module:
+    - link
+id: paragraph.app_stores.field_appstore
+field_name: field_appstore
+entity_type: paragraph
+bundle: app_stores
+label: AppStore
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

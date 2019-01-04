@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: d8base_branding
 theme: d8base
-region: header
-weight: -7
+region: content_top
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:

@@ -1,0 +1,18 @@
+uuid: f3a3152c-ab45-4c1a-a9b6-66c434974c56
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_paragraph
+id: block_content.block_paragraph.metatag
+field_name: metatag
+entity_type: block_content
+bundle: block_paragraph
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

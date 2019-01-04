@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      title: ميديا
+  page:
+    display_options:
+      menu:
+        title: ميديا

@@ -1,0 +1,19 @@
+uuid: abb44d3c-480e-4b33-8cb0-d02beb37d236
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_appstore
+field_name: field_appstore
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

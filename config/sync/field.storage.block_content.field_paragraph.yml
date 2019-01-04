@@ -1,0 +1,21 @@
+uuid: 19d9c00c-2204-4dbb-a7b5-02ec6ae31ede
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_paragraph
+field_name: field_paragraph
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

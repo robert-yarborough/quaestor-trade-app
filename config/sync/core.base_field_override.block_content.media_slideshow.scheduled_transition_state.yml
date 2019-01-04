@@ -1,0 +1,18 @@
+uuid: 83975eb0-0355-4a35-a708-881f3a9c2a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slideshow
+id: block_content.media_slideshow.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: block_content
+bundle: media_slideshow
+label: null
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

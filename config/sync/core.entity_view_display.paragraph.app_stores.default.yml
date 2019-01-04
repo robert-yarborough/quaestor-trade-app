@@ -1,0 +1,116 @@
+uuid: 365defa1-dfc7-470b-9d7c-658b428121e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.app_stores.field_appstore
+    - field.field.paragraph.app_stores.field_google_play
+    - field.field.paragraph.app_stores.field_macos_store
+    - field.field.paragraph.app_stores.field_windows_store
+    - paragraphs.paragraphs_type.app_stores
+  module:
+    - ds
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      content:
+        - field_appstore
+        - field_google_play
+        - field_macos_store
+        - field_windows_store
+id: paragraph.app_stores.default
+targetEntityType: paragraph
+bundle: app_stores
+mode: default
+content:
+  field_appstore:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+  field_google_play:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+  field_macos_store:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+  field_windows_store:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+hidden: {  }

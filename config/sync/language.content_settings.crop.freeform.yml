@@ -1,0 +1,11 @@
+uuid: 2d3be044-58e3-48e8-b0ce-88d19b4b7b52
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.freeform
+id: crop.freeform
+target_entity_type_id: crop
+target_bundle: freeform
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 668614ca-4043-4d72-afb3-26dc698ca568
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_line1
+    - paragraphs.paragraphs_type.options
+id: paragraph.options.field_title_line1
+field_name: field_title_line1
+entity_type: paragraph
+bundle: options
+label: 'Title line 1'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,64 @@
+uuid: c0390e71-4413-48c9-8ef4-0a3827da4948
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.options
+    - field.field.paragraph.text_with_image.field_subtitle
+    - field.field.paragraph.text_with_image.field_title
+    - field.field.paragraph.text_with_image.field_twi_image
+    - image.style.255x213
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - ds
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_twi_image
+        - field_title
+        - field_subtitle
+id: paragraph.text_with_image.options
+targetEntityType: paragraph
+bundle: text_with_image
+mode: options
+content:
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_twi_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: 255x213
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+hidden: {  }

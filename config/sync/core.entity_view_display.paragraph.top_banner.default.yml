@@ -1,0 +1,90 @@
+uuid: f5823cfd-5cca-4de1-a2d7-e04c91f0d8c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.top_banner.field_button
+    - field.field.paragraph.top_banner.field_sub_subtitle
+    - field.field.paragraph.top_banner.field_subtitle
+    - field.field.paragraph.top_banner.field_title_line1
+    - field.field.paragraph.top_banner.field_title_line2
+    - field.field.paragraph.top_banner.field_top_banner_bg
+    - paragraphs.paragraphs_type.top_banner
+  module:
+    - ds
+    - image
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_title_line1
+        - field_title_line2
+        - field_subtitle
+        - field_sub_subtitle
+        - field_button
+        - field_top_banner_bg
+id: paragraph.top_banner.default
+targetEntityType: paragraph
+bundle: top_banner
+mode: default
+content:
+  field_button:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sub_subtitle:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title_line1:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_line2:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_top_banner_bg:
+    weight: 5
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+hidden: {  }

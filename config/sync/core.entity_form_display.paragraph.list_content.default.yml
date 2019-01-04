@@ -1,0 +1,73 @@
+uuid: 3c922dba-9a9c-435a-b75f-491f9bf00dc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_content.field_list_content_image
+    - field.field.paragraph.list_content.field_orientation
+    - field.field.paragraph.list_content.field_title_line1
+    - field.field.paragraph.list_content.field_title_line2
+    - field.field.paragraph.list_content.field_twi_two_items
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.list_content
+  module:
+    - image
+    - imce
+    - lightning_media
+    - paragraphs
+id: paragraph.list_content.default
+targetEntityType: paragraph
+bundle: list_content
+mode: default
+content:
+  field_list_content_image:
+    type: image_image
+    weight: 3
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+  field_orientation:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title_line1:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_line2:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twi_two_items:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

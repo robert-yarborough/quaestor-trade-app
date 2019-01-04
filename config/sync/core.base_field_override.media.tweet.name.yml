@@ -1,0 +1,20 @@
+uuid: fda6d7f3-724e-46ae-b88c-f9d2d8db450f
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+id: media.tweet.name
+field_name: name
+entity_type: media
+bundle: tweet
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

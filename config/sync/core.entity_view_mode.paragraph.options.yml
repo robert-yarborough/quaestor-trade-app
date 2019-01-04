@@ -1,0 +1,14 @@
+uuid: f33b1d33-58d7-4ea9-9c47-43ee11cb06c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.options
+label: Options
+targetEntityType: paragraph
+cache: true

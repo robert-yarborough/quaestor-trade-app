@@ -1,0 +1,18 @@
+uuid: 30e9c632-e1bd-4610-965e-c836b74ff86a
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.instagram
+id: media.instagram.created
+field_name: created
+entity_type: media
+bundle: instagram
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

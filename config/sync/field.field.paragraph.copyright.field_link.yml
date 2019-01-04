@@ -1,0 +1,23 @@
+uuid: b4e51dfa-1530-4080-ad2d-79ff180e5130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.copyright
+  module:
+    - link
+id: paragraph.copyright.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: copyright
+label: 'Terms and conditions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

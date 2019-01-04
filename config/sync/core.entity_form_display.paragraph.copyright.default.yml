@@ -1,0 +1,47 @@
+uuid: 04b503d3-d336-427b-8798-3a39aeb386cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.copyright.field_description
+    - field.field.paragraph.copyright.field_legal_disclaimer
+    - field.field.paragraph.copyright.field_link
+    - paragraphs.paragraphs_type.copyright
+  module:
+    - link
+    - text
+id: paragraph.copyright.default
+targetEntityType: paragraph
+bundle: copyright
+mode: default
+content:
+  field_description:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_legal_disclaimer:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

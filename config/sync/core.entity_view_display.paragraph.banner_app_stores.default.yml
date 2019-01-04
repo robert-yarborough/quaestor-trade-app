@@ -1,0 +1,93 @@
+uuid: 63b764bc-dca4-43d1-8cdf-ef30c50cfed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_app_stores.field_app_stores
+    - field.field.paragraph.banner_app_stores.field_banner_appstores_bg
+    - field.field.paragraph.banner_app_stores.field_button
+    - field.field.paragraph.banner_app_stores.field_subtitle
+    - field.field.paragraph.banner_app_stores.field_title_line1
+    - field.field.paragraph.banner_app_stores.field_title_line2
+    - paragraphs.paragraphs_type.banner_app_stores
+  module:
+    - ds
+    - entity_reference_revisions
+    - image
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_title_line1
+        - field_title_line2
+        - field_subtitle
+        - field_button
+        - field_app_stores
+        - field_app_stores_reference
+        - field_banner_appstores_bg
+id: paragraph.banner_app_stores.default
+targetEntityType: paragraph
+bundle: banner_app_stores
+mode: default
+content:
+  field_app_stores:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_banner_appstores_bg:
+    weight: 6
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_button:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_subtitle:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_title_line1:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_line2:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

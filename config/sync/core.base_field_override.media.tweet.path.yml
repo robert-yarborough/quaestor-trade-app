@@ -1,0 +1,20 @@
+uuid: cc993ede-ba39-4504-af72-acad3731704c
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+  module:
+    - path
+id: media.tweet.path
+field_name: path
+entity_type: media
+bundle: tweet
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

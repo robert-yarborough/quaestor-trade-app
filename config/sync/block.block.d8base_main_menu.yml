@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: d8base_main_menu
 theme: d8base
-region: header
-weight: -3
+region: content_top
+weight: -1
 provider: null
 plugin: 'system_menu_block:main'
 settings:

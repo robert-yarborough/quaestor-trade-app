@@ -1,0 +1,23 @@
+uuid: a296c4bd-bde8-4a7e-b850-ee661025d6eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button
+    - paragraphs.paragraphs_type.banner_app_stores
+  module:
+    - link
+id: paragraph.banner_app_stores.field_button
+field_name: field_button
+entity_type: paragraph
+bundle: banner_app_stores
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

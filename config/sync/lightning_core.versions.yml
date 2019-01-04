@@ -110,3 +110,17 @@ admin_toolbar_tools: 1.25.0
 token_filter: 1.1.0
 language: 8.6.4
 kint: 1.2.0
+q8_search: 0.0.0
+entity_reference_revisions: 1.6.0
+paragraphs: 1.5.0
+ds: 3.2.0
+ds_extras: 3.2.0
+ds_switch_view_mode: 3.2.0
+imce: 1.7.0
+content_translation: 8.6.4
+locale: 8.6.4
+config_translation: 8.6.4
+file_mdm: 1.1.0
+file_mdm_exif: 1.1.0
+file_mdm_font: 1.1.0
+image_effects: 2.2.0

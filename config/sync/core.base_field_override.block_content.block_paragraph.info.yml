@@ -1,0 +1,18 @@
+uuid: 0f323f70-4a61-458f-9d3e-361154d827ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_paragraph
+id: block_content.block_paragraph.info
+field_name: info
+entity_type: block_content
+bundle: block_paragraph
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

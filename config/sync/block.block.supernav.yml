@@ -10,8 +10,8 @@ dependencies:
     - d8base
 id: supernav
 theme: d8base
-region: header
-weight: -5
+region: content_top
+weight: -3
 provider: null
 plugin: 'system_menu_block:supernav'
 settings:

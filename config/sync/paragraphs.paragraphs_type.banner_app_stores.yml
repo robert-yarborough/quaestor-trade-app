@@ -1,0 +1,9 @@
+uuid: 804e6ce4-4e00-4aff-ad5f-173798117312
+langcode: en
+status: true
+dependencies: {  }
+id: banner_app_stores
+label: 'Banner & App Stores'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: a2794ea0-fac7-48b5-9bf3-8a07d7a52299
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.top_banner
+id: paragraph.top_banner.status
+field_name: status
+entity_type: paragraph
+bundle: top_banner
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

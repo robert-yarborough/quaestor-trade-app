@@ -1,0 +1,19 @@
+uuid: ed84a903-5e15-435d-889b-1573b19b9029
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_line1
+    - paragraphs.paragraphs_type.content_block_left
+id: paragraph.content_block_left.field_title_line1
+field_name: field_title_line1
+entity_type: paragraph
+bundle: content_block_left
+label: 'Title line 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

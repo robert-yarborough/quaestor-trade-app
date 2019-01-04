@@ -1,0 +1,55 @@
+uuid: 764c6692-f0ad-4bdf-b6b6-c1a583257feb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_app_stores
+    - paragraphs.paragraphs_type.app_stores
+    - paragraphs.paragraphs_type.banner_app_stores
+  module:
+    - entity_reference_revisions
+id: paragraph.banner_app_stores.field_app_stores
+field_name: field_app_stores
+entity_type: paragraph
+bundle: banner_app_stores
+label: 'App Stores'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      app_stores: app_stores
+    target_bundles_drag_drop:
+      app_stores:
+        enabled: true
+        weight: 10
+      banner_app_stores:
+        weight: 11
+        enabled: false
+      content_block_left:
+        weight: 12
+        enabled: false
+      content_block_right:
+        weight: 13
+        enabled: false
+      copyright:
+        weight: 14
+        enabled: false
+      list_content:
+        weight: 15
+        enabled: false
+      options:
+        weight: 16
+        enabled: false
+      text_with_image:
+        weight: 17
+        enabled: false
+      top_banner:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,85 @@
+uuid: abb9a565-f858-49b5-9e3e-5e3819b45fc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_content.field_list_content_image
+    - field.field.paragraph.list_content.field_orientation
+    - field.field.paragraph.list_content.field_title_line1
+    - field.field.paragraph.list_content.field_title_line2
+    - field.field.paragraph.list_content.field_twi_two_items
+    - paragraphs.paragraphs_type.list_content
+  module:
+    - ds
+    - entity_reference_revisions
+    - image
+    - options
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_title_line1
+        - field_title_line2
+        - field_twi_two_items
+        - field_orientation
+        - field_list_content_image
+id: paragraph.list_content.default
+targetEntityType: paragraph
+bundle: list_content
+mode: default
+content:
+  field_list_content_image:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_orientation:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title_line1:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_line2:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_twi_two_items:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: list
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+hidden: {  }

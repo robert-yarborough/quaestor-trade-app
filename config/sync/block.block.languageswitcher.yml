@@ -8,8 +8,8 @@ dependencies:
     - d8base
 id: languageswitcher
 theme: d8base
-region: header
-weight: -6
+region: content_top
+weight: -4
 provider: null
 plugin: 'language_block:language_interface'
 settings:

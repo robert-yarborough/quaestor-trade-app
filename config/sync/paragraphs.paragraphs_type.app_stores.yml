@@ -1,0 +1,9 @@
+uuid: 75c0e2bb-fbed-483c-8c99-9170890fda3c
+langcode: en
+status: true
+dependencies: {  }
+id: app_stores
+label: 'App Stores'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
