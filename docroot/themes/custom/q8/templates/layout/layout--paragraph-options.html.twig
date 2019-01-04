@@ -14,12 +14,14 @@
   set classes = [
   'layout',
   'layout--onecol',
-  'investing-block',
+  'features-block',
+  'block-section',
+  'js-block-slider',
+  'is-slider',
 ]
 %}
-{% set style  = 'background-image: url(' ~ content.content.field_banner_appstores_bg[0]|render  ~ ')' %}
 {% if content %}
-  <div{{ attributes.addClass(classes).setAttribute('style', style) }}>
+  <div{{ attributes.addClass(classes).setAttribute('data-bottom-top', '@fadeAttr: 0;').setAttribute('data-200-top', '@fadeAttr: 1;') }}>
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
       <div class="page-frame">
         {% if content.content.field_title_line1[0] or content.content.field_title_line2[0] %}
@@ -34,23 +36,8 @@
           </div>
         {% endif %}
   
-        {% if content.content.field_button[0] %}
-          <div class="investing-block__cta">
-            {{ content.content.field_button[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
-          </div>
-        {% endif %}
-  
-        {% if content.content.field_app_stores[0] %}
-          <div class="available-links__inner">
-            {{ content.content.field_app_stores }}
-          </div>
-        {% endif %}
+        {{ content.content.field_twi_three_items }}
       </div>
     </div>
   </div>
 {% endif %}
-
-
-
-
-

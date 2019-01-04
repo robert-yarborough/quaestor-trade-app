@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+  'info-block',
+  'info-block__white',
+  'block-section',
+  'is-right',
+]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'info-block__row') }}>
+      <div class="info-block__col is-image">
+        {% if content.content.field_content_block_image[0] %}
+          <div class="info-block__image">
+            {{ content.content.field_content_block_image }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="info-block__col">
+        <div class="info-block__content">
+          <div class="info-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
+          
+          {% if content.content.field_title_line1[0] or content.content.field_title_line2[0] %}
+            <div class="block-title">
+              {{ content.content.field_title_line1[0] }} <b>{{ content.content.field_title_line2[0] }}</b>
+            </div>
+          {% endif %}
+  
+          {% if content.content.field_description[0] %}
+            <div class="info-block__list">
+              {{ content.content.field_description }}
+            </div>
+          {% endif %}
+  
+          {% if content.content.field_button[0] %}
+            <div class="info-block__btn">
+              {{ content.content.field_button[0]|merge({ '#attributes': { 'class': [ 'btn-primary__dark' ] } }) }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+  
+          
+          

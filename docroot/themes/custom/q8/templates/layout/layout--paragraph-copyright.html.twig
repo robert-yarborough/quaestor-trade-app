@@ -27,18 +27,27 @@
             <div class="powered-title">Powered by</div>
             <a href="http://q8sec.com/" target="_blank"><svg class="logo q-icon"><use xlink:href="#logo-securities"></use></svg></a>
           </div>
+          
           <div class="main-footer__right">
-            <div class="main-footer__copyright">
-              {{ content.content.field_description }}
-            </div>
-            <div class="main-footer__nav">
-              {{ content.content.field_link }}
-            </div>
+            {% if content.content.field_description[0] %}
+              <div class="main-footer__copyright">
+                {{ content.content.field_description }}
+              </div>
+            {% endif %}
+  
+            {% if content.content.field_link[0] %}
+              <div class="main-footer__nav">
+                {{ content.content.field_link }}
+              </div>
+            {% endif %}
           </div>
         </div>
-        <div class="legal-disclaimer">
-          {{ content.content.field_legal_disclaimer }}
-        </div>
+        
+        {% if content.content.field_legal_disclaimer[0] %}
+          <div class="legal-disclaimer">
+            {{ content.content.field_legal_disclaimer }}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>

@@ -18,7 +18,8 @@
         "drupal/token_filter": "^1.1",
         "drupal/paragraphs": "^1.5",
         "drupal/ds": "^3.2",
-        "drupal/imce": "^1.7"
+        "drupal/imce": "^1.7",
+        "drupal/image_effects": "^2.2"
     },
     "repositories": {
         "drupal": {

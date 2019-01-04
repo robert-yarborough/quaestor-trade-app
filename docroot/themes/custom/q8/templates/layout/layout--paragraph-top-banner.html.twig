@@ -20,12 +20,6 @@
 ]
 %}
 
-{%
-  set styles  = [
-  '',
-]
-%}
-
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     <div class="front-banner__bg skrollable skrollable-before"
@@ -43,7 +37,7 @@
           {% if content.content.field_title_line1[0] or content.content.field_title_line2[0] %}
             <div class="front-banner__title">
               <h1>
-                {{ content.content.field_title_line1 }} <b>{{ content.content.field_title_line2 }}</b>
+                {{ content.content.field_title_line1[0] }} <b>{{ content.content.field_title_line2[0] }}</b>
               </h1>
             </div>
           {% endif %}
