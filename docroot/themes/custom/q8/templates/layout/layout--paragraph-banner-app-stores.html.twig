@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+  'investing-block',
+]
+%}
+{%
+  set styles  = [
+    'background-image: url(' ~ content.content.field_banner_appstores_bg[0]|render  ~ ')',
+]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes).setAttribute('style', styles) }}>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+      <div class="page-frame">
+        {% if content.content.field_title_line1[0] or content.content.field_title_line2[0] %}
+          <div class="block-title block-center">
+            {{ content.content.field_title_line1 }} <b>{{ content.content.field_title_line2 }}</b>
+          </div>
+        {% endif %}
+  
+        {% if content.content.field_subtitle[0] %}
+          <div class="block-description block-center">
+            {{ content.content.field_subtitle }}
+          </div>
+        {% endif %}
+  
+        {% if content.content.field_button[0] %}
+          <div class="investing-block__cta">
+            {{ content.content.field_button[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
+          </div>
+        {% endif %}
+  
+        {% if content.content.field_app_stores_reference[0] %}
+          <div class="available-links__inner">
+            {{ content.content.field_app_stores_reference[0] }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+
+
+

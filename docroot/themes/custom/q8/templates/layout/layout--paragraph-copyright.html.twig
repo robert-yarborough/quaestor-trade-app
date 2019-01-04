@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+  'main-footer',
+  'is-light',
+]
+%}
+{% if content %}
+  <div {{ attributes.addClass(classes) }} role="contentinfo">
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+      <div class="page-frame">
+        <div class="main-footer__inner">
+          <div class="main-footer__powered">
+            <div class="powered-title">Powered by</div>
+            <a href="http://q8sec.com/" target="_blank"><svg class="logo q-icon"><use xlink:href="#logo-securities"></use></svg></a>
+          </div>
+          <div class="main-footer__right">
+            <div class="main-footer__copyright">
+              {{ content.content.field_description }}
+            </div>
+            <div class="main-footer__nav">
+              {{ content.content.field_link }}
+            </div>
+          </div>
+        </div>
+        <div class="legal-disclaimer">
+          {{ content.content.field_legal_disclaimer }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

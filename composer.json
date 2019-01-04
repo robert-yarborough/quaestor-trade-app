@@ -15,7 +15,10 @@
         "cweagans/composer-patches": "^1.6.0",
         "acquia/lightning": "^3.2",
         "drupal/admin_toolbar": "^1.25",
-        "drupal/token_filter": "^1.1"
+        "drupal/token_filter": "^1.1",
+        "drupal/paragraphs": "^1.5",
+        "drupal/ds": "^3.2",
+        "drupal/imce": "^1.7"
     },
     "repositories": {
         "drupal": {
@@ -67,6 +70,9 @@
         "patches": {
             "drupal/core": {
                 "Error adding Content Type Selection criteria or Context": "https://www.drupal.org/files/issues/2018-09-18/drupal-contextdefinition_bc_fix-2998462-15-D8.patch"
+            },
+            "drupal/ds": {
+                "Display layout twig not overridable. [#2802429]": "https://www.drupal.org/files/issues/ds_display-layout-overrides-not-working_2802429-3.patch"
             }
         },
         "enable-patching": true

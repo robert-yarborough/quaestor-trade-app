@@ -53,16 +53,8 @@
 <div id="page-wrapper">
   <div id="page">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
-      {{ page.secondary_menu }}
-      {{ page.premium_menu }}
       {{ page.header }}
-      {{ page.primary_menu }}
     </header>
-    {% if page.highlighted %}
-      <div class="highlighted layout-container">
-        {{ page.highlighted }}
-      </div>
-    {% endif %}
     {% if page.featured_top %}
       <div class="featured-top">
         <aside class="featured-top__inner section" role="complementary">
@@ -72,7 +64,6 @@
     {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper">
       <div id="main" class="layout-main">
-        {{ page.breadcrumb }}
         {% if page.sidebar_first %}
           <div id="sidebar-first" class="column sidebar">
             <aside class="section" role="complementary">
@@ -83,7 +74,9 @@
         <main id="content" class="column main-content" role="main">
           <section class="section">
             <a id="main-content" tabindex="-1"></a>
+            {{ page.content_top }}
             {{ page.content }}
+            {{ page.content_bottom }}
           </section>
         </main>
         {% if page.sidebar_second %}
@@ -95,29 +88,16 @@
         {% endif %}
       </div>
     </div>
-    {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
+    {% if page.featured_bottom %}
       <div class="featured-bottom">
         <aside role="complementary">
-          {{ page.featured_bottom_first }}
-          {{ page.featured_bottom_second }}
-          {{ page.featured_bottom_third }}
+          {{ page.featured_bottom }}
         </aside>
       </div>
     {% endif %}
-    {% if page.footer_first or page.footer_second %}
+    {% if page.footer %}
       <footer class="site-footer">
-        <div class="site-footer__container">
-          <div class="footer-top">
-            <div class="layout-container">
-              {{ page.footer_first }}
-            </div>
-          </div>
-          <div class="footer-btm">
-            <div class="layout-container">
-              {{ page.footer_second }}
-            </div>
-          </div>
-        </div>
+        {{ page.footer }}
       </footer>
     {% endif %}
   </div>
