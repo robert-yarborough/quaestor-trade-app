@@ -13,5 +13,5 @@ composer global require dealerdirect/phpcodesniffer-composer-installer
 
 phpcs --standard=Drupal --extensions=php,module,inc,install,test,theme,info ./docroot/modules/custom
 phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,theme ./docroot/modules/custom
-phpcs --standard=Drupal --extensions=php,module,inc,install,test,theme,info --ignore=*.css,*.md ./docroot/themes/custom
-phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,theme --ignore=*.css,*.md ./docroot/themes/custom
+phpcs --standard=Drupal --extensions=php,module,inc,install,test,theme,info --ignore=*.css,*.md,*/node_modules/* ./docroot/themes/custom
+phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,theme --ignore=*.css,*.md,*/node_modules/* ./docroot/themes/custom
