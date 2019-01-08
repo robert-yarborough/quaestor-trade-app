@@ -42,6 +42,16 @@
       "nuke": "rm -r -f docroot/modules/contrib docroot/profiles/contrib/lightning vendor composer.lock"
     },
     "extra": {
+        "drupal-scaffold": {
+            "excludes": [
+                "robots.txt",
+                "sites/development.services.yml"
+            ],
+            "initial": {
+                "sites/default/default.services.yml": "sites/default/services.yml",
+                "sites/default/default.settings.php": "sites/default/settings.php"
+            }
+        },
         "installer-types": [
             "bower-asset",
             "npm-asset"
