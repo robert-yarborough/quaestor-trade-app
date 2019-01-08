@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Die on any error.
-# set -e
+set -e
 
 
 # sh scripts/qa/phpcs_dev.sh
