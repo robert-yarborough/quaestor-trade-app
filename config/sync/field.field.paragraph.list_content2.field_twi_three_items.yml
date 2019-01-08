@@ -1,0 +1,58 @@
+uuid: deb39263-13d5-464f-b3ba-d2fc29d84e2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twi_three_items
+    - paragraphs.paragraphs_type.list_content2
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - entity_reference_revisions
+id: paragraph.list_content2.field_twi_three_items
+field_name: field_twi_three_items
+entity_type: paragraph
+bundle: list_content2
+label: 'Text with image Three items'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text_with_image: text_with_image
+    target_bundles_drag_drop:
+      list_content2:
+        weight: 11
+        enabled: false
+      app_stores:
+        weight: 12
+        enabled: false
+      banner_app_stores:
+        weight: 13
+        enabled: false
+      content_block_left:
+        weight: 14
+        enabled: false
+      content_block_right:
+        weight: 15
+        enabled: false
+      copyright:
+        weight: 16
+        enabled: false
+      list_content:
+        weight: 17
+        enabled: false
+      options:
+        weight: 18
+        enabled: false
+      text_with_image:
+        enabled: true
+        weight: 19
+      top_banner:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

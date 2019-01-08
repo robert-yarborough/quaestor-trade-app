@@ -1,0 +1,21 @@
+uuid: b55557e0-3442-42a6-8373-bae4321abb0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.list_content2
+  module:
+    - text
+id: paragraph.list_content2.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: list_content2
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
