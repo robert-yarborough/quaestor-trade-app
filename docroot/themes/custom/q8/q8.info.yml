@@ -1,6 +1,6 @@
-name: 'Q8 base theme'
+name: 'Q8 theme'
 type: theme
-description: 'Custom theme template for Pactera Drupal 8 projects'
+description: 'Custom theme Q8 Securities'
 package: Custom
 core: 8.x
 base theme: classy

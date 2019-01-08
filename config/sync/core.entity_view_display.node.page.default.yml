@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.field_block_reference
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.panelizer
     - node.type.page
   module:
     - metatag
@@ -48,4 +47,3 @@ content:
 hidden:
   content_moderation_control: true
   langcode: true
-  panelizer: true

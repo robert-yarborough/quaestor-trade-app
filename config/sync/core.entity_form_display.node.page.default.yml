@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.field_block_reference
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.panelizer
     - node.type.page
   module:
     - content_moderation
@@ -109,5 +108,4 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden:
-  panelizer: true
+hidden: {  }
