@@ -69,9 +69,6 @@
             ]
         },
         "patches": {
-            "drupal/core": {
-                "Error adding Content Type Selection criteria or Context": "https://www.drupal.org/files/issues/2018-09-18/drupal-contextdefinition_bc_fix-2998462-15-D8.patch"
-            },
             "drupal/ds": {
                 "Display layout twig not overridable. [#2802429]": "https://www.drupal.org/files/issues/ds_display-layout-overrides-not-working_2802429-3.patch"
             }

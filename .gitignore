@@ -1,9 +1,6 @@
 # If you have never committed ".idea" folder you are not developer
 .idea/
 
-# Ignore binaries.
-/bin
-
 # Ignore non-custom parts of Drupal.
 /docroot/core
 /docroot/libraries
@@ -11,14 +8,27 @@
 /docroot/profiles/contrib
 /docroot/themes/contrib
 /docroot/sites/default/files
+/docroot/sites/development.services.yml
+/docroot/sites/*/settings*.php
 
-/docroot/sites/*/settings.php
+# Ignore simpletest
+docroot/sites/simpletest
 
 # Ignore node and npm.
 */node_modules/*
+/docroot/themes/custom/design_lens/yarn-error.log
+
+# Ignore Import Images
+/docroot/sites/default/images
 
 # Ignore Composer-managed dependencies.
 vendor/
 
 # Ignore local docker compose overrides.
 docker-compose.override.yml
+
+# Ignore yarn logs
+*yarn-error.log
+
+
+
