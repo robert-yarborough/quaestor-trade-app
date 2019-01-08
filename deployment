@@ -2,6 +2,7 @@
 # Die on any error.
 set -e
 
+
 # sh scripts/qa/phpcs_dev.sh
 
 # Install all dependencies.
