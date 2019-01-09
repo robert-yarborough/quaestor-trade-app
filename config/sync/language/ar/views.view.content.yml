@@ -5,15 +5,11 @@ display:
         options:
           submit_button: انتقاء
       fields:
-        nothing:
-          admin_label: أيقونة
         type:
-          label: النوع
-        name:
-          label: المستخدم
-        link:
+          label: 'نوع المحتوى'
+        operations:
           label: عمليات
       filters:
         type:
           expose:
-            label: النوع
+            label: 'نوع المحتوى'

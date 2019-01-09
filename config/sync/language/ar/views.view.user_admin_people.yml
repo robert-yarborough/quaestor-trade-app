@@ -5,13 +5,15 @@ display:
         options:
           submit_button: انتقاء
       fields:
-        filename:
-          label: الاسم
-        filesize:
-          label: الحجم
+        name:
+          label: 'اسم المستخدم'
         status:
           label: الحالة
+        roles_target_id:
+          label: الأدوار
+        operations:
+          label: عمليات
       filters:
         status:
-          expose:
+          group_info:
             label: الحالة

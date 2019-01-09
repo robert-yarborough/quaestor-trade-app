@@ -5,7 +5,7 @@ package: Custom
 core: 8.x
 base theme: classy
 libraries:
-  - d8base/base
+  - q8/base
 regions:
   header: 'Header'
   featured_top: 'Featured top'
