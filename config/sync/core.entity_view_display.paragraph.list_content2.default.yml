@@ -1,0 +1,103 @@
+uuid: 18d15f2e-9f24-447a-aa96-829ad39faf48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_content2.field_button
+    - field.field.paragraph.list_content2.field_button2
+    - field.field.paragraph.list_content2.field_subtitle
+    - field.field.paragraph.list_content2.field_title_line1
+    - field.field.paragraph.list_content2.field_title_line2
+    - field.field.paragraph.list_content2.field_twi_three_items
+    - paragraphs.paragraphs_type.list_content2
+  module:
+    - ds
+    - entity_reference_revisions
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_title_line1
+        - field_title_line2
+        - field_subtitle
+        - field_twi_three_items
+        - field_button
+        - field_button2
+id: paragraph.list_content2.default
+targetEntityType: paragraph
+bundle: list_content2
+mode: default
+content:
+  field_button:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_button2:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title_line1:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_line2:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_twi_three_items:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: options
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }
