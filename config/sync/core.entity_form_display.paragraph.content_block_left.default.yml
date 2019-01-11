@@ -4,10 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.content_block_left.field_button
-    - field.field.paragraph.content_block_left.field_content_block_image
     - field.field.paragraph.content_block_left.field_description
-    - field.field.paragraph.content_block_left.field_title_line1
-    - field.field.paragraph.content_block_left.field_title_line2
+    - field.field.paragraph.content_block_left.field_image
+    - field.field.paragraph.content_block_left.field_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.content_block_left
   module:
@@ -22,16 +21,25 @@ bundle: content_block_left
 mode: default
 content:
   field_button:
-    weight: 4
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_content_block_image:
+  field_description:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
     type: image_image
-    weight: 3
+    weight: 2
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -42,30 +50,13 @@ content:
       lightning_media:
         file_links: true
         remove_button: true
-  field_description:
-    weight: 2
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
-  field_title_line1:
+  field_title:
     weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_title_line2:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: text_textfield
     region: content
 hidden:
   created: true

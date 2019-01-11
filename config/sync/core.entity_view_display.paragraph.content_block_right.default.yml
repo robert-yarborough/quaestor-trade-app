@@ -4,10 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.content_block_right.field_button
-    - field.field.paragraph.content_block_right.field_content_block_image
     - field.field.paragraph.content_block_right.field_description
-    - field.field.paragraph.content_block_right.field_title_line1
-    - field.field.paragraph.content_block_right.field_title_line2
+    - field.field.paragraph.content_block_right.field_image
+    - field.field.paragraph.content_block_right.field_title
     - paragraphs.paragraphs_type.content_block_right
   module:
     - ds
@@ -24,11 +23,9 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_title_line1
-        - field_title_line2
+        - field_title
+        - field_image
         - field_description
-        - field_content_block_image
-        - field_content_block_right_image
         - field_button
 id: paragraph.content_block_right.default
 targetEntityType: paragraph
@@ -36,7 +33,7 @@ bundle: content_block_right
 mode: default
 content:
   field_button:
-    weight: 5
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -47,15 +44,6 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_content_block_image:
-    weight: 3
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_description:
     weight: 2
     label: hidden
@@ -63,20 +51,20 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_title_line1:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title_line2:
+  field_image:
     weight: 1
     label: hidden
     settings:
-      link_to_entity: false
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: string
+    type: image
     region: content
+  field_title:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

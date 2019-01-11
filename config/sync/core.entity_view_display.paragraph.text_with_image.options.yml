@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.options
+    - field.field.paragraph.text_with_image.field_image
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_title
-    - field.field.paragraph.text_with_image.field_twi_image
     - image.style.255x213
     - paragraphs.paragraphs_type.text_with_image
   module:
@@ -23,30 +23,18 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_twi_image
         - field_title
         - field_subtitle
+        - field_image
 id: paragraph.text_with_image.options
 targetEntityType: paragraph
 bundle: text_with_image
 mode: options
 content:
-  field_subtitle:
+  field_image:
+    type: image
     weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
-  field_title:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_twi_image:
-    weight: 0
     label: hidden
     settings:
       image_style: 255x213
@@ -59,6 +47,18 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: image
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
+  field_title:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

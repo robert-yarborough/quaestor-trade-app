@@ -20,8 +20,8 @@
   <div{{ attributes.addClass(classes) }}>
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
       <h3>
-        {% if content.content.field_twi_image[0] %}
-          <i><div class="q-icon">{{ content.content.field_twi_image[0] }}</div></i>
+        {% if content.content.field_image[0] %}
+          <i><div class="q-icon">{{ content.content.field_image[0] }}</div></i>
         {% endif %}
         
         {{ content.content.field_title[0] }}

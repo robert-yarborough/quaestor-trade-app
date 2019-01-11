@@ -4,10 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.content_block_left.field_button
-    - field.field.paragraph.content_block_left.field_content_block_image
     - field.field.paragraph.content_block_left.field_description
-    - field.field.paragraph.content_block_left.field_title_line1
-    - field.field.paragraph.content_block_left.field_title_line2
+    - field.field.paragraph.content_block_left.field_image
+    - field.field.paragraph.content_block_left.field_title
     - paragraphs.paragraphs_type.content_block_left
   module:
     - ds
@@ -21,20 +20,12 @@ third_party_settings:
       library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
-      settings:
-        classes: {  }
-        wrappers:
-          content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
+      settings: {  }
     regions:
       content:
-        - field_title_line1
-        - field_title_line2
         - field_description
-        - field_content_block_image
+        - field_image
+        - field_title
         - field_button
 id: paragraph.content_block_left.default
 targetEntityType: paragraph
@@ -42,7 +33,7 @@ bundle: content_block_left
 mode: default
 content:
   field_button:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -53,8 +44,15 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_content_block_image:
-    weight: 3
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 1
     label: hidden
     settings:
       image_style: ''
@@ -62,27 +60,11 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_description:
+  field_title:
+    type: text_default
     weight: 2
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: content
-  field_title_line1:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title_line2:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
 hidden: {  }

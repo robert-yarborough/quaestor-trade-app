@@ -22,9 +22,9 @@
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
-      {% if content.content.field_twi_image[0] %}
+      {% if content.content.field_image[0] %}
         <div class="finance-block__icon">
-          {{ content.content.field_twi_image }}
+          {{ content.content.field_image }}
         </div>
       {% endif %}
 

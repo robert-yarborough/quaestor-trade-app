@@ -3,10 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.list_content.field_list_content_image
+    - field.field.paragraph.list_content.field_image
     - field.field.paragraph.list_content.field_orientation
-    - field.field.paragraph.list_content.field_title_line1
-    - field.field.paragraph.list_content.field_title_line2
+    - field.field.paragraph.list_content.field_title
     - field.field.paragraph.list_content.field_twi_two_items
     - image.style.thumbnail
     - paragraphs.paragraphs_type.list_content
@@ -15,14 +14,15 @@ dependencies:
     - imce
     - lightning_media
     - paragraphs
+    - text
 id: paragraph.list_content.default
 targetEntityType: paragraph
 bundle: list_content
 mode: default
 content:
-  field_list_content_image:
+  field_image:
     type: image_image
-    weight: 3
+    weight: 2
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -34,30 +34,22 @@ content:
         file_links: true
         remove_button: true
   field_orientation:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_title_line1:
+  field_title:
     weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_title_line2:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: text_textfield
     region: content
   field_twi_two_items:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs

@@ -24,9 +24,9 @@
   <div{{ attributes.addClass(classes).setAttribute('data-bottom-top', '@fadeAttr: 0;').setAttribute('data-200-top', '@fadeAttr: 1;') }}>
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
       <div class="page-frame">
-        {% if content.content.field_title_line1[0] or content.content.field_title_line2[0] %}
+        {% if content.content.field_title[0] %}
           <div class="block-title block-center">
-            {{ content.content.field_title_line1[0] }} <b>{{ content.content.field_title_line2[0] }}</b>
+            {{ content.content.field_title[0] }}
           </div>
         {% endif %}
   

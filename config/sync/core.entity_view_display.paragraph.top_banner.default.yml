@@ -4,11 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.top_banner.field_button
+    - field.field.paragraph.top_banner.field_image
     - field.field.paragraph.top_banner.field_sub_subtitle
     - field.field.paragraph.top_banner.field_subtitle
-    - field.field.paragraph.top_banner.field_title_line1
-    - field.field.paragraph.top_banner.field_title_line2
-    - field.field.paragraph.top_banner.field_top_banner_bg
+    - field.field.paragraph.top_banner.field_title
     - paragraphs.paragraphs_type.top_banner
   module:
     - ds
@@ -25,19 +24,18 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_title_line1
-        - field_title_line2
         - field_subtitle
         - field_sub_subtitle
         - field_button
-        - field_top_banner_bg
+        - field_image
+        - field_title
 id: paragraph.top_banner.default
 targetEntityType: paragraph
 bundle: top_banner
 mode: default
 content:
   field_button:
-    weight: 4
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
@@ -48,8 +46,16 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_sub_subtitle:
+  field_image:
     weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_sub_subtitle:
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -57,34 +63,17 @@ content:
     type: string
     region: content
   field_subtitle:
-    weight: 2
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_title_line1:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title_line2:
-    type: string
-    weight: 1
+  field_title:
+    type: text_default
+    weight: 4
     region: content
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-  field_top_banner_bg:
-    weight: 5
-    label: hidden
-    settings:
-      image_style: ''
-    third_party_settings: {  }
-    type: image_url
-    region: content
 hidden: {  }

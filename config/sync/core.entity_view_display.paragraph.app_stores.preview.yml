@@ -1,8 +1,9 @@
-uuid: 365defa1-dfc7-470b-9d7c-658b428121e2
+uuid: e7a1da75-74c8-4eec-9b4a-1679fe69bccb
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.app_stores.field_appstore
     - field.field.paragraph.app_stores.field_google_play
     - field.field.paragraph.app_stores.field_macos_store
@@ -25,10 +26,10 @@ third_party_settings:
         - field_google_play
         - field_macos_store
         - field_windows_store
-id: paragraph.app_stores.default
+id: paragraph.app_stores.preview
 targetEntityType: paragraph
 bundle: app_stores
-mode: default
+mode: preview
 content:
   field_appstore:
     weight: 0

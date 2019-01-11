@@ -29,9 +29,9 @@
       <div class="info-block__col">
         <div class="info-block__content">
           <div class="info-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
-          {% if content.content.field_title_line1[0] or content.content.field_title_line2[0] %}
+          {% if content.content.field_title[0] %}
             <div class="block-title">
-              {{ content.content.field_title_line1[0] }} <b>{{ content.content.field_title_line2[0] }}</b>
+              {{ content.content.field_title[0] }}
             </div>
           {% endif %}
   
@@ -49,9 +49,9 @@
         </div>
       </div>
       <div class="info-block__col is-image">
-        {% if content.content.field_content_block_image[0] %}
+        {% if content.content.field_image[0] %}
           <div class="info-block__image">
-            {{ content.content.field_content_block_image }}
+            {{ content.content.field_image }}
           </div>
         {% endif %}
       </div>
