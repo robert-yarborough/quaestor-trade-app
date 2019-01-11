@@ -87,7 +87,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      view_mode: options
+      view_mode: finance
       link: ''
     third_party_settings:
       ds:

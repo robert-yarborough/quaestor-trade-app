@@ -124,4 +124,6 @@ file_mdm: 1.1.0
 file_mdm_exif: 1.1.0
 file_mdm_font: 1.1.0
 image_effects: 2.2.0
-devel: 1.2.0
+geofield: 1.0.0-beta6
+geofield_map: 2.23.0
+simple_gmap: 1.4.0

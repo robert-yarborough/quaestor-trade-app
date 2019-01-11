@@ -3,13 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_block_reference
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_paragraph
+    - field.field.node.page.panelizer
     - node.type.page
   module:
     - content_moderation
-    - inline_entity_form
     - metatag
+    - paragraphs
     - path
 _core:
   default_config_hash: 7fm6IQg6gNfLHHQlwMKSUqMSbPhM8O91P6nqQkjtH80
@@ -24,28 +25,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_block_reference:
-    weight: 103
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      collapsed: true
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-      collapsible: false
-      allow_duplicate: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
   field_meta_tags:
     type: metatag_firehose
     region: content
     weight: 101
     settings: {  }
     third_party_settings: {  }
+  field_paragraph:
+    type: entity_reference_paragraphs
+    weight: 104
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -108,4 +105,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  panelizer: true

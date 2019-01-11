@@ -1,0 +1,71 @@
+uuid: 7242c419-066b-454b-882a-751d5deeed3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_address
+    - field.field.paragraph.map.field_email
+    - field.field.paragraph.map.field_fax
+    - field.field.paragraph.map.field_phone
+    - field.field.paragraph.map.field_title
+    - field.field.paragraph.map.field_zip_code
+    - paragraphs.paragraphs_type.map
+  module:
+    - text
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_address:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_fax:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_zip_code:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

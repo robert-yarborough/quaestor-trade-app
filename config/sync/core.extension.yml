@@ -94,6 +94,7 @@ module:
   search_api_db: 0
   serialization: 0
   shortcut: 0
+  simple_gmap: 0
   simple_oauth: 0
   simple_oauth_extras: 0
   slick: 0

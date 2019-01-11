@@ -1,15 +1,7 @@
 display:
   default:
     display_options:
-      exposed_form:
-        options:
-          submit_button: انتقاء
-      fields:
-        type:
-          label: 'نوع المحتوى'
-        operations:
-          label: عمليات
       filters:
-        type:
+        langcode:
           expose:
-            label: 'نوع المحتوى'
+            label: اللغة

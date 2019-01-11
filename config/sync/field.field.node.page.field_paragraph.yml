@@ -1,0 +1,59 @@
+uuid: 803087e5-6461-4728-9eda-11568ee3164f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: page
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      app_stores:
+        weight: 12
+        enabled: false
+      banner_app_stores:
+        weight: 13
+        enabled: false
+      content_block_left:
+        weight: 14
+        enabled: false
+      content_block_right:
+        weight: 15
+        enabled: false
+      copyright:
+        weight: 16
+        enabled: false
+      list_content:
+        weight: 17
+        enabled: false
+      list_content2:
+        weight: 18
+        enabled: false
+      map:
+        weight: 19
+        enabled: false
+      options:
+        weight: 20
+        enabled: false
+      text_with_image:
+        weight: 21
+        enabled: false
+      top_banner:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+uuid: f4f600bf-7ff1-4023-b615-a0b570e6a916
+langcode: en
+status: true
+dependencies: {  }
+name: 83x92
+label: 83x92
+effects:
+  046ce4b5-23ac-4f05-8380-3d549e050aaa:
+    uuid: 046ce4b5-23ac-4f05-8380-3d549e050aaa
+    id: image_resize
+    weight: 2
+    data:
+      width: 83
+      height: 92

@@ -1,0 +1,19 @@
+uuid: afc958c5-6b94-43bb-9584-d0dbcfeb2d27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fax
+    - paragraphs.paragraphs_type.map
+id: paragraph.map.field_fax
+field_name: field_fax
+entity_type: paragraph
+bundle: map
+label: Fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
