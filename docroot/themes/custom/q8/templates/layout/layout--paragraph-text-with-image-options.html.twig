@@ -14,28 +14,32 @@
   set classes = [
   'layout',
   'layout--onecol',
+  'features-block__col',
+  'block-center',
+  'animate-fadein-effect',
+  'swiper-slide'
 ]
 %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
-      {% if content.content.field_twi_image[0] %}
-        <div class="fb-icon">
-          {{ content.content.field_twi_image }}
-        </div>
-      {% endif %}
-      
-      {% if content.content.field_title[0] %}
-        <div class="fb-title">
-          {{ content.content.field_title }}
-        </div>
-      {% endif %}
-      
-      {% if content.content.field_subtitle[0] %}
-        <div class="fb-desc">
-          {{ content.content.field_subtitle }}
-        </div>
-      {% endif %}
+        {% if content.content.field_twi_image[0] %}
+          <div class="fb-icon">
+            {{ content.content.field_twi_image }}
+          </div>
+        {% endif %}
+
+        {% if content.content.field_title[0] %}
+          <div class="fb-title">
+            {{ content.content.field_title }}
+          </div>
+        {% endif %}
+
+        {% if content.content.field_subtitle[0] %}
+          <div class="fb-desc">
+            {{ content.content.field_subtitle }}
+          </div>
+        {% endif %}
     </div>
   </div>
 {% endif %}

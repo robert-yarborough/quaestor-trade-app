@@ -9,6 +9,9 @@ display:
         bundle:
           expose:
             label: النوع
+        langcode:
+          expose:
+            label: اللغة
       title: ميديا
   media_page_list:
     display_title: ميديا
