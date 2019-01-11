@@ -1,0 +1,64 @@
+uuid: 43c67d74-484f-4a31-9649-29a46a42bf3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.finance
+    - field.field.paragraph.text_with_image.field_subtitle
+    - field.field.paragraph.text_with_image.field_title
+    - field.field.paragraph.text_with_image.field_twi_image
+    - image.style.83x92
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - ds
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_twi_image
+        - field_title
+        - field_subtitle
+id: paragraph.text_with_image.finance
+targetEntityType: paragraph
+bundle: text_with_image
+mode: finance
+content:
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_twi_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: 83x92
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+hidden: {  }

@@ -1,0 +1,14 @@
+uuid: e0329d18-c70e-44c2-abeb-f5d61a7f5e9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.finance
+label: Finance
+targetEntityType: paragraph
+cache: true
