@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_applications
+    - paragraphs.paragraphs_type.application
     - paragraphs.paragraphs_type.application_banners_block
   module:
     - entity_reference_revisions
@@ -21,7 +22,8 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles: null
+    target_bundles:
+      application: application
     target_bundles_drag_drop:
       application_banners_block:
         weight: 12
@@ -29,6 +31,9 @@ settings:
       app_stores:
         weight: 13
         enabled: false
+      application:
+        enabled: true
+        weight: 14
       banner_app_stores:
         weight: 14
         enabled: false
@@ -55,5 +60,8 @@ settings:
         enabled: false
       top_banner:
         weight: 22
+        enabled: false
+      map:
+        weight: 23
         enabled: false
 field_type: entity_reference_revisions

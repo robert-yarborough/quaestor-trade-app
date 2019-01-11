@@ -1,0 +1,64 @@
+uuid: b0a1299d-8b3a-4a8d-b97e-9e748b3e10a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.application.field_avaiability
+    - field.field.paragraph.application.field_description
+    - field.field.paragraph.application.field_image
+    - field.field.paragraph.application.field_link
+    - field.field.paragraph.application.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.application
+  module:
+    - image
+    - link
+    - text
+id: paragraph.application.default
+targetEntityType: paragraph
+bundle: application
+mode: default
+content:
+  field_avaiability:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_description:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
