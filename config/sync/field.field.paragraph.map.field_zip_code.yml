@@ -1,0 +1,19 @@
+uuid: 97aa3785-64f5-41ca-a208-cc22d09095d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_zip_code
+    - paragraphs.paragraphs_type.map
+id: paragraph.map.field_zip_code
+field_name: field_zip_code
+entity_type: paragraph
+bundle: map
+label: 'Zip code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

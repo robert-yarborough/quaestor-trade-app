@@ -1,0 +1,102 @@
+uuid: 47d81d7a-101c-4da5-acc6-18609f1a5675
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_address
+    - field.field.paragraph.map.field_email
+    - field.field.paragraph.map.field_fax
+    - field.field.paragraph.map.field_phone
+    - field.field.paragraph.map.field_title
+    - field.field.paragraph.map.field_zip_code
+    - paragraphs.paragraphs_type.map
+  module:
+    - ds
+    - simple_gmap
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_title
+        - field_email
+        - field_phone
+        - field_fax
+        - field_address
+        - field_zip_code
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_address:
+    weight: 4
+    label: hidden
+    settings:
+      include_map: true
+      apikey: ''
+      iframe_width: 100%
+      iframe_height: '780'
+      static_scale: 1
+      link_text: 'View larger map'
+      zoom_level: 19
+      include_text: true
+      map_type: m
+      langcode: page
+      include_static_map: false
+      include_link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: simple_gmap
+    region: content
+  field_email:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_fax:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_zip_code:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
