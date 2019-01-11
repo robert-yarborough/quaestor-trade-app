@@ -1,0 +1,11 @@
+uuid: f06b889b-cecd-4a9e-99bc-8c4e9c6e5a7e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:5119d9a5-5439-4870-b643-1b8c85207b9a'
+id: application
+label: Application
+icon_uuid: 5119d9a5-5439-4870-b643-1b8c85207b9a
+description: ''
+behavior_plugins: {  }

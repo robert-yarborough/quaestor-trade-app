@@ -1,6 +1,6 @@
 uuid: d58d2f38-4209-4013-8b63-34e0c16b4d84
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:block_paragraph:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
@@ -10,7 +10,7 @@ dependencies:
     - d8base
 id: copyright
 theme: d8base
-region: footer
+region: ''
 weight: 0
 provider: null
 plugin: 'block_content:66760d87-f2c1-4130-bd62-0ecd0ec6067e'

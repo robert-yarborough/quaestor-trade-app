@@ -1,0 +1,11 @@
+uuid: 21bffd55-1dcb-4748-b933-3e7e021a5dab
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:20e2c599-ee60-437c-af7f-f533e88cd66b'
+id: application_banners_block
+label: 'Application banners (block)'
+icon_uuid: 20e2c599-ee60-437c-af7f-f533e88cd66b
+description: ''
+behavior_plugins: {  }
