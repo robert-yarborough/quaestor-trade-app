@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.page.field_block_reference
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_paragraph
     - field.field.node.page.panelizer
     - node.type.page
   module:
     - content_moderation
     - inline_entity_form
     - metatag
+    - paragraphs
     - path
 _core:
   default_config_hash: 7fm6IQg6gNfLHHQlwMKSUqMSbPhM8O91P6nqQkjtH80
@@ -47,6 +49,18 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+  field_paragraph:
+    type: entity_reference_paragraphs
+    weight: 104
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
