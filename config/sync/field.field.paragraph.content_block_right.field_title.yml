@@ -1,19 +1,21 @@
-uuid: c3a93e30-974a-4944-9acd-950fd8ec4aa7
+uuid: df99c5df-12ff-4254-89cf-1dff39b9913e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title_line1
+    - field.storage.paragraph.field_title
     - paragraphs.paragraphs_type.content_block_right
-id: paragraph.content_block_right.field_title_line1
-field_name: field_title_line1
+  module:
+    - text
+id: paragraph.content_block_right.field_title
+field_name: field_title
 entity_type: paragraph
 bundle: content_block_right
-label: 'Title line 1'
+label: Title
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: text

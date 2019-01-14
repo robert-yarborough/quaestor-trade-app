@@ -6,8 +6,7 @@ dependencies:
     - field.field.paragraph.list_content2.field_button
     - field.field.paragraph.list_content2.field_button2
     - field.field.paragraph.list_content2.field_subtitle
-    - field.field.paragraph.list_content2.field_title_line1
-    - field.field.paragraph.list_content2.field_title_line2
+    - field.field.paragraph.list_content2.field_title
     - field.field.paragraph.list_content2.field_twi_three_items
     - paragraphs.paragraphs_type.list_content2
   module:
@@ -25,19 +24,18 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_title_line1
-        - field_title_line2
         - field_subtitle
         - field_twi_three_items
         - field_button
         - field_button2
+        - field_title
 id: paragraph.list_content2.default
 targetEntityType: paragraph
 bundle: list_content2
 mode: default
 content:
   field_button:
-    weight: 4
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
@@ -49,7 +47,7 @@ content:
     type: link
     region: content
   field_button2:
-    weight: 5
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -61,30 +59,21 @@ content:
     type: link
     region: content
   field_subtitle:
-    weight: 2
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_title_line1:
-    weight: 0
+  field_title:
+    weight: 4
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
-    region: content
-  field_title_line2:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: text_default
     region: content
   field_twi_three_items:
-    weight: 3
+    weight: 1
     label: hidden
     settings:
       view_mode: finance

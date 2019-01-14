@@ -1,18 +1,18 @@
-uuid: f841c402-ebae-49d3-994f-13be987d7515
+uuid: 9a4571f3-a737-4341-8ebe-c32854828e7d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_twi_image
-    - paragraphs.paragraphs_type.text_with_image
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.banner_app_stores
   module:
     - image
-id: paragraph.text_with_image.field_twi_image
-field_name: field_twi_image
+id: paragraph.banner_app_stores.field_image
+field_name: field_image
 entity_type: paragraph
-bundle: text_with_image
+bundle: banner_app_stores
 label: Image
-description: 'Recommended image size is 255х255.'
+description: 'Recommended image size is 1920х790.'
 required: false
 translatable: false
 default_value: {  }
@@ -21,9 +21,9 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 255x255
+  max_resolution: 1920x790
   min_resolution: ''
-  alt_field: true
+  alt_field: false
   alt_field_required: true
   title_field: false
   title_field_required: false

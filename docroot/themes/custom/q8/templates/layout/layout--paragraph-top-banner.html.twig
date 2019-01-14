@@ -25,7 +25,7 @@
     <div class="front-banner__bg skrollable skrollable-before"
          data-top-bottom="transform: translate3d(0px, 30%, 0px);"
          data--200-top="transform: translate3d(0px, 0%, 0px);"
-         style="background-image: url({{ content.content.field_top_banner_bg[0]|render }}); transform: translate3d(0px, 0%, 0px);">
+         style="background-image: url({{ content.content.field_image[0]|render }}); transform: translate3d(0px, 0%, 0px);">
     </div>
     
     <div {{ region_attributes.content
@@ -34,10 +34,10 @@
               .setAttribute('data--200-top', 'transform: translate3d(0px, 0%, 0px); opacity: 1;')
               .setAttribute('style', 'transform: translate3d(0px, 0%, 0px); opacity: 1;') }}>
         <div class="page-frame">
-          {% if content.content.field_title_line1[0] or content.content.field_title_line2[0] %}
+          {% if content.content.field_title[0] %}
             <div class="front-banner__title">
               <h1>
-                {{ content.content.field_title_line1[0] }} <b>{{ content.content.field_title_line2[0] }}</b>
+                {{ content.content.field_title[0] }}
               </h1>
             </div>
           {% endif %}

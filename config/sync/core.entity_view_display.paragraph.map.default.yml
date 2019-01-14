@@ -24,12 +24,12 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_title
         - field_email
         - field_phone
         - field_fax
         - field_address
         - field_zip_code
+        - field_title
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
@@ -85,7 +85,7 @@ content:
     type: string
     region: content
   field_title:
-    weight: 0
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }

@@ -4,8 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.options.field_subtitle
-    - field.field.paragraph.options.field_title_line1
-    - field.field.paragraph.options.field_title_line2
+    - field.field.paragraph.options.field_title
     - field.field.paragraph.options.field_twi_three_items
     - paragraphs.paragraphs_type.options
   module:
@@ -22,41 +21,31 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_title_line1
-        - field_title_line2
         - field_subtitle
         - field_twi_three_items
+        - field_title
 id: paragraph.options.default
 targetEntityType: paragraph
 bundle: options
 mode: default
 content:
   field_subtitle:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_title_line1:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title_line2:
-    type: string
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   field_twi_three_items:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 1
     label: hidden
     settings:
       view_mode: options

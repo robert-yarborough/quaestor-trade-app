@@ -4,11 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.banner_app_stores.field_app_stores
-    - field.field.paragraph.banner_app_stores.field_banner_appstores_bg
     - field.field.paragraph.banner_app_stores.field_button
+    - field.field.paragraph.banner_app_stores.field_image
     - field.field.paragraph.banner_app_stores.field_subtitle
-    - field.field.paragraph.banner_app_stores.field_title_line1
-    - field.field.paragraph.banner_app_stores.field_title_line2
+    - field.field.paragraph.banner_app_stores.field_title
     - paragraphs.paragraphs_type.banner_app_stores
   module:
     - ds
@@ -26,13 +25,11 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_title_line1
-        - field_title_line2
+        - field_title
+        - field_image
         - field_subtitle
         - field_button
         - field_app_stores
-        - field_app_stores_reference
-        - field_banner_appstores_bg
 id: paragraph.banner_app_stores.default
 targetEntityType: paragraph
 bundle: banner_app_stores
@@ -43,17 +40,16 @@ content:
     weight: 4
     label: hidden
     settings:
-      view_mode: default
+      view_mode: preview
       link: ''
-    third_party_settings: {  }
-    region: content
-  field_banner_appstores_bg:
-    weight: 6
-    label: hidden
-    settings:
-      image_style: ''
-    third_party_settings: {  }
-    type: image_url
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     region: content
   field_button:
     type: link
@@ -67,6 +63,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+  field_image:
+    type: image_url
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
   field_subtitle:
     type: text_default
     weight: 2
@@ -74,20 +78,11 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_title_line1:
+  field_title:
     weight: 0
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: text_default
     region: content
-  field_title_line2:
-    type: string
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden: {  }

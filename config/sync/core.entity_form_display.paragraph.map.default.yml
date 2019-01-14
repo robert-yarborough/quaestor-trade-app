@@ -50,7 +50,7 @@ content:
     type: string_textfield
     region: content
   field_title:
-    weight: 0
+    weight: 6
     settings:
       size: 60
       placeholder: ''

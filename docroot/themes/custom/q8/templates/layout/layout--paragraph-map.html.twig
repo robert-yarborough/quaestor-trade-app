@@ -24,7 +24,11 @@
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'map-block__inner') }}>
       <div class="map-block__contact">
         <div class="map-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
-        <div class="map-block__title">Contact information</div>
+        {% if content.content.field_title[0] %}
+          <div class="map-block__title">
+            {{ content.content.field_title[0] }}
+          </div>
+        {% endif %}
         <div class="map-block__info">
           {% if content.content.field_address[0] %}
             <p><i><svg width="14" height="20" class="q-icon q-icon-gps"><use xlink:href="#icon-gps"></use></svg></i>

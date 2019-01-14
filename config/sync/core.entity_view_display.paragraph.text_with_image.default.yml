@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text_with_image.field_image
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_title
-    - field.field.paragraph.text_with_image.field_twi_image
     - paragraphs.paragraphs_type.text_with_image
   module:
     - ds
@@ -21,16 +21,25 @@ third_party_settings:
       settings: {  }
     regions:
       content:
-        - field_twi_image
-        - field_title
         - field_subtitle
+        - field_title
+        - field_image
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
 bundle: text_with_image
 mode: default
 content:
-  field_subtitle:
+  field_image:
     weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_subtitle:
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -42,14 +51,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_twi_image:
-    weight: 0
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
 hidden: {  }

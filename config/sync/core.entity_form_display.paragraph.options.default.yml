@@ -4,8 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.options.field_subtitle
-    - field.field.paragraph.options.field_title_line1
-    - field.field.paragraph.options.field_title_line2
+    - field.field.paragraph.options.field_title
     - field.field.paragraph.options.field_twi_three_items
     - paragraphs.paragraphs_type.options
   module:
@@ -17,32 +16,24 @@ bundle: options
 mode: default
 content:
   field_subtitle:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_title_line1:
+  field_title:
     weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_title_line2:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: text_textfield
     region: content
   field_twi_three_items:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
