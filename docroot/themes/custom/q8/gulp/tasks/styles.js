@@ -9,15 +9,44 @@ const csso         = require('postcss-csso');
 const concat       = require('gulp-concat');
 const gulpif       = require('gulp-if');
 
-const isMax = mq => {
+const processors = [
+    autoprefixer({
+        browsers: ['last 4 versions'],
+        cascade: false
+    }),
+    mqpacker({
+        sort: sortMediaQueries
+    }),
+    csso
+];
+
+gulp.task('styles', function() {
+    return gulp
+        .src(config.src.sass + '/*.{sass,scss}')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: config.production ? 'compact' : 'expanded', // nested, expanded, compact, compressed
+            precision: 5
+        }))
+        .on('error', config.errorHandler)
+        .pipe(postcss(processors))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(config.dest.css));
+});
+
+gulp.task('styles:watch', function() {
+    gulp.watch(config.src.sass + '/**/*.{sass,scss}', ['styles']);
+});
+
+function isMax(mq) {
     return /max-width/.test(mq);
-};
+}
 
-const isMin = mq => {
+function isMin(mq) {
     return /min-width/.test(mq);
-};
+}
 
-const sortMediaQueries = (a, b) => {
+function sortMediaQueries(a, b) {
     A = a.replace(/\D/g, '');
     B = b.replace(/\D/g, '');
 
@@ -32,33 +61,4 @@ const sortMediaQueries = (a, b) => {
     }
 
     return 1;
-};
-
-const processors = [
-    autoprefixer({
-        browsers: ['last 4 versions'],
-        cascade: false
-    }),
-    mqpacker({
-        sort: sortMediaQueries
-    }),
-    csso
-];
-
-gulp.task('styles', () => {
-    return gulp
-        .src(config.src.sass + '/*.{sass,scss}')
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: config.production ? 'compact' : 'expanded', // nested, expanded, compact, compressed
-            precision: 5
-        }))
-        .on('error', config.errorHandler)
-        .pipe(postcss(processors))
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(config.dest.css));
-});
-
-gulp.task('styles:watch',() => {
-    gulp.watch(config.src.sass + '/**/*.{sass,scss}', ['styles']);
-});
+}

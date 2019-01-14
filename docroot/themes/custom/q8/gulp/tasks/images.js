@@ -3,6 +3,8 @@ const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const size = require('gulp-size');
+const gulpIf = require('gulp-if');
+const isFile = gulpIf.isFile;
 const config = require('../config');
 const watch = require('gulp-watch');
 
@@ -27,9 +29,9 @@ gulp.task('images', () => {
     }));
 });
 
-gulp.task('images:watch', ['images'], () => {
+gulp.task('images:watch', ['images'], function () {
     return watch([
-        config.src.img + '/*.*'], () => {
+        config.src.img + '/*.*'], function () {
         gulp.src([
             config.src.img + '/*.*'
         ])

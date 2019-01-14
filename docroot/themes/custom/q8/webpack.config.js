@@ -16,8 +16,8 @@ function createConfig(env) {
     webpackConfig = {
         context: path.join(__dirname, config.src.scripts),
         entry: {
-            vendor: ['jquery'],
-            app: './app.js'
+            //vendor: ['jquery'],
+            script: './app.js',
         },
         output: {
             path: path.join(__dirname, config.dest.scripts),
@@ -26,24 +26,24 @@ function createConfig(env) {
         },
         devtool: isProduction ?
             '#source-map' :
-            '#cheap-module-eval-source-map',
+            '#cheap-module-source-map',
         plugins: [
-            new webpack.optimize.CommonsChunkPlugin({
-                name: 'vendor',
-                filename: '[name].js',
-                minChunks: Infinity
-            }),
+            // new webpack.optimize.CommonsChunkPlugin({
+            //     name: 'vendor',
+            //     filename: '[name].js',
+            //     minChunks: Infinity
+            // }),
             // uncomment in case of emergency code formatter need
             // new PrettierPlugin({
             //     printWidth: 80,
             //     tabWidth: 4
             // }),
-            new webpack.ProvidePlugin({ // Global plugin include
-                $: "jquery",
-                jQuery: "jquery",
-                'window.jQuery': "jquery"
-            }),
-            new webpack.NoEmitOnErrorsPlugin(),
+            // new webpack.ProvidePlugin({ // Global plugin include
+            //     $: "jquery",
+            //     jQuery: "jquery",
+            //     'window.jQuery': "jquery",
+            // }),
+            //new webpack.NoEmitOnErrorsPlugin(),
 
             // Use it to analyse your bundle
             new BundleAnalyzerPlugin({

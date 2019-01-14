@@ -11,14 +11,17 @@
 /docroot/sites/development.services.yml
 /docroot/sites/*/settings*.php
 
-# Ignore simpletest
+# Ignore simpletest.
 docroot/sites/simpletest
 
 # Ignore node and npm.
 */node_modules/*
-/docroot/themes/custom/design_lens/yarn-error.log
+/docroot/themes/custom/q8/yarn-error.log
 
-# Ignore Import Images
+# Ignore gulp config
+/docroot/themes/custom/q8/gulp/config.local.js
+
+# Ignore Import Images.
 /docroot/sites/default/images
 
 # Ignore Composer-managed dependencies.
@@ -27,8 +30,15 @@ vendor/
 # Ignore local docker compose overrides.
 docker-compose.override.yml
 
-# Ignore yarn logs
+# Ignore yarn logs.
 *yarn-error.log
 
+# Ignore css map.
+*css.map
 
+# Ignore js map.
+*js.map
+
+# Ignore browsersync module.
+/docroot/modules/browsersync
 
