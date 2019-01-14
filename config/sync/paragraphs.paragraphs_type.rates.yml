@@ -1,0 +1,11 @@
+uuid: 013dce8d-2d33-48e3-aa0a-13a84f3dab6c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:4d64cb02-544b-455e-83f0-5a2511402a86'
+id: rates
+label: Rates
+icon_uuid: 4d64cb02-544b-455e-83f0-5a2511402a86
+description: ''
+behavior_plugins: {  }

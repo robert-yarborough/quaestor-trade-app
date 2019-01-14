@@ -1,0 +1,14 @@
+uuid: e8136632-c576-48a2-bedf-0edf52e87b44
+langcode: en
+status: true
+dependencies: {  }
+name: 364x175
+label: 364x175
+effects:
+  7b664f06-07a9-4efa-9dd7-8e9ffe291a8d:
+    uuid: 7b664f06-07a9-4efa-9dd7-8e9ffe291a8d
+    id: image_resize
+    weight: 1
+    data:
+      width: 364
+      height: 175

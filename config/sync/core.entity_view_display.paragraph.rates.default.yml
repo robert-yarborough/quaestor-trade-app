@@ -1,0 +1,63 @@
+uuid: be9e1f87-6768-479a-a138-e3c80e3d7a2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rates.field_link
+    - field.field.paragraph.rates.field_paragraphs
+    - field.field.paragraph.rates.field_subtitle
+    - field.field.paragraph.rates.field_title
+    - paragraphs.paragraphs_type.rates
+  module:
+    - ds
+    - entity_reference_revisions
+    - link
+    - text
+id: paragraph.rates.default
+targetEntityType: paragraph
+bundle: rates
+mode: default
+content:
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

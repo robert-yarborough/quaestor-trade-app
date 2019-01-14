@@ -1,20 +1,27 @@
-uuid: 89dea11d-22f1-4f47-b444-909caf2bf01d
+uuid: 40aa0726-3b43-41f9-81ee-484e6e87f4f7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_title_background
-    - node.type.flexible
+    - node.type.page
   module:
+    - content_translation
     - image
-id: node.flexible.field_title_background
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: '0'
+      alt: '0'
+      title: '0'
+id: node.page.field_title_background
 field_name: field_title_background
 entity_type: node
-bundle: flexible
+bundle: page
 label: 'Title background'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,0 +1,21 @@
+uuid: 4934a3f0-e102-4e37-afa8-e9ac3629e6a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.rate_item
+  module:
+    - text
+id: paragraph.rate_item.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: rate_item
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
