@@ -1,0 +1,15 @@
+bfmdev1:
+  host: bfmdev1.com
+  options:
+    command-specific:
+      sql-sync:
+        no-dump: true
+    os: Linux
+  paths:
+    files: sites/default/files
+    drush-script: /var/www/httpdocs/vendor/drush/drush/drush.php
+  root: /var/www/httpdocs/docroot
+  uri: 'http://q8securities.bfmdev1.com/'
+  user: q8securities
+  ssh:
+    options: '-p 5012'

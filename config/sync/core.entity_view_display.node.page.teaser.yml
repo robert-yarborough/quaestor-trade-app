@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_paragraph
-    - field.field.node.page.panelizer
     - node.type.page
   module:
     - user
@@ -22,6 +21,7 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  field_block_reference: true
   field_meta_tags: true
   field_paragraph: true
   langcode: true

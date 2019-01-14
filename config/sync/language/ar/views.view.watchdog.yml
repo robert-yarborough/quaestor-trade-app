@@ -1,9 +1,18 @@
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: انتقاء
       fields:
+        nothing:
+          admin_label: أيقونة
         type:
           label: النوع
+        name:
+          label: المستخدم
+        link:
+          label: عمليات
       filters:
         type:
           expose:

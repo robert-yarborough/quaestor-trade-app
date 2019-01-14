@@ -2,16 +2,22 @@ label: ميديا
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: انتقاء
       fields:
+        media_bulk_form:
+          action_title: إجراء
         bundle:
           label: النوع
+        status:
+          label: الحالة
+        operations:
+          label: عمليات
       filters:
         bundle:
           expose:
             label: النوع
-        langcode:
-          expose:
-            label: اللغة
       title: ميديا
   media_page_list:
     display_title: ميديا

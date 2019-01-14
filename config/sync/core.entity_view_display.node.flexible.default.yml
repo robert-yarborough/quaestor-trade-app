@@ -1,0 +1,82 @@
+uuid: 1f6a2df3-6ccc-4171-b9ba-aa7c9c2215a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.flexible.field_meta_tags
+    - field.field.node.flexible.field_paragraphs
+    - field.field.node.flexible.field_title_background
+    - node.type.flexible
+  module:
+    - ds
+    - entity_reference_revisions
+    - metatag
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_meta_tags
+        - node_title
+        - field_paragraphs
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.flexible.default
+targetEntityType: node
+bundle: flexible
+mode: default
+content:
+  field_meta_tags:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: ds_content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  field_title_background: true
+  langcode: true
+  links: true

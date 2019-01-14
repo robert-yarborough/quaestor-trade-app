@@ -18,6 +18,7 @@ module:
   ctools_block: 0
   datetime: 0
   dblog: 0
+  devel: 0
   diff: 0
   dropzonejs: 0
   editor: 0
@@ -46,12 +47,9 @@ module:
   language: 0
   layout_discovery: 0
   libraries: 0
-  lightning_api: 0
   lightning_contact_form: 0
   lightning_core: 0
   lightning_install: 0
-  lightning_landing_page: 0
-  lightning_layout: 0
   lightning_media: 0
   lightning_media_audio: 0
   lightning_media_bulk_upload: 0
@@ -62,9 +60,7 @@ module:
   lightning_media_twitter: 0
   lightning_media_video: 0
   lightning_page: 0
-  lightning_roles: 0
   lightning_scheduler: 0
-  lightning_search: 0
   lightning_workflow: 0
   link: 0
   locale: 0
@@ -129,6 +125,7 @@ theme:
   classy: 0
   seven: 0
   d8base: 0
+  q8: 0
 profile: lightning
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

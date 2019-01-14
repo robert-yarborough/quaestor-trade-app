@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_paragraph
-    - field.field.node.page.panelizer
     - node.type.page
   module:
     - entity_reference_revisions
@@ -48,5 +47,6 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_block_reference: true
   langcode: true
   panelizer: true

@@ -1,0 +1,30 @@
+uuid: af767eeb-7405-4449-9909-d5ca10b8e16d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.application_banners_block.field_applications
+    - paragraphs.paragraphs_type.application_banners_block
+  module:
+    - paragraphs
+id: paragraph.application_banners_block.default
+targetEntityType: paragraph
+bundle: application_banners_block
+mode: default
+content:
+  field_applications:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
