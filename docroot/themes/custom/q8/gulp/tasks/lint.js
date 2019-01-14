@@ -13,7 +13,7 @@ gulp.task('lint:styles', () => {
     }));
 });
 
-gulp.task('lint', () => {
+gulp.task('lint', function(){
   runseq(
     'lint:styles'
   );

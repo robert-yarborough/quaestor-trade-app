@@ -1,25 +1,25 @@
-const gulp   = require('gulp');
-const config = require('../config.js');
+var gulp   = require('gulp');
+var config = require('../config.js');
 
-gulp.task('copy:fonts', () => {
+gulp.task('copy:fonts', function() {
     return gulp
         .src(config.src.fonts + '/*.{ttf,eot,woff,woff2}')
         .pipe(gulp.dest(config.dest.fonts));
 });
 
-gulp.task('copy:lib', () => {
+gulp.task('copy:lib', function() {
     return gulp
         .src(config.src.lib + '/**/*.*')
         .pipe(gulp.dest(config.dest.lib));
 });
 
-gulp.task('copy:rootfiles', () => {
+gulp.task('copy:rootfiles', function() {
     return gulp
         .src(config.src.root + '/*.*')
         .pipe(gulp.dest(config.dest.root));
 });
 
-gulp.task('copy:static', () => {
+gulp.task('copy:static', function() {
   return gulp
       .src(config.src.static + '/*.*', {
         dot: true
@@ -27,7 +27,7 @@ gulp.task('copy:static', () => {
       .pipe(gulp.dest(config.dest.root));
 });
 
-gulp.task('copy:html', () => {
+gulp.task('copy:html', function() {
     return gulp
         .src(config.src.root + '/*.html')
         .pipe(gulp.dest(config.dest.root));
@@ -38,6 +38,6 @@ gulp.task('copy', [
     'copy:static',
     'copy:fonts'
 ]);
-gulp.task('copy:watch', () => {
+gulp.task('copy:watch', function() {
     gulp.watch(config.src.root + '/**/*.*', ['copy']);
 });

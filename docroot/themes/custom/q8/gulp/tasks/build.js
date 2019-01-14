@@ -1,26 +1,27 @@
-const gulp        = require('gulp');
-const runSequence = require('run-sequence');
-const config      = require('../config');
+var gulp        = require('gulp');
+var runSequence = require('run-sequence');
+var config      = require('../config');
 
-const build = cb => {
+function build(cb) {
     runSequence(
-        'clean',
+        //'clean',
         'styles',
         'images',
         'sprites',
+        'sprites-css',
         'webpack',
         'copy',
         cb
     );
 }
 
-gulp.task('build', cb => {
+gulp.task('build', function(cb) {
     config.setEnv('production');
     config.logEnv();
     build(cb);
 });
 
-gulp.task('build:dev', cb => {
+gulp.task('build:dev', function(cb) {
     config.setEnv('development');
     config.logEnv();
     build(cb);

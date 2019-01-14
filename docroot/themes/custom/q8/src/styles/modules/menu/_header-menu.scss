@@ -164,9 +164,10 @@
                     margin-bottom: 7px;
                 }
             }
-            &.is-current {
+            &.is-active {
                 a {
                     text-decoration: underline;
+                    color: white;
                 }
             }
         }

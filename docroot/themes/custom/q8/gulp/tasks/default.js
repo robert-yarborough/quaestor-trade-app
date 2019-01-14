@@ -1,8 +1,8 @@
-const gulp        = require('gulp');
-const runSequence = require('run-sequence');
-const config      = require('../config');
+var gulp        = require('gulp');
+var runSequence = require('run-sequence');
+var config      = require('../config');
 
-gulp.task('default', cb => {
+gulp.task('default', function(cb) {
     runSequence(
         'build:dev',
         'server',
