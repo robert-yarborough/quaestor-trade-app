@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @file
+ * Theming functions.
+ */
+
+ /**
+  * Implements q8_preprocess_field__node__node_title__flexible().
+  */
 function q8_preprocess_field__node__node_title__flexible(&$variables) {
   // Fallback element.
   $variables['bg_url'] = '';
@@ -7,7 +15,7 @@ function q8_preprocess_field__node__node_title__flexible(&$variables) {
   // Add node alias.
   $node = &$variables['element']['#object'];
 
-  // Get the background field and check if it is an url
+  // Get the background field and check if it is an url.
   if ($node->hasField('field_title_background') && !$node->field_title_background->isEmpty()) {
     $imageStyle = \Drupal::entityTypeManager()->getStorage('image_style')->load('crop_freeform');
     $imageUri = $node->field_title_background->referencedEntities()[0]->getFileUri();
