@@ -19,7 +19,7 @@ field_name: field_title_background
 entity_type: node
 bundle: page
 label: 'Title background'
-description: ''
+description: 'Leave this field empty if you need a custom header. In this case, you need to create the paragraph `Top Banner`'
 required: false
 translatable: true
 default_value: {  }
