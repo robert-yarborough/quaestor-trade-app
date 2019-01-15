@@ -1,4 +1,9 @@
 .path-user {
+    .main-header__inner {
+        @include media('<tablet') {
+            padding-bottom: 10px;
+        }
+    }
     .layout-main {
         @extend .page-frame;
     }
@@ -11,6 +16,11 @@
         margin-top: 50px;
         @include media('<tablet') {
             margin-top: 20px;
+        }
+        .tabs {
+            li {
+                margin: 0 1px;
+            }
         }
     }
     .page-container {
@@ -29,7 +39,8 @@
             background-repeat: no-repeat;
         }
     }
-    .user-login-form, .user-pass {
+    .user-login-form, .user-pass,
+    .contextual-region.profile {
         background-color: white;
         padding: 60px;
         border-bottom: 7px solid $c-bright;
@@ -54,6 +65,13 @@
             @include media('>=tablet') {
                 margin-top: 30px;
             }
+        }
+    }
+    .contextual-region.profile {
+        font-size: 30px;
+        text-align: center;
+        .form-item {
+            text-align: center;
         }
     }
 }

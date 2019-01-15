@@ -121,7 +121,7 @@
                             width: 100%;
                         }
                     }
-                    .is-open-account, a[href='/user'] {
+                    .is-open-account, a[data-drupal-link-system-path='user'] {
                         background-color: white;
                         color: $c-primary;
                         transition: .3s background, .3s color, .3s box-shadow;
@@ -131,7 +131,9 @@
                             box-shadow: inset 0 0 0 1px $c-bright;
                         }
                     }
-                    .is-login, a[href*='login'], a[href*='logout'] {
+                    .is-login,
+                    a[data-drupal-link-system-path*='login'],
+                    a[data-drupal-link-system-path*='logout'] {
                         box-shadow: inset 0 0 0 1px white;
                         transition: .3s box-shadow, .3s color;
                         background-color: $c-primary;
