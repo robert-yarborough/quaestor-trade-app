@@ -14,6 +14,7 @@
         width: 100%;
         background-color: $c-primary;
         pointer-events: none;
+        z-index: 1;
     }
     .navbar {
         &__group {
@@ -95,6 +96,7 @@
                         }
                     }
                     li {
+                        padding-top: 0;
                         &:not(:last-child) {
                             @include media('>=tablet') {
                                 margin-right: 20px;
