@@ -3,14 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.image_browser
     - field.field.paragraph.2_columns_image_text.field_attributes
+    - field.field.paragraph.2_columns_image_text.field_button
     - field.field.paragraph.2_columns_image_text.field_image
     - field.field.paragraph.2_columns_image_text.field_text
     - field.field.paragraph.2_columns_image_text.field_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.2_columns_image_text
   module:
-    - image
+    - entity_browser
+    - link
     - text
 id: paragraph.2_columns_image_text.default
 targetEntityType: paragraph
@@ -23,13 +25,27 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_button:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_image:
     weight: 1
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      entity_browser: image_browser
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      preview_image_style: medium
+      field_widget_edit: true
+      open: false
+      view_mode: default
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_text:
     weight: 3

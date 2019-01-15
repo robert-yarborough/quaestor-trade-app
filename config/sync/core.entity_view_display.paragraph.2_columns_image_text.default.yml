@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.2_columns_image_text.field_attributes
+    - field.field.paragraph.2_columns_image_text.field_button
     - field.field.paragraph.2_columns_image_text.field_image
     - field.field.paragraph.2_columns_image_text.field_text
     - field.field.paragraph.2_columns_image_text.field_title
@@ -11,6 +12,7 @@ dependencies:
   module:
     - ds
     - image
+    - link
     - text
 third_party_settings:
   ds:
@@ -24,6 +26,7 @@ third_party_settings:
       left:
         - field_title
         - field_text
+        - field_button
       right:
         - field_image
 id: paragraph.2_columns_image_text.default
@@ -31,6 +34,25 @@ targetEntityType: paragraph
 bundle: 2_columns_image_text
 mode: default
 content:
+  field_button:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: left
   field_image:
     weight: 2
     label: hidden
