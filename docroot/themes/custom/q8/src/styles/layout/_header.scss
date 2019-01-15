@@ -7,6 +7,14 @@
         align-items: flex-start;
         padding: 20px 0;
     }
+    &__helper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $c-primary;
+        pointer-events: none;
+    }
     .navbar {
         &__group {
             flex-grow: 1;
@@ -111,7 +119,7 @@
                             width: 100%;
                         }
                     }
-                    .is-open-account {
+                    .is-open-account, a[href='/user'] {
                         background-color: white;
                         color: $c-primary;
                         transition: .3s background, .3s color, .3s box-shadow;
@@ -121,7 +129,7 @@
                             box-shadow: inset 0 0 0 1px $c-bright;
                         }
                     }
-                    .is-login, a[href*='login'] {
+                    .is-login, a[href*='login'], a[href*='logout'] {
                         box-shadow: inset 0 0 0 1px white;
                         transition: .3s box-shadow, .3s color;
                         background-color: $c-primary;
@@ -139,6 +147,9 @@
                         }
                         .q-icon {
                             fill: currentColor;
+                        }
+                        &.is-active {
+                            color: white;
                         }
                         &:hover {
                             box-shadow: inset 0 0 0 1px $c-bright;

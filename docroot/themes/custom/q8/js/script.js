@@ -208,6 +208,21 @@ var setHeaderActions = function ($) {
         }
         moduleIsInited = true;
 
+        var $w = $(window);
+
+        // Header Helper:
+
+        var header_create_helper = function header_create_helper() {
+            var $main_header = $('.js-main-header', context);
+            var $h_main_header = $main_header.height();
+            var $main_header_helper = $('.js-main-header-helper', context);
+            if ($main_header.length && $main_header_helper.length) {
+                $main_header_helper.css('height', $h_main_header);
+            }
+        };
+        header_create_helper();
+        $w.on('resize', header_create_helper);
+
         // Language Toggle:
 
         var $menu_lang_list = $('.js-menu-lang-list', context);
@@ -265,6 +280,33 @@ var setHeaderActions = function ($) {
                 e.preventDefault();
                 $(this).toggleClass('is-active');
                 $h_lang_drop.slideToggle();
+            }
+        });
+
+        // Header Menu Relocate:
+
+        var $h_menu_links = $('.js-h-menu-links', context);
+        var $h_menu_main = $('.js-h-menu-main', context);
+        var $h_search = $('.js-h-search', context);
+
+        var header_relocate_m = function header_relocate_m() {
+            if ($h_menu_links.length) {
+                $h_menu_links.prependTo($h_menu_main);
+            }
+        };
+
+        var header_relocate_d = function header_relocate_d() {
+            if ($h_menu_links.length) {
+                $h_menu_links.insertBefore($h_search);
+            }
+        };
+
+        // Tablet:
+        addMediaQueryListener(devicesMQ.desktopMMQ, function (match) {
+            if (match) {
+                header_relocate_m();
+            } else if (match == false) {
+                header_relocate_d();
             }
         });
     };
@@ -423,29 +465,11 @@ var setMain = function ($) {
             }
         });
 
-        var $h_menu_links = $('.js-h-menu-links');
-        var $h_menu_main = $('.js-h-menu-main');
-        var $h_search = $('.js-h-search');
-
-        var header_relocate_m = function header_relocate_m() {
-            if ($h_menu_links.length) {
-                $h_menu_links.prependTo($h_menu_main);
-            }
-        };
-
-        var header_relocate_d = function header_relocate_d() {
-            if ($h_menu_links.length) {
-                $h_menu_links.insertBefore($h_search);
-            }
-        };
-
         // Tablet:
         addMediaQueryListener(devicesMQ.desktopMMQ, function (match) {
             if (match) {
-                header_relocate_m();
                 animate_destroy();
             } else if (match == false) {
-                header_relocate_d();
                 animate_init();
             }
         });
