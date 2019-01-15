@@ -5,10 +5,11 @@ dependencies: {  }
 name: 49x49
 label: 49x49
 effects:
-  31c9c75b-58e0-46a7-9e00-e0ca94206048:
-    uuid: 31c9c75b-58e0-46a7-9e00-e0ca94206048
-    id: image_resize
+  6e8eeee6-95dc-40f3-95fe-95667cb6bd61:
+    uuid: 6e8eeee6-95dc-40f3-95fe-95667cb6bd61
+    id: image_scale
     weight: 2
     data:
       width: 49
-      height: 49
+      height: null
+      upscale: false

@@ -1,0 +1,15 @@
+uuid: 9f95328f-0297-4c1d-9d1f-91e4dc0161ff
+langcode: en
+status: true
+dependencies: {  }
+name: 215x215
+label: 215x215
+effects:
+  96d09b99-aa50-40dc-b41a-ef53449962d3:
+    uuid: 96d09b99-aa50-40dc-b41a-ef53449962d3
+    id: image_scale
+    weight: 2
+    data:
+      width: 215
+      height: null
+      upscale: false
