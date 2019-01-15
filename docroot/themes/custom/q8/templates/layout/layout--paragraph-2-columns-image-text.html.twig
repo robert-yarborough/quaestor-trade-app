@@ -21,7 +21,7 @@
                 <div class="info-block__list">
                     {{ content.left.field_text }}
                 </div>
-                {% if content.left.field_button %}
+                {% if content.left.field_button[0] %}
                     <div class="info-block__btn">
                         {{ content.left.field_button[0]|merge(link_classes) }}
                     </div>

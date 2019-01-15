@@ -17,7 +17,7 @@ use Drupal\Core\Entity\FieldableEntityInterface;
  */
 function q8_preprocess_field__node__node_title__page(&$variables) {
   // Fallback element.
-  $variables['bg_url'] = '';
+  $variables['bg_url'] = FALSE;
 
   // Add node alias.
   $node = &$variables['element']['#object'];

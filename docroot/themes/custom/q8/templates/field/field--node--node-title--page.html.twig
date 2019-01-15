@@ -37,6 +37,7 @@
  * @see template_preprocess_field()
  */
 #}
+{% if bg_url %}
 <div class="front-banner block-section front-banner--main is-center">
     <div class="front-banner__bg skrollable skrollable-before" data-top-bottom="transform: translate3d(0px, 30%, 0px);" data--200-top="transform: translate3d(0px, 0%, 0px);" style="{% if bg_url %} background-image: url('{{ bg_url|trim }}'); {% endif %} transform: translate3d(0px, 0%, 0px);">
     </div>
@@ -50,4 +51,4 @@
         </div>
     </div>
 </div>
-
+{% endif %}
