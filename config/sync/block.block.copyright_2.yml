@@ -2,6 +2,7 @@ uuid: 60725572-e039-4af8-bcc2-d156b937359d
 langcode: en
 status: true
 dependencies:
+
   content:
     - 'block_content:block_paragraph:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
   module:
