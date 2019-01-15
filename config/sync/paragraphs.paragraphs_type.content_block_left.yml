@@ -1,9 +1,0 @@
-uuid: 643f39e1-d40e-4ab1-a587-3fd04baadfaa
-langcode: en
-status: true
-dependencies: {  }
-id: content_block_left
-label: 'Content Block - Left'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }
