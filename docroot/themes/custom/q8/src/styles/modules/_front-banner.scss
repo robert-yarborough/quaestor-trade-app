@@ -4,6 +4,7 @@
     align-items: center;
     overflow: hidden;
     position: relative;
+    z-index: 2;
     &--large {
         @include media('>=tablet') {
             height: 100vh;
