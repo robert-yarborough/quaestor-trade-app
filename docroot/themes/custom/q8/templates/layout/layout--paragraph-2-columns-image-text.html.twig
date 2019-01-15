@@ -1,0 +1,25 @@
+<div{{ attributes.addClass('is-image--contain') }}>
+    <div class="info-block__row">
+        {% if not img_right %}
+            <div class="info-block__col is-image">
+                {{ content.right.field_image }}
+            </div>
+        {% endif %}
+        <div class="info-block__col">
+            <div class="info-block__content">
+                <div class="info-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
+                <div class="block-title">
+                    {{ content.left.field_title }}
+                </div>
+                <div class="info-block__list">
+                    {{ content.left.field_text }}
+                </div>
+            </div>
+        </div>
+        {% if img_right %}
+            <div class="info-block__col is-image">
+                {{ content.right.field_image }}
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains q8_theme.module.
+ */
+
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_help().
+ */
+function q8_theme_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the q8_theme module.
+    case 'help.page.q8_theme':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Theming functions and layouts') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function q8_theme_preprocess_layout__paragraph_2_columns_image_text(array &$variables) {
+  // Add alias for the current entity.
+  $entity = &$variables['content']['#entity'];
+
+  // Set empty attributes.
+  if (empty($variables['attributes'])) {
+    $variables['attributes'] = new Attribute();
+  }
+
+  // By default image is in the right column.
+  $variables['img_right'] = TRUE;
+
+  // Process paragraph attributes.
+  if (
+    $entity instanceof FieldableEntityInterface
+    && $entity->hasField('field_attributes')
+  ) {
+    // Add paragraph classes.
+    $classes = array_column($entity->get('field_attributes')->getValue(), 'value');
+    $variables['attributes'] = new Attribute(
+      [
+        'class' => $classes,
+      ]
+    );
+
+    // Override image position to the left.
+    if (in_array('is-left', $classes)) {
+      $variables['img_right'] = FALSE;
+    }
+
+  }
+
+}

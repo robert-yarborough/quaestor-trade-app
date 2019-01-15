@@ -13,3 +13,6 @@ display:
         type:
           expose:
             label: 'نوع المحتوى'
+        langcode:
+          expose:
+            label: اللغة

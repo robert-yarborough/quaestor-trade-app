@@ -1,0 +1,58 @@
+uuid: 18fb8f7b-7fe4-4499-9a36-2ba817aadf71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.2_columns_image_text.field_attributes
+    - field.field.paragraph.2_columns_image_text.field_image
+    - field.field.paragraph.2_columns_image_text.field_text
+    - field.field.paragraph.2_columns_image_text.field_title
+    - paragraphs.paragraphs_type.2_columns_image_text
+  module:
+    - ds
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: q8_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      left:
+        - field_title
+        - field_text
+      right:
+        - field_image
+id: paragraph.2_columns_image_text.default
+targetEntityType: paragraph
+bundle: 2_columns_image_text
+mode: default
+content:
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: right
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+hidden:
+  field_attributes: true
