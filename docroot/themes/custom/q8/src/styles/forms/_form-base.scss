@@ -6,22 +6,26 @@ label {
 @include input-styles() {
     max-width: 100%;
     border: none;
-    color: $c-base;
-    background: #fff;
+    color: $c-primary;
+    background: white;
     vertical-align: middle;
     outline: none;
-    box-shadow: inset 0 0 0 1px $c-str, inset 0 0 0 1px $c-str;
+    font-weight: 700;
+    box-shadow: inset 0 0 0 1px $c-base, inset 0 0 0 1px $c-base;
     transition: box-shadow .3s;
     @include media('>=tablet') {
-        padding-right: 23px;
-        padding-left: 23px;
+        padding-right: 27px;
+        padding-left: 27px;
     }
     @include media('<tablet') {
         padding-right: 16px;
         padding-left: 16px;
     }
+    @include placeholder {
+        color: $c-str-8;
+    }
     &:focus {
-
+        box-shadow: inset 0 0 0 1px $c-primary, inset 0 0 0 1px $c-primary;
     }
     &:disabled,
     &[disabled] {
@@ -36,19 +40,19 @@ label {
 }
 @include input-styles(false) {
     @include media('>=tablet') {
-        height: 60px;
+        height: 53px;
         padding-top: 10px;
         padding-bottom: 10px;
     }
     @include media('<tablet') {
-        height: 40px;
-        padding-top: 4px;
-        padding-bottom: 6px;
+        height: 43px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
 @include input-styles(false, false) {
     &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 100px #fff inset;
+        //-webkit-box-shadow: 0 0 0 100px #fff inset;
     }
 }
 textarea {
@@ -61,5 +65,31 @@ select {
     cursor: pointer;
     &::-ms-expand {
         display: none;
+    }
+}
+.form-item {
+    margin: 0 0 20px;
+    label {
+        display: block;
+        margin-bottom: 3px;
+    }
+}
+.form-actions {
+    @extend %btn-dark;
+    margin: 0;
+    padding: 0;
+    @include media('<tablet') {
+        width: 100%;
+    }
+    &:after {
+        z-index: 1;
+    }
+    .button {
+        @extend %btn-dark;
+        background: none!important;
+        border: 0;
+        @include media('>=tablet') {
+            justify-content: flex-start;
+        }
     }
 }

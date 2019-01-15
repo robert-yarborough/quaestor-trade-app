@@ -19,7 +19,7 @@ bundle: list_content2
 mode: default
 content:
   field_button:
-    weight: 4
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -27,7 +27,7 @@ content:
     type: link_default
     region: content
   field_button2:
-    weight: 5
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -35,7 +35,7 @@ content:
     type: link_default
     region: content
   field_subtitle:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
@@ -43,7 +43,7 @@ content:
     type: text_textarea
     region: content
   field_title:
-    weight: 6
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -51,7 +51,7 @@ content:
     type: text_textfield
     region: content
   field_twi_three_items:
-    weight: 3
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs

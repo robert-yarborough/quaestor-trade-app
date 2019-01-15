@@ -1,0 +1,20 @@
+.icon {
+    font-size: 16px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("../images/sprites/svg/sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 0em 0em;
+
+      .no-svg & {
+        background-image: url("../svg/sprite.png");
+      }
+    }
+}
+
+
+
+
+

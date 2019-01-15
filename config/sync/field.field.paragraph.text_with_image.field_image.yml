@@ -19,7 +19,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: text_with_image
 label: Image
-description: 'Recommended image size is 255х255.'
+description: "Recommended image size:\r\n- for Lef/Right BlockFront - 55x55\r\n- for Option Block - 215x215\r\n- for List content - 90x90"
 required: false
 translatable: true
 default_value: {  }
@@ -28,7 +28,7 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 255x255
+  max_resolution: ''
   min_resolution: ''
   alt_field: true
   alt_field_required: true

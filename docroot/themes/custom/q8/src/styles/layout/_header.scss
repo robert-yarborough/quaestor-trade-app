@@ -7,6 +7,15 @@
         align-items: flex-start;
         padding: 20px 0;
     }
+    &__helper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $c-primary;
+        pointer-events: none;
+        z-index: 1;
+    }
     .navbar {
         &__group {
             flex-grow: 1;
@@ -87,6 +96,7 @@
                         }
                     }
                     li {
+                        padding-top: 0;
                         &:not(:last-child) {
                             @include media('>=tablet') {
                                 margin-right: 20px;
@@ -111,7 +121,7 @@
                             width: 100%;
                         }
                     }
-                    .is-open-account {
+                    .is-open-account, a[data-drupal-link-system-path='user'] {
                         background-color: white;
                         color: $c-primary;
                         transition: .3s background, .3s color, .3s box-shadow;
@@ -121,12 +131,29 @@
                             box-shadow: inset 0 0 0 1px $c-bright;
                         }
                     }
-                    .is-login {
+                    .is-login,
+                    a[data-drupal-link-system-path*='login'],
+                    a[data-drupal-link-system-path*='logout'] {
                         box-shadow: inset 0 0 0 1px white;
                         transition: .3s box-shadow, .3s color;
                         background-color: $c-primary;
+                        &:after {
+                            content: '';
+                            display: inline-block;
+                            width: 19px;
+                            height: 19px;
+                            vertical-align: middle;
+                            position: relative;
+                            top: -2px;
+                            margin-left: 7px;
+                            background-image: url('../images/icons/svg/icon-login-white.svg');
+                            background-repeat: no-repeat;
+                        }
                         .q-icon {
                             fill: currentColor;
+                        }
+                        &.is-active {
+                            color: white;
                         }
                         &:hover {
                             box-shadow: inset 0 0 0 1px $c-bright;
@@ -220,7 +247,7 @@
         &__box {
             position: absolute;
             right: 100%;
-            top: -7px;
+            top: -5px;
             margin-right: 10px;
             min-width: 400px;
             transition: .5s;
@@ -245,6 +272,9 @@
             color: white;
             width: 100%;
             padding-right: 50px;
+            @include placeholder {
+                color: white;
+            }
         }
         &__action {
             position: absolute;
@@ -260,6 +290,9 @@
                 right: 15px;
                 top: 9px;
             }
+        }
+        .form-item {
+            margin: 0;
         }
     }
 }

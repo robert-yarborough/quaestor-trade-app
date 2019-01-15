@@ -41,7 +41,7 @@ config.serverProxy
     ? serverConfig = Object.assign(serverConfig, proxyServer)
     : serverConfig = Object.assign(serverConfig, staticServer);
 
-gulp.task('server', () => {
+gulp.task('server', function() {
     server.init(serverConfig);
 });
 

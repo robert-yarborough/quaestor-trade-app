@@ -44,6 +44,12 @@
     }
     .fb-icon {
         margin-bottom: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 215px;
+        @include media('<tablet-m', '>=tablet') {
+            width: 180px;
+        }
         @include media('<tablet') {
             margin-bottom: 25px;
         }
