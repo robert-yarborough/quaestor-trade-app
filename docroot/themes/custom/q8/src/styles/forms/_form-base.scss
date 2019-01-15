@@ -45,9 +45,9 @@ label {
         padding-bottom: 10px;
     }
     @include media('<tablet') {
-        height: 40px;
-        padding-top: 4px;
-        padding-bottom: 6px;
+        height: 43px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
 @include input-styles(false, false) {
@@ -78,13 +78,18 @@ select {
     @extend %btn-dark;
     margin: 0;
     padding: 0;
+    @include media('<tablet') {
+        width: 100%;
+    }
     &:after {
         z-index: 1;
     }
     .button {
         @extend %btn-dark;
-        justify-content: flex-start;
+        background: none!important;
         border: 0;
-        background: none;
+        @include media('>=tablet') {
+            justify-content: flex-start;
+        }
     }
 }
