@@ -51,10 +51,13 @@
 #}
 {% include directory ~ '/images/svg/svg/symbols.svg' %}
 <div id="page-wrapper">
-  <div id="page">
-    <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
-      {{ page.header }}
+  <div class="edit-tabs edit-tabs--top">{{ page.header }}</div>
+  <div id="page" class="page-container">
+    <header id="header" class="header main-header js-main-header" role="banner" aria-label="{{ 'Site header'|t }}">
+      {{ page.content_top }}
     </header>
+    <div class="main-header__helper js-main-header-helper"></div>
+    <div class="edit-tabs edit-tabs--secondary">{{ page.header }}</div>
     {% if page.featured_top %}
       <div class="featured-top">
         <aside class="featured-top__inner section" role="complementary">
@@ -74,7 +77,6 @@
         <main id="content" class="column main-content" role="main">
           <section class="section">
             <a id="main-content" tabindex="-1"></a>
-            {{ page.content_top }}
             {{ page.content }}
             {{ page.content_bottom }}
           </section>

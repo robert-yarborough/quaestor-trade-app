@@ -48,7 +48,7 @@ label {
 }
 @include input-styles(false, false) {
     &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 100px #fff inset;
+        //-webkit-box-shadow: 0 0 0 100px #fff inset;
     }
 }
 textarea {

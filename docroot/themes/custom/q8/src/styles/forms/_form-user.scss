@@ -1,0 +1,12 @@
+.path-user {
+    .layout-main {
+        @extend .page-frame;
+    }
+    .edit-tabs--top {
+        display: none;
+    }
+    .edit-tabs--secondary {
+        display: block;
+        text-align: center;
+    }
+}

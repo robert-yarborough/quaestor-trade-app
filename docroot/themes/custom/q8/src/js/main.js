@@ -141,30 +141,13 @@ const setMain = (($) => {
             }
         });
 
-        let $h_menu_links = $('.js-h-menu-links');
-        let $h_menu_main = $('.js-h-menu-main');
-        let $h_search = $('.js-h-search');
-
-        const header_relocate_m = () => {
-            if ($h_menu_links.length) {
-                $h_menu_links.prependTo($h_menu_main);
-            }
-        };
-
-        const header_relocate_d = () => {
-            if ($h_menu_links.length) {
-                $h_menu_links.insertBefore($h_search);
-            }
-        };
 
         // Tablet:
         addMediaQueryListener(devicesMQ.desktopMMQ, function (match) {
             if (match) {
-                header_relocate_m();
                 animate_destroy();
             }
             else if (match == false) {
-                header_relocate_d();
                 animate_init();
             }
         });

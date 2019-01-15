@@ -75,6 +75,24 @@ body {
             }
         }
     }
+    &.toolbar-horizontal {
+        .front-banner--main {
+            @include media('>=tablet-l') {
+                margin-top: -142px;
+            }
+        }
+    }
+}
+.page-container {
+    position: relative;
+}
+.edit-tabs {
+    ul.tabs {
+        margin-bottom: 0;
+    }
+    &--secondary {
+        display: none;
+    }
 }
 html {
     &[dir="rtl"] {

@@ -14,7 +14,6 @@
 #}
 {%
   set classes = [
-  'main-header',
   'navbar',
   'navbar-default',
   'region',
@@ -23,33 +22,32 @@
 %}
 
 {% if elements %}
-  <div {{ attributes.addClass(classes) }}>
-    <div class="page-frame">
-      <div class="main-header__inner">
-        {{ elements.q8_branding }}
-        <div class="navbar__group">
-          <div class="navbar__top--main">
-            <div class="menu--lang__main">
-              {{ elements.q8_languageswitcher }}
-            </div>
-            
-            <div class="menu--links js-h-menu-links">
-              {{ elements.q8_supernav }}
-            </div>
-            
-            <div class="header-search js-h-search">
-              <a href="#" class="header-search__toggle js-h-search-toggle"><svg class="q-icon"><use xlink:href="#icon-search"></use></svg></a>
-              <div class="header-search__box js-h-search-box">
-                {{ elements.q8_simplesearchblock }}
-              </div>
+  <div class="page-frame">
+    <div class="main-header__inner">
+      {{ elements.q8_branding }}
+      <div class="navbar__group">
+        <div class="navbar__top--main">
+
+          {{ elements.q8_languageswitcher }}
+
+          <div class="header-toggle-btn js-h-toggle-btn"><span></span></div>
+
+          <div class="menu--links js-h-menu-links">
+            {{ elements.q8_supernav }}
+          </div>
+
+          <div class="header-search js-h-search">
+            <a href="#" class="header-search__toggle js-h-search-toggle"><svg class="q-icon"><use xlink:href="#icon-search"></use></svg></a>
+            <div class="header-search__box js-h-search-box">
+              {{ elements.q8_simplesearchblock }}
             </div>
           </div>
-          
-          <div class="navbar__bot--main js-h-menu-main">
-            {{ elements.q8_main_menu }}
-            <div class="menu--user">
-              {{ elements.q8_account_menu }}
-            </div>
+        </div>
+
+        <div class="navbar__bot--main js-h-menu-main">
+          {{ elements.q8_main_menu }}
+          <div class="menu--user">
+            {{ elements.q8_account_menu }}
           </div>
         </div>
       </div>
