@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.2_columns_image_text.field_attributes
     - field.field.paragraph.2_columns_image_text.field_button
     - field.field.paragraph.2_columns_image_text.field_image
+    - field.field.paragraph.2_columns_image_text.field_mobile_image
     - field.field.paragraph.2_columns_image_text.field_text
     - field.field.paragraph.2_columns_image_text.field_title
     - paragraphs.paragraphs_type.2_columns_image_text
@@ -29,13 +30,14 @@ third_party_settings:
         - field_button
       right:
         - field_image
+        - field_mobile_image
 id: paragraph.2_columns_image_text.default
 targetEntityType: paragraph
 bundle: 2_columns_image_text
 mode: default
 content:
   field_button:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       trim_length: null
@@ -54,7 +56,16 @@ content:
     type: link
     region: left
   field_image:
-    weight: 2
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: right
+  field_mobile_image:
+    weight: 4
     label: hidden
     settings:
       image_style: ''
