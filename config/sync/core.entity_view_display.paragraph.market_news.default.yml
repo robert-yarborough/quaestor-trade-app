@@ -1,0 +1,61 @@
+uuid: e6ac6fe0-e13f-4e22-b59a-0add4a19002e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.market_news.field_button
+    - field.field.paragraph.market_news.field_title
+    - field.field.paragraph.market_news.field_view
+    - paragraphs.paragraphs_type.market_news
+  module:
+    - ds
+    - link
+    - text
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_title
+        - field_view
+        - field_button
+id: paragraph.market_news.default
+targetEntityType: paragraph
+bundle: market_news
+mode: default
+content:
+  field_button:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_view:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

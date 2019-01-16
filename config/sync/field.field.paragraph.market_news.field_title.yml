@@ -1,0 +1,21 @@
+uuid: 4e11088c-b393-4f37-aee6-5fd947c85e3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.market_news
+  module:
+    - text
+id: paragraph.market_news.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: market_news
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
