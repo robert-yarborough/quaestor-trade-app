@@ -1,0 +1,7 @@
+uuid: f78cdfae-43d0-4c48-8029-b12dffde040d
+langcode: en
+status: true
+dependencies: {  }
+id: white_background
+label: 'White background'
+classes: info-block__white

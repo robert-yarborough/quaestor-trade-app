@@ -1,0 +1,7 @@
+uuid: e2971e04-5c09-4d6d-8594-f126001ae746
+langcode: en
+status: true
+dependencies: {  }
+id: grey_background
+label: 'Grey background'
+classes: info-block__grey
