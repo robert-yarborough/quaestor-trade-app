@@ -18,6 +18,8 @@ function createConfig(env) {
         entry: {
             //vendor: ['jquery'],
             script: './app.js',
+            'module-features-slider': './modules/features-slider.js',
+            'module-finance-slider': './modules/finance-slider.js',
         },
         output: {
             path: path.join(__dirname, config.dest.scripts),

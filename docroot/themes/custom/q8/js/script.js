@@ -332,9 +332,9 @@ var setMain = function ($) {
             return;
         }
         moduleIsInited = true;
-        var $root = $('html, body');
+        var $root = $('html, body', context);
 
-        var $next_scroll_link = $('.js-scroll-next-link');
+        var $next_scroll_link = $('.js-scroll-next-link', context);
 
         $next_scroll_link.on({
             click: function click(e) {
@@ -344,7 +344,7 @@ var setMain = function ($) {
             }
         });
 
-        var $chat_widget = $('#chat-widget-container');
+        var $chat_widget = $('#chat-widget-container', context);
         setTimeout(function () {
             if ($chat_widget.length) {
                 $root.addClass('is-cart');
@@ -352,36 +352,9 @@ var setMain = function ($) {
         }, 3000);
 
         var init_slider_class = 'slider-initialized';
-        var $finance_slider = $('.js-finance-block-slider');
-        var financeSwiper = void 0;
 
-        var $rate_slider = $('.js-rates-block-slider');
+        var $rate_slider = $('.js-rates-block-slider', context);
         var rateSwiper = void 0;
-        var finance_slider_init = function finance_slider_init() {
-            if ($finance_slider.length && !$finance_slider.hasClass(init_slider_class)) {
-                financeSwiper = new Swiper($finance_slider, {
-                    slidesPerView: 2,
-                    speed: 750,
-                    navigation: {
-                        nextEl: '.js-fin-sl-btn-next',
-                        prevEl: '.js-fin-sl-btn-prev'
-                    },
-                    breakpoints: {
-                        550: {
-                            slidesPerView: 1
-                        }
-                    }
-                });
-                $finance_slider.addClass(init_slider_class);
-            }
-        };
-
-        var finance_slider_destroy = function finance_slider_destroy() {
-            if ($finance_slider.length && $finance_slider.hasClass(init_slider_class)) {
-                financeSwiper.destroy(false, true);
-                $finance_slider.removeClass(init_slider_class);
-            }
-        };
 
         var rate_slider_init = function rate_slider_init() {
             if ($rate_slider.length) {
@@ -409,42 +382,6 @@ var setMain = function ($) {
             }
         };
 
-        var $feature_slider = $('.js-block-slider');
-        var $feature_slider_wrap = $feature_slider.find('.features-block__grid');
-        var $feature_slider_item = $feature_slider.find('.features-block__col');
-        var $nav_prev = $('<div class="swiper-button-prev js-ft-sl-btn-prev"/>');
-        var $nav_next = $('<div class="swiper-button-next js-ft-sl-btn-next"/>');
-        var featureSwiper = void 0;
-
-        if ($feature_slider.length) {
-            $feature_slider_wrap.addClass('swiper-wrapper');
-            $feature_slider_item.addClass('swiper-slide');
-            $feature_slider_wrap.wrap('<div class="swiper-container" />');
-            $nav_prev.insertAfter($feature_slider_wrap);
-            $nav_next.insertAfter($feature_slider_wrap);
-        }
-
-        var feature_slider_init = function feature_slider_init() {
-            if ($feature_slider.length && !$feature_slider.hasClass(init_slider_class)) {
-                var $feature_slider_box = $feature_slider.find('.swiper-container');
-                featureSwiper = new Swiper($feature_slider_box, {
-                    speed: 750,
-                    navigation: {
-                        nextEl: '.js-ft-sl-btn-next',
-                        prevEl: '.js-ft-sl-btn-prev'
-                    }
-                });
-                $feature_slider.addClass(init_slider_class);
-            }
-        };
-
-        var feature_slider_destroy = function feature_slider_destroy() {
-            if ($feature_slider.length && $feature_slider.hasClass(init_slider_class)) {
-                featureSwiper.destroy(false, true);
-                $feature_slider.removeClass(init_slider_class);
-            }
-        };
-
         var animate_init = function animate_init() {
             skrollr.init();
         };
@@ -455,13 +392,9 @@ var setMain = function ($) {
         // Mobile:
         addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
             if (match) {
-                finance_slider_init();
                 rate_slider_init();
-                feature_slider_init();
             } else if (match == false) {
-                finance_slider_destroy();
                 rate_slider_destroy();
-                feature_slider_destroy();
             }
         });
 
