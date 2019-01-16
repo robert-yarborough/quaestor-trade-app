@@ -1,0 +1,7 @@
+uuid: 2736e3b8-ba99-43b5-805f-215e1acf2cd2
+langcode: en
+status: true
+dependencies: {  }
+id: image_is_big
+label: 'Image is big'
+classes: is-image--large

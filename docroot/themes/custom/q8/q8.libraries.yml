@@ -2,15 +2,48 @@ base:
   version: VERSION
   css:
     theme:
-      css/vendor.css: {}
       //fonts.googleapis.com/css?family=Roboto:300,400,700: { type: external }
-      //cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css: { type: external }
+      css/vendor.css: {}
       css/style.css: {}
   js:
-    //cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js: { type: external }
     //cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js: { type: external }
     js/script.js: {}
   dependencies:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+
+vendor-swiper:
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css: { type: external }
+      css/module-slider.css: { minified: true }
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js: { type: external }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+
+module-features:
+  css:
+    theme:
+      css/module-features.css: { minified: true }
+  js:
+    js/module-features-slider.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - q8/vendor-swiper
+module-finance:
+  css:
+    theme:
+      css/module-finance.css: { minified: true }
+  js:
+    js/module-finance-slider.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - q8/vendor-swiper

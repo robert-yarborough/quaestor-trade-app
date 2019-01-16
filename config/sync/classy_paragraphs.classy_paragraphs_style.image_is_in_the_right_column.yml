@@ -1,0 +1,7 @@
+uuid: 23ccc904-7dfc-43e5-a49d-ae3085df7085
+langcode: en
+status: true
+dependencies: {  }
+id: image_is_in_the_right_column
+label: 'Image is in the RIGHT column'
+classes: is-right

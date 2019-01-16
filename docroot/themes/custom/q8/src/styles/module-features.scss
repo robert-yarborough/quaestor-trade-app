@@ -1,3 +1,5 @@
+@import 'core/core';
+
 .features-block {
     @include media('>=tablet-l') {
         padding: 175px 0 130px;
