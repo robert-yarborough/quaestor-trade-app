@@ -22,7 +22,8 @@
         "drupal/image_effects": "^2.2",
         "drupal/simple_gmap": "^1.4",
         "drupal/viewsreference": "^1.4",
-        "drupal/menu_link_attributes": "^1.0"
+        "drupal/menu_link_attributes": "^1.0",
+        "drupal/classy_paragraphs": "^1.0@beta"
     },
     "repositories": {
         "drupal": {

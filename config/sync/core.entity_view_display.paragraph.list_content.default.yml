@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.list_content.field_image
-    - field.field.paragraph.list_content.field_orientation
+    - field.field.paragraph.list_content.field_style
     - field.field.paragraph.list_content.field_title
     - field.field.paragraph.list_content.field_twi_two_items
     - paragraphs.paragraphs_type.list_content
@@ -12,7 +12,6 @@ dependencies:
     - ds
     - entity_reference_revisions
     - image
-    - options
     - text
 third_party_settings:
   ds:
@@ -41,12 +40,13 @@ content:
     third_party_settings: {  }
     type: image_url
     region: content
-  field_orientation:
-    weight: 1
-    label: hidden
-    settings: {  }
+  field_style:
+    weight: 5
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
-    type: list_default
+    type: entity_reference_label
     region: content
   field_title:
     type: text_default
