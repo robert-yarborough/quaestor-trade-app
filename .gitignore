@@ -42,3 +42,6 @@ docker-compose.override.yml
 # Ignore browsersync module.
 /docroot/modules/browsersync
 
+# Ignore report.html.
+/docroot/themes/custom/q8/js/report.html
+
