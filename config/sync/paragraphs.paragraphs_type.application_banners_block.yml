@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   content:
-    - 'file:file:20e2c599-ee60-437c-af7f-f533e88cd66b'
+    - 'file:file:03c97e79-2315-48e0-b718-8aeb15cb12ce'
 id: application_banners_block
 label: 'Application banners (block)'
-icon_uuid: 20e2c599-ee60-437c-af7f-f533e88cd66b
+icon_uuid: 03c97e79-2315-48e0-b718-8aeb15cb12ce
 description: ''
 behavior_plugins: {  }

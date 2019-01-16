@@ -5,20 +5,38 @@
  * Theming functions.
  */
 
- /**
-  * Implements q8_preprocess_field__node__node_title__flexible().
-  */
-function q8_preprocess_field__node__node_title__flexible(&$variables) {
+use Drupal\Core\Entity\FieldableEntityInterface;
+
+/**
+ * @file
+ * Theming functions.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function q8_preprocess_field__node__node_title__page(&$variables) {
   // Fallback element.
-  $variables['bg_url'] = '';
+  $variables['bg_url'] = FALSE;
 
   // Add node alias.
   $node = &$variables['element']['#object'];
 
   // Get the background field and check if it is an url.
-  if ($node->hasField('field_title_background') && !$node->field_title_background->isEmpty()) {
+  if ($node instanceof FieldableEntityInterface
+    && $node->hasField('field_title_background') && !$node->get('field_title_background')->isEmpty()) {
     $imageStyle = \Drupal::entityTypeManager()->getStorage('image_style')->load('crop_freeform');
-    $imageUri = $node->field_title_background->referencedEntities()[0]->getFileUri();
+    $imageUri = $node->get('field_title_background')->referencedEntities()[0]->getFileUri();
     $variables['bg_url'] = $imageStyle ? $imageStyle->buildUrl($imageUri) : file_create_url($imageUri);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function q8_preprocess_field__field_avaiability(&$variables) {
+  foreach ($variables['items'] as $delta => &$item) {
+    $value = $variables['element']['#items'][$delta]->getValue()['value'];
+    $item['content'] = ['#markup' => '<span class="' . $value . '">' . $value . '</span>'];
   }
 }

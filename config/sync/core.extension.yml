@@ -7,6 +7,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  classy_paragraphs: 0
   config: 0
   consumers: 0
   contact: 0
@@ -68,6 +69,7 @@ module:
   media_entity_instagram: 0
   media_entity_twitter: 0
   media_library: 0
+  menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
   moderation_dashboard: 0
@@ -86,6 +88,7 @@ module:
   panels_ipe: 0
   path: 0
   q8_search: 0
+  q8_theme: 0
   quickedit: 0
   rdf: 0
   schemata: 0
@@ -93,7 +96,6 @@ module:
   search_api: 0
   search_api_db: 0
   serialization: 0
-  shortcut: 0
   simple_gmap: 0
   simple_oauth: 0
   simple_oauth_extras: 0

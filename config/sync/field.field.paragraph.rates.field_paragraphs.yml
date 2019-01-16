@@ -1,0 +1,73 @@
+uuid: 6e245e50-f478-430a-a832-491d751fbf32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.rate_item
+    - paragraphs.paragraphs_type.rates
+  module:
+    - entity_reference_revisions
+id: paragraph.rates.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: rates
+label: 'Rates and Fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      rate_item: rate_item
+    target_bundles_drag_drop:
+      rate_item:
+        enabled: true
+        weight: 16
+      app_stores:
+        weight: 17
+        enabled: false
+      application:
+        weight: 18
+        enabled: false
+      application_banners_block:
+        weight: 19
+        enabled: false
+      banner_app_stores:
+        weight: 20
+        enabled: false
+      content_block_left:
+        weight: 21
+        enabled: false
+      content_block_right:
+        weight: 22
+        enabled: false
+      copyright:
+        weight: 23
+        enabled: false
+      list_content:
+        weight: 24
+        enabled: false
+      list_content2:
+        weight: 25
+        enabled: false
+      map:
+        weight: 26
+        enabled: false
+      options:
+        weight: 27
+        enabled: false
+      rates:
+        weight: 28
+        enabled: false
+      text_with_image:
+        weight: 29
+        enabled: false
+      top_banner:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

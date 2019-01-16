@@ -1,0 +1,37 @@
+{% set link_classes = { '#attributes': { 'class': [ 'btn-primary__dark' ] } } %}
+{% set layout_classes = [
+    'info-block',
+    'block-section',
+    'is-image--contain'
+  ]
+%}
+<div{{ attributes.addClass(layout_classes) }}>
+    <div class="info-block__row">
+        {% if not img_right %}
+            <div class="info-block__col is-image">
+                {{ content.right.field_image }}
+            </div>
+        {% endif %}
+        <div class="info-block__col">
+            <div class="info-block__content">
+                <div class="info-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
+                <div class="block-title">
+                    {{ content.left.field_title }}
+                </div>
+                <div class="info-block__list">
+                    {{ content.left.field_text }}
+                </div>
+                {% if content.left.field_button[0] %}
+                    <div class="info-block__btn">
+                        {{ content.left.field_button[0]|merge(link_classes) }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% if img_right %}
+            <div class="info-block__col is-image">
+                {{ content.right.field_image }}
+            </div>
+        {% endif %}
+    </div>
+</div>

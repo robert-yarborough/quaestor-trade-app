@@ -1,0 +1,21 @@
+uuid: 0e6ae6a7-a8a3-41b4-a9a4-8118c47fc6e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.rates
+  module:
+    - text
+id: paragraph.rates.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: rates
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

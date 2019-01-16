@@ -1,0 +1,8 @@
+q8_2col:
+  label: 2 columns layout
+  category: Q8
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right

@@ -1,0 +1,30 @@
+uuid: 24854425-0716-4a5a-a513-c42fc8b31a5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rate_item.field_subtitle
+    - field.field.paragraph.rate_item.field_title
+    - paragraphs.paragraphs_type.rate_item
+  module:
+    - text
+id: paragraph.rate_item.default
+targetEntityType: paragraph
+bundle: rate_item
+mode: default
+content:
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

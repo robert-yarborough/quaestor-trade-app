@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   content:
-    - 'file:file:5119d9a5-5439-4870-b643-1b8c85207b9a'
+    - 'file:file:8e91397b-6996-45ea-b739-95f764d8df44'
 id: application
 label: Application
-icon_uuid: 5119d9a5-5439-4870-b643-1b8c85207b9a
+icon_uuid: 8e91397b-6996-45ea-b739-95f764d8df44
 description: ''
 behavior_plugins: {  }

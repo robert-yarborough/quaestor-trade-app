@@ -1,0 +1,11 @@
+uuid: 375cb663-cc75-43b2-a9ec-64d6e90bbc17
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:c22d164c-7c57-4da2-b7d4-ebe68a180cb1'
+id: rate_item
+label: 'Rate item'
+icon_uuid: c22d164c-7c57-4da2-b7d4-ebe68a180cb1
+description: ''
+behavior_plugins: {  }

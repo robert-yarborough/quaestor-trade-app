@@ -1,0 +1,84 @@
+uuid: ac8885a3-27c4-4222-8ae6-62e415b3b503
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.2_columns_image_text.field_attributes
+    - field.field.paragraph.2_columns_image_text.field_button
+    - field.field.paragraph.2_columns_image_text.field_image
+    - field.field.paragraph.2_columns_image_text.field_mobile_image
+    - field.field.paragraph.2_columns_image_text.field_text
+    - field.field.paragraph.2_columns_image_text.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.2_columns_image_text
+  module:
+    - image
+    - imce
+    - lightning_media
+    - link
+    - text
+id: paragraph.2_columns_image_text.default
+targetEntityType: paragraph
+bundle: 2_columns_image_text
+mode: default
+content:
+  field_attributes:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_button:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      preview_image_style: medium
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+    type: image_image
+    region: content
+  field_mobile_image:
+    type: image_image
+    weight: 2
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+  field_text:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

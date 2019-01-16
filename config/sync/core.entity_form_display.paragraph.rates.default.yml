@@ -1,0 +1,66 @@
+uuid: 7d1a27c0-a5f1-4e28-922b-ca080ea0a45d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rates.field_link
+    - field.field.paragraph.rates.field_paragraphs
+    - field.field.paragraph.rates.field_subtitle
+    - field.field.paragraph.rates.field_title
+    - paragraphs.paragraphs_type.rates
+  module:
+    - link
+    - paragraphs
+    - text
+id: paragraph.rates.default
+targetEntityType: paragraph
+bundle: rates
+mode: default
+content:
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_paragraphs:
+    type: paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: rate_item
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
+    third_party_settings: {  }
+    region: content
+  field_subtitle:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

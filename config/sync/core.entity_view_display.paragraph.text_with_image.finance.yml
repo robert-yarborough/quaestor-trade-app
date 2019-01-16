@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_image
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_title
-    - image.style.83x92
+    - image.style.90x90
     - paragraphs.paragraphs_type.text_with_image
   module:
     - ds
@@ -37,7 +37,7 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: 83x92
+      image_style: 90x90
       image_link: ''
     third_party_settings:
       ds:

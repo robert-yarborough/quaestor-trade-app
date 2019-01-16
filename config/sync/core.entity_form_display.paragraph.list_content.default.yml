@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.list_content.field_image
-    - field.field.paragraph.list_content.field_orientation
+    - field.field.paragraph.list_content.field_style
     - field.field.paragraph.list_content.field_title
     - field.field.paragraph.list_content.field_twi_two_items
     - image.style.thumbnail
@@ -33,7 +33,7 @@ content:
       lightning_media:
         file_links: true
         remove_button: true
-  field_orientation:
+  field_style:
     weight: 1
     settings: {  }
     third_party_settings: {  }
