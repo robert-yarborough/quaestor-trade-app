@@ -1,34 +1,27 @@
-uuid: a091831b-3ae9-490c-8ee7-ddae4e92fc9d
+uuid: cc6cde94-0fde-416d-8641-8a13c72e6199
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
-    - paragraphs.paragraphs_type.content_block_right
+    - field.storage.paragraph.field_mobile_image
+    - paragraphs.paragraphs_type.2_columns_image_text
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
-id: paragraph.content_block_right.field_image
-field_name: field_image
+id: paragraph.2_columns_image_text.field_mobile_image
+field_name: field_mobile_image
 entity_type: paragraph
-bundle: content_block_right
-label: Image
-description: 'Recommended image size is 1220х765.'
+bundle: 2_columns_image_text
+label: 'Mobile Image'
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 1220x765
+  max_resolution: ''
   min_resolution: ''
   alt_field: true
   alt_field_required: true

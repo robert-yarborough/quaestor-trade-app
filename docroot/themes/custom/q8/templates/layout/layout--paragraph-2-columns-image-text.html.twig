@@ -8,9 +8,26 @@
 <div{{ attributes.addClass(layout_classes) }}>
     <div class="info-block__row">
         {% if not img_right %}
-            <div class="info-block__col is-image">
-                {{ content.right.field_image }}
-            </div>
+          <div class="info-block__col is-image">
+            <style>
+              {% if content.left.field_mobile_image[0] %}
+              @media all and (min-width: 768px) {
+                .info-block__image-id-1 {
+                  background-image: url({{ content.right.field_mobile_image[0]|render }});
+                }
+              }
+              {% endif %}
+
+              {% if content.left.field_image[0] %}
+              @media all and (max-width: 767px) {
+                .info-block__image-id-1 {
+                  background-image: url({{ content.right.field_image[0]|render }});
+                }
+              }
+              {% endif %}
+            </style>
+            <div class="info-block__image info-block__image-id-1"></div>
+          </div>
         {% endif %}
         <div class="info-block__col">
             <div class="info-block__content">
@@ -30,7 +47,24 @@
         </div>
         {% if img_right %}
             <div class="info-block__col is-image">
-                {{ content.right.field_image }}
+              <style>
+                {% if content.left.field_mobile_image[0] %}
+                  @media all and (min-width: 768px) {
+                    .info-block__image-id-1 {
+                      background-image: url({{ content.right.field_mobile_image[0]|render }});
+                    }
+                  }
+                {% endif %}
+
+                {% if content.left.field_image[0] %}
+                  @media all and (max-width: 767px) {
+                    .info-block__image-id-1 {
+                      background-image: url({{ content.right.field_image[0]|render }});
+                    }
+                  }
+                {% endif %}
+              </style>
+              <div class="info-block__image info-block__image-id-1"></div>
             </div>
         {% endif %}
     </div>

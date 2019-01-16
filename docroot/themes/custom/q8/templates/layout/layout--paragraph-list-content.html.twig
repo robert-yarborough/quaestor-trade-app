@@ -21,7 +21,6 @@
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'info-block__row') }}>
-      {% if (content.content.field_orientation[0]['#markup'] == 'left') %}
         <div class="info-block__col is-image">
           {% if content.content.field_image[0] %}
             <div class="info-block__image is-image" style="background-image: url({{ content.content.field_image[0]|render }})"></div>
@@ -40,26 +39,6 @@
             </div>
           </div>
         </div>
-      {% else %}
-        <div class="info-block__col">
-          <div class="info-block__content">
-            <div class="info-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
-            {% if content.content.field_title[0] %}
-              <div class="block-title">
-                {{ content.content.field_title[0] }}
-              </div>
-            {% endif %}
-            <div class="info-block__list">
-              {{ content.content.field_twi_two_items }}
-            </div>
-          </div>
-        </div>
-        <div class="info-block__col is-image">
-          {% if content.content.field_image[0] %}
-            <div class="info-block__image is-image" style="background-image: url({{ content.content.field_image[0]|render }})"></div>
-          {% endif %}
-        </div>
-      {% endif %}
     </div>
   </div>
 {% endif %}

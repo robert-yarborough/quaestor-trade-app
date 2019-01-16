@@ -1,0 +1,7 @@
+uuid: d0491deb-097b-4d07-87ae-e551dc1f54d8
+langcode: en
+status: true
+dependencies: {  }
+id: left
+label: Left
+classes: is-image-right
