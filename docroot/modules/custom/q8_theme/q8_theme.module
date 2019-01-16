@@ -37,12 +37,12 @@ function q8_theme_preprocess_layout__paragraph_2_columns_image_text(array &$vari
   // Process paragraph attributes.
   if (
     $entity instanceof FieldableEntityInterface
-    && $entity->hasField('field_classy_attributes')
+    && $entity->hasField('field_style')
   ) {
 
     // Override image position to the left.
     $classes = [];
-    foreach ($entity->get('field_classy_attributes')->referencedEntities() as $class) {
+    foreach ($entity->get('field_style')->referencedEntities() as $class) {
       $classes[] = $class->getClasses();
     }
 
