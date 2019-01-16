@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.image_browser
-    - field.field.paragraph.2_columns_image_text.field_attributes
     - field.field.paragraph.2_columns_image_text.field_button
+    - field.field.paragraph.2_columns_image_text.field_classy_attributes
     - field.field.paragraph.2_columns_image_text.field_image
     - field.field.paragraph.2_columns_image_text.field_text
     - field.field.paragraph.2_columns_image_text.field_title
@@ -19,12 +19,6 @@ targetEntityType: paragraph
 bundle: 2_columns_image_text
 mode: default
 content:
-  field_attributes:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_button:
     weight: 4
     settings:
@@ -32,6 +26,12 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_classy_attributes:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_image:
     weight: 1

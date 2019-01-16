@@ -32,28 +32,21 @@ function q8_theme_preprocess_layout__paragraph_2_columns_image_text(array &$vari
   // Add alias for the current entity.
   $entity = &$variables['content']['#entity'];
 
-  // Set empty attributes.
-  if (empty($variables['attributes'])) {
-    $variables['attributes'] = new Attribute();
-  }
-
   // By default image is in the right column.
   $variables['img_right'] = TRUE;
 
   // Process paragraph attributes.
   if (
     $entity instanceof FieldableEntityInterface
-    && $entity->hasField('field_attributes')
+    && $entity->hasField('field_classy_attributes')
   ) {
-    // Add paragraph classes.
-    $classes = array_column($entity->get('field_attributes')->getValue(), 'value');
-    $variables['attributes'] = new Attribute(
-      [
-        'class' => $classes,
-      ]
-    );
 
     // Override image position to the left.
+    $classes = [];
+    foreach ($entity->get('field_classy_attributes')->referencedEntities() as $class) {
+      $classes[] = $class->getClasses();
+    }
+
     if (in_array('is-left', $classes)) {
       $variables['img_right'] = FALSE;
     }
