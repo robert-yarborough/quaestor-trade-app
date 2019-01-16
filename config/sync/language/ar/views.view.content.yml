@@ -5,11 +5,16 @@ display:
         options:
           submit_button: انتقاء
       fields:
+        title:
+          label: العنوان
         type:
           label: 'نوع المحتوى'
         operations:
           label: عمليات
       filters:
+        title:
+          expose:
+            label: العنوان
         type:
           expose:
             label: 'نوع المحتوى'

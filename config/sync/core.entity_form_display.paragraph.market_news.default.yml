@@ -1,0 +1,44 @@
+uuid: 5a8da709-14bf-4566-922c-813a0d340e69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.market_news.field_button
+    - field.field.paragraph.market_news.field_title
+    - field.field.paragraph.market_news.field_view
+    - paragraphs.paragraphs_type.market_news
+  module:
+    - link
+    - text
+    - viewsreference
+id: paragraph.market_news.default
+targetEntityType: paragraph
+bundle: market_news
+mode: default
+content:
+  field_button:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_view:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

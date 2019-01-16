@@ -60,18 +60,16 @@ content:
     label: hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: right
   field_mobile_image:
     weight: 4
     label: hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: right
   field_text:
     weight: 1
