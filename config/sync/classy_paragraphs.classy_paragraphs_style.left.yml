@@ -4,4 +4,4 @@ status: true
 dependencies: {  }
 id: left
 label: Left
-classes: is-image-right
+classes: is-image-left

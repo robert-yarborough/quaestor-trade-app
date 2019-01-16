@@ -1,0 +1,9 @@
+uuid: cf71a6e2-6ad9-408e-b103-1c7a90e0baa7
+langcode: en
+status: true
+dependencies: {  }
+id: market_news
+label: 'Market News'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
