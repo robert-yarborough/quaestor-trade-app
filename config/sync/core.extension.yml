@@ -113,6 +113,7 @@ module:
   video_embed_media: 0
   views_infinite_scroll: 0
   views_ui: 0
+  viewsreference: 0
   workflows: 0
   ds: 1
   menu_link_content: 1
