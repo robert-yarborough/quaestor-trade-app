@@ -124,18 +124,18 @@
                     .is-open-account, a[data-drupal-link-system-path='user'] {
                         background-color: white;
                         color: $c-primary;
-                        transition: .3s background, .3s color, .3s box-shadow;
+                        transition: .3s;
                         &:hover {
-                            background-color: $c-primary;
-                            color: white;
-                            box-shadow: inset 0 0 0 1px $c-bright;
+                            background-color: $c-bright;
+                            color: $c-primary;
+                            box-shadow: inset 0 0 0 1px white;
                         }
                     }
                     .is-login,
                     a[data-drupal-link-system-path*='login'],
                     a[data-drupal-link-system-path*='logout'] {
                         box-shadow: inset 0 0 0 1px white;
-                        transition: .3s box-shadow, .3s color;
+                        transition: .3s;
                         background-color: $c-primary;
                         &:after {
                             content: '';
@@ -148,6 +148,7 @@
                             margin-left: 7px;
                             background-image: url('../images/icons/svg/icon-login-white.svg');
                             background-repeat: no-repeat;
+                            transition: .3s;
                         }
                         .q-icon {
                             fill: currentColor;
@@ -157,7 +158,11 @@
                         }
                         &:hover {
                             box-shadow: inset 0 0 0 1px $c-bright;
-                            color: white;
+                            color: $c-primary;
+                            background-color: white;
+                            &:after {
+                                background-image: url('../images/icons/svg/icon-login-blue.svg');
+                            }
                         }
                     }
                 }

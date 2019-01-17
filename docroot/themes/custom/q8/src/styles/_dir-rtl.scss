@@ -7,6 +7,14 @@ html {
         body {
             text-align: right;
         }
+        [class*='btn-primary'] {
+            padding: 10px 30px 10px 50px;
+            &:after {
+                transform: rotate(-135deg);
+                left: 20px;
+                right: auto;
+            }
+        }
         .main-header {
             .navbar__top {
                 margin-left: 0;
@@ -191,7 +199,9 @@ html {
                             }
                         }
                     }
-                    a[href*='login'], a[href*='logout'] {
+                    a[href*='login'],
+                    a[href*='logout'],
+                    .is-login {
                         &:after {
                             margin-left: 0;
                             margin-right: 7px;
@@ -335,6 +345,7 @@ html {
                 a {
                     &:after {
                         margin-right: 3px;
+                        transform: rotate(-135deg);
                     }
                 }
             }
@@ -370,6 +381,22 @@ html {
                         margin-left: 15px;
                     }
                 }
+            }
+        }
+        .user-login-form, .user-pass,
+        .contextual-region.profile {
+            .form-item {
+                text-align: right;
+            }
+        }
+        .form-actions {
+            input {
+                padding: 10px 30px 10px 50px;
+            }
+            &:after {
+                left: 20px;
+                right: auto;
+                transform: rotate(-135deg);
             }
         }
     }

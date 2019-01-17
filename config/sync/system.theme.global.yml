@@ -14,3 +14,11 @@ logo:
   use_default: false
 _core:
   default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8
+browsersync_enabled: 0
+browsersync_host: localhost
+browsersync_port: '9000'
+third_party_settings:
+  browsersync:
+    enabled: null
+    host: localhost
+    port: '9000'

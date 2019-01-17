@@ -5,7 +5,7 @@
     'is-image--contain'
   ]
 %}
-<div{{ attributes.addClass(layout_classes) }}>
+<div{{ attributes.addClass(layout_classes) }}">
     <div class="info-block__row">
         {% if not img_right %}
           <div class="info-block__col is-image">
@@ -26,7 +26,7 @@
               }
               {% endif %}
             </style>
-            <div class="info-block__image info-block__image-id-1"></div>
+            <div class="info-block__image" style="background-image: url('{{ content.right.field_image[0]|render }}')"></div>
           </div>
         {% endif %}
         <div class="info-block__col">
@@ -64,7 +64,7 @@
                   }
                 {% endif %}
               </style>
-              <div class="info-block__image info-block__image-id-1"></div>
+              <div class="info-block__image" style="background-image: url('{{ content.right.field_image[0]|render }}')"></div>
             </div>
         {% endif %}
     </div>
