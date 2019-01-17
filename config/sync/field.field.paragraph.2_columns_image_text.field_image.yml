@@ -11,9 +11,9 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
+      alt: alt
+      title: title
       file: '0'
-      alt: '0'
-      title: '0'
 id: paragraph.2_columns_image_text.field_image
 field_name: field_image
 entity_type: paragraph
@@ -31,8 +31,8 @@ settings:
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  alt_field_required: true
-  title_field: false
+  alt_field_required: false
+  title_field: true
   title_field_required: false
   default_image:
     uuid: ''

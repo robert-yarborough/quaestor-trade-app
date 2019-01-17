@@ -1,23 +1,21 @@
-uuid: 96138d8b-dfcb-4f9d-a292-b991a7594232
+uuid: b86651d4-b4f8-4b6e-b9bc-951f5496a66d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_classy_attributes
+    - field.storage.paragraph.field_style
     - paragraphs.paragraphs_type.2_columns_image_text
-id: paragraph.2_columns_image_text.field_classy_attributes
-field_name: field_classy_attributes
+id: paragraph.2_columns_image_text.field_style
+field_name: field_style
 entity_type: paragraph
 bundle: 2_columns_image_text
-label: Attributes
+label: Style
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:classy_paragraphs_style'
-  handler_settings:
-    target_bundles: null
-    auto_create: false
+  handler_settings: {  }
 field_type: entity_reference
