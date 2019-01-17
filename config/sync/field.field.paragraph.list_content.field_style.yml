@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - classy_paragraphs.classy_paragraphs_style.left
     - field.storage.paragraph.field_style
     - paragraphs.paragraphs_type.list_content
 id: paragraph.list_content.field_style
@@ -12,11 +11,9 @@ entity_type: paragraph
 bundle: list_content
 label: Style
 description: ''
-required: true
+required: false
 translatable: false
-default_value:
-  -
-    target_uuid: d0491deb-097b-4d07-87ae-e551dc1f54d8
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:classy_paragraphs_style'

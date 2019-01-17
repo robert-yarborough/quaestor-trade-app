@@ -1,7 +1,0 @@
-uuid: a601519c-d55c-4082-b963-53003da73050
-langcode: en
-status: true
-dependencies: {  }
-id: right
-label: Right
-classes: is-image-right
