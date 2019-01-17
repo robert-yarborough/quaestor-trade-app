@@ -177,6 +177,11 @@
     @include media('>tablet-l') {
         margin-left: auto;
     }
+    @include media('<=tablet-l') {
+        &:not(.is-visible) {
+            display: none;
+        }
+    }
     &__list {
         color: white;
         font-size: 18px;

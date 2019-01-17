@@ -292,12 +292,14 @@ var setHeaderActions = function ($) {
 		var header_relocate_m = function header_relocate_m() {
 			if ($h_menu_links.length) {
 				$h_menu_links.prependTo($h_menu_main);
+				$h_menu_links.addClass('is-visible');
 			}
 		};
 
 		var header_relocate_d = function header_relocate_d() {
 			if ($h_menu_links.length) {
 				$h_menu_links.insertBefore($h_search);
+				$h_menu_links.removeClass('is-visible');
 			}
 		};
 
