@@ -1,0 +1,71 @@
+uuid: fd382791-8daa-4da5-a41e-fba219b14b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.article
+  module:
+    - entity_reference_revisions
+id: node.article.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: article
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      2_columns_image_text:
+        weight: 16
+        enabled: false
+      application:
+        weight: 17
+        enabled: false
+      application_banners_block:
+        weight: 18
+        enabled: false
+      app_stores:
+        weight: 19
+        enabled: false
+      banner_app_stores:
+        weight: 20
+        enabled: false
+      copyright:
+        weight: 21
+        enabled: false
+      list_content:
+        weight: 22
+        enabled: false
+      list_content2:
+        weight: 23
+        enabled: false
+      map:
+        weight: 24
+        enabled: false
+      market_news:
+        weight: 25
+        enabled: false
+      options:
+        weight: 26
+        enabled: false
+      rates:
+        weight: 27
+        enabled: false
+      rate_item:
+        weight: 28
+        enabled: false
+      text_with_image:
+        weight: 29
+        enabled: false
+      top_banner:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions
