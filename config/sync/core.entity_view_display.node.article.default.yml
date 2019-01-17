@@ -5,10 +5,70 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_article_categories
+    - field.field.node.article.field_author
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_paragraph
+    - field.field.node.article.field_title_background
     - node.type.article
   module:
+    - ds
+    - entity_reference_revisions
+    - metatag
+    - panelizer
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_twocol
+      library: layout_discovery/twocol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      top:
+        - node_title
+      first:
+        - field_author
+        - node_post_date
+        - field_article_categories
+      second:
+        - body
+      bottom:
+        - field_paragraph
+        - field_meta_tags
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 2
+        label: above
+        formatter: ds_post_date_short
+        ft:
+          id: default
+          settings:
+            lb: Date
+            lb-col: false
+            classes: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -17,22 +77,51 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: second
   field_article_categories:
-    weight: 102
+    weight: 3
     label: above
     settings:
-      link: true
-    third_party_settings: {  }
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: entity_reference_label
-    region: content
-  links:
-    weight: 100
+    region: first
+  field_author:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: first
+  field_meta_tags:
+    weight: 6
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
+    type: metatag_empty_formatter
+    region: bottom
+  field_paragraph:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: bottom
 hidden:
+  field_title_background: true
   langcode: true
+  links: true

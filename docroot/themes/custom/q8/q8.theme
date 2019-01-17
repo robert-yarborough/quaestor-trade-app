@@ -13,22 +13,34 @@ use Drupal\Core\Entity\FieldableEntityInterface;
  */
 
 /**
- * Implements hook_preprocess_HOOK().
+ * Implements q8_preprocess_field__node__node_title__page().
  */
-function q8_preprocess_field__node__node_title__page(&$variables) {
-  // Fallback element.
-  $variables['bg_url'] = FALSE;
+function q8_preprocess_field__node__node_title__page(array &$variables) {
+  $variables['bg_url'] = q8_get_node_background_title($variables['element']['#object']);
+}
 
-  // Add node alias.
-  $node = &$variables['element']['#object'];
+/**
+ * Implements q8_preprocess_layout__node_article_full().
+ */
+function q8_preprocess_layout__node_article_full(array &$variables) {
+  $variables['bg_url'] = q8_get_node_background_title($variables['content']['#node']);
+}
+
+/**
+ * Get background for node title.
+ */
+function q8_get_node_background_title($node) {
+  // Fallback element.
+  $bg_url = FALSE;
 
   // Get the background field and check if it is an url.
   if ($node instanceof FieldableEntityInterface
     && $node->hasField('field_title_background') && !$node->get('field_title_background')->isEmpty()) {
     $imageStyle = \Drupal::entityTypeManager()->getStorage('image_style')->load('crop_freeform');
     $imageUri = $node->get('field_title_background')->referencedEntities()[0]->getFileUri();
-    $variables['bg_url'] = $imageStyle ? $imageStyle->buildUrl($imageUri) : file_create_url($imageUri);
+    $bg_url = $imageStyle ? $imageStyle->buildUrl($imageUri) : file_create_url($imageUri);
   }
+  return $bg_url;
 }
 
 /**

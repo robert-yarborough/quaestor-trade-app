@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--twocol',
+]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if content.top %}
+      <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
+        <div class="front-banner block-section front-banner--main is-center">
+          <div class="front-banner__bg skrollable skrollable-before" style="{% if bg_url %} background-image: url('{{ bg_url|trim }}'); {% endif %} transform: translate3d(0px, 0%, 0px);" data-top-bottom="transform: translate3d(0px, 30%, 0px);" data--200-top="transform: translate3d(0px, 0%, 0px);">
+          </div>
+          <div class="front-banner__inner skrollable skrollable-before" data-top-bottom="transform: translate3d(0px, -30%, 0px); opacity: 0;" data--200-top="transform: translate3d(0px, 0%, 0px); opacity: 1;" style="transform: translate3d(0px, 0%, 0px); opacity: 1;">
+            <div class="page-frame">
+              <div class="front-banner__title">
+                {{ content.top.node_title }}
+              </div>
+            </div>
+              </div>
+        </div>
+        {{ content.top|without('node_title') }}
+      </div>
+    {% endif %}
+
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+
+    {% if content.bottom %}
+      <div {{ region_attributes.bottom.addClass('layout__region', 'layout__region--bottom') }}>
+        {{ content.bottom }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
