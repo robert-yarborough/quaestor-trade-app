@@ -236,7 +236,7 @@
             padding-top: 0;
         }
     }
-    &.is-image-right {
+    &.is-right {
         .info-block__col {
             &:not(.is-image) {
                 @include media('>=tablet') {
@@ -245,7 +245,7 @@
             }
         }
     }
-    &.is-image-left {
+    &.is-left {
         .info-block__col {
             &.is-image {
                 @include media('>=tablet') {
@@ -254,7 +254,7 @@
             }
         }
     }
-    &.is-right {
+    &.is-right-content {
         justify-content: flex-end;
         .info-block__image {
             justify-content: flex-end;
@@ -277,7 +277,7 @@
             }
         }
     }
-    &.is-left {
+    &.is-left-content {
         .info-block__image {
             background-position: top left;
         }
