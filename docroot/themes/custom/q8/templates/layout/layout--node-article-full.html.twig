@@ -35,12 +35,16 @@
       </div>
     {% endif %}
 
-    <div class="page-frame">
-      <div class="post-full">
+    
+    <div class="post-full">
+      <div class="page-frame">
         <div class="post-full__inner">
           {% if content.first %}
             <div {{ region_attributes.first.addClass('layout__region', 'post-full__left') }}>
-              <div class="post-full__category">{{ content.first.field_article_categories }}</div>
+              <div class="post-full__category">
+                <svg class="q-icon"><use xlink:href="#icon-news"></use></svg>
+                {{ content.first.field_article_categories }}
+              </div>
               <div class="post-full__date">{{ content.first.node_post_date }}</div>
               <div class="post-full__author">{{ content.first.field_author }}</div>
             </div>

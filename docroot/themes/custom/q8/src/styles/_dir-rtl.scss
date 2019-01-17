@@ -399,5 +399,11 @@ html {
                 transform: rotate(-135deg);
             }
         }
+        .post-full__category {
+            .q-icon {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
     }
 }
