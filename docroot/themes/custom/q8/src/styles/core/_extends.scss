@@ -67,7 +67,7 @@
     color: $c-bright;
     border-color: $c-bright;
     &:hover {
-        color: white;
-        background-color: $c-primary;
+        color: $c-primary;
+        background-color: $c-bright;
     }
 }
