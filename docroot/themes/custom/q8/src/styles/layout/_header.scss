@@ -20,6 +20,9 @@
         &__group {
             flex-grow: 1;
             margin-left: 70px;
+            @include media('<=desktop-l') {
+                margin-left: 50px;
+            }
         }
         &__top {
             margin-left: auto;
@@ -171,9 +174,13 @@
     }
     .main-logo {
         fill: white;
-        @include media('>tablet-l') {
+        @include media('>desktop-l') {
             width: 173px;
             height: 93px;
+        }
+        @include media('<=desktop-l') {
+            width: 115px;
+            height: 63px;
         }
         @include media('<=tablet-l') {
             width: 99px;

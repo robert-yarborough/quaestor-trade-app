@@ -99,6 +99,10 @@
 						navigation: {
 							nextEl: '.js-ft-sl-btn-next',
 							prevEl: '.js-ft-sl-btn-prev'
+						},
+						a11y: {
+							prevSlideMessage: 'Previous slide',
+							nextSlideMessage: 'Next slide'
 						}
 					});
 					$feature_slider.addClass(init_slider_class);

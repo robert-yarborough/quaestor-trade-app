@@ -13,6 +13,10 @@
 							nextEl: '.js-fin-sl-btn-next',
 							prevEl: '.js-fin-sl-btn-prev',
 						},
+						a11y: {
+							prevSlideMessage: 'Previous slide',
+							nextSlideMessage: 'Next slide',
+						},
 						breakpoints: {
 							550: {
 								slidesPerView: 1,
