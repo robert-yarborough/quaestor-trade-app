@@ -1,0 +1,12 @@
+uuid: 1434a371-cbdd-452e-ac99-13ac3f95a4ca
+langcode: en
+status: true
+dependencies: {  }
+id: search_articles
+label: 'Search Articles'
+description: ''
+use_admin_theme: false
+path: /article-listing
+access_logic: and
+access_conditions: {  }
+parameters: {  }

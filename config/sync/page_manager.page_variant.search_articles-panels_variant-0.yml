@@ -1,0 +1,40 @@
+uuid: 55e90044-0614-44bf-b0a9-73e3482d0160
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.search_articles
+  module:
+    - config_pages
+    - panels
+id: search_articles-panels_variant-0
+label: 'Search page'
+variant: panels_variant
+variant_settings:
+  blocks:
+    ccbcdf12-b3bf-4a3f-9243-b58dad8e1cba:
+      id: config_pages_block
+      label: 'Search Articles Title'
+      provider: config_pages
+      label_display: '0'
+      region: content
+      weight: 0
+      uuid: ccbcdf12-b3bf-4a3f-9243-b58dad8e1cba
+      config_page_type: search_articles
+      config_page_view_mode: full
+      context_mapping: {  }
+  id: panels_variant
+  uuid: cb9db986-934f-423b-8bcc-15445cf1fbd1
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: search_articles-panels_variant-0
+  builder: standard
+page: search_articles
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,21 @@
+uuid: 1e27481a-0dba-4caa-9292-d453590a6053
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.search_articles
+    - field.storage.config_pages.field_title
+  module:
+    - text
+id: config_pages.search_articles.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: search_articles
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

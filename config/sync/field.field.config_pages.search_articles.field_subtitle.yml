@@ -1,0 +1,21 @@
+uuid: 916b19af-540b-480b-bb5c-1f3d1ef208d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.search_articles
+    - field.storage.config_pages.field_subtitle
+  module:
+    - text
+id: config_pages.search_articles.field_subtitle
+field_name: field_subtitle
+entity_type: config_pages
+bundle: search_articles
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

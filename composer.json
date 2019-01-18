@@ -25,7 +25,8 @@
         "drupal/menu_link_attributes": "^1.0",
         "drupal/classy_paragraphs": "^1.0@beta",
         "drupal/browsersync": "^1.0@beta",
-        "drupal/page_manager": "^4.0@beta"
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/config_pages": "^2.2"
     },
     "repositories": {
         "drupal": {
