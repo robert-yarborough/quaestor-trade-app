@@ -1,0 +1,40 @@
+uuid: 172bc57a-d8c8-4e3e-be4b-657a0de858d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.search_articles
+    - field.field.config_pages.search_articles.field_subtitle
+    - field.field.config_pages.search_articles.field_title
+    - field.field.config_pages.search_articles.field_title_background
+  module:
+    - image
+    - text
+id: config_pages.search_articles.default
+targetEntityType: config_pages
+bundle: search_articles
+mode: default
+content:
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title_background:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+hidden: {  }

@@ -1,27 +1,20 @@
-uuid: 3f556507-d121-4c73-98df-06bf7e18fbba
+uuid: 10d1c38d-de04-4f89-a242-6bda3408861c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_title_background
-    - node.type.article
+    - config_pages.type.search_articles
+    - field.storage.config_pages.field_title_background
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      file: '0'
-      title: '0'
-id: node.article.field_title_background
+id: config_pages.search_articles.field_title_background
 field_name: field_title_background
-entity_type: node
-bundle: article
+entity_type: config_pages
+bundle: search_articles
 label: 'Title background'
 description: 'Recommended image size is 1920х790.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

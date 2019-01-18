@@ -15,3 +15,8 @@ display:
         status:
           expose:
             label: الحالة
+  page_2:
+    display_options:
+      fields:
+        entity_label:
+          label: الكيان

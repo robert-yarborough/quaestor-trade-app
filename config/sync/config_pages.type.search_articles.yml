@@ -1,0 +1,14 @@
+uuid: 48558788-f4c0-4578-abb2-b0f400cb8d44
+langcode: en
+status: true
+dependencies: {  }
+id: search_articles
+label: 'Article Listing'
+context:
+  show_warning: true
+  group:
+    language: false
+menu:
+  path: /admin/content/search-articles
+  weight: 0
+  description: ''
