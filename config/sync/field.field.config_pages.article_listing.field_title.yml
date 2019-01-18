@@ -1,20 +1,20 @@
-uuid: 1e27481a-0dba-4caa-9292-d453590a6053
+uuid: 3e5a1b39-0369-4e08-967e-2d119472f5e8
 langcode: en
 status: true
 dependencies:
   config:
-    - config_pages.type.search_articles
+    - config_pages.type.article_listing
     - field.storage.config_pages.field_title
   module:
     - text
-id: config_pages.search_articles.field_title
+id: config_pages.article_listing.field_title
 field_name: field_title
 entity_type: config_pages
-bundle: search_articles
+bundle: article_listing
 label: Title
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

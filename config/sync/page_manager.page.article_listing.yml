@@ -1,9 +1,9 @@
-uuid: 1434a371-cbdd-452e-ac99-13ac3f95a4ca
+uuid: b7f27d67-3771-4e66-81c8-7630c9ff006f
 langcode: en
 status: true
 dependencies: {  }
-id: search_articles
-label: 'Search Articles'
+id: article_listing
+label: 'Article Listing'
 description: ''
 use_admin_theme: false
 path: /article-listing
