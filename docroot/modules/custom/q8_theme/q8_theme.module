@@ -30,6 +30,7 @@ function q8_theme_help($route_name, RouteMatchInterface $route_match) {
 function q8_theme_preprocess_layout__paragraph_2_columns_image_text(array &$variables) {
   // Add alias for the current entity.
   $entity = &$variables['content']['#entity'];
+  $variables['entity_id'] = $entity->id();
 
   // By default image is in the right column.
   $variables['img_right'] = TRUE;
