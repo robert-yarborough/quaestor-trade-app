@@ -27,6 +27,7 @@
         @include media('<tablet') {
             min-height: 315px;
             justify-content: center;
+            margin-bottom: 15px;
         }
         img {
             @include media('<tablet') {
@@ -97,6 +98,17 @@
             padding-left: 45px;
             @include media('<tablet') {
                 //padding-left: 17px;
+            }
+            &:before {
+                content: '';
+                background-image: url('../images/icons/svg/icon-checkmark-alt.svg');
+                background-repeat: no-repeat;
+                width: 26px;
+                height: 23px;
+                fill: $c-primary;
+                position: absolute;
+                left: 0;
+                top: -1px;
             }
             .q-icon {
                 width: 26px;
@@ -236,7 +248,7 @@
             padding-top: 0;
         }
     }
-    &.is-right {
+    &.is-image--right {
         .info-block__col {
             &:not(.is-image) {
                 @include media('>=tablet') {
@@ -245,16 +257,40 @@
             }
         }
     }
-    &.is-left {
+    &.is-image--left {
         .info-block__col {
-            &.is-image {
-                @include media('>=tablet') {
-                    order: -1;
+             &.is-image {
+                 @include media('>=tablet') {
+                     order: -1;
+                 }
+             }
+        }
+        .info-block__image {
+            background-position: center left;
+        }
+    }
+
+    &.is-image--large {
+        .info-block__content {
+            @include media('>=tablet') {
+                padding-right: 0;
+            }
+        }
+        .info-block__image {
+            @include media('>=tablet') {
+                padding-right: 0;
+            }
+        }
+        .info-block__col {
+            &:not(.is-image) {
+                @include media('>=tablet-l') {
+                    padding-left: 11.197vw;
                 }
             }
         }
+
     }
-    &.is-right-content {
+    &.is-image--small {
         justify-content: flex-end;
         .info-block__image {
             justify-content: flex-end;
@@ -277,12 +313,7 @@
             }
         }
     }
-    &.is-left-content {
-        .info-block__image {
-            background-position: top left;
-        }
-    }
-    &.is-top {
+    &.is-not-top-space {
         .info-block__image {
             padding-top: 0;
             background-position: top center;
@@ -296,26 +327,6 @@
             background-size: contain;
             max-height: 720px;
         }
-    }
-    &.is-image--large {
-        .info-block__content {
-            @include media('>=tablet') {
-                padding-right: 0;
-            }
-        }
-        .info-block__image {
-            @include media('>=tablet') {
-                padding-right: 0;
-            }
-        }
-        .info-block__col {
-            &:not(.is-image) {
-                @include media('>=tablet-l') {
-                    padding-left: 11.197vw;
-                }
-            }
-        }
-
     }
     .block-title {
         font-weight: 300;

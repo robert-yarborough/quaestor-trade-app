@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 id: is_top_add_top_padding
-label: 'Add top padding'
-classes: is-top
+label: 'Without top space'
+classes: is-not-top-space

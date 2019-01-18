@@ -4,4 +4,4 @@ status: true
 dependencies: {  }
 id: image_is_in_the_right_column
 label: 'Image is in the RIGHT column'
-classes: is-right
+classes: is-image--right

@@ -114,12 +114,44 @@
                 font-size: 14px;
             }
             li {
+                color: $c-str-8;
                 &:not(:last-child) {
                     @include media('>=tablet-l') {
                         margin-right: 12px;
                     }
                     @include media('<tablet-l') {
                         margin-right: 5px;
+                    }
+                }
+            }
+            span {
+                display: flex;
+                align-items: center;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    margin-right: 5px;
+                }
+                &.web {
+                    &:before {
+                        width: 18px;
+                        height: 18px;
+                        background-image: url('../images/icons/svg/icon-web.svg');
+                    }
+                }
+                &.macos {
+                    &:before {
+                        width: 16px;
+                        height: 16px;
+                        background-image: url('../images/icons/svg/icon-apple.svg');
+                    }
+                }
+                &.windows {
+                    &:before {
+                        width: 16px;
+                        height: 16px;
+                        background-image: url('../images/icons/svg/icon-windows.svg');
                     }
                 }
             }

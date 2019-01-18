@@ -38,24 +38,24 @@
  * @ingroup themeable
  */
 #}
-{%
-    set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-]
-%}
+{% set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
 
 {% block paragraph %}
-    <div{{ attributes.addClass(classes).addClass("rates-block skrollable skrollable-after") }}>
-        <div class="page-frame">
-            {% block content %}
-                <div class="rates-block__title">{{ content.field_title }}</div>
-                <div class="rates-block__desc">{{ content.field_subtitle }}</div>
-                <div class="rates-block__inner">{{ content.field_paragraphs }}</div>
-                <div class="rates-block__btn">{{ content.field_link }}</div>
-            {% endblock %}
-        </div>
+  <div{{ attributes.addClass(classes).addClass("rates-block skrollable skrollable-after") }}
+    data-bottom-top="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;" fadeattr="1">
+    <div class="page-frame">
+      {% block content %}
+        <div class="rates-block__title">{{ content.field_title }}</div>
+        <div class="rates-block__desc">{{ content.field_subtitle }}</div>
+        <div class="rates-block__inner">{{ content.field_paragraphs }}</div>
+        <div class="rates-block__btn">{{ content.field_link }}</div>
+      {% endblock %}
     </div>
+  </div>
+  {{ attach_library('q8/module-rates') }}
 {% endblock paragraph %}
