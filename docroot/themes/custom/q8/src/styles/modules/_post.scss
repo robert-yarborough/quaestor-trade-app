@@ -32,6 +32,13 @@
             max-width: calc(100% - 150px);
             padding-left: 40px;
         }
+        .field--type-text-with-summary {
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
     &__category {
         display: flex;
