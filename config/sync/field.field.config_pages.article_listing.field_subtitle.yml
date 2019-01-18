@@ -1,20 +1,20 @@
-uuid: 916b19af-540b-480b-bb5c-1f3d1ef208d0
+uuid: 76efd559-24b2-4e33-9a3c-f179ff66d116
 langcode: en
 status: true
 dependencies:
   config:
-    - config_pages.type.search_articles
+    - config_pages.type.article_listing
     - field.storage.config_pages.field_subtitle
   module:
     - text
-id: config_pages.search_articles.field_subtitle
+id: config_pages.article_listing.field_subtitle
 field_name: field_subtitle
 entity_type: config_pages
-bundle: search_articles
+bundle: article_listing
 label: Subtitle
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

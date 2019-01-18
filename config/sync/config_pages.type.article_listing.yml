@@ -1,14 +1,14 @@
-uuid: 48558788-f4c0-4578-abb2-b0f400cb8d44
+uuid: f2a8e11d-824a-42d2-8a33-186a20ca3f13
 langcode: en
 status: true
 dependencies: {  }
-id: search_articles
+id: article_listing
 label: 'Article Listing'
 context:
   show_warning: true
   group:
     language: false
 menu:
-  path: /admin/content/search-articles
+  path: /admin/content/article-listing
   weight: 0
   description: ''

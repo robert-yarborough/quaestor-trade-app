@@ -1,22 +1,22 @@
-uuid: 172bc57a-d8c8-4e3e-be4b-657a0de858d7
+uuid: d1f7d1f5-3af7-41db-9238-6a345719e864
 langcode: en
 status: true
 dependencies:
   config:
-    - config_pages.type.search_articles
-    - field.field.config_pages.search_articles.field_subtitle
-    - field.field.config_pages.search_articles.field_title
-    - field.field.config_pages.search_articles.field_title_background
+    - config_pages.type.article_listing
+    - field.field.config_pages.article_listing.field_subtitle
+    - field.field.config_pages.article_listing.field_title
+    - field.field.config_pages.article_listing.field_title_background
   module:
     - image
     - text
-id: config_pages.search_articles.default
+id: config_pages.article_listing.default
 targetEntityType: config_pages
-bundle: search_articles
+bundle: article_listing
 mode: default
 content:
   field_subtitle:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -30,7 +30,7 @@ content:
     type: text_default
     region: content
   field_title_background:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       image_style: ''

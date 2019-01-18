@@ -1,25 +1,25 @@
-uuid: 4af73a04-59ab-4fd3-9129-78624ce37494
+uuid: eec8f2c7-a568-4c99-9afe-a4a8cce026fc
 langcode: en
 status: true
 dependencies:
   config:
-    - config_pages.type.search_articles
-    - field.field.config_pages.search_articles.field_subtitle
-    - field.field.config_pages.search_articles.field_title
-    - field.field.config_pages.search_articles.field_title_background
+    - config_pages.type.article_listing
+    - field.field.config_pages.article_listing.field_subtitle
+    - field.field.config_pages.article_listing.field_title
+    - field.field.config_pages.article_listing.field_title_background
     - image.style.thumbnail
   module:
     - image
     - imce
     - lightning_media
     - text
-id: config_pages.search_articles.default
+id: config_pages.article_listing.default
 targetEntityType: config_pages
-bundle: search_articles
+bundle: article_listing
 mode: default
 content:
   field_subtitle:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
@@ -36,7 +36,7 @@ content:
     region: content
   field_title_background:
     type: image_image
-    weight: 1
+    weight: 2
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
