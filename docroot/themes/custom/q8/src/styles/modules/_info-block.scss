@@ -17,7 +17,7 @@
     }
     &__image {
         height: 100%;
-        background-position: center;
+        background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
@@ -295,9 +295,12 @@
         .info-block__image {
             justify-content: flex-end;
             align-items: flex-start;
-            background-position: top right;
+            @include media('>=tablet') {
+                background-position: top right;
+            }
             @include media('<tablet') {
                 padding-right: 0;
+                background-position: top center;
             }
         }
         .info-block__content {

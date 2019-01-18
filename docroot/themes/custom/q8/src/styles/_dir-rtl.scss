@@ -57,6 +57,10 @@ html {
                 li {
                     padding-left: 0;
                     padding-right: 45px;
+                    &:before {
+                        left: auto;
+                        right: 0;
+                    }
                 }
                 .q-icon {
                     left: auto;
@@ -368,6 +372,12 @@ html {
                             @include media('<tablet-l') {
                                 margin-left: 5px;
                             }
+                        }
+                    }
+                    span {
+                        &:before {
+                            margin-right: 0;
+                            margin-left: 5px;
                         }
                     }
                     .q-icon {
