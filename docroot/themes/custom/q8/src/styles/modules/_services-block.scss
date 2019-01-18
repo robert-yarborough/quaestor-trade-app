@@ -24,7 +24,7 @@
         margin-top: 100px;
         border-bottom: 7px solid $c-bright;
         @include media('<tablet-l') {
-            margin-top: 60px;
+            margin-top: 80px;
         }
         @include media('>=tablet') {
             margin-left: 6px;
@@ -32,7 +32,7 @@
         }
         &:not(:nth-child(1)) {
             @include media('<tablet') {
-                margin-top: 100px;
+                margin-top: 110px;
             }
         }
     }
