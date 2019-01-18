@@ -1,24 +1,22 @@
-uuid: 482ce29e-48a4-456c-944b-7c7774208c3f
+uuid: 57b6232b-7f6e-4918-8704-bdcd09b7dcd1
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: 8aTzJfhfIZ2Twd4_TsRkj1OcwgrlV-GtbGmNGRqAv_s
-id: landing_page
-label: 'Landing page'
+id: article_page
+label: 'Article page'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  357097ed-305b-4a11-9bc7-6b80f1688cd2:
+  a15dc1dd-b46a-484d-9d58-b8baa0e4dc72:
     id: node_type
     bundles:
-      landing_page: landing_page
+      article: article
     negate: false
     context_mapping:
       node: node
-    uuid: 357097ed-305b-4a11-9bc7-6b80f1688cd2
+    uuid: a15dc1dd-b46a-484d-9d58-b8baa0e4dc72
 selection_logic: and
 weight: -5
 relationships: {  }
