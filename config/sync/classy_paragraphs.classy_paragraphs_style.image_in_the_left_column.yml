@@ -1,7 +1,0 @@
-uuid: 06580a9e-1026-497e-ad11-316da92b191c
-langcode: en
-status: true
-dependencies: {  }
-id: image_in_the_left_column
-label: 'Image in the LEFT column'
-classes: is-left
