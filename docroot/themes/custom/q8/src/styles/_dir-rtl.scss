@@ -405,5 +405,11 @@ html {
                 margin-left: 10px;
             }
         }
+        .post-full__right {
+            @include media('>=tablet') {
+                padding-left: 0;
+                padding-right: 40px;
+            }
+        }
     }
 }
