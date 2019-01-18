@@ -1,4 +1,8 @@
 .moderation-dashboard {
+    padding-bottom: 70px;
+    @include media('<tablet') {
+        padding-bottom: 40px;
+    }
     .moderation-dashboard-block {
         background-color: white;
         border-radius: 0;
