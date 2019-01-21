@@ -25,7 +25,8 @@ class NodePostDateTimeAgo extends NodePostDate {
     return [
       '#markup' => $this->t('@time ago', [
         '@time' => $this->dateFormatter->formatTimeDiffSince(
-          $this->entity()->{$render_key}->value)
+          $this->entity()->{$render_key}->value
+        ),
       ]),
     ];
   }
