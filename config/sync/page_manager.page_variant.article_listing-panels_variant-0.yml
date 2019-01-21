@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - page_manager.page.article_listing
+    - views.view.all_articles
     - views.view.featured_articles
   module:
     - config_pages
@@ -20,7 +21,7 @@ variant_settings:
       provider: config_pages
       label_display: '0'
       region: content
-      weight: 0
+      weight: -1
       uuid: 6f44f5fe-80ec-4576-8f3e-44acb091c282
       config_page_type: article_listing
       config_page_view_mode: full
@@ -35,6 +36,17 @@ variant_settings:
       region: content
       weight: 0
       uuid: 4269d5ba-4ae2-497a-862a-473907c62c77
+      context_mapping: {  }
+    9b5b0ef2-752e-4b47-9691-c85a48b2a1aa:
+      id: 'views_block:all_articles-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      uuid: 9b5b0ef2-752e-4b47-9691-c85a48b2a1aa
       context_mapping: {  }
   id: panels_variant
   uuid: 6dee8f9b-7e38-4c63-a4c2-0b1264a657b8
