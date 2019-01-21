@@ -62,8 +62,10 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content news-block__list">
-      {{ rows }}
+    <div class="page-frame">
+      <div class="news-block__list">
+        {{ rows }}
+      </div>
     </div>
   {% elseif empty %}
     <div class="view-empty">
