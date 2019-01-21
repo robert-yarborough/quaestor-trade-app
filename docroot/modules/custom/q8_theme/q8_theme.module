@@ -7,6 +7,7 @@
 
 use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_help().
@@ -30,6 +31,7 @@ function q8_theme_help($route_name, RouteMatchInterface $route_match) {
 function q8_theme_preprocess_layout__paragraph_2_columns_image_text(array &$variables) {
   // Add alias for the current entity.
   $entity = &$variables['content']['#entity'];
+  $variables['entity_id'] = $entity->id();
 
   // By default image is in the right column.
   $variables['img_right'] = TRUE;
@@ -51,5 +53,16 @@ function q8_theme_preprocess_layout__paragraph_2_columns_image_text(array &$vari
     }
 
   }
+}
 
+/**
+ * Implements q8_theme_form_views_exposed_form_alter().
+ */
+function q8_theme_form_views_exposed_form_alter(&$form, FormStateInterface $form_state) {
+  switch ($form_state->get('view')->id()) {
+    case 'featured_articles':
+      $form['categories']['#title_display'] = 'invisible';
+      $form['actions']['#attributes']['class'][] = 'hidden';
+      break;
+  }
 }

@@ -36,12 +36,25 @@ module-features:
     - core/jquery.once
     - core/drupal
     - q8/vendor-swiper
+
 module-finance:
   css:
     theme:
       css/module-finance.css: { minified: true }
   js:
     js/module-finance-slider.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - q8/vendor-swiper
+
+module-rates:
+  css:
+    theme:
+      css/module-rates.css: { minified: true }
+  js:
+    js/module-rates-slider.js: { minified: true }
   dependencies:
     - core/jquery
     - core/jquery.once

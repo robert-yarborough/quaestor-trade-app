@@ -19,7 +19,7 @@ field_name: field_title_background
 entity_type: node
 bundle: article
 label: 'Title background'
-description: ''
+description: 'Recommended image size is 1920х790.'
 required: false
 translatable: true
 default_value: {  }
@@ -28,7 +28,7 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: ''
+  max_resolution: 1920x790
   min_resolution: ''
   alt_field: true
   alt_field_required: true

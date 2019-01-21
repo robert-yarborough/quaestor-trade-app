@@ -1,0 +1,14 @@
+uuid: 6a1ee34f-2397-45ad-91da-e9cce0be4944
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.list_teaser
+label: 'List Teaser'
+targetEntityType: node
+cache: true

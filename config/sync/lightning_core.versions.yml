@@ -132,3 +132,6 @@ classy_paragraphs: 1.0.0-beta1
 menu_link_attributes: 1.0.0
 viewsreference: 1.4.0
 browsersync: 1.0.0-beta1
+page_manager_ui: 4.0.0-beta3
+config_pages: 2.2.0
+better_exposed_filters: 3.0.0-alpha5

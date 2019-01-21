@@ -37,7 +37,10 @@
           </div>
 
           <div class="header-search js-h-search">
-            <a href="#" class="header-search__toggle js-h-search-toggle"><svg class="q-icon"><use xlink:href="#icon-search"></use></svg></a>
+            <a href="#" class="header-search__toggle js-h-search-toggle">
+              <span class="visually-hidden">{{ 'Search Button'|t }}</span>
+              <svg class="q-icon"><use xlink:href="#icon-search"></use></svg>
+            </a>
             <div class="header-search__box js-h-search-box">
               {{ elements.q8_simplesearchblock }}
             </div>

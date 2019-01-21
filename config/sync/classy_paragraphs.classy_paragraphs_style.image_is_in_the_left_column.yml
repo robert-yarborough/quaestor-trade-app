@@ -1,0 +1,7 @@
+uuid: e4b25b7e-c766-4822-aeed-dba593af24f5
+langcode: en
+status: true
+dependencies: {  }
+id: image_is_in_the_left_column
+label: 'Image is in the LEFT column'
+classes: is-image--left

@@ -1,0 +1,12 @@
+uuid: b7f27d67-3771-4e66-81c8-7630c9ff006f
+langcode: en
+status: true
+dependencies: {  }
+id: article_listing
+label: 'Article Listing'
+description: ''
+use_admin_theme: false
+path: /article-listing
+access_logic: and
+access_conditions: {  }
+parameters: {  }

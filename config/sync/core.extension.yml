@@ -2,6 +2,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
+  better_exposed_filters: 0
   blazy: 0
   block: 0
   block_content: 0
@@ -10,6 +11,7 @@ module:
   ckeditor: 0
   classy_paragraphs: 0
   config: 0
+  config_pages: 0
   consumers: 0
   contact: 0
   contact_storage: 0
@@ -83,14 +85,13 @@ module:
   options: 0
   page_cache: 0
   page_manager: 0
+  page_manager_ui: 0
   panelizer: 0
-  panelizer_quickedit: 0
   panels: 0
   panels_ipe: 0
   path: 0
   q8_search: 0
   q8_theme: 0
-  quickedit: 0
   rdf: 0
   schemata: 0
   schemata_json_schema: 0

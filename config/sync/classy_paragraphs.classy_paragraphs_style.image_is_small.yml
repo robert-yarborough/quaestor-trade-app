@@ -1,0 +1,7 @@
+uuid: 754bcb33-2617-4a4a-9581-5a5bc9739303
+langcode: en
+status: true
+dependencies: {  }
+id: image_is_small
+label: 'Image is small'
+classes: is-image--small

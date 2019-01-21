@@ -5,28 +5,43 @@
     'is-image--contain'
   ]
 %}
+{% set css_id = '.info-block__image_' ~ entity_id %}
+
+{% set url_bg_mobile_image = content.right.field_mobile_image[0]|render %}
+{% set url_bg_image = content.right.field_image[0]|render %}
+
+{% set style_bg  %}
+  {% if url_bg_image %}
+    @media all and (min-width: 768px) {
+      {{ css_id }} {
+      background-image: url({{ url_bg_image }});
+      }
+    }
+  {% endif %}
+
+  {% if url_bg_mobile_image %}
+    @media all and (max-width: 767px) {
+      {{ css_id }} {
+      background-image: url({{ url_bg_mobile_image }});
+      }
+    }
+  {% else %}
+    @media all and (max-width: 767px) {
+      {{ css_id }} {
+        background-image: url({{ url_bg_image }});
+      }
+    }
+  {% endif %}
+{% endset %}
+
 <div{{ attributes.addClass(layout_classes) }}">
     <div class="info-block__row">
         {% if not img_right %}
           <div class="info-block__col is-image">
             <style>
-              {% if content.left.field_mobile_image[0] %}
-              @media all and (min-width: 768px) {
-                .info-block__image-id-1 {
-                  background-image: url({{ content.right.field_mobile_image[0]|render }});
-                }
-              }
-              {% endif %}
-
-              {% if content.left.field_image[0] %}
-              @media all and (max-width: 767px) {
-                .info-block__image-id-1 {
-                  background-image: url({{ content.right.field_image[0]|render }});
-                }
-              }
-              {% endif %}
+              {{ style_bg }}
             </style>
-            <div class="info-block__image" style="background-image: url('{{ content.right.field_image[0]|render }}')"></div>
+            <div class="info-block__image info-block__image_{{ entity_id }}"></div>
           </div>
         {% endif %}
         <div class="info-block__col">
@@ -46,26 +61,12 @@
             </div>
         </div>
         {% if img_right %}
-            <div class="info-block__col is-image">
-              <style>
-                {% if content.left.field_mobile_image[0] %}
-                  @media all and (min-width: 768px) {
-                    .info-block__image-id-1 {
-                      background-image: url({{ content.right.field_mobile_image[0]|render }});
-                    }
-                  }
-                {% endif %}
-
-                {% if content.left.field_image[0] %}
-                  @media all and (max-width: 767px) {
-                    .info-block__image-id-1 {
-                      background-image: url({{ content.right.field_image[0]|render }});
-                    }
-                  }
-                {% endif %}
-              </style>
-              <div class="info-block__image" style="background-image: url('{{ content.right.field_image[0]|render }}')"></div>
-            </div>
+          <div class="info-block__col is-image">
+            <style>
+              {{ style_bg }}
+            </style>
+            <div class="info-block__image info-block__image_{{ entity_id }}"></div>
+          </div>
         {% endif %}
     </div>
 </div>

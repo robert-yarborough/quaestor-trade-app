@@ -1,0 +1,14 @@
+uuid: f2a8e11d-824a-42d2-8a33-186a20ca3f13
+langcode: en
+status: true
+dependencies: {  }
+id: article_listing
+label: 'Article Listing'
+context:
+  show_warning: true
+  group:
+    language: false
+menu:
+  path: /admin/content/article-listing
+  weight: 0
+  description: ''

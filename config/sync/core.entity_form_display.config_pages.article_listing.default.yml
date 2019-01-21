@@ -1,0 +1,51 @@
+uuid: eec8f2c7-a568-4c99-9afe-a4a8cce026fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.article_listing
+    - field.field.config_pages.article_listing.field_subtitle
+    - field.field.config_pages.article_listing.field_title
+    - field.field.config_pages.article_listing.field_title_background
+    - image.style.thumbnail
+  module:
+    - image
+    - imce
+    - lightning_media
+    - text
+id: config_pages.article_listing.default
+targetEntityType: config_pages
+bundle: article_listing
+mode: default
+content:
+  field_subtitle:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_title_background:
+    type: image_image
+    weight: 2
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+hidden:
+  label: true
