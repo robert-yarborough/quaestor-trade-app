@@ -107,27 +107,5 @@ services:
     - 'traefik.port=80'
     - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL}'
 
-  behat:
-    hostname: behat
-    container_name: "${PROJECT_NAME}_behat"
-    image: docksal/behat
-    volumes:
-      - ./:/var/www/html
-    # Run a built-in web server for access to HTML reports
-    ports:
-      - 8001:8001
-    entrypoint: "php -S 0.0.0.0:8001"
-    labels:
-      - 'traefik.backend=behat'
-      - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:behat.${PROJECT_BASE_URL}'
-
-  browser:
-    hostname: browser
-    container_name: "${PROJECT_NAME}_browser"
-    # Pick/uncomment one
-    image: selenium/standalone-chrome
-    #image: selenium/standalone-firefox
-
 volumes:
   codebase:
