@@ -1,0 +1,9 @@
+
+q8_forms.how_can_we_help_form:
+  path: '/q8_forms/form/how_can_we_help'
+  defaults:
+    _form: '\Drupal\q8_forms\Form\HowCanWeHelpForm'
+    _title: 'HowCanWeHelpForm'
+  requirements:
+    permission: access content
+  
