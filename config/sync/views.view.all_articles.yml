@@ -80,10 +80,10 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '‹‹ First'
-            last: 'Last ››'
+            previous: Previous
+            next: Next
+            first: First
+            last: Last
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -329,10 +329,23 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
-      title: 'All Articles'
+      title: 'All <strong>Articles</strong>'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Articles not found'
+            format: rich_text
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
