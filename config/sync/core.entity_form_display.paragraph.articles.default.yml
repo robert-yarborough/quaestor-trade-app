@@ -1,0 +1,46 @@
+uuid: eaffade6-b8b5-415f-b26a-f8315c81b3b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.articles.field_content
+    - field.field.paragraph.articles.field_link
+    - field.field.paragraph.articles.field_title
+    - paragraphs.paragraphs_type.articles
+  module:
+    - link
+    - text
+id: paragraph.articles.default
+targetEntityType: paragraph
+bundle: articles
+mode: default
+content:
+  field_content:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

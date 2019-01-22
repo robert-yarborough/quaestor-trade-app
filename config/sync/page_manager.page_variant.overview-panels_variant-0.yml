@@ -5,6 +5,7 @@ dependencies:
   config:
     - page_manager.page.overview
   module:
+    - config_pages
     - panels
     - q8_forms
 id: overview-panels_variant-0
@@ -20,6 +21,17 @@ variant_settings:
       region: top
       weight: 0
       uuid: 65a4312e-a1ca-484e-bedf-a4ae650802d1
+      context_mapping: {  }
+    088ba76b-9fcb-4614-ab13-95c4172be704:
+      id: config_pages_block
+      label: Paragraphs
+      provider: config_pages
+      label_display: '0'
+      region: content
+      weight: 0
+      uuid: 088ba76b-9fcb-4614-ab13-95c4172be704
+      config_page_type: overview_page
+      config_page_view_mode: paragraphs
       context_mapping: {  }
   id: panels_variant
   uuid: 31b41f17-5722-4dbb-af6c-b010c8c01260

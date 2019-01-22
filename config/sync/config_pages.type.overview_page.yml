@@ -7,7 +7,7 @@ label: 'Overview page'
 context:
   show_warning: true
   group:
-    language: false
+    language: true
 menu:
   path: /admin/content/overview
   weight: 0

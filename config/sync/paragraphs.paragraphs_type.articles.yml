@@ -1,0 +1,9 @@
+uuid: c4973209-bc05-4293-96f2-61d6eeeeba73
+langcode: en
+status: true
+dependencies: {  }
+id: articles
+label: Articles
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

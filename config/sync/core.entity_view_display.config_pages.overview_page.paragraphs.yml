@@ -1,0 +1,29 @@
+uuid: 9bd4cb14-fb15-401f-95c5-54e85750a049
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.overview_page
+    - core.entity_view_mode.config_pages.paragraphs
+    - field.field.config_pages.overview_page.field_paragraphs
+    - field.field.config_pages.overview_page.field_title
+    - field.field.config_pages.overview_page.field_title_background
+  module:
+    - entity_reference_revisions
+id: config_pages.overview_page.paragraphs
+targetEntityType: config_pages
+bundle: overview_page
+mode: paragraphs
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_title: true
+  field_title_background: true

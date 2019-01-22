@@ -1,0 +1,14 @@
+uuid: fd249372-bd07-4cf7-a676-a1bcde43a158
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: config_pages.paragraphs
+label: Paragraphs
+targetEntityType: config_pages
+cache: true
