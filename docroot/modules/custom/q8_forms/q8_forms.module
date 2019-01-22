@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Main file.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function q8_forms_theme() {
+  return [
+    'how_can_we_help_form' => [
+      'render element' => 'form',
+      'file' => 'forms.theme.inc',
+    ],
+  ];
+}

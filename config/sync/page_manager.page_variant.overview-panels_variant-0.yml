@@ -1,0 +1,38 @@
+uuid: 60076fda-2d39-4040-a9dc-3e262ab37e9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.overview
+  module:
+    - panels
+    - q8_forms
+id: overview-panels_variant-0
+label: Page
+variant: panels_variant
+variant_settings:
+  blocks:
+    65a4312e-a1ca-484e-bedf-a4ae650802d1:
+      id: how_can_we_help_block
+      label: 'How can we help block'
+      provider: q8_forms
+      label_display: '0'
+      region: top
+      weight: 0
+      uuid: 65a4312e-a1ca-484e-bedf-a4ae650802d1
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 31b41f17-5722-4dbb-af6c-b010c8c01260
+  label: null
+  weight: 0
+  layout: q8_top_content
+  layout_settings: {  }
+  page_title: 'How can we help?'
+  storage_type: page_manager
+  storage_id: overview-panels_variant-0
+  builder: standard
+page: overview
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

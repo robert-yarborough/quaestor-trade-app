@@ -6,3 +6,11 @@ q8_2col:
       label: Left
     right:
       label: Right
+q8_top_content:
+  label: Top Content
+  category: Q8
+  regions:
+    top:
+      label: Top
+    content:
+      label: Content

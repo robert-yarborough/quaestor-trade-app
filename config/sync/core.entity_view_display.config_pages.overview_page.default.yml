@@ -1,0 +1,40 @@
+uuid: cd148d56-cb3b-49a3-814f-07b8072473f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.overview_page
+    - field.field.config_pages.overview_page.field_title
+    - field.field.config_pages.overview_page.field_title_background
+  module:
+    - ds
+    - image
+    - text
+id: config_pages.overview_page.default
+targetEntityType: config_pages
+bundle: overview_page
+mode: default
+content:
+  field_title:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title_background:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image_url
+    region: content
+hidden: {  }

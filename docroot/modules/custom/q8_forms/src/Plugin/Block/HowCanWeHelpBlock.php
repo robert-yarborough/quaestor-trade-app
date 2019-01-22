@@ -2,6 +2,7 @@
 
 namespace Drupal\q8_forms\Plugin\Block;
 
+use Drupal\q8_forms\Form\HowCanWeHelpForm;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -18,20 +19,14 @@ use Drupal\Core\Form\FormBuilderInterface;
 class HowCanWeHelpBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
-   * Drupal\Core\Form\FormBuilderInterface definition.
+   * Form builder.
    *
    * @var \Drupal\Core\Form\FormBuilderInterface
    */
   protected $formBuilder;
+
   /**
    * Constructs a new HowCanWeHelpBlock object.
-   *
-   * @param array $configuration
-   *   A configuration array containing information about the plugin instance.
-   * @param string $plugin_id
-   *   The plugin_id for the plugin instance.
-   * @param string $plugin_definition
-   *   The plugin implementation definition.
    */
   public function __construct(
     array $configuration,
@@ -42,6 +37,7 @@ class HowCanWeHelpBlock extends BlockBase implements ContainerFactoryPluginInter
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->formBuilder = $form_builder;
   }
+
   /**
    * {@inheritdoc}
    */
@@ -53,11 +49,12 @@ class HowCanWeHelpBlock extends BlockBase implements ContainerFactoryPluginInter
       $container->get('form_builder')
     );
   }
+
   /**
    * {@inheritdoc}
    */
   public function build() {
-    return $this->formBuilder->getForm('how_can_we_help_form');
+    return $this->formBuilder->getForm(HowCanWeHelpForm::class);
   }
 
 }

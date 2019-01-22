@@ -1,0 +1,42 @@
+uuid: d501f067-bec6-4f3c-b3b4-5013591f045c
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.overview_page
+    - field.field.config_pages.overview_page.field_title
+    - field.field.config_pages.overview_page.field_title_background
+    - image.style.thumbnail
+  module:
+    - image
+    - imce
+    - lightning_media
+    - text
+id: config_pages.overview_page.default
+targetEntityType: config_pages
+bundle: overview_page
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_title_background:
+    weight: 1
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+    type: image_image
+    region: content
+hidden:
+  label: true

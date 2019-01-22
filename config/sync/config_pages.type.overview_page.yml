@@ -1,0 +1,14 @@
+uuid: 6a01bf4e-d40a-4bb8-9062-4aafecc70a38
+langcode: en
+status: true
+dependencies: {  }
+id: overview_page
+label: 'Overview page'
+context:
+  show_warning: true
+  group:
+    language: false
+menu:
+  path: /admin/content/overview
+  weight: 0
+  description: 'Overview page'

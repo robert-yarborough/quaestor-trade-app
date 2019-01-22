@@ -1,0 +1,12 @@
+uuid: 4991d28d-267c-4b53-91e7-d87f5ba564f8
+langcode: en
+status: true
+dependencies: {  }
+id: overview
+label: Overview
+description: ''
+use_admin_theme: false
+path: /overview
+access_logic: and
+access_conditions: {  }
+parameters: {  }

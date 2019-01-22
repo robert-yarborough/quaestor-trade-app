@@ -1,0 +1,11 @@
+<div class="front-banner block-section front-banner--main is-center">
+    <div class="front-banner__bg"{% if background %} style="background-image: url('{{ background }}')"{% endif %}></div>
+    <div class="front-banner__inner">
+        <div class="page-frame">
+            <div class="front-banner__title">
+                {{ title }}
+            </div>
+            {{ form }}
+        </div>
+    </div>
+</div>
