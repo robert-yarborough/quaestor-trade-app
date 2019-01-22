@@ -1,0 +1,28 @@
+<div class="block-wrapper">
+    <div class="page-frame">
+        {% if title %}
+            <h2>{{ title }}</h2>
+        {% endif %}
+
+        {% if description %}
+            <div>{{ description }}</div>
+        {% endif %}
+
+        <div class="form-wrapper">
+            <form{{ attributes }}
+                {{ form.client_type }}
+                {{ form.first_name }}
+                {{ form.last_name }}
+                {{ form.email }}
+                {{ form.phone }}
+                {{ form.country_code }}
+                {{ form.language }}
+                {{ form.interests }}
+                {{ form.submit }}
+                {{ form.form_build_id }}
+                {{ form.form_token }}
+                {{ form.form_id }}
+            </form>
+        </div>
+    </div>
+</div>

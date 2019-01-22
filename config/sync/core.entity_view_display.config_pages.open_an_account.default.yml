@@ -1,0 +1,48 @@
+uuid: 3fc89f18-4a27-49fe-b045-bc93742b8227
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.open_an_account
+    - field.field.config_pages.open_an_account.field_description
+    - field.field.config_pages.open_an_account.field_form_title
+    - field.field.config_pages.open_an_account.field_title
+    - field.field.config_pages.open_an_account.field_title_background
+  module:
+    - image
+    - text
+id: config_pages.open_an_account.default
+targetEntityType: config_pages
+bundle: open_an_account
+mode: default
+content:
+  field_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_form_title:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_title_background:
+    type: image_url
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+hidden: {  }

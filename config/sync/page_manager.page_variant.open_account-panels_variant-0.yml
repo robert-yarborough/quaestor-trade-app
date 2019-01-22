@@ -1,0 +1,47 @@
+uuid: 6770010a-3194-4ada-8207-60876c0c264e
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.open_account
+  module:
+    - panels
+    - q8_forms
+id: open_account-panels_variant-0
+label: Page
+variant: panels_variant
+variant_settings:
+  blocks:
+    84ee049e-3c37-42a5-bebd-9060b116440f:
+      id: open_account_form
+      label: 'Open Account Form Block'
+      provider: q8_forms
+      label_display: '0'
+      region: content
+      weight: 0
+      uuid: 84ee049e-3c37-42a5-bebd-9060b116440f
+      context_mapping: {  }
+    29e56a49-0e61-45df-8513-1a1657d5f371:
+      id: open_account_top_block
+      label: 'Open account top block'
+      provider: q8_forms
+      label_display: '0'
+      region: top
+      weight: -10
+      uuid: 29e56a49-0e61-45df-8513-1a1657d5f371
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 610f6c21-41a5-4955-8cef-0fcc3449f128
+  label: null
+  weight: 0
+  layout: q8_top_content
+  layout_settings: {  }
+  page_title: 'Open An Account'
+  storage_type: page_manager
+  storage_id: open_account-panels_variant-0
+  builder: standard
+page: open_account
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -14,5 +14,15 @@ function q8_forms_theme() {
       'render element' => 'form',
       'file' => 'forms.theme.inc',
     ],
+    'open_account_form' => [
+      'render element' => 'form',
+      'file' => 'forms.theme.inc',
+    ],
+    'open_account_page_top' => [
+      'variables' => [
+        'background' => [],
+        'title' => [],
+      ],
+    ],
   ];
 }

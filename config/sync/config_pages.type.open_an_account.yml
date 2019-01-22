@@ -1,0 +1,14 @@
+uuid: c4e1901f-fe53-4f48-a1a2-ebf0c0695089
+langcode: en
+status: true
+dependencies: {  }
+id: open_an_account
+label: 'Open an account'
+context:
+  show_warning: true
+  group:
+    language: true
+menu:
+  path: /admin/content/account
+  weight: 0
+  description: ''

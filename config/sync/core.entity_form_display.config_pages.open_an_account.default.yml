@@ -1,0 +1,60 @@
+uuid: dbc49068-b3c6-451d-be2d-8c58ba7fc2d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.open_an_account
+    - field.field.config_pages.open_an_account.field_description
+    - field.field.config_pages.open_an_account.field_form_title
+    - field.field.config_pages.open_an_account.field_title
+    - field.field.config_pages.open_an_account.field_title_background
+    - image.style.thumbnail
+  module:
+    - image
+    - imce
+    - lightning_media
+    - text
+id: config_pages.open_an_account.default
+targetEntityType: config_pages
+bundle: open_an_account
+mode: default
+content:
+  field_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_form_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_title_background:
+    type: image_image
+    weight: 1
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+hidden:
+  label: true
