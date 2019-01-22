@@ -8,6 +8,9 @@
     100% {
         transform: perspective(100px) rotateX(0) rotateY(0); }
 }
+.loader-wrap {
+    position: relative;
+}
 .ajax-progress-fullscreen {
     background: none;
     width: 100%;
