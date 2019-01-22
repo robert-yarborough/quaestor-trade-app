@@ -119,7 +119,7 @@ ds_switch_view_mode: 3.2.0
 imce: 1.7.0
 content_translation: 8.6.4
 locale: 8.6.4
-config_translation: 8.6.4
+config_translation: 8.6.5
 file_mdm: 1.1.0
 file_mdm_exif: 1.1.0
 file_mdm_font: 1.1.0

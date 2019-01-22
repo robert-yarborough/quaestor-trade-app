@@ -73,3 +73,14 @@ module-rates:
     - core/jquery.once
     - core/drupal
     - q8/vendor-swiper
+
+module-tabs-filters:
+  css:
+    theme:
+      css/module-tabs-filters.css: { minified: true }
+  js:
+    js/module-tabs-filters.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
