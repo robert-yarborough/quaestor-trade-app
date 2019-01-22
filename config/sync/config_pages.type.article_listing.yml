@@ -7,7 +7,7 @@ label: 'Article Listing'
 context:
   show_warning: true
   group:
-    language: false
+    language: true
 menu:
   path: /admin/content/article-listing
   weight: 0
