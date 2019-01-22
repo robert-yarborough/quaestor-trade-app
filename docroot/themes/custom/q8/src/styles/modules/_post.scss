@@ -105,6 +105,7 @@
     &__featured {
         background-color: $c-str-1;
         padding-bottom: 4.5vw;
+        position: relative;
         .view-filters {
             margin-bottom: 4.5vw;
             @include media('<tablet') {
@@ -173,6 +174,7 @@
     }
     &__all {
         padding: 4.5vw 0 6vw;
+        position: relative;
         &--wrap {
             position: relative;
         }
