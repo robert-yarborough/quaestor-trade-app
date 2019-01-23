@@ -25,6 +25,44 @@ const setMain = (($) => {
 			}
 		}, 3000);
 
+		// Animate forms placeholer:
+
+		let $animate_placeholder = $('.js-animate-placeholder', context);
+		let $fields = 'input[type="text"],' +
+			'input[type="password"],' +
+			'input[type="email"],' +
+			'input[type="number"],' +
+			'input[type="month"],' +
+			'input[type="date"],' +
+			'input[type="time"],' +
+			'input[type="search"],' +
+			'input[type="tel"], ' +
+			'textarea';
+		let $field = $animate_placeholder.find($fields);
+		if($animate_placeholder.length) {
+			$field.each(function () {
+				let $that = $(this);
+				let $holder = $that.attr('placeholder');
+				if($holder.length) {
+					$('<div class="placeholder-label">' + $holder + '</div>')
+						.insertBefore($that);
+				}
+			});
+		}
+
+		$field.on('keydown keyup', function() {
+			let $that = $(this);
+			let $value = $that.val();
+			let $holder = $that.prev('.placeholder-label');
+			if($holder.length) {
+				if($value) {
+					$holder.addClass('is-active');
+					return
+				}
+				$holder.removeClass('is-active');
+			}
+		});
+
 		const animate_init = () => {
 			skrollr.init();
 		};
@@ -51,6 +89,7 @@ const setMain = (($) => {
 				animate_init();
 			}
 		});
+
 	};
 })(window.jQuery);
 export default setMain;

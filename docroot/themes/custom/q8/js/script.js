@@ -352,6 +352,34 @@ var setMain = function ($) {
 			}
 		}, 3000);
 
+		// Animate forms placeholer:
+
+		var $animate_placeholder = $('.js-animate-placeholder', context);
+		var $fields = 'input[type="text"],' + 'input[type="password"],' + 'input[type="email"],' + 'input[type="number"],' + 'input[type="month"],' + 'input[type="date"],' + 'input[type="time"],' + 'input[type="search"],' + 'input[type="tel"], ' + 'textarea';
+		var $field = $animate_placeholder.find($fields);
+		if ($animate_placeholder.length) {
+			$field.each(function () {
+				var $that = $(this);
+				var $holder = $that.attr('placeholder');
+				if ($holder.length) {
+					$('<div class="placeholder-label">' + $holder + '</div>').insertBefore($that);
+				}
+			});
+		}
+
+		$field.on('keydown keyup', function () {
+			var $that = $(this);
+			var $value = $that.val();
+			var $holder = $that.prev('.placeholder-label');
+			if ($holder.length) {
+				if ($value) {
+					$holder.addClass('is-active');
+					return;
+				}
+				$holder.removeClass('is-active');
+			}
+		});
+
 		var animate_init = function animate_init() {
 			skrollr.init();
 		};
