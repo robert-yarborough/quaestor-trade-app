@@ -1,0 +1,194 @@
+.pagination {
+    .pager__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--pages {
+            font-size: 18px;
+            @include media('<=tablet-l') {
+                font-size: 16px;
+            }
+            @include media('<tablet') {
+                font-size: 15px;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+            }
+            .pager__item {
+                padding: 0;
+                margin: 0 15px;
+                font-weight: 700;
+                @include media('<=tablet-l') {
+                    margin: 0 5px;
+                }
+                @include media('<tablet') {
+                    margin: 0 1px;
+                }
+                a {
+                    display: block;
+                    padding: 5px 14px;
+                    @include media('<=tablet-l') {
+                        padding: 5px 10px;
+                    }
+                    @include media('<tablet') {
+                        padding: 5px 7px;
+                    }
+                }
+                &.is-active {
+                    a {
+                        color: black;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+        &--sub {
+            @include media('>=tablet-l') {
+                min-width: 212px;
+            }
+            @include media('<tablet-l', '>=tablet') {
+                min-width: 185px;
+            }
+            @include media('<tablet') {
+                min-width: 52px;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .pager__item {
+        display: block;
+        padding: 0;
+        &--previous, &--next {
+            a {
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                padding: 0 25px;
+                @include media('>=tablet') {
+                    border: 1px solid $c-primary;
+                    height: 40px;
+                    line-height: 40px;
+                    min-width: 157px;
+                    transition: .3s;
+                }
+                @include media('<=tablet-l') {
+                    font-size: 15px;
+                    min-width: 130px;
+                    padding: 0 20px;
+                }
+                @include media('<tablet') {
+                    min-width: 1px;
+                    padding: 0;
+                    span {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    @include media('>=tablet') {
+                        background-color: $c-primary;
+                        color: white;
+                    }
+                }
+            }
+        }
+        &--previous {
+            a {
+                &:before {
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    border-top: 1px solid currentColor;
+                    border-right: 1px solid currentColor;
+                    transform: rotate(-135deg);
+                    margin-right: auto;
+                    white-space: nowrap;
+                    display: inline-block;
+                }
+            }
+        }
+        &--next {
+            a {
+                &:after {
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    border-top: 1px solid currentColor;
+                    border-right: 1px solid currentColor;
+                    transform: rotate(45deg);
+                    margin-left: auto;
+                    white-space: nowrap;
+                    display: inline-block;
+                }
+            }
+        }
+        &--last, &--first {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include media('>=tablet') {
+                    width: 45px;
+                    border: 1px solid $c-primary;
+                    height: 40px;
+                    line-height: 40px;
+                    transition: .3s;
+                }
+                &:hover {
+                    @include media('>=tablet') {
+                        background-color: $c-primary;
+                        color: white;
+                    }
+                }
+                &:before, &:after {
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    border-top: 1px solid currentColor;
+                    border-right: 1px solid currentColor;
+                    transform: rotate(-135deg);
+                    white-space: nowrap;
+                    display: inline-block;
+                    position: relative;
+                }
+            }
+        }
+        &--last {
+            margin-left: 10px;
+            a {
+                @include media('>=tablet') {
+                    padding: 0 12px 0 5px;
+                }
+                &:before, &:after {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    @include media('<tablet') {
+                        right: 5px;
+                    }
+                }
+            }
+        }
+        &--first {
+            margin-right: 10px;
+            a {
+                @include media('>=tablet') {
+                    padding: 0 5px 0 12px;
+                }
+                &:before, &:after {
+                    transform: rotate(-135deg);
+                }
+                &:before {
+                    @include media('<tablet') {
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

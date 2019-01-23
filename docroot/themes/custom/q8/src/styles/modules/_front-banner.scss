@@ -75,9 +75,10 @@
             padding-top: 75px;
         }
     }
-    &__title {
+    &__title, .field--name-node-title {
         margin-bottom: 20px;
         font-weight: 300;
+        color: white;
         @include media('>=tablet-l') {
             font-size: 68px;
             line-height: 70px;

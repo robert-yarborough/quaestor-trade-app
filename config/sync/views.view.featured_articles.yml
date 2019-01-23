@@ -210,6 +210,42 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_featured_value:
+          id: field_featured_value
+          table: node__field_featured
+          field: field_featured_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
         field_article_categories_target_id:
           id: field_article_categories_target_id
           table: node__field_article_categories
@@ -281,11 +317,28 @@ display:
       title: 'Featured Articles'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Articles not found'
+            format: rich_text
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -306,7 +359,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 4
+          items_per_page: 3
           offset: 1
       displays:
         block_1: block_1
@@ -319,6 +372,7 @@ display:
         row: false
         filters: true
         filter_groups: true
+        empty: false
       row:
         type: 'ds_entity:node'
         options:
@@ -338,6 +392,7 @@ display:
           advanced_fieldset:
             advanced: false
       inherit_exposed_filters: true
+      empty: {  }
     cache_metadata:
       max-age: -1
       contexts:

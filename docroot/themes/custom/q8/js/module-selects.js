@@ -60,69 +60,31 @@
 /******/ 	__webpack_require__.p = "scripts/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 5:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 (function ($, Drupal, drupalSettings) {
-	Drupal.behaviors.featureSlider = {
+	Drupal.behaviors.selectsStyle = {
 		attach: function attach(context, settings) {
-			var init_slider_class = 'slider-initialized';
-			var $feature_slider = $('.js-block-slider');
-			var $feature_slider_wrap = $feature_slider.find('.features-block__grid', context);
-			var $feature_slider_item = $feature_slider.find('.features-block__col', context);
-			var $nav_prev = $('<div class="swiper-button-prev js-ft-sl-btn-prev"/>');
-			var $nav_next = $('<div class="swiper-button-next js-ft-sl-btn-next"/>');
-
-			var featureSwiper = void 0;
-
-			if ($feature_slider.length) {
-				$feature_slider_wrap.addClass('swiper-wrapper', context);
-				$feature_slider_item.addClass('swiper-slide', context);
-				$feature_slider_wrap.wrap('<div class="swiper-container" />');
-				$nav_prev.insertAfter($feature_slider_wrap);
-				$nav_next.insertAfter($feature_slider_wrap);
-			}
-
-			var feature_slider_init = function feature_slider_init() {
-				if ($feature_slider.length && !$feature_slider.hasClass(init_slider_class)) {
-					var $feature_slider_box = $feature_slider.find('.swiper-container', context);
-					featureSwiper = new Swiper($feature_slider_box, {
-						speed: 750,
-						navigation: {
-							nextEl: '.js-ft-sl-btn-next',
-							prevEl: '.js-ft-sl-btn-prev'
-						},
-						a11y: {
-							prevSlideMessage: 'Previous slide',
-							nextSlideMessage: 'Next slide'
-						}
-					});
-					$feature_slider.addClass(init_slider_class);
-				}
-			};
-
-			var feature_slider_destroy = function feature_slider_destroy() {
-				if ($feature_slider.length && $feature_slider.hasClass(init_slider_class)) {
-					featureSwiper.destroy(false, true);
-					$feature_slider.removeClass(init_slider_class);
-				}
-			};
-
-			// Mobile:
-			addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
-				if (match) {
-					feature_slider_init();
-				} else if (match == false) {
-					feature_slider_destroy();
-				}
+			var $selectDefault = $('select:not(.view-filters select)', context);
+			var $selectFilter = $('.view-filters select', context);
+			$selectDefault.once('selectsStyle').select2({
+				minimumResultsForSearch: -1,
+				theme: 'default-q8',
+				width: '100%'
+			});
+			$selectFilter.once('selectsStyle').select2({
+				minimumResultsForSearch: -1,
+				theme: 'filter-q8',
+				width: '100%'
 			});
 		}
 	};
@@ -131,4 +93,4 @@
 /***/ })
 
 /******/ });
-//# sourceMappingURL=module-features-slider.js.map
+//# sourceMappingURL=module-selects.js.map

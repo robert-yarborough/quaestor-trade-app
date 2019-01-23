@@ -85,6 +85,12 @@ select {
         line-height: 16px;
         padding-top: 5px;
     }
+    + {
+        p {
+            line-height: normal;
+            margin-bottom: 20px;
+        }
+    }
 }
 .form-actions {
     @extend %btn-dark;

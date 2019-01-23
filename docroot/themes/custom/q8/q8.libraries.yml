@@ -13,6 +13,19 @@ base:
     - core/drupal
     - core/drupalSettings
 
+global-select:
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css: { type: external, minified: true }
+      css/component-select2.css: { preprocess: false }
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js: { type: external, minified: true, attributes: { defer: true } }
+    js/module-selects.js: { attributes: { defer: true } }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+
 vendor-swiper:
   css:
     theme:
@@ -60,3 +73,14 @@ module-rates:
     - core/jquery.once
     - core/drupal
     - q8/vendor-swiper
+
+module-tabs-filters:
+  css:
+    theme:
+      css/module-tabs-filters.css: { minified: true }
+  js:
+    js/module-tabs-filters.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

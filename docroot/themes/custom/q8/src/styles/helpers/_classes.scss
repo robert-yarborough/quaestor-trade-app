@@ -8,9 +8,42 @@
     line-height: 26px;
     max-width: 600px;
     margin-bottom: 45px;
-    @include media('<tablet-l') {
+    @include media('<=tablet-l') {
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 40px;
+    }
+}
+.no-image {
+    background-color: $c-str-8;
+    position: relative;
+    min-height: 200px;
+    @include media('>=tablet') {
+        min-height: 400px;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('../images/icons/svg/icon-logo-large-light.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        opacity: .5;
+    }
+}
+.view-empty {
+    text-align: center;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    font-size: 32px;
+    font-weight: 700;
+    @include media('<tablet') {
+        font-size: 26px;
     }
 }
