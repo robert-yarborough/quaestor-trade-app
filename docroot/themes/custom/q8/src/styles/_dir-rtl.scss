@@ -499,5 +499,25 @@ html {
             left: 0;
             right: auto;
         }
+        .pagination {
+            .pager__item--last {
+                a {
+                    &:after {
+                        @include media('<tablet') {
+                            right: -5px;
+                        }
+                    }
+                }
+            }
+            .pager__item--first {
+                a {
+                    &:before {
+                        @include media('<tablet') {
+                            left: -5px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
