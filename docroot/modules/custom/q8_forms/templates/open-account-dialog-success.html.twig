@@ -1,7 +1,18 @@
-<h2>{{ title }}<br><b>{{ subtitle }}</b></h2>
-<p>
-{% trans %}
-    Dear, {{ name }} Thank you for registering! We will<br>get in touch with you shortly.
-{% endtrans %}
-</p>
-<a class="btn" href="{{ url('<front>') }}">{{ 'Back to home'|t }}</a>
+<div class="open-account-dialog">
+  <div class="oas--wrap">
+    <div>
+      <div class="oas--head">
+        <div class="oas--title">{{ title }}</div>
+        <div class="oas--subtitle">{{ subtitle }}</div>
+      </div>
+      <div class="oas--text">
+      {% trans %}
+        Dear, <strong>{{ name }}</strong> Thank you for registering! We will get in touch with you shortly.
+      {% endtrans %}
+      </div>
+      <div class="oas--cta">
+        <a href="{{ url('<front>') }}">{{ 'Back to home'|t }}</a>
+      </div>
+    </div>
+  </div>
+</div>
