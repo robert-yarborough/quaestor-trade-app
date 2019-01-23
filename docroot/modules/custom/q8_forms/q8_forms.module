@@ -24,5 +24,12 @@ function q8_forms_theme() {
         'title' => [],
       ],
     ],
+    'open_account_dialog_success' => [
+      'variables' => [
+        'name' => '',
+        'title' => '',
+        'subtitle' => '',
+      ],
+    ],
   ];
 }

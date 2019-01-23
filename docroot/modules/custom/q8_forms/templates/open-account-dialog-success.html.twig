@@ -1,0 +1,7 @@
+<h2>{{ title }}<br><b>{{ subtitle }}</b></h2>
+<p>
+{% trans %}
+    Dear, {{ name }} Thank you for registering! We will<br>get in touch with you shortly.
+{% endtrans %}
+</p>
+<a class="btn" href="{{ url('<front>') }}">{{ 'Back to home'|t }}</a>

@@ -4,4 +4,4 @@ status: true
 dependencies: {  }
 formId: account_form
 captchaType: recaptcha/reCAPTCHA
-label: account_form
+label: open_account_form

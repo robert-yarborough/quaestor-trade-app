@@ -9,15 +9,22 @@
         {% endif %}
 
         <div class="form-wrapper">
+            {# This library is required for popups #}
+            {{ attach_library('core/drupal.dialog.ajax') }}
             <form{{ attributes }}
                 {{ form.client_type }}
-                {{ form.first_name }}
-                {{ form.last_name }}
+                <div class="row">
+                    {{ form.first_name }}
+                    {{ form.last_name }}
+                </div>
                 {{ form.email }}
-                {{ form.phone }}
-                {{ form.country_code }}
+                <div class="row">
+                    {{ form.phone }}
+                    {{ form.country_code }}
+                </div>
                 {{ form.language }}
                 {{ form.interests }}
+                {{ form.captcha }}
                 {{ form.submit }}
                 {{ form.form_build_id }}
                 {{ form.form_token }}
