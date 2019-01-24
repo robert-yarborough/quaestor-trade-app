@@ -55,6 +55,10 @@ class SimpleSearchForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+
+    $form['#action'] = '/search';
+    $form['#method'] = 'get';
+
     $form['search'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search'),
@@ -80,15 +84,6 @@ class SimpleSearchForm extends FormBase {
       '#value' => $this->t('Submit'),
     ];
 
-    $form['icon'] = [
-      '#markup' => '<div class="header-search__action--icon"><svg class="q-icon"><use xlink:href="#icon-search"></use></svg></div>',
-      '#allowed_tags' => [
-        'div',
-        'svg',
-        'use',
-      ],
-    ];
-
     return $form;
   }
 
@@ -96,12 +91,7 @@ class SimpleSearchForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    /*$form_state->setRedirect(
-    SearchConstantsInterface::SEARCH_ROUTE,
-    [
-    'search' => $form_state->getValue('search'),
-    ]
-    );*/
+
   }
 
 }
