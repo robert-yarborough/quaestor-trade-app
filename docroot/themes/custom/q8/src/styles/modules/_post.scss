@@ -117,6 +117,7 @@
             border: 0;
             @include media('>=tablet-l') {
                 max-width: calc(100%/3 - 10px);
+                flex-basis: calc(100%/3 - 10px);
             }
         }
         .view-content,

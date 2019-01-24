@@ -25,6 +25,7 @@
     }
     &__col {
         padding: 0 10px;
+        text-align: center;
         @include media('>=tablet') {
             width: calc(100% / 3);
             max-width: 275px;
