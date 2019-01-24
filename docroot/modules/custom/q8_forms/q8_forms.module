@@ -31,5 +31,11 @@ function q8_forms_theme() {
         'subtitle' => '',
       ],
     ],
+    'open_account_dialog_fail' => [
+      'variables' => [
+        'title' => '',
+        'text' => [],
+      ],
+    ],
   ];
 }
