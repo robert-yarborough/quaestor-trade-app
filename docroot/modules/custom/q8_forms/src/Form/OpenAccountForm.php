@@ -205,27 +205,7 @@ class OpenAccountForm extends FormBase {
         }
 
         // Create contact.
-        // Build variables array.
-        // ToDo. Build this array in the separate method.
-        $properties = [
-          [
-            'property' => 'email',
-            'value' => $formState->getValue('email'),
-          ],
-          [
-            'property' => 'firstname',
-            'value' => $formState->getValue('first_name'),
-          ],
-          [
-            'property' => 'lastname',
-            'value' => $formState->getValue('last_name'),
-          ],
-          [
-            'property' => 'phone',
-            'value' => $formState->getValue('phone'),
-          ],
-
-        ];
+        $properties = $this->buildProperties($formState->getValues());
 
         // Create contact or return error.
         try {
@@ -264,6 +244,37 @@ class OpenAccountForm extends FormBase {
         return $response;
       }
     }
+  }
+
+  /**
+   * Map variables array for hubspot.
+   *
+   * @param array $values
+   *   Form values.
+   *
+   * @return array
+   *   Returns Hubspot-style parameters array.
+   */
+  public function buildProperties(array $values) {
+    return [
+      // ToDo. Add new parameters when create add them in the UI.
+      [
+        'property' => 'email',
+        'value' => $values['email'],
+      ],
+      [
+        'property' => 'firstname',
+        'value' => $values['first_name'],
+      ],
+      [
+        'property' => 'lastname',
+        'value' => $values['last_name'],
+      ],
+      [
+        'property' => 'phone',
+        'value' => $values['phone'],
+      ],
+    ];
   }
 
   /**
