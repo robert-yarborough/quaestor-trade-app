@@ -54,6 +54,23 @@
         font-size: 50px;
         line-height: 48px;
         margin-bottom: 35px;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 52px;
+            top: -30px;
+            left: calc(50% - 30px);
+            border-right: 2px solid;
+            border-top: 2px solid;
+            transform: scaleX(-1) rotate(135deg);
+            transform-origin: left top;
+            border-color: transparent;
+            animation: checkbox-check .35s cubic-bezier(.4,.0,.23,1) forwards;
+            animation-delay: .3s;
+        }
     }
     &--title {
         font-weight: 300;
@@ -74,4 +91,9 @@
             @extend %btn-light;
         }
     }
+}
+@keyframes checkbox-check {
+    0% { height: 0; width: 0; border-color: transparent;}
+    25% { height: 0; width: 10px; border-color: transparent;}
+    100% { width: 18px;  height: 52px; border-color: $c-bright;}
 }
