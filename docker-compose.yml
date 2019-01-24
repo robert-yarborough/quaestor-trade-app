@@ -83,7 +83,18 @@ services:
       - 'traefik.backend=portainer'
       - 'traefik.port=9000'
       - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
-
+  solr:
+    image: wodby/solr:$SOLR_TAG
+    container_name: "${PROJECT_NAME}_solr"
+    environment:
+      SOLR_DEFAULT_CONFIG_SET: $SOLR_CONFIG_SET
+      SOLR_HEAP: 1024m
+    volumes:
+      - ./:/var/www/html
+    labels:
+      - 'traefik.backend=solr'
+      - 'traefik.port=8983'
+      - 'traefik.frontend.rule=Host:solr.${PROJECT_BASE_URL}'
   traefik:
     image: traefik
     container_name: "${PROJECT_NAME}_traefik"
