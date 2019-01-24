@@ -178,7 +178,12 @@ class OpenAccountForm extends FormBase {
         '#theme' => 'item_list',
         '#items' => $errors,
       ];
-      $response->addCommand($this->buildDialog($this->t('Your form has an error(s)'), $content));
+      $response->addCommand(
+        $this->buildErrorDialog(
+          $this->t('Your form has an error(s)'),
+          $content
+        )
+      );
 
       return $response;
     }
@@ -192,7 +197,7 @@ class OpenAccountForm extends FormBase {
         // Validate if the user is already exists.
         $search = $contacts->search($formState->getValue('email'));
         if ($search->data->total) {
-          $response->addCommand($this->buildDialog(
+          $response->addCommand($this->buildErrorDialog(
             $this->t('You are already registered'),
             $this->t('You are already registered! Please use another email or contact us with another method')
           ));
@@ -201,6 +206,7 @@ class OpenAccountForm extends FormBase {
 
         // Create contact.
         // Build variables array.
+        // ToDo. Build this array in the separate method.
         $properties = [
           [
             'property' => 'email',
@@ -224,17 +230,11 @@ class OpenAccountForm extends FormBase {
         // Create contact or return error.
         try {
           $contacts->create($properties);
-          $title = $this->t('Success');
-          $content = [
-            '#theme' => 'open_account_dialog_success',
-            '#name' => $formState->getValue('first_name') . ' ' . $formState->getValue('last_name'),
-            '#title' => $title,
-            '#subtitle' => $this->t('your request was submitted'),
-          ];
           $response->addCommand(
-            $this->buildDialog(
-              $title,
-              $content
+            $this->buildSuccessDialog(
+              $this->t('Success'),
+              $formState->getValue('first_name') . ' ' . $formState->getValue('last_name'),
+              $this->t('your request was submitted')
             )
           );
           return $response;
@@ -244,7 +244,7 @@ class OpenAccountForm extends FormBase {
           // Looks like the property(ies) doesn't exist.
           $this->logger('open_account_form')->critical('Looks like property doesn`t exists. ERROR: @error', ['@error' => $exception->getMessage()]);
           $response->addCommand(
-            $this->buildDialog(
+            $this->buildErrorDialog(
               $this->t('Hubspot error'),
               $this->t('Hubspot server error. Please contact us in another method')
             )
@@ -256,7 +256,7 @@ class OpenAccountForm extends FormBase {
       else {
         $this->logger('open_account_form')->critical('Cannot connect to hubspot server.');
         $response->addCommand(
-          $this->buildDialog(
+          $this->buildErrorDialog(
             $this->t('Your form has an error(s)'),
             $this->t('Cannot connect to Hubspot server. Please contact us in another method')
           )
@@ -267,20 +267,54 @@ class OpenAccountForm extends FormBase {
   }
 
   /**
-   * Helper function for building popup.
+   * Helper function for building success popup.
    *
    * @param string|object|array $title
    *   Popup title.
-   * @param string|object|array $content
-   *   Popup content.
+   * @param string $name
+   *   User name.
+   * @param string $subtitle
+   *   Status description.
    *
    * @return \Drupal\Core\Ajax\OpenModalDialogCommand
    *   Ajax command for the response.
    */
-  protected function buildDialog($title, $content) {
+  protected function buildSuccessDialog($title, $name, $subtitle) {
     return new OpenModalDialogCommand(
       $title,
-      $content,
+      [
+        '#theme' => 'open_account_dialog_success',
+        '#name' => $name,
+        '#title' => $title,
+        '#subtitle' => $subtitle,
+      ],
+      // ToDo. Add correct options here.
+      [
+        'width' => 700,
+        'height' => 500,
+      ]
+    );
+  }
+
+  /**
+   * Helper function for building error popup.
+   *
+   * @param string|object|array $title
+   *   Error title.
+   * @param string|object|array $text
+   *   Error text.
+   *
+   * @return \Drupal\Core\Ajax\OpenModalDialogCommand
+   *   Ajax command for the response.
+   */
+  protected function buildErrorDialog($title, $text) {
+    return new OpenModalDialogCommand(
+      $title,
+      [
+        '#theme' => 'open_account_dialog_fail',
+        '#title' => $title,
+        '#text' => $text,
+      ],
       // ToDo. Add correct options here.
       [
         'width' => 700,
