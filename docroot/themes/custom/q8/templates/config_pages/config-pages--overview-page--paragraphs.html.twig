@@ -18,7 +18,5 @@ view_mode ? 'config_pages--' ~ config_pages.bundle|clean_class ~ '--' ~ view_mod
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="page-frame">
-    {{ content }}
-  </div>
+  {{ content }}
 </div>

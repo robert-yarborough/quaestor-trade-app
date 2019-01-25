@@ -287,6 +287,10 @@
             position: absolute;
             right: 40px;
             bottom: 25px;
+            @include media('<tablet') {
+                right: 23px;
+                bottom: 23px;
+            }
         }
     }
 }
