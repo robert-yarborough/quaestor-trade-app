@@ -361,8 +361,14 @@ var setMain = function ($) {
 			$field.each(function () {
 				var $that = $(this);
 				var $holder = $that.attr('placeholder');
+				var $value = $that.val();
 				if ($holder.length) {
 					$('<div class="placeholder-label">' + $holder + '</div>').insertBefore($that);
+					if ($value) {
+						$that.prev('.placeholder-label').addClass('is-active');
+						return;
+					}
+					$that.prev('.placeholder-label').removeClass('is-active');
 				}
 			});
 		}
