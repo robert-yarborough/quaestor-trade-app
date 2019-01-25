@@ -43,9 +43,15 @@ const setMain = (($) => {
 			$field.each(function () {
 				let $that = $(this);
 				let $holder = $that.attr('placeholder');
+				let $value = $that.val();
 				if($holder.length) {
 					$('<div class="placeholder-label">' + $holder + '</div>')
 						.insertBefore($that);
+					if($value) {
+						$that.prev('.placeholder-label').addClass('is-active');
+						return
+					}
+					$that.prev('.placeholder-label').removeClass('is-active');
 				}
 			});
 		}

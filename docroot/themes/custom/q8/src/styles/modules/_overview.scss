@@ -13,7 +13,7 @@
     }
     .features-block__grid {
         padding-top: 0;
-        @include media('>=tablet') {
+        @include media('<tablet-l', '>=tablet') {
             flex-wrap: wrap;
             justify-content: center;
         }
