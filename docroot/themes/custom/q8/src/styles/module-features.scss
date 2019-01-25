@@ -75,7 +75,7 @@
         margin-right: auto;
         font-weight: 600;
         @include media('>=tablet-l') {
-            min-height: 52px;
+            //min-height: 52px;
         }
         @include media('<tablet-l') {
             font-size: 18px;

@@ -1,7 +1,9 @@
 .overview-block {
-    padding-bottom: 90px;
     .features-block {
         padding: 90px 0 110px;
+        @include media('<tablet') {
+            padding: 45px 0 50px;
+        }
     }
     .features-block__grid {
         padding-top: 0;
@@ -23,16 +25,13 @@
             }
         }
     }
-    .page-frame  {
-        > .field--name-field-title {
-            @extend .news-block__title;
-            color: black;
-        }
-        > .field--name-field-link {
-            @extend .news-block__cta;
-            a {
-                @extend %btn-dark;
-            }
+    .news-block__title {
+        color: black;
+        line-height: normal;
+    }
+    .news-block__cta {
+        a {
+            @extend %btn-dark;
         }
     }
 }
@@ -43,12 +42,19 @@
         margin-right: auto;
         position: relative;
         input[type=text] {
-            height: 60px;
-            padding-left: 33px;
-            padding-right: 60px;
-            font-size: 20px;
             color: black;
             font-weight: 400;
+            @include media('>=tablet') {
+                height: 60px;
+                font-size: 20px;
+                padding-left: 33px;
+                padding-right: 60px;
+            }
+            @include media('<tablet') {
+                padding-right: 40px;
+                height: 35px;
+                font-size: 16px;
+            }
             @include placeholder {
                 color: black;
             }
@@ -71,6 +77,16 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: 30px 29px;
+            @include media('<tablet') {
+                width: 40px;
+                background-size: 20px 19px;
+            }
         }
+    }
+}
+.overview-articles {
+    padding: 115px 0 100px;
+    @include media('<tablet') {
+        padding: 50px 0 45px;
     }
 }

@@ -50,9 +50,13 @@ not paragraph.isPublished() ? 'paragraph--unpublished'
 ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }} data-bottom-top="@fadeAttr: 0;" data-200-top="@fadeAttr: 1;" fadeattr="0">
+  <div{{ attributes.addClass(classes) }} data-bottom-top="@fadeAttr: 0;" data-490-top="@fadeAttr: 1;" fadeattr="0">
     {% block content %}
-      <div class="features-block__grid">{{ content }}</div>
+      <div class="page-frame">
+        <div class="features-block__grid">
+          {{ content }}
+        </div>
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}

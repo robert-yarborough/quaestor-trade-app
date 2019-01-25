@@ -81,6 +81,11 @@
         @include media('<tablet-l') {
             padding-top: 30px;
         }
+        a {
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
     }
 }
 .nb-item {

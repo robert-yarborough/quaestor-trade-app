@@ -7,7 +7,8 @@ html {
         body {
             text-align: right;
         }
-        [class*='btn-primary'] {
+        [class*='btn-primary'],
+        .news-block__cta a {
             padding: 10px 30px 10px 50px;
             &:after {
                 transform: rotate(-135deg);
@@ -595,6 +596,23 @@ html {
                 left: 30px;
                 @include media('<tablet') {
                     left: 20px;
+                }
+            }
+        }
+        .overview-search {
+            &__form {
+                input[type=text] {
+                    @include media('>=tablet') {
+                        padding-left: 60px;
+                        padding-right: 33px;
+                    }
+                    @include media('<tablet') {
+                        padding-left: 40px;
+                    }
+                }
+                .button {
+                    left: 0;
+                    right: auto;
                 }
             }
         }
