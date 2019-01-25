@@ -63,7 +63,7 @@ class OpenAccountForm extends FormBase {
     $form['client_type'] = [
       '#type' => 'radios',
       '#title' => $this->t('Are you an individual or institution'),
-      '#options' => ['Individual' => $this->t('Individual'), 'Institution' => $this->t('Institution')],
+      '#options' => ['Individual' => $this->t('Individual'), 'Institutional' => $this->t('Institution')],
       '#default_value' => 'Individual',
       '#required' => TRUE,
     ];
@@ -117,13 +117,12 @@ class OpenAccountForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $label,
       '#title_display' => 'invisible',
-      '#required' => TRUE,
       '#attributes' => [
         'placeholder' => $label,
       ],
     ];
 
-    $form['language'] = [
+    $form['language_preference'] = [
       '#type' => 'radios',
       '#title' => $this->t('Preferred language'),
       '#options' => ['English' => $this->t('English'), 'Arabic' => $this->t('Arabic')],
@@ -273,6 +272,22 @@ class OpenAccountForm extends FormBase {
       [
         'property' => 'phone',
         'value' => $values['phone'],
+      ],
+      [
+        'property' => 'client_type',
+        'value' => $values['client_type'],
+      ],
+      [
+        'property' => 'phone_country_code',
+        'value' => $values['country_code'],
+      ],
+      [
+        'property' => 'language_preference',
+        'value' => $values['language_preference'],
+      ],
+      [
+        'property' => 'what_markets_are_you_interested_in_',
+        'value' => $values['interests'],
       ],
     ];
   }
