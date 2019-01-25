@@ -4,6 +4,12 @@
         @include media('<tablet') {
             padding: 45px 0 50px;
         }
+        .fb-title {
+            max-width: none;
+            @include media('>=tablet') {
+                font-size: 28px;
+            }
+        }
     }
     .features-block__grid {
         padding-top: 0;
