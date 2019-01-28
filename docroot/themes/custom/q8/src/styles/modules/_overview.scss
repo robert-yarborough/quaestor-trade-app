@@ -1,20 +1,24 @@
 .overview-block {
     .features-block {
-        padding: 90px 0 110px;
+        @include media('>=tablet-l') {
+            padding: 90px 0 110px;
+        }
         @include media('<tablet') {
             padding: 45px 0 50px;
         }
         .fb-title {
             max-width: none;
-            @include media('>=tablet') {
+            @include media('>=tablet-l') {
                 font-size: 28px;
             }
+        }
+        .fb-icon {
+            width: auto;
         }
     }
     .features-block__grid {
         padding-top: 0;
         @include media('<tablet-l', '>=tablet') {
-            flex-wrap: wrap;
             justify-content: center;
         }
     }
@@ -24,11 +28,7 @@
             max-width: calc(25% - 10px);
         }
         @include media('<tablet-l', '>=tablet') {
-            flex-basis: calc(100%/3 - 10px);
-            max-width: calc(100%/3 - 10px);
-            &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)){
-                margin-top: 25px;
-            }
+
         }
     }
     .news-block__title {

@@ -352,7 +352,7 @@ var setMain = function ($) {
 			}
 		}, 3000);
 
-		// Animate forms placeholer:
+		// Animate forms placeholder:
 
 		var $animate_placeholder = $('.js-animate-placeholder', context);
 		var $fields = 'input[type="text"],' + 'input[type="password"],' + 'input[type="email"],' + 'input[type="number"],' + 'input[type="month"],' + 'input[type="date"],' + 'input[type="time"],' + 'input[type="search"],' + 'input[type="tel"], ' + 'textarea';
