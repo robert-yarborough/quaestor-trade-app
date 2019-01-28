@@ -25,7 +25,7 @@ const setMain = (($) => {
 			}
 		}, 3000);
 
-		// Animate forms placeholer:
+		// Animate forms placeholder:
 
 		let $animate_placeholder = $('.js-animate-placeholder', context);
 		let $fields = 'input[type="text"],' +
