@@ -1,0 +1,7 @@
+uuid: cbd9a119-e168-4848-aa0e-d3b928a5d522
+langcode: en
+status: true
+dependencies: {  }
+id: align_center
+label: 'Align in Center'
+classes: is-center

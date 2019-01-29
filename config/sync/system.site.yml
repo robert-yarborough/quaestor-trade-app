@@ -3,8 +3,8 @@ name: 'Q8 Securities '
 mail: admin@example.com
 slogan: ''
 page:
-  403: ''
-  404: ''
+  403: /node/19
+  404: /node/19
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
