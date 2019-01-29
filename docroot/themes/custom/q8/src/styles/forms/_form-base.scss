@@ -29,7 +29,7 @@ label {
     }
     &:disabled,
     &[disabled] {
-        opacity: 0.35;
+        opacity: 0.5;
         cursor: none;
     }
     &.error {
@@ -102,6 +102,7 @@ select {
     min-width: 250px;
     background: none!important;
     border: 0;
+    position: relative;
     @include media('<tablet') {
         width: 100%;
     }
@@ -115,15 +116,19 @@ select {
             justify-content: flex-start;
         }
         &.disabled, &:disabled {
-            background-color: transparent;
+            background-color: white;
             color: $c-primary;
+            cursor: not-allowed;
+            z-index: 5;
+            position: relative;
         }
     }
     .ajax-progress {
-        font-size: 0;
-        min-width: 20px;
-        min-height: 20px;
-        display: none;
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        margin-top: -10px;
+        z-index: 6;
     }
 }
 .form-item-group {

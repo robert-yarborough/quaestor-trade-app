@@ -8,7 +8,8 @@ html {
             text-align: right;
         }
         [class*='btn-primary'],
-        .news-block__cta a {
+        .news-block__cta a,
+        .oas--cta a {
             padding: 10px 30px 10px 50px;
             &:after {
                 transform: rotate(-135deg);
@@ -518,6 +519,12 @@ html {
                         }
                     }
                 }
+            }
+        }
+        .form-actions {
+            .ajax-progress {
+                right: auto;
+                left: 40px;
             }
         }
         .form-radios {
