@@ -15,6 +15,13 @@
         background-color: $c-primary;
         pointer-events: none;
         z-index: 1;
+        max-height: 143px;
+        @include media('<=desktop-l') {
+            max-height: 133px;
+        }
+        @include media('<=tablet-l') {
+            max-height: 105px;
+        }
     }
     .navbar {
         &__group {
