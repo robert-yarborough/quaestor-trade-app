@@ -1,6 +1,17 @@
 display:
   default:
+    display_title: الرئيسي
     display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'إعادة الضبط'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
       fields:
         media_bulk_form:
           action_title: إجراء
@@ -10,6 +21,7 @@ display:
             label: الاسم
       title: ميديا
   page:
+    display_title: الصفحة
     display_options:
       menu:
         title: ميديا

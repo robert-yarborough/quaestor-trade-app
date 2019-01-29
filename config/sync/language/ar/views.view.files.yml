@@ -1,9 +1,19 @@
+label: الملفات
 display:
   default:
+    display_title: الرئيسي
     display_options:
       exposed_form:
         options:
           submit_button: انتقاء
+          reset_button_label: 'إعادة الضبط'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
       fields:
         filename:
           label: الاسم
@@ -15,8 +25,17 @@ display:
         status:
           expose:
             label: الحالة
+      title: الملفات
+  page_1:
+    display_options:
+      menu:
+        title: الملفات
   page_2:
     display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
       fields:
         entity_label:
           label: الكيان

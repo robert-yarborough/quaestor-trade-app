@@ -5,14 +5,14 @@ ui:
   show:
     additional_queries: false
     advanced_column: false
-    master_display: false
+    master_display: true
     performance_statistics: true
     preview_information: true
     sql_query:
       enabled: true
       where: above
-    display_embed: false
-  always_live_preview: true
+    display_embed: true
+  always_live_preview: false
   exposed_filter_any_label: old_any
 field_rewrite_elements:
   div: DIV

@@ -4,6 +4,10 @@ display:
       exposed_form:
         options:
           submit_button: انتقاء
+          reset_button_label: 'إعادة الضبط'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
       fields:
         title:
           label: العنوان
@@ -21,3 +25,6 @@ display:
         langcode:
           expose:
             label: اللغة
+    display_title: الرئيسي
+  page_1:
+    display_title: الصفحة

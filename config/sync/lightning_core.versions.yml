@@ -139,3 +139,5 @@ q8_forms: 0.0.0
 captcha: 1.0.0-beta1
 recaptcha: 2.3.0
 hubspot_api: 1.0.0-alpha1
+search_api_solr: 2.5.0
+search_api_solr_admin: 2.5.0

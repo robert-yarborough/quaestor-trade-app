@@ -1,10 +1,8 @@
 display:
   default:
-    display_title: الرئيسي
     display_options:
       exposed_form:
         options:
-          submit_button: انتقاء
           reset_button_label: 'إعادة الضبط'
           exposed_sorts_label: 'الترتيب حسب'
           sort_asc_label: تصاعدي
@@ -13,18 +11,6 @@ display:
         options:
           expose:
             items_per_page_options_all_label: '- الكل -'
-      fields:
-        name:
-          label: 'اسم المستخدم'
-        status:
-          label: الحالة
-        roles_target_id:
-          label: الأدوار
-        operations:
-          label: عمليات
-      filters:
-        status:
-          group_info:
-            label: الحالة
+    display_title: الرئيسي
   page_1:
     display_title: الصفحة
