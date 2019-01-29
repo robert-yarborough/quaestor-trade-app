@@ -25,9 +25,12 @@
     }
     &__col {
         padding: 0 10px;
+        text-align: center;
         @include media('>=tablet') {
             width: calc(100% / 3);
             max-width: 275px;
+            flex-shrink: 1;
+            height: auto;
         }
         @include media('<tablet') {
             &:not(:last-child) {
@@ -74,13 +77,13 @@
         margin-right: auto;
         font-weight: 600;
         @include media('>=tablet-l') {
-            min-height: 52px;
+            //min-height: 52px;
         }
         @include media('<tablet-l') {
             font-size: 18px;
             line-height: 18px;
             margin-bottom: 15px;
-            min-height: 36px;
+            //min-height: 36px;
         }
         @include media('<tablet') {
             min-height: 1px;

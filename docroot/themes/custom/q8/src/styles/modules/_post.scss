@@ -117,6 +117,7 @@
             border: 0;
             @include media('>=tablet-l') {
                 max-width: calc(100%/3 - 10px);
+                flex-basis: calc(100%/3 - 10px);
             }
         }
         .view-content,
@@ -286,6 +287,10 @@
             position: absolute;
             right: 40px;
             bottom: 25px;
+            @include media('<tablet') {
+                right: 23px;
+                bottom: 23px;
+            }
         }
     }
 }

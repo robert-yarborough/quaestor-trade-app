@@ -1,0 +1,21 @@
+uuid: 468e165f-b31c-41d3-95ef-8515c01157a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.overview_page
+    - field.storage.config_pages.field_title
+  module:
+    - text
+id: config_pages.overview_page.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: overview_page
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

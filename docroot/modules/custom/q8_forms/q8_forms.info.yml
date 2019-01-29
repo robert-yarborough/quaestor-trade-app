@@ -1,0 +1,8 @@
+name: 'Q8 forms'
+type: module
+description: 'Custom forms'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:recaptcha
+  - drupal:hubspot_api

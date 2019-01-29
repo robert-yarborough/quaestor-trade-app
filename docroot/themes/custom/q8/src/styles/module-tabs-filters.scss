@@ -59,15 +59,14 @@
         }
     }
     .bef-links {
-        display: flex;
-        justify-content: center;
         font-weight: 500;
         font-size: 20px;
+        @include media('>=tablet') {
+            display: flex;
+            justify-content: center;
+        }
         @include media('<=tablet-l') {
             font-size: 16px;
-        }
-        @include media('<tablet') {
-            flex-direction: column;
         }
         a {
             color: $c-base;
@@ -115,6 +114,10 @@
             }
         }
         > div {
+            @include media('>=tablet') {
+                flex-grow: 1;
+                max-width: 50%;
+            }
             &:not(:last-child) {
                 @include media('>=tablet') {
                     border-right: 1px solid $c-str-8;

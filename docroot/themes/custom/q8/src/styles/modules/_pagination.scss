@@ -38,6 +38,7 @@
                 &.is-active {
                     a {
                         color: black;
+                        pointer-events: none;
                     }
                 }
             }

@@ -1,0 +1,79 @@
+uuid: b029c58c-792c-472e-b0df-d185723d439b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.feature
+    - paragraphs.paragraphs_type.features
+  module:
+    - entity_reference_revisions
+id: paragraph.features.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: features
+label: Features
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      feature: feature
+    target_bundles_drag_drop:
+      feature:
+        enabled: true
+        weight: 18
+      2_columns_image_text:
+        weight: 19
+        enabled: false
+      app_stores:
+        weight: 20
+        enabled: false
+      application:
+        weight: 21
+        enabled: false
+      application_banners_block:
+        weight: 22
+        enabled: false
+      banner_app_stores:
+        weight: 23
+        enabled: false
+      copyright:
+        weight: 24
+        enabled: false
+      features:
+        weight: 25
+        enabled: false
+      list_content:
+        weight: 26
+        enabled: false
+      list_content2:
+        weight: 27
+        enabled: false
+      map:
+        weight: 28
+        enabled: false
+      market_news:
+        weight: 29
+        enabled: false
+      options:
+        weight: 30
+        enabled: false
+      rate_item:
+        weight: 31
+        enabled: false
+      rates:
+        weight: 32
+        enabled: false
+      text_with_image:
+        weight: 33
+        enabled: false
+      top_banner:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

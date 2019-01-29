@@ -8,6 +8,7 @@ module:
   block_content: 0
   breakpoint: 0
   browsersync: 0
+  captcha: 0
   ckeditor: 0
   classy_paragraphs: 0
   config: 0
@@ -42,6 +43,7 @@ module:
   filter: 0
   help: 0
   history: 0
+  hubspot_api: 0
   image: 0
   image_effects: 0
   image_widget_crop: 0
@@ -91,9 +93,11 @@ module:
   panels: 0
   panels_ipe: 0
   path: 0
+  q8_forms: 0
   q8_search: 0
   q8_theme: 0
   rdf: 0
+  recaptcha: 0
   schemata: 0
   schemata_json_schema: 0
   search_api: 0

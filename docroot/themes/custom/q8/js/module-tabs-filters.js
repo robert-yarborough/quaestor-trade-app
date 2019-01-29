@@ -97,10 +97,11 @@
 				}
 			});
 
-			$tabs_filters.find('.js-drop').on({
+			$tabs_filters.find('a').on({
 				click: function click(e) {
 					var $that = $(this);
-					$that.removeClass('is-visible');
+					$that.closest($tabs_filters).find('.js-selected').text($that.text());
+					$that.closest('.js-drop').removeClass('is-visible');
 					$that.closest($tabs_filters).find('.js-selected').removeClass('is-active');
 				}
 			});

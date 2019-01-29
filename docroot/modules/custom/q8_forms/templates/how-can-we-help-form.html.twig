@@ -1,0 +1,11 @@
+<div class="front-banner block-section front-banner--main is-center {% if background is empty %}is-transparent{% endif %}">
+    <div class="front-banner__bg"{% if background %} style="background-image: url('{{ background }}')"{% endif %}></div>
+    <div class="front-banner__inner">
+        <div class="page-frame">
+            <div class="front-banner__title">
+                {{ title }}
+            </div>
+            <div class="overview-search__form">{{ form }}</div>
+        </div>
+    </div>
+</div>

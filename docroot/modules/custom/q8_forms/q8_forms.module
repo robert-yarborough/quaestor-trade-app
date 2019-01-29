@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Main file.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function q8_forms_theme() {
+  return [
+    'how_can_we_help_form' => [
+      'render element' => 'form',
+      'file' => 'forms.theme.inc',
+    ],
+    'open_account_form' => [
+      'render element' => 'form',
+      'file' => 'forms.theme.inc',
+    ],
+    'open_account_page_top' => [
+      'variables' => [
+        'background' => [],
+        'title' => [],
+      ],
+    ],
+    'open_account_dialog_success' => [
+      'variables' => [
+        'name' => '',
+        'title' => '',
+        'subtitle' => '',
+      ],
+    ],
+    'open_account_dialog_fail' => [
+      'variables' => [
+        'title' => '',
+        'text' => [],
+      ],
+    ],
+  ];
+}

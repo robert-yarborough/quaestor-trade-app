@@ -1,0 +1,21 @@
+uuid: af07d551-9de2-4091-a402-cafd5309b2e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.open_an_account
+    - field.storage.config_pages.field_form_title
+  module:
+    - text
+id: config_pages.open_an_account.field_form_title
+field_name: field_form_title
+entity_type: config_pages
+bundle: open_an_account
+label: 'Form Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

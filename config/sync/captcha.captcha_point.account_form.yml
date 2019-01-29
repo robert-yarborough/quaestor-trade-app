@@ -1,0 +1,7 @@
+uuid: e9aa2f04-7072-4542-a9ba-268831860759
+langcode: en
+status: true
+dependencies: {  }
+formId: account_form
+captchaType: recaptcha/reCAPTCHA
+label: open_account_form

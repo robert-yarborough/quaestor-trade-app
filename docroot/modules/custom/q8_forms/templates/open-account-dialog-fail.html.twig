@@ -1,0 +1,16 @@
+<div class="open-account-dialog is-error">
+    <div class="oas--wrap">
+        <div>
+            <div class="oas--head">
+                <div class="oas--title">{{ title }}</div>
+            </div>
+            <div class="oas--text">
+                {{ text }}
+            </div>
+            <div class="oas--cta">
+                <a href="{{ url('<front>') }}">{{ 'Back to home'|t }}</a>
+                <a href="{{ url('<current>') }}">{{ 'Continue'|t }}</a>
+            </div>
+        </div>
+    </div>
+</div>

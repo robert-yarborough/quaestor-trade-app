@@ -27,7 +27,9 @@
         "drupal/browsersync": "^1.0@beta",
         "drupal/page_manager": "^4.0@beta",
         "drupal/config_pages": "^2.2",
-        "drupal/better_exposed_filters": "^3.0@alpha"
+        "drupal/better_exposed_filters": "^3.0@alpha",
+        "drupal/recaptcha": "^2.3",
+        "drupal/hubspot_api": "^1.0@alpha"
     },
     "repositories": {
         "drupal": {

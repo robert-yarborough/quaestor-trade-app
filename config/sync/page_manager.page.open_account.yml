@@ -1,0 +1,12 @@
+uuid: 211aef8d-8a12-4511-a809-a693b1e72674
+langcode: en
+status: true
+dependencies: {  }
+id: open_account
+label: 'Open Account'
+description: ''
+use_admin_theme: false
+path: /open-account
+access_logic: and
+access_conditions: {  }
+parameters: {  }
