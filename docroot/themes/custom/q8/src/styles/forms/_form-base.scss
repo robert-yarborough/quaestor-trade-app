@@ -124,11 +124,37 @@ select {
         }
     }
     .ajax-progress {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        background: none;
+        display: inline-block;
+        padding: 0;
         position: absolute;
         right: 40px;
         top: 50%;
         margin-top: -10px;
         z-index: 6;
+        img, > * {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            left: -1000px;
+        }
+        &:before {
+            content: '';
+            display: block;
+            border: 3px solid $c-str-1;
+            border-top: 3px solid $c-primary;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            animation: spin 2s linear infinite;
+        }
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 }
 .form-item-group {
