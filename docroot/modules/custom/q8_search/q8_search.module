@@ -32,3 +32,16 @@ function q8_search_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+/**
+ * Implements hook_views_data().
+ */
+function q8_search_views_data() {
+  $data['views']['q8_search_top_summary'] = [
+    'title' => t('Search top summary'),
+    'area' => [
+      'id' => 'search_top_summary',
+    ],
+  ];
+  return $data;
+}

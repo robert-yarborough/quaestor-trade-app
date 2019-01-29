@@ -23,7 +23,7 @@ class HowCanWeHelpForm extends FormBase {
    * Constructs a new HowCanWeHelpForm object.
    */
   public function __construct(Request $request) {
-    $this->requestStack = $request;
+    $this->request = $request;
   }
 
   /**
@@ -46,14 +46,21 @@ class HowCanWeHelpForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $form['#action'] = '/overview/search';
+    $form['#method'] = 'get';
+
     $title = $this->t('How can we help?');
     $form['how_can_we_help'] = [
+      '#cache' => [
+        'contexts' => ['url.query_args:how_can_we_help'],
+      ],
       '#type' => 'textfield',
       '#attributes' => [
         'placeholder' => $this->t('Ask us anything. We are experts!'),
       ],
       '#title' => $title,
       '#title_display' => 'invisible',
+      '#default_value' => $this->request->get('how_can_we_help'),
     ];
 
     $form['submit'] = [

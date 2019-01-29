@@ -1,0 +1,12 @@
+uuid: afa11905-82a0-47d5-859e-e77e56e72b87
+langcode: en
+status: true
+dependencies: {  }
+id: overview_search
+label: 'Overview search'
+description: ''
+use_admin_theme: false
+path: /overview/search
+access_logic: and
+access_conditions: {  }
+parameters: {  }

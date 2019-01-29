@@ -2,6 +2,7 @@
 
 namespace Drupal\q8_forms\Form;
 
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Drupal\Core\Form\FormBase;
@@ -99,6 +100,7 @@ class OpenAccountForm extends FormBase {
       '#attributes' => [
         'placeholder' => $label,
       ],
+      '#description' => $this->t('Note: email should starts from letter'),
     ];
 
     $label = $this->t('Phone');
@@ -159,6 +161,15 @@ class OpenAccountForm extends FormBase {
 
   /**
    * Ajax submit for the call.
+   *
+   * @param array $form
+   *   An associative array containing the structure of the form.
+   * @param \Drupal\Core\Form\FormStateInterface $formState
+   *   The current state of the form.
+   *
+   * @return \Drupal\Core\Ajax\AjaxResponse
+   *   An AJAX response that display validation error messages or represents a
+   *   successful submission.
    */
   public function ajaxSubmit(array &$form, FormStateInterface $formState) {
 
@@ -209,6 +220,7 @@ class OpenAccountForm extends FormBase {
         // Create contact or return error.
         try {
           $contacts->create($properties);
+
           $response->addCommand(
             $this->buildSuccessDialog(
               $this->t('Success'),
@@ -216,20 +228,27 @@ class OpenAccountForm extends FormBase {
               $this->t('your request was submitted')
             )
           );
-          return $response;
         }
         catch (\Exception $exception) {
-          // ToDo. Parse error from the response body.
           // Looks like the property(ies) doesn't exist.
           $this->logger('open_account_form')->critical('Looks like property doesn`t exists. ERROR: @error', ['@error' => $exception->getMessage()]);
+          // Parse error from the response.
+          $raw = [];
+          $message = $this->t('Hubspot server error. Please contact us in another method');
+          if (preg_match('/{".+"}/', $exception->getMessage(), $raw)) {
+            $errorArr = Json::decode(reset($raw));
+            if (isset($errorArr['status']) && $errors['status'] == 'error') {
+              $message = $errorArr['message'];
+            }
+          }
           $response->addCommand(
             $this->buildErrorDialog(
               $this->t('Hubspot error'),
-              $this->t('Hubspot server error. Please contact us in another method')
+              $message
             )
           );
-          return $response;
         }
+        return $response;
       }
       // Return message if something went wrong with Hubspot.
       else {
@@ -256,7 +275,6 @@ class OpenAccountForm extends FormBase {
    */
   public function buildProperties(array $values) {
     return [
-      // ToDo. Add new parameters when create add them in the UI.
       [
         'property' => 'email',
         'value' => $values['email'],
@@ -314,7 +332,7 @@ class OpenAccountForm extends FormBase {
         '#title' => $title,
         '#subtitle' => $subtitle,
       ],
-      // ToDo. Add correct options here.
+      // Popup options.
       [
         'width' => 700,
         'height' => 500,
@@ -341,7 +359,7 @@ class OpenAccountForm extends FormBase {
         '#title' => $title,
         '#text' => $text,
       ],
-      // ToDo. Add correct options here.
+      // Popup options.
       [
         'width' => 700,
         'height' => 500,

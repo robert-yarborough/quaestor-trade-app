@@ -1,0 +1,51 @@
+uuid: d4d3e538-8918-4e65-b819-b1f10a0f334b
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.overview_search
+    - views.view.search_articles
+  module:
+    - panels
+    - q8_forms
+    - views
+id: overview_search-panels_variant-0
+label: Page
+variant: panels_variant
+variant_settings:
+  blocks:
+    4c9e46da-c9d7-4a0f-ad34-c485f8c4c56a:
+      id: 'views_block:search_articles-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 4c9e46da-c9d7-4a0f-ad34-c485f8c4c56a
+      context_mapping: {  }
+    52d0f590-23bb-4ae9-90f3-5195eff55956:
+      id: how_can_we_help_block
+      label: 'How can we help block'
+      provider: q8_forms
+      label_display: '0'
+      region: top
+      weight: 0
+      uuid: 52d0f590-23bb-4ae9-90f3-5195eff55956
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 1cd739cb-a926-482c-9dd8-c5ca2550b839
+  label: null
+  weight: 0
+  layout: q8_top_content
+  layout_settings: {  }
+  page_title: 'How can we help?'
+  storage_type: page_manager
+  storage_id: overview_search-panels_variant-0
+  builder: standard
+page: overview_search
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

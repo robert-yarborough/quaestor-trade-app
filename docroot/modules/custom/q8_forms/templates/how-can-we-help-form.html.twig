@@ -5,7 +5,12 @@
             <div class="front-banner__title">
                 {{ title }}
             </div>
-            <div class="overview-search__form">{{ form }}</div>
+            <div class="overview-search__form">
+                <form{{ attributes }}>
+                    {{ form.how_can_we_help }}
+                    {{ form.submit }}
+                </form>
+            </div>
         </div>
     </div>
 </div>
