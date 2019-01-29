@@ -214,3 +214,9 @@ body {
 .block-bg {
     background-color: $c-str-1;
 }
+
+.skrollr {
+    body {
+        height: auto!important;
+    }
+}

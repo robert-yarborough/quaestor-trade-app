@@ -56,7 +56,7 @@ class HowCanWeHelpForm extends FormBase {
       ],
       '#type' => 'textfield',
       '#attributes' => [
-        'placeholder' => $this->t('Ask us anything. We are experts!'),
+        'placeholder' => $this->t('Ask us anything. We\'re Experts!'),
       ],
       '#title' => $title,
       '#title_display' => 'invisible',
