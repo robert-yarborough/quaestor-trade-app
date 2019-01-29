@@ -8,9 +8,6 @@
 use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Session\AccountInterface;
-use Drupal\block\Entity\Block;
-use Drupal\Core\Access\AccessResult;
 
 /**
  * Implements hook_help().
@@ -71,17 +68,20 @@ function q8_theme_form_views_exposed_form_alter(&$form, FormStateInterface $form
 }
 
 /**
- * Implements hook_block_access().
+ * Implements q8_theme_preprocess_block__footerbanner().
  */
-function q8_theme_block_access(Block $block, $operation, AccountInterface $account) {
-  if ($operation == 'view' && $block->getPluginId() == 'block_content:96e51dc7-ae8c-4430-9574-62e5bc676a65') {
+function q8_theme_preprocess_block__footerbanner(array &$variables) {
+  // Get Request Object.
+  $request = \Drupal::request();
 
-    // Get Request Object.
-    $request = \Drupal::request();
-    if ($exception = $request->attributes->get('exception')) {
-      // Get the status code.
-      $status_code = $exception->getStatusCode();
-      return AccessResult::forbiddenIf(in_array($status_code, [404]))->addCacheableDependency($block);
+  // If there is HTTP Exception..
+  if ($exception = $request->attributes->get('exception')) {
+    // Get the status code.
+    $status_code = $exception->getStatusCode();
+
+    // Hide Footer Banner for 404 pages.
+    if (in_array($status_code, [403, 404])) {
+      $variables['content']['#access'] = FALSE;
     }
   }
 }
