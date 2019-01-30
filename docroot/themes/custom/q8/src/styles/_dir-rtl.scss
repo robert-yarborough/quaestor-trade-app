@@ -360,6 +360,16 @@ html {
                 margin-left: 10px;
             }
         }
+        .search-result--articles {
+            .view-content {
+                .category {
+                    &:before {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
         .services-block {
             .sb__links {
                 &--list {
@@ -371,6 +381,12 @@ html {
                             }
                             @include media('<tablet-l') {
                                 margin-left: 5px;
+                            }
+                        }
+                        &:last-child {
+                            @include media('<tablet-l') {
+                                margin-left: 5px;
+                                margin-right: 5px;
                             }
                         }
                     }
