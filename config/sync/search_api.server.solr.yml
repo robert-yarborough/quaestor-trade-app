@@ -15,18 +15,20 @@ name: Solr
 description: ''
 backend: search_api_solr_multilingual
 backend_config:
-  connector: standard
+  connector: basic_auth
   connector_config:
-    scheme: http
-    host: solr
-    port: '8983'
-    path: /solr
+    scheme: https
+    host: solr.bfmdev1.com
+    port: '443'
+    path: /solr/
     core: q8s
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10
     finalize_timeout: 30
     commit_within: 1000
+    username: bfm
+    password: solr
     solr_version: ''
     http_method: AUTO
     jmx: false
