@@ -1,11 +1,11 @@
 .search-result {
     background-color: $c-str-1;
-    padding: 70px 0 135px;
+    padding: 0 0 135px;
     @include media('<=tablet-l') {
-        padding: 50px 0 120px;
+        padding: 0 0 120px;
     }
     @include media('<tablet') {
-        padding: 35px 0 50px;
+        padding: 0 0 50px;
     }
     .view-header {
         font-size: 24px;
@@ -47,6 +47,9 @@
                 em {
                     font-style: normal;
                 }
+            }
+            .read-more {
+                @extend .nb-item__link;
             }
         }
     }

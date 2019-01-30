@@ -96,3 +96,20 @@
         padding: 50px 0 45px;
     }
 }
+.search-overview {
+    .front-banner__inner {
+        padding-bottom: 65px;
+        @include media('<=tablet-l') {
+            padding-top: 150px;
+            padding-bottom: 30px;
+        }
+    }
+    .overview-search__form {
+        input[type=text] {
+            box-shadow: inset 0 0 0 1px $c-str-8, inset 0 0 0 1px $c-str-8;
+            &:focus {
+                box-shadow: inset 0 0 0 1px $c-primary, inset 0 0 0 1px $c-primary;
+            }
+        }
+    }
+}
