@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:block_paragraph:96e51dc7-ae8c-4430-9574-62e5bc676a65'
   module:
     - block_content
-    - system
   theme:
     - q8
 id: footerbanner
@@ -23,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: /node/19
-    negate: true
-    context_mapping: {  }
+visibility: {  }
