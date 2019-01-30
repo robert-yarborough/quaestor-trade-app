@@ -78,13 +78,14 @@ body {
     &.toolbar-horizontal {
         .front-banner--main {
             @include media('>=tablet-l') {
-                margin-top: -142px;
+                //margin-top: -142px;
             }
         }
     }
 }
 .page-container {
     position: relative;
+    overflow: hidden;
 }
 .edit-tabs {
     ul.tabs {

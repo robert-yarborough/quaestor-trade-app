@@ -21,22 +21,18 @@
         }
     }
     &--main {
-        @include media('>=tablet-l') {
+        @include media('>tablet-l') {
             margin-top: -151px;
             //height: 730px;
         }
-        @include media('<tablet-l', '>=tablet') {
-            //height: 405px;
-            margin-top: -105px;
-        }
-        @include media('<tablet') {
+        @include media('<=tablet-l') {
             //height: 480px;
             margin-top: -105px;
         }
         .front-banner__inner {
             padding-top: 230px;
             padding-bottom: 100px;
-            @include media('<tablet-l') {
+            @include media('<=tablet-l') {
                 padding-top: 100px;
                 padding-bottom: 80px;
             }
