@@ -47,7 +47,7 @@ not paragraph.isPublished() ? 'paragraph--unpublished'
 ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes, 'features-block__col animate-fadein-effect') }}>
+  <div{{ attributes.addClass(classes, 'features-block__col') }}>
     {% block content %}
       <div class="fb-icon">{{ content.field_image }}</div>
       <div class="fb-title">{{ content.field_title }}</div>
