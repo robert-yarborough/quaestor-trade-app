@@ -263,6 +263,7 @@
             border-bottom: 4px solid $c-bright;
             padding: 25px 40px;
             position: relative;
+            background-color: white;
             @include media('<=tablet-l') {
                 padding: 24px 23px;
             }
