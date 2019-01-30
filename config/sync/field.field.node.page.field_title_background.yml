@@ -6,14 +6,7 @@ dependencies:
     - field.storage.node.field_title_background
     - node.type.page
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: '0'
-      alt: '0'
-      title: '0'
 id: node.page.field_title_background
 field_name: field_title_background
 entity_type: node
@@ -21,7 +14,7 @@ bundle: page
 label: 'Title background'
 description: 'Leave this field empty if you need a custom header. In this case, you need to create the paragraph `Top Banner`'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

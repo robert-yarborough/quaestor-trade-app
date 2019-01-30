@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_image
     - paragraphs.paragraphs_type.banner_app_stores
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: paragraph.banner_app_stores.field_image
 field_name: field_image
 entity_type: paragraph
@@ -14,7 +21,7 @@ bundle: banner_app_stores
 label: Image
 description: 'Recommended image size is 1920х790.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
