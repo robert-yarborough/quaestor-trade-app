@@ -54,26 +54,6 @@
             margin-right: auto;
         }
     }
-    &.is-transparent {
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100%;
-            background-color: $c-str-1;
-            left: 0;
-            bottom: 0;
-            @include media('>tablet-l') {
-                height: calc(100% - 151px);
-            }
-            @include media('<=tablet-l') {
-                height: calc(100% - 105px);
-            }
-        }
-        .front-banner__title {
-            color: $c-base;
-        }
-    }
     &__bg {
         position: absolute;
         left: 0;

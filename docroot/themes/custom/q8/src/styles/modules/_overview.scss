@@ -96,7 +96,25 @@
         padding: 50px 0 45px;
     }
 }
-.search-overview {
+.front-banner.search-overview {
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: $c-str-1;
+        left: 0;
+        bottom: 0;
+        @include media('>tablet-l') {
+            height: calc(100% - 151px);
+        }
+        @include media('<=tablet-l') {
+            height: calc(100% - 105px);
+        }
+    }
+    .front-banner__title {
+        color: $c-base;
+    }
     .front-banner__inner {
         padding-bottom: 65px;
         @include media('<=tablet-l') {
