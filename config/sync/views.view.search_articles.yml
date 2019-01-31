@@ -400,7 +400,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'How can we help'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -470,11 +470,13 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<p>{{ ''There are no search results. Please try another query or contact us directly''|t }}</p>'
+          content: '<p>There are no search results. Please try another query or contact us directly</p>'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_ajax: true
+      title: ''
     cache_metadata:
       max-age: -1
       contexts:

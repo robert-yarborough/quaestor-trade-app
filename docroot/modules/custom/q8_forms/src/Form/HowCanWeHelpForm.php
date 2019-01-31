@@ -2,38 +2,13 @@
 
 namespace Drupal\q8_forms\Form;
 
-use Drupal\Core\Form\FormBase;
+use Drupal\q8_search\Form\SimpleSearchForm;
 use Drupal\Core\Form\FormStateInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class HowCanWeHelpForm.
  */
-class HowCanWeHelpForm extends FormBase {
-
-  /**
-   * Current request.
-   *
-   * @var \Symfony\Component\HttpFoundation\Request
-   */
-  protected $request;
-
-  /**
-   * Constructs a new HowCanWeHelpForm object.
-   */
-  public function __construct(Request $request) {
-    $this->request = $request;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('request_stack')->getCurrentRequest()
-    );
-  }
+class HowCanWeHelpForm extends SimpleSearchForm {
 
   /**
    * {@inheritdoc}
@@ -46,36 +21,13 @@ class HowCanWeHelpForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['#action'] = '/overview/search';
-    $form['#method'] = 'get';
+    $form = parent::buildForm($form, $form_state);
 
-    $title = $this->t('How can we help?');
-    $form['how_can_we_help'] = [
-      '#cache' => [
-        'contexts' => ['url.query_args:how_can_we_help'],
-      ],
-      '#type' => 'textfield',
-      '#attributes' => [
-        'placeholder' => $this->t("Ask us anything. We're Experts!"),
-      ],
-      '#title' => $title,
-      '#title_display' => 'invisible',
-      '#default_value' => $this->request->get('how_can_we_help'),
-    ];
-
-    $form['submit'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Submit'),
+    $form['how_can_we_help']['#attributes'] = [
+      'placeholder' => $this->t("Ask us anything. We're Experts!"),
     ];
 
     return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-
   }
 
 }

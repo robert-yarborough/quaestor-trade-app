@@ -6,6 +6,7 @@
  */
 
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -44,4 +45,28 @@ function q8_search_views_data() {
     ],
   ];
   return $data;
+}
+
+/**
+ * Implements q8_theme_form_views_exposed_form_alter().
+ */
+function q8_search_form_views_exposed_form_alter(&$form, FormStateInterface $form_state) {
+  switch ($form_state->get('view')->id()) {
+    case 'search_articles':
+      $form['how_can_we_help']['#title_display'] = 'invisible';
+      $form['how_can_we_help']['#attributes'] = [
+        'placeholder' => t("Ask us anything. We're Experts!"),
+      ];
+
+      if ($config = config_pages_config('overview_page')) {
+        if ($config->hasField('field_title') && !$config->get('field_title')->isEmpty()) {
+          $form['title'] = [
+            '#type' => 'processed_text',
+            '#text' => $config->get('field_title')[0]->value,
+            '#format' => $config->get('field_title')[0]->format,
+          ];
+        }
+      }
+      break;
+  }
 }
