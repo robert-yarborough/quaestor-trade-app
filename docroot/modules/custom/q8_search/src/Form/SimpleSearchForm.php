@@ -55,15 +55,15 @@ class SimpleSearchForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $form['#cache'] = [
+      'context' => ['url.query_args'],
+    ];
 
-    $form['#action'] = '/search';
-    $form['#method'] = 'get';
-
-    $form['search'] = [
+    $form['how_can_we_help'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search'),
       '#title_display' => 'hidden',
-      '#default_value' => $this->request->get('search'),
+      '#default_value' => $this->request->get('how_can_we_help'),
       '#attributes' => [
         'placeholder' => $this->t('Search'),
         'maxlength' => SearchConstantsInterface::SEARCH_MAX_LENGTH,
@@ -91,7 +91,12 @@ class SimpleSearchForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-
+    $form_state->setRedirect(
+      SearchConstantsInterface::SEARCH_ROUTE,
+      [
+        'how_can_we_help' => $form_state->getValue('how_can_we_help'),
+      ]
+    );
   }
 
 }
