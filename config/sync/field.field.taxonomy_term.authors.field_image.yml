@@ -19,7 +19,7 @@ field_name: field_image
 entity_type: taxonomy_term
 bundle: authors
 label: Image
-description: ''
+description: 'Recommended image size is 120х120.'
 required: false
 translatable: true
 default_value: {  }
