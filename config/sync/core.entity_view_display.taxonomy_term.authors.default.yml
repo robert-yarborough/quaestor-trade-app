@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.authors.field_image
+    - image.style.120x120
     - taxonomy.vocabulary.authors
   module:
     - ds
@@ -41,9 +42,16 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: ''
+      image_style: 120x120
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: image
     region: content
 hidden:
