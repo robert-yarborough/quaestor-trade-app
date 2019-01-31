@@ -8,6 +8,9 @@
 use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Access\AccessResult;
 
 /**
  * Implements hook_help().
@@ -68,20 +71,17 @@ function q8_theme_form_views_exposed_form_alter(&$form, FormStateInterface $form
 }
 
 /**
- * Implements q8_theme_preprocess_block__footerbanner().
+ * Implements hook_block_access().
  */
-function q8_theme_preprocess_block__footerbanner(array &$variables) {
-  // Get Request Object.
-  $request = \Drupal::request();
-
-  // If there is HTTP Exception..
-  if ($exception = $request->attributes->get('exception')) {
-    // Get the status code.
-    $status_code = $exception->getStatusCode();
-
-    // Hide Footer Banner for 404 pages.
-    if (in_array($status_code, [403, 404])) {
-      $variables['content']['#access'] = FALSE;
+function q8_theme_block_access(Block $block, $operation, AccountInterface $account) {
+  if ($operation == 'view' && $block->id() == 'footerbanner') {
+    // Get Request Object.
+    $request = \Drupal::request();
+    if ($exception = $request->attributes->get('exception')) {
+      // Get the status code.
+      $status_code = $exception->getStatusCode();
+      // Hide Footer Banner for 403 and 404 pages.
+      return AccessResult::forbiddenIf(in_array($status_code, [403, 404]))->addCacheableDependency($block);
     }
   }
 }
