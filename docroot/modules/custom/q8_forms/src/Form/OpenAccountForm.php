@@ -304,6 +304,10 @@ class OpenAccountForm extends FormBase {
         'value' => $values['language_preference'],
       ],
       [
+        'property' => 'hs_language',
+        'value' => $values['language_preference'] == 'English' ? 'en' : 'ar',
+      ],
+      [
         'property' => 'what_markets_are_you_interested_in_',
         'value' => $values['interests'],
       ],
