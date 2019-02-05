@@ -66,6 +66,11 @@ function q8_theme_form_views_exposed_form_alter(&$form, FormStateInterface $form
     case 'featured_articles':
       $form['categories']['#title_display'] = 'invisible';
       $form['actions']['#attributes']['class'][] = 'hidden';
+
+      // Limit the number to 5 items for exposed filter category.
+      $form['categories']['#options'] = array_slice(
+        $form['categories']['#options'], 0, 5, TRUE
+      );
       break;
   }
 }
