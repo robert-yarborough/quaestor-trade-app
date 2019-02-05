@@ -77,8 +77,10 @@
             overflow: hidden;
             min-width: 105px;
             line-height: normal;
+            height: 100%;
             @include media('>=tablet') {
                 justify-content: center;
+                text-align: center;
             }
             @include media('<=tablet-l') {
                 padding: 15px 20px;
