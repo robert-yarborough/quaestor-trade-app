@@ -311,6 +311,10 @@ class OpenAccountForm extends FormBase {
         'property' => 'what_markets_are_you_interested_in_',
         'value' => $values['interests'],
       ],
+      [
+        'property' => 'market_access_clone_',
+        'value' => $values['interests'],
+      ],
     ];
   }
 
