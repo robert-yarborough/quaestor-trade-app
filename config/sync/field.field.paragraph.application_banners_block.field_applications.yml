@@ -15,7 +15,7 @@ bundle: application_banners_block
 label: Applications
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

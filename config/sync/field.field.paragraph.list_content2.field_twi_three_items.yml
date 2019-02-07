@@ -15,7 +15,7 @@ bundle: list_content2
 label: 'Text with image Three items'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
