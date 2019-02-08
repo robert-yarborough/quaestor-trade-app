@@ -94,7 +94,6 @@
                 "Display layout twig not overridable. [#2802429]": "https://www.drupal.org/files/issues/ds_display-layout-overrides-not-working_2802429-3.patch"
             },
             "drupal/core":{
-                "SVG fix in aggregated css": "https://www.drupal.org/files/issues/2362643-47-fix-svg.patch",
                 "Invalid translation language (und) specified. [#2995655]" : "https://www.drupal.org/files/issues/2018-09-04/invalid_translation_language-2995655-14.patch"
             }
         },
