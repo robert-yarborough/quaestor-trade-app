@@ -7,7 +7,7 @@
     }
     &:before {
         @include media('>tablet-l') {
-            content: '';
+            //content: '';
             display: block;
             position: absolute;
             width: 690px;
@@ -38,7 +38,6 @@
         flex-direction: column;
         position: relative;
         margin-top: 100px;
-        border-bottom: 7px solid $c-bright;
         @include media('<tablet-l') {
             margin-top: 80px;
         }
@@ -68,8 +67,15 @@
         background-color: white;
         padding: 100px 20px 25px;
         flex-grow: 1;
+        transition: .4s;
+        border-bottom: 7px solid $c-bright;
         @include media('<tablet-l') {
             padding: 95px 15px 25px;
+        }
+        &:hover {
+            @include media('>=tablet-l') {
+                box-shadow: 0 0 12px rgba(0,0,0,.3);
+            }
         }
     }
     &__title {
@@ -118,7 +124,7 @@
         font-size: 16px;
         font-weight: 500;
         &--title {
-            color: $c-str-8;
+            color: $c-str-9;
             @include media('>=tablet-l') {
                 margin-right: 15px;
             }
@@ -130,7 +136,7 @@
                 font-size: 14px;
             }
             li {
-                color: $c-str-8;
+                color: $c-str-9;
                 &:not(:last-child) {
                     @include media('>=tablet-l') {
                         margin-right: 12px;

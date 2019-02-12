@@ -59,7 +59,7 @@
         a {
             color: $c-base;
             &:hover {
-                color: $c-primary;
+                text-decoration: underline;
             }
         }
     }
