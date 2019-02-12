@@ -19,7 +19,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: 2_columns_image_text
 label: Image
-description: ''
+description: "Recommended image size:<br>\r\n- Big image: 950x720<br>\r\n- Small image: 500x790"
 required: true
 translatable: true
 default_value: {  }

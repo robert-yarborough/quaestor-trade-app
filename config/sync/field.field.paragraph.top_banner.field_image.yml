@@ -12,7 +12,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: top_banner
 label: Image
-description: 'Recommended image size is 1920х745.'
+description: 'Recommended image size: 1920х745'
 required: false
 translatable: false
 default_value: {  }
