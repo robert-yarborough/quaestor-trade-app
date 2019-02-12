@@ -32,6 +32,7 @@
             display: flex;
             flex-direction: column;
             background-color: white;
+            transition: .4s;
             @include media('>=tablet-l') {
                 flex-basis: calc(25% - 10px);
                 max-width: calc(25% - 10px);
@@ -72,6 +73,11 @@
                 left: 0;
                 bottom: 0;
                 background-color: $c-bright;
+            }
+            &:hover {
+                @include media('>=tablet-l') {
+                    box-shadow: 0 0 12px rgba(0,0,0,.3);
+                }
             }
         }
     }
@@ -141,6 +147,7 @@
         a {
             display: inline-block;
             position: relative;
+            color: $c-primary;
             &:after {
                 content: '';
                 display: inline-block;
@@ -155,7 +162,7 @@
                 white-space: nowrap;
             }
             &:hover {
-                color: $c-secondary;
+                text-decoration: underline;
             }
         }
     }
