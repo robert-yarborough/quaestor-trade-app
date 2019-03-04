@@ -1,0 +1,350 @@
+label {
+    &[for] {
+        cursor: pointer;
+    }
+}
+@include input-styles() {
+    max-width: 100%;
+    border: none;
+    color: $c-primary;
+    background: white;
+    vertical-align: middle;
+    outline: none;
+    font-weight: 700;
+    box-shadow: inset 0 0 0 1px $c-base, inset 0 0 0 1px $c-base;
+    transition: box-shadow .3s;
+    @include media('>=tablet') {
+        padding-right: 27px;
+        padding-left: 27px;
+    }
+    @include media('<tablet') {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    @include placeholder {
+        color: $c-str-8;
+    }
+    &:focus {
+        box-shadow: inset 0 0 0 1px $c-primary, inset 0 0 0 1px $c-primary;
+    }
+    &:disabled,
+    &[disabled] {
+        opacity: 0.5;
+        cursor: none;
+    }
+    &.error {
+
+    }
+    &.success {
+
+    }
+}
+@include input-styles(false) {
+    width: 100%;
+    @include media('>=tablet') {
+        height: 53px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @include media('<tablet') {
+        height: 43px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+@include input-styles(false, false) {
+    &:-webkit-autofill {
+        //-webkit-box-shadow: 0 0 0 100px #fff inset;
+    }
+}
+textarea {
+    resize: none;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    &::-ms-expand {
+        display: none;
+    }
+}
+.form-item {
+    margin: 0 0 20px;
+    position: relative;
+    label {
+        display: block;
+        margin-bottom: 3px;
+    }
+    input {
+        &.error {
+            border: 0;
+            box-shadow: inset 0 0 0 1px $c-error, inset 0 0 0 1px $c-error;
+            //color: $c-error;
+        }
+    }
+    .description {
+        font-size: 14px;
+        line-height: 16px;
+        padding-top: 5px;
+    }
+    + {
+        p {
+            line-height: normal;
+            margin-bottom: 20px;
+        }
+    }
+}
+.form-actions {
+    @extend %btn-dark;
+    margin: 0;
+    padding: 0;
+    min-width: 250px;
+    background: none!important;
+    border: 0;
+    position: relative;
+    @include media('<tablet') {
+        width: 100%;
+    }
+    &:after {
+        z-index: 1;
+    }
+    .button {
+        @extend %btn-dark;
+        width: 100%;
+        @include media('>=tablet') {
+            justify-content: flex-start;
+        }
+        &.disabled, &:disabled {
+            background-color: white;
+            color: $c-primary;
+            cursor: not-allowed;
+            z-index: 5;
+            position: relative;
+        }
+    }
+    .ajax-progress {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        background: none;
+        display: inline-block;
+        padding: 0;
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        margin-top: -10px;
+        z-index: 6;
+        img, > * {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            left: -1000px;
+        }
+        &:before {
+            content: '';
+            display: block;
+            border: 3px solid $c-str-1;
+            border-top: 3px solid $c-primary;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            animation: spin 2s linear infinite;
+        }
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+.form-item-group {
+    @include media('>=tablet') {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .form-item {
+        @include media('>=tablet') {
+            flex-basis: calc(50% - 10px);
+            max-width: calc(50% - 10px);
+        }
+    }
+}
+.form-radios  {
+    @include media('>=tablet') {
+        display: flex;
+        align-items: center;
+    }
+    .form-item {
+        margin: 0;
+        @include media('<tablet') {
+            margin-bottom: 10px;
+        }
+        &:not(:last-child) {
+            @include media('>=tablet') {
+                padding-right: 23px;
+            }
+        }
+    }
+}
+.form-type-radio {
+    input {
+        display: none;
+        &:checked {
+            + label {
+                &:before {
+                    background-color: $c-bright;
+                }
+            }
+        }
+    }
+    label {
+        position: relative;
+        line-height: normal;
+        padding-left: 25px;
+        font-size: 22px;
+        font-weight: 700;
+        color: $c-str-8;
+        @include media('<tablet') {
+            font-size: 16px;
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            left: 0;
+            top: 6px;
+            border-radius: 50%;
+            border: 2px solid $c-primary;
+            transition: .3s;
+            @include media('<tablet') {
+                top: 2px;
+            }
+        }
+    }
+}
+.base-form {
+    background-color: white;
+    border-bottom: 7px solid $c-bright;
+    padding: 60px;
+    @include media('<tablet') {
+        padding: 30px;
+    }
+    &__title {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 300;
+        color: black;
+        line-height: 48px;
+        margin-bottom: 15px;
+        @include media('<tablet') {
+            font-size: 28px;
+            line-height: 30px;
+        }
+        strong {
+            font-weight: 700;
+        }
+        h1, h2, h3 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    }
+    &__description {
+        text-align: center;
+        max-width: 830px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 22px;
+        line-height: 26px;
+        @include media('<tablet') {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    &__wrapper {
+        padding-top: 55px;
+        max-width: 710px;
+        margin-left: auto;
+        margin-right: auto;
+        @include media('<tablet') {
+            padding-top: 30px;
+        }
+    }
+    .fieldgroup {
+        padding-top: 20px;
+        @include media('<tablet') {
+            padding-top: 10px;
+        }
+        legend {
+            font-size: 22px;
+            line-height: normal;
+            color: black;
+            @include media('<tablet') {
+                font-size: 18px;
+            }
+            @include media('>tablet-l') {
+                display: inline-block;
+                width: 60%;
+                float: left;
+                padding-right: 20px;
+            }
+        }
+    }
+    .fieldset-wrapper {
+        @include media('>tablet-l') {
+            display: inline-block;
+            float: right;
+            width: 40%;
+        }
+    }
+    .form-action-wrapper {
+        text-align: center;
+        padding-top: 45px;
+        @include media('<tablet') {
+            padding-top: 20px;
+        }
+    }
+    .captcha {
+        text-align: center;
+        .g-recaptcha {
+            display: inline-block;
+        }
+    }
+    .placeholder-label {
+        font-size: 10px;
+        color: $c-str-8;
+        line-height: normal;
+        padding-left: 27px;
+        padding-bottom: 3px;
+        font-weight: 700;
+        transition: .5s;
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        @include media('<tablet') {
+            padding-left: 16px;
+        }
+        &:not(.is-active) {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(35px);
+            font-size: 16px;
+        }
+    }
+}
+.js-animate-placeholder {
+    .form-item:not(.form-type-radio):not(.form-actions):not(.fieldgroup) {
+        margin-top: 16px;
+        @include media('<tablet') {
+            margin-top: 25px;
+        }
+    }
+}
+.g-recaptcha {
+    @include media('<tablet') {
+        transform: scale(0.77);
+        transform-origin: 0 0;
+    }
+}

@@ -19,7 +19,7 @@ field_name: field_title_background
 entity_type: config_pages
 bundle: open_an_account
 label: 'Title background'
-description: 'Recommended image size: 1920х790'
+description: ''
 required: false
 translatable: true
 default_value: {  }

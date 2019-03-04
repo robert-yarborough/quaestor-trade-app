@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+  'available-links',
+]
+%}
+{% set icon_path = '/' ~ directory ~ '/images' %}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'page-frame') }}>
+      <div class="available-links__inner">
+        <div class="available-links__label">{{ "Available on:"|t }}</div>
+        <div class="available-links__list">
+          {% if content.content.field_appstore[0]['#plain_text'] %}
+            <a href="{{ content.content.field_appstore[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/app-store-badge-1.png" alt="app-store-badge" width="173" height="58"></a>
+          {% endif %}
+
+          {% if content.content.field_google_play[0]['#plain_text'] %}
+            <a href="{{ content.content.field_google_play[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/google-play-badge.png" alt="google-play-badge" width="203" height="79"></a>
+          {% endif %}
+
+          {% if content.content.field_macos_store[0]['#plain_text'] %}
+            <a href="{{ content.content.field_macos_store[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/app-macos-badge.png" alt="app-store-badge" width="171" height="56"></a>
+          {% endif %}
+
+          {% if content.content.field_windows_store[0]['#plain_text'] %}
+            <a href="{{ content.content.field_windows_store[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/app-windows-badge.png" alt="app-store-badge" width="180" height="55"></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

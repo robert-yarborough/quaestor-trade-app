@@ -39,3 +39,7 @@ display:
       fields:
         entity_label:
           label: الكيان
+      arguments:
+        fid:
+          exception:
+            title: الكل

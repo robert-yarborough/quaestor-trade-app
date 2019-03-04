@@ -1,0 +1,22 @@
+uuid: fc9b5e93-b748-41ee-96c5-ca7fddae1d75
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - q8_base
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: q8_base_messages
+theme: q8_base
+region: header
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

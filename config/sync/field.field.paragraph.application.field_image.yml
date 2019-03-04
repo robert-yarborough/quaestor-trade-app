@@ -19,7 +19,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: application
 label: Image
-description: 'Recommended image size: 365x175'
+description: ''
 required: false
 translatable: true
 default_value: {  }

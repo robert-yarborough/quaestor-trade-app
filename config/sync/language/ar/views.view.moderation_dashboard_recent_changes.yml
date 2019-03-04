@@ -12,3 +12,12 @@ display:
         options:
           expose:
             items_per_page_options_all_label: '- الكل -'
+  block_2:
+    display_options:
+      arguments:
+        uid:
+          exception:
+            title: الكل
+        'null':
+          exception:
+            title: الكل

@@ -1,0 +1,22 @@
+uuid: 69a2f710-c5a1-468e-a578-6af1c89b2101
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - q8_tur
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: q8_tur_content
+theme: q8_tur
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

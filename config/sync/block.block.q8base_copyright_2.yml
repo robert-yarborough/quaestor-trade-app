@@ -1,0 +1,25 @@
+uuid: 7742a1bc-216b-4f6e-93e6-eac629dc4b9f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_paragraph:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
+  module:
+    - block_content
+  theme:
+    - q8base
+id: q8base_copyright_2
+theme: q8base
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
+settings:
+  id: 'block_content:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

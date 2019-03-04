@@ -26,6 +26,8 @@ module:
   dblog: 0
   devel: 0
   diff: 0
+  domain: 0
+  domain_theme_switch: 0
   dropzonejs: 0
   editor: 0
   embed: 0
@@ -138,6 +140,10 @@ theme:
   seven: 0
   d8base: 0
   q8: 0
+  q8base: 0
+  q8_base: 0
+  q8_blue: 0
+  q8_tur: 0
 profile: lightning
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

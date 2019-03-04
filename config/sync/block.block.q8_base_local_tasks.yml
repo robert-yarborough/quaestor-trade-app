@@ -1,0 +1,22 @@
+uuid: 8ea6c03f-2225-4328-b17e-74a9a562a73b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - q8_base
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: q8_base_local_tasks
+theme: q8_base
+region: header
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

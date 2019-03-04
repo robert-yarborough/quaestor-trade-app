@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "faf99e6ef50e74419d3663993bac5914",
+    "content-hash": "69f0520240046d030ac9484d31b55619",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -2094,6 +2094,7 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
+                    "Invalid translation language (und) specified. [#2995655]": "https://www.drupal.org/files/issues/2018-09-04/invalid_translation_language-2995655-14.patch",
                     "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                     "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer": "https://www.drupal.org/files/issues/2885441-2.patch",
                     "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2018-09-24/2815221-109.patch",
@@ -2435,6 +2436,112 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/diff",
                 "issues": "https://www.drupal.org/project/issues/diff"
+            }
+        },
+        {
+            "name": "drupal/domain",
+            "version": "1.0.0-alpha15",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/domain",
+                "reference": "8.x-1.0-alpha15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/domain-8.x-1.0-alpha15.zip",
+                "reference": "8.x-1.0-alpha15",
+                "shasum": "e981d5224bd7883776c6729135b876141f0437d3"
+            },
+            "require": {
+                "drupal/core": "^8.5"
+            },
+            "require-dev": {
+                "drupal/domain_access": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha15",
+                    "datestamp": "1550763184",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "agentrickard",
+                    "homepage": "https://www.drupal.org/user/20975"
+                },
+                {
+                    "name": "nonsie",
+                    "homepage": "https://www.drupal.org/user/29899"
+                }
+            ],
+            "description": "Creates domain records within a Drupal installation.",
+            "homepage": "https://www.drupal.org/project/domain",
+            "support": {
+                "source": "http://cgit.drupalcode.org/domain"
+            }
+        },
+        {
+            "name": "drupal/domain_theme_switch",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/domain_theme_switch",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/domain_theme_switch-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "5a7208bd3d741233ffe74f6cedf2b177e2a1cc2a"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/domain": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1537687085",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "abramm",
+                    "homepage": "https://www.drupal.org/user/3216035"
+                },
+                {
+                    "name": "aloknarwaria",
+                    "homepage": "https://www.drupal.org/user/906640"
+                }
+            ],
+            "description": "Theme switch for different domains",
+            "homepage": "https://www.drupal.org/project/domain_theme_switch",
+            "support": {
+                "source": "http://cgit.drupalcode.org/domain_theme_switch"
             }
         },
         {
@@ -12892,6 +12999,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2018-08-09T05:50:03+00:00"
         },
         {
@@ -14389,6 +14497,7 @@
         "drupal/page_manager": 10,
         "drupal/better_exposed_filters": 15,
         "drupal/hubspot_api": 15,
+        "drupal/domain": 15,
         "acquia/lightning_dev": 20
     },
     "prefer-stable": true,

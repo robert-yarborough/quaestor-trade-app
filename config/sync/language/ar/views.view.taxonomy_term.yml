@@ -13,5 +13,9 @@ display:
         options:
           expose:
             items_per_page_options_all_label: '- الكل -'
+      arguments:
+        tid:
+          exception:
+            title: الكل
   page_1:
     display_title: الصفحة

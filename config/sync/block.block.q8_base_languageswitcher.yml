@@ -1,0 +1,20 @@
+uuid: 4093a2cc-ec27-44e4-bc6e-3b8be596f96b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - q8_base
+id: q8_base_languageswitcher
+theme: q8_base
+region: content_top
+weight: -4
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

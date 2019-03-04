@@ -1,0 +1,20 @@
+uuid: 16ab9fa1-1e09-4bb1-9831-cf6306316b3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - q8_tur
+id: q8_tur_languageswitcher
+theme: q8_tur
+region: content_top
+weight: -4
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

@@ -19,14 +19,25 @@ display:
           action_title: إجراء
         bundle:
           label: النوع
+        uid:
+          label: المؤلف
         status:
           label: الحالة
+          settings:
+            format_custom_true: منشور
+        changed:
+          label: التحديث
         operations:
           label: عمليات
       filters:
         bundle:
           expose:
             label: النوع
+        status:
+          group_info:
+            group_items:
+              1:
+                title: منشور
         langcode:
           expose:
             label: اللغة

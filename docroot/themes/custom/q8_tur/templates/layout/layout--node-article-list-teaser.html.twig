@@ -1,0 +1,10 @@
+{%
+  set classes = [
+  'layout',
+]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content.content }}
+  </div>
+{% endif %}

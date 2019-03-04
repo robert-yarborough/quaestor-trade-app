@@ -8,5 +8,9 @@ display:
           exposed_sorts_label: 'الترتيب حسب'
           sort_asc_label: تصاعدي
           sort_desc_label: تنازلي
+      arguments:
+        nid:
+          exception:
+            title: الكل
   page:
     display_title: الصفحة

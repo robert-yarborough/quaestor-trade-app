@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+  'investing-block',
+]
+%}
+{% set style  = 'background-image: url(' ~ content.content.field_image[0]|render  ~ ')' %}
+{% if content %}
+  <div{{ attributes.addClass(classes).setAttribute('style', style) }}>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+      <div class="page-frame">
+        {% if content.content.field_title[0] %}
+          <div class="block-title block-center">
+            {{ content.content.field_title[0] }}
+          </div>
+        {% endif %}
+  
+        {% if content.content.field_subtitle[0] %}
+          <div class="block-description block-center">
+            {{ content.content.field_subtitle }}
+          </div>
+        {% endif %}
+  
+        {% if content.content.field_button[0] %}
+          <div class="investing-block__cta">
+            {{ content.content.field_button[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
+          </div>
+        {% endif %}
+  
+        {% if content.content.field_app_stores[0] %}
+          {{ content.content.field_app_stores }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+
+
+

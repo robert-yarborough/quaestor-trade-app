@@ -13,6 +13,8 @@ display:
           expose:
             items_per_page_options_all_label: '- الكل -'
       fields:
+        changed:
+          label: التحديث
         operations:
           label: عمليات
   page_1:
