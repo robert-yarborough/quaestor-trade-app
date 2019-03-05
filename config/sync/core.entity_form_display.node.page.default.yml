@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.field_domain_access
+    - field.field.node.page.field_domain_all_affiliates
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_paragraph
     - field.field.node.page.field_title_background
@@ -27,6 +29,19 @@ content:
     type: datetime_timestamp
     weight: 4
     settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_domain_access:
+    type: options_buttons
+    weight: 40
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_domain_all_affiliates:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 41
     third_party_settings: {  }
     region: content
   field_meta_tags:

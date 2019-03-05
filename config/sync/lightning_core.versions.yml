@@ -143,3 +143,9 @@ search_api_solr: 2.5.0
 search_api_solr_admin: 2.5.0
 domain: 1.0.0-alpha15
 domain_theme_switch: 1.4.0
+domain_alias: 1.0.0-alpha15
+domain_access: 1.0.0-alpha15
+domain_config: 1.0.0-alpha15
+domain_source: 1.0.0-alpha15
+domain_content: 1.0.0-alpha15
+domain_path: 1.0.0-beta2

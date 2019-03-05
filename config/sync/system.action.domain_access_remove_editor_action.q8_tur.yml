@@ -1,0 +1,14 @@
+uuid: 0cf6f409-6c71-40ba-b92c-bdf414628a04
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_tur
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.q8_tur
+label: 'Remove editors from the Q8 Turquoise domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: q8_tur

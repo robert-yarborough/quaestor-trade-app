@@ -1,0 +1,14 @@
+uuid: 6c3cda63-5adc-46d9-9453-2219860d7e68
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_blue
+  module:
+    - domain_access
+id: domain_access_add_editor_action.q8_blue
+label: 'Add editors to the Q8 Blue domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: q8_blue

@@ -1,0 +1,14 @@
+uuid: cf8b917d-d908-4d74-9eab-49989aa4bfe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_blue
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.q8_blue
+label: 'Remove editors from the Q8 Blue domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: q8_blue

@@ -1,0 +1,14 @@
+uuid: 14005eee-8289-41af-aa87-c18c2d88c9ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_tur
+  module:
+    - domain_access
+id: domain_access_add_editor_action.q8_tur
+label: 'Add editors to the Q8 Turquoise domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: q8_tur
