@@ -1,0 +1,24 @@
+uuid: 04346a40-64bd-493b-b918-e0a26f7a7598
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.supernav
+  module:
+    - system
+  theme:
+    - q8_blue
+id: q8_blue_supernav
+theme: q8_blue
+region: content_top
+weight: -3
+provider: null
+plugin: 'system_menu_block:supernav'
+settings:
+  id: 'system_menu_block:supernav'
+  label: Supernav
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

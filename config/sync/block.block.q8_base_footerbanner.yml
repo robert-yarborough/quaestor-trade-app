@@ -1,0 +1,25 @@
+uuid: db86ac93-2ed6-496b-b467-2a03fa77e492
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_paragraph:96e51dc7-ae8c-4430-9574-62e5bc676a65'
+  module:
+    - block_content
+  theme:
+    - q8_base
+id: q8_base_footerbanner
+theme: q8_base
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:96e51dc7-ae8c-4430-9574-62e5bc676a65'
+settings:
+  id: 'block_content:96e51dc7-ae8c-4430-9574-62e5bc676a65'
+  label: 'Footer Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

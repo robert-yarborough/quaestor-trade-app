@@ -22,3 +22,6 @@ display:
           label: عمليات
   page_1:
     display_title: الصفحة
+    display_options:
+      menu:
+        title: لائحة

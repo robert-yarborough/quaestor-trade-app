@@ -1,0 +1,20 @@
+uuid: 00e38311-ef00-44ac-825a-5f49ec0b4daf
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.market_news
+id: paragraph.market_news.uid
+field_name: uid
+entity_type: paragraph
+bundle: market_news
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

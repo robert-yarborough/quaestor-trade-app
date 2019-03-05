@@ -31,9 +31,9 @@ services:
       - ./:/var/www/html
       - ./files:/mnt/files/
 
-  nginx:
+  nginx_tur:
     image: wodby/drupal-nginx:$NGINX_TAG
-    container_name: "${PROJECT_NAME}_nginx"
+    container_name: "${PROJECT_NAME}_nginx_tur"
     depends_on:
       - php
     environment:
@@ -46,24 +46,41 @@ services:
     labels:
       - 'traefik.backend=nginx'
       - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL_TUR}'
 
-  node:
-    image: wodby/node:$NODE_TAG
-    container_name: "${PROJECT_NAME}_node"
-    working_dir: ${PROJECT_ROOT}/themes/custom/${PROJECT_NAME}
-    labels:
-      - 'traefik.backend=node'
-      - 'traefik.port=3000'
-      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL}'
-    expose:
-      - "3000"
+  nginx_blue:
+    image: wodby/drupal-nginx:$NGINX_TAG
+    container_name: "${PROJECT_NAME}_nginx_blue"
+    depends_on:
+      - php
+    environment:
+      NGINX_STATIC_CONTENT_OPEN_FILE_CACHE: "off"
+      NGINX_ERROR_LOG_LEVEL: debug
+      NGINX_BACKEND_HOST: php
+      NGINX_SERVER_ROOT: $PROJECT_ROOT
     volumes:
       - ./:/var/www/html
-  # by default, runs as 'wodby' user that leads to issues with permissions
-  # so we explicitly set the user to root
-    user: root
-    command: sh -c 'yarn install && yarn run start'
+    labels:
+      - 'traefik.backend=nginx'
+      - 'traefik.port=80'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL_BLUE}'
+
+#  node:
+#    image: wodby/node:$NODE_TAG
+#    container_name: "${PROJECT_NAME}_node"
+#    working_dir: ${PROJECT_ROOT}/themes/custom/${PROJECT_NAME}
+#    labels:
+#      - 'traefik.backend=node'
+#      - 'traefik.port=3000'
+#      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL_BLUE}'
+#    expose:
+#      - "3000"
+#    volumes:
+#      - ./:/var/www/html
+#  # by default, runs as 'wodby' user that leads to issues with permissions
+#  # so we explicitly set the user to root
+#    user: root
+#    command: sh -c 'yarn install && yarn run start'
 
   mailhog:
     image: mailhog/mailhog
@@ -71,7 +88,7 @@ services:
     labels:
       - 'traefik.backend=mailhog'
       - 'traefik.port=8025'
-      - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL}'
+      - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL_BLUE}'
 
   portainer:
     image: portainer/portainer
@@ -82,7 +99,7 @@ services:
     labels:
       - 'traefik.backend=portainer'
       - 'traefik.port=9000'
-      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
+      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL_BLUE}'
   solr:
     image: wodby/solr:$SOLR_TAG
     container_name: "${PROJECT_NAME}_solr"
@@ -94,7 +111,7 @@ services:
     labels:
       - 'traefik.backend=solr'
       - 'traefik.port=8983'
-      - 'traefik.frontend.rule=Host:solr.${PROJECT_BASE_URL}'
+      - 'traefik.frontend.rule=Host:solr.${PROJECT_BASE_URL_BLUE}'
   traefik:
     image: traefik
     container_name: "${PROJECT_NAME}_traefik"
@@ -116,7 +133,7 @@ services:
     labels:
     - 'traefik.backend=pma'
     - 'traefik.port=80'
-    - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL}'
+    - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL_BLUE}'
 
 volumes:
   codebase:

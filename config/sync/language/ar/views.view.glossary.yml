@@ -15,5 +15,7 @@ display:
       fields:
         title:
           label: العنوان
+        name:
+          label: المؤلف
   page_1:
     display_title: الصفحة

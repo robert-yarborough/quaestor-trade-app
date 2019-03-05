@@ -1,0 +1,25 @@
+uuid: 13503192-5019-40f6-ae0d-a7deae35dfce
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - q8_blue
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: q8_blue_branding
+theme: q8_blue
+region: content_top
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

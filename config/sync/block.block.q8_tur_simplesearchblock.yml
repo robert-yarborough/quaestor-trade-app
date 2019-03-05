@@ -1,0 +1,20 @@
+uuid: 54175d65-ea11-4db8-a84d-f41c4daab30d
+langcode: en
+status: true
+dependencies:
+  module:
+    - q8_search
+  theme:
+    - q8_tur
+id: q8_tur_simplesearchblock
+theme: q8_tur
+region: content_top
+weight: -2
+provider: null
+plugin: simple_search_block
+settings:
+  id: simple_search_block
+  label: 'Simple search block'
+  provider: q8_search
+  label_display: '0'
+visibility: {  }

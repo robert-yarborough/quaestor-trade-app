@@ -1,0 +1,22 @@
+uuid: 6f82d39c-5beb-4011-a98b-80fe980a9f6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - q8_blue
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: q8_blue_content
+theme: q8_blue
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

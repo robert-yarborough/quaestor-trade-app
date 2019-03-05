@@ -16,6 +16,12 @@ display:
         media_bulk_form:
           action_title: إجراء
       filters:
+        status:
+          group_info:
+            label: منشور
+            group_items:
+              1:
+                title: منشور
         name:
           expose:
             label: الاسم

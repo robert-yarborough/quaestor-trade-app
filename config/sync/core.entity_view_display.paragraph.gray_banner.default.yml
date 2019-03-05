@@ -1,0 +1,39 @@
+uuid: 615b66dc-0e3b-4403-8e41-b03acba26f93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gray_banner.field_description
+    - field.field.paragraph.gray_banner.field_sub_subtitle
+    - field.field.paragraph.gray_banner.field_title
+    - paragraphs.paragraphs_type.gray_banner
+  module:
+    - text
+id: paragraph.gray_banner.default
+targetEntityType: paragraph
+bundle: gray_banner
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sub_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

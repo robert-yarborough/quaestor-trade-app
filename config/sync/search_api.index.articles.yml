@@ -7,6 +7,7 @@ dependencies:
     - node
     - search_api
   config:
+    - field.storage.node.field_domain_access
     - search_api.server.solr
     - core.entity_view_mode.node.search_index
 third_party_settings:
@@ -36,6 +37,14 @@ name: Articles
 description: ''
 read_only: false
 field_settings:
+  field_domain_access:
+    label: 'Domain Access'
+    datasource_id: 'entity:node'
+    property_path: field_domain_access
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_domain_access
   rendered_item:
     label: 'Rendered HTML output'
     property_path: rendered_item

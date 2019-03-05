@@ -1,0 +1,22 @@
+uuid: 32e751bc-0d36-4363-87c3-afa762c01fa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.rate_item
+id: paragraph.rate_item.status
+field_name: status
+entity_type: paragraph
+bundle: rate_item
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

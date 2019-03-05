@@ -1,0 +1,43 @@
+.investing-block {
+    background-color: $c-primary;
+    padding: 125px 0 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media('<tablet-l') {
+        padding: 45px 0 50px;
+    }
+    .block-title {
+        color: white;
+        font-weight: 300;
+        @include media('<tablet') {
+            font-size: 32px;
+            line-height: 32px;
+        }
+        b {
+            font-weight: 700;
+        }
+    }
+    .block-description {
+        color: white;
+    }
+    &__cta {
+        text-align: center;
+    }
+    .available-links {
+        &__inner {
+            margin-top: 130px;
+            padding-top: 70px;
+            border-top: 2px solid white;
+            @include media('<tablet-l') {
+                padding-top: 40px;
+                margin-top: 40px;
+            }
+        }
+        &__label {
+          color: white;
+          font-size: 16px;
+          font-weight: 500;
+        }
+    }
+}

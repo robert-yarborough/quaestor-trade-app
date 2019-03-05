@@ -1,0 +1,11 @@
+uuid: 78b7ff65-2591-4b82-ae79-3aa76bc88945
+langcode: en
+status: true
+dependencies: {  }
+id: q8_blue
+domain_id: 4570803
+hostname: q8securities-blue.bfmdev1.com
+name: 'Q8 Blue'
+scheme: http
+weight: 1
+is_default: true

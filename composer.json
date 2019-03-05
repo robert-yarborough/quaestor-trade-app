@@ -30,7 +30,11 @@
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/recaptcha": "^2.3",
         "drupal/hubspot_api": "^1.0@alpha",
-        "drupal/search_api_solr": "^2.5"
+        "drupal/search_api_solr": "^2.5",
+        "drupal/domain": "^1.0@alpha",
+        "drupal/domain_theme_switch": "^1.4",
+        "drupal/domain_path": "^1.0@beta",
+        "drupal/domain_site_settings": "^1.3"
     },
     "repositories": {
         "drupal": {
