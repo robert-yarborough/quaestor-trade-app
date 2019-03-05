@@ -65,22 +65,22 @@ services:
       - 'traefik.port=80'
       - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL_BLUE}'
 
-  node:
-    image: wodby/node:$NODE_TAG
-    container_name: "${PROJECT_NAME}_node"
-    working_dir: ${PROJECT_ROOT}/themes/custom/${PROJECT_NAME}
-    labels:
-      - 'traefik.backend=node'
-      - 'traefik.port=3000'
-      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL_BLUE}'
-    expose:
-      - "3000"
-    volumes:
-      - ./:/var/www/html
-  # by default, runs as 'wodby' user that leads to issues with permissions
-  # so we explicitly set the user to root
-    user: root
-    command: sh -c 'yarn install && yarn run start'
+#  node:
+#    image: wodby/node:$NODE_TAG
+#    container_name: "${PROJECT_NAME}_node"
+#    working_dir: ${PROJECT_ROOT}/themes/custom/${PROJECT_NAME}
+#    labels:
+#      - 'traefik.backend=node'
+#      - 'traefik.port=3000'
+#      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL_BLUE}'
+#    expose:
+#      - "3000"
+#    volumes:
+#      - ./:/var/www/html
+#  # by default, runs as 'wodby' user that leads to issues with permissions
+#  # so we explicitly set the user to root
+#    user: root
+#    command: sh -c 'yarn install && yarn run start'
 
   mailhog:
     image: mailhog/mailhog
