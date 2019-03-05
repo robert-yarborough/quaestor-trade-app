@@ -1,0 +1,18 @@
+name: 'Q8 base theme'
+type: theme
+description: 'Base theme Q8'
+package: Custom
+core: 8.x
+base theme: classy
+libraries:
+  - q8_base/base
+regions:
+  header: 'Header'
+  featured_top: 'Featured top'
+  content_top: 'Content top'
+  content: 'Content'
+  content_bottom: 'Content bottom'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom: 'Featured bottom'
+  footer: 'Footer'
