@@ -1,0 +1,9 @@
+uuid: ebff7a74-a15c-4685-aca4-5a9bc1c40814
+langcode: en
+status: true
+dependencies: {  }
+id: gray_banner
+label: 'Gray Banner'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

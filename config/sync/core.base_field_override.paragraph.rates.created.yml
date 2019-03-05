@@ -1,0 +1,18 @@
+uuid: 0f1ed11d-4ac9-486e-b9d3-6467675a6153
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.rates
+id: paragraph.rates.created
+field_name: created
+entity_type: paragraph
+bundle: rates
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: q8_tur
 domain_id: 5374323
-hostname: 'q8.tur.localhost:8000'
+hostname: q8securities-tur.bfmdev1.com
 name: 'Q8 Turquoise'
 scheme: http
 weight: 2

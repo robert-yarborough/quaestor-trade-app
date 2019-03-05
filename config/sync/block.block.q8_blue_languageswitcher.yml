@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - domain
     - language
   theme:
     - q8_blue
@@ -17,4 +18,12 @@ settings:
   label: 'Language switcher'
   provider: language
   label_display: '0'
-visibility: {  }
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_blue: q8_blue
+      q8_tur: q8_tur
+    negate: false
+    context_mapping:
+      'entity:domain': '@domain.current_domain_context:entity:domain'
