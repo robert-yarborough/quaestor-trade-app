@@ -98,7 +98,8 @@
                 "Display layout twig not overridable. [#2802429]": "https://www.drupal.org/files/issues/ds_display-layout-overrides-not-working_2802429-3.patch"
             },
             "drupal/core":{
-                "Invalid translation language (und) specified. [#2995655]" : "https://www.drupal.org/files/issues/2018-09-04/invalid_translation_language-2995655-14.patch"
+                "Invalid translation language (und) specified. [#2995655]" : "https://www.drupal.org/files/issues/2018-09-04/invalid_translation_language-2995655-14.patch",
+                "Allow granular overriding of sql_mode options. [#2939760]" : "https://www.drupal.org/files/issues/2018-12-07/2939760-6.drupal.allow-granular-overriding-of-sqlmode-options.patch"
             }
         },
         "enable-patching": true
