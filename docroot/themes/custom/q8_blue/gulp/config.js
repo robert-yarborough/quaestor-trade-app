@@ -18,7 +18,7 @@ const config = {
     outputCSS: 'style.css',
 
     // uncomment if you want to use proxy
-    serverProxy: localConfig ? localConfig.serverProxy : 'mysite.com',
+    // serverProxy: localConfig ? localConfig.serverProxy : 'mysite.com',
 
     src: {
         root         : srcPath,
