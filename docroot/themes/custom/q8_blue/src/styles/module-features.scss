@@ -10,6 +10,35 @@
     @include media('<tablet') {
         padding: 40px 0;
     }
+    &.is-background {
+        background-color: $c-str-3;
+        position: relative;
+        overflow: hidden;
+        padding-top: 165px!important;
+        @include media('<tablet-l', '>=tablet') {
+            padding-top: 50px!important;
+        }
+        @include media('<tablet') {
+            padding-top: 40px!important;
+        }
+        &:before {
+            content: '';
+            background-image: url('../images/icons/svg/icon-logo-large-light.svg');
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            display: block;
+            bottom: -360px;
+            position: absolute;
+            width: 717px;
+            height: 1245px;
+            left: -25px;
+            opacity: .65;
+            pointer-events: none;
+            @include media('<tablet-l') {
+                display: none;
+            }
+        }
+    }
     &__grid {
         max-width: $sw-site-l;
         margin-right: auto;
