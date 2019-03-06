@@ -5,10 +5,6 @@
 parameters:
   http.response.debug_cacheability_headers: true
   twig.config: { debug: true, auto_reload: true, cache: false }
-  renderer.config: {
-    required_cache_contexts: [url.site, 'languages:language_interface', theme, user.permissions],
-    auto_placeholder_conditions: { max-age: 0, contexts: [session, user], tags: {  } }
-  }
 services:
   cache.backend.null:
     class: Drupal\Core\Cache\NullBackendFactory

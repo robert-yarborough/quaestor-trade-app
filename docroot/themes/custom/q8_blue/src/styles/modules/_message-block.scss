@@ -1,0 +1,83 @@
+.message-block {
+    background-color: $c-str-3;
+    padding-top: 5.46875vw;
+    padding-bottom: 7.03125vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    @include media('<tablet') {
+        padding: 50px 0;
+    }
+    &:before {
+        content: '';
+        background-image: url('../images/icons/svg/icon-logo-large-light.svg');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        display: block;
+        bottom: 0;
+        position: absolute;
+        width: 717px;
+        height: 1245px;
+        left: 0;
+        opacity: .65;
+        pointer-events: none;
+        @include media('<tablet-l') {
+            display: none;
+        }
+    }
+    &__wrap {
+        max-width: 610px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 1;
+    }
+    &__title {
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 300;
+        @include media('<tablet-l', '>=tablet') {
+            font-size: 28px;
+            line-height: 28px;
+        }
+        @include media('<tablet') {
+            font-size: 24px;
+            line-height: 24px;
+        }
+        strong {
+            font-weight: 700;
+            display: block;
+        }
+    }
+    &__subtitle {
+        font-size: 48px;
+        line-height: 55px;
+        font-weight: 700;
+        @include media('<tablet-l', '>=tablet') {
+            font-size: 28px;
+            line-height: 28px;
+        }
+        @include media('<tablet') {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+    &__description {
+        font-size: 22px;
+        line-height: 32px;
+        padding-top: 43px;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        @include media('<tablet-l', '>=tablet') {
+            font-size: 18px;
+            line-height: 28px;
+            padding-top: 25px;
+        }
+        @include media('<tablet') {
+            font-size: 16px;
+            line-height: 24px;
+            padding-top: 17px;
+        }
+    }
+}
