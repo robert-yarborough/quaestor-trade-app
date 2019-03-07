@@ -1,13 +1,13 @@
-uuid: e2347ae8-830a-42e3-a6f7-fb48ea8f8cf0
+uuid: abdf49b5-1ba6-47c0-a3d8-7533a70a93b6
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.media_slideshow
-id: block_content.media_slideshow.metatag
+    - node.type.article
+id: node.article.metatag
 field_name: metatag
-entity_type: block_content
-bundle: media_slideshow
+entity_type: node
+bundle: article
 label: Metatags
 description: 'The meta tags for the entity.'
 required: false

@@ -1,13 +1,13 @@
-uuid: e2347ae8-830a-42e3-a6f7-fb48ea8f8cf0
+uuid: 7d2cc32f-1149-4937-a1ed-95bd9f2c49a7
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.media_slideshow
-id: block_content.media_slideshow.metatag
+    - taxonomy.vocabulary.article_categories
+id: taxonomy_term.article_categories.metatag
 field_name: metatag
-entity_type: block_content
-bundle: media_slideshow
+entity_type: taxonomy_term
+bundle: article_categories
 label: Metatags
 description: 'The meta tags for the entity.'
 required: false

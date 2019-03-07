@@ -1,13 +1,13 @@
-uuid: 26a5ce55-130b-4535-98f5-79c7cd01d7d9
+uuid: 8aa594f1-a563-4749-81d4-d150f4df5e19
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
-id: node.page.uid
+    - node.type.article
+id: node.article.uid
 field_name: uid
 entity_type: node
-bundle: page
+bundle: article
 label: 'Authored by'
 description: 'The username of the content author.'
 required: false

@@ -1,13 +1,13 @@
-uuid: 68444699-b2f5-4c2f-83e9-832ce939c3b9
+uuid: 760819cc-6551-466d-94f9-67ea9862f3ba
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.top_banner
-id: paragraph.top_banner.uid
+    - paragraphs.paragraphs_type.gray_banner
+id: paragraph.gray_banner.uid
 field_name: uid
 entity_type: paragraph
-bundle: top_banner
+bundle: gray_banner
 label: 'Authored by'
 description: 'The user ID of the paragraphs author.'
 required: false

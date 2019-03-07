@@ -1,13 +1,13 @@
-uuid: 4b662746-1de9-4fbf-a720-3e84953e241d
+uuid: 3f340c06-9bba-40c4-b6f9-13a04642a944
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
-id: node.page.changed
+    - node.type.article
+id: node.article.changed
 field_name: changed
 entity_type: node
-bundle: page
+bundle: article
 label: Changed
 description: 'The time that the node was last edited.'
 required: false

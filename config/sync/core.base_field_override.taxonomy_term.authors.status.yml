@@ -1,13 +1,13 @@
-uuid: 423acb07-ba42-459a-9828-112f38552490
+uuid: c2861d1c-3595-445c-83c4-455681c200ab
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.banner_app_stores
-id: paragraph.banner_app_stores.status
+    - taxonomy.vocabulary.authors
+id: taxonomy_term.authors.status
 field_name: status
-entity_type: paragraph
-bundle: banner_app_stores
+entity_type: taxonomy_term
+bundle: authors
 label: Published
 description: ''
 required: false

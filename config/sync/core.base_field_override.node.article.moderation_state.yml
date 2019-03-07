@@ -1,13 +1,13 @@
-uuid: e9832f6b-ac1a-4402-9c37-16811e9e73ac
+uuid: 595b88b0-b9e5-4424-b062-d584436013cb
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.block_paragraph
-id: block_content.block_paragraph.moderation_state
+    - node.type.article
+id: node.article.moderation_state
 field_name: moderation_state
-entity_type: block_content
-bundle: block_paragraph
+entity_type: node
+bundle: article
 label: 'Moderation state'
 description: 'The moderation state of this piece of content.'
 required: false
