@@ -1,0 +1,32 @@
+uuid: 81278c26-4c3c-4b80-8f9c-e4a5c02c6ba4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_paragraph:4f4187e4-345a-482d-8ee0-99dba39a234b'
+  module:
+    - block_content
+    - domain
+  theme:
+    - q8_blue
+id: copyrightblue_2
+theme: q8_blue
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:4f4187e4-345a-482d-8ee0-99dba39a234b'
+settings:
+  id: 'block_content:4f4187e4-345a-482d-8ee0-99dba39a234b'
+  label: 'Copyright (blue)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_blue: q8_blue
+    negate: false
+    context_mapping: {  }

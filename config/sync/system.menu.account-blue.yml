@@ -1,0 +1,8 @@
+uuid: 43144aac-881e-4c35-b0a3-5861d51dc21a
+langcode: en
+status: true
+dependencies: {  }
+id: account-blue
+label: 'User account menu (blue)'
+description: ''
+locked: false

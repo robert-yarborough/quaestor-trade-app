@@ -1,4 +1,4 @@
-uuid: 203cfd6e-aed6-4fcf-879e-150ec208ba28
+uuid: cb314500-9061-4acf-b4dd-b46e543c46df
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,10 @@ dependencies:
     - 'block_content:block_paragraph:96e51dc7-ae8c-4430-9574-62e5bc676a65'
   module:
     - block_content
+    - domain
   theme:
     - q8_tur
-id: q8_tur_footerbanner
+id: footerbannertur_2
 theme: q8_tur
 region: footer
 weight: -5
@@ -16,10 +17,16 @@ provider: null
 plugin: 'block_content:96e51dc7-ae8c-4430-9574-62e5bc676a65'
 settings:
   id: 'block_content:96e51dc7-ae8c-4430-9574-62e5bc676a65'
-  label: 'Footer Banner'
+  label: 'Footer Banner (tur)'
   provider: block_content
   label_display: '0'
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_tur: q8_tur
+    negate: false
+    context_mapping: {  }

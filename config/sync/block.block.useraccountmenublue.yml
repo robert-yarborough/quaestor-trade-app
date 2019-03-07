@@ -1,0 +1,31 @@
+uuid: 78da87b3-f8d3-4dd6-b44d-41b99074ea53
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account-blue
+  module:
+    - domain
+    - system
+  theme:
+    - q8_blue
+id: useraccountmenublue
+theme: q8_blue
+region: content_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:account-blue'
+settings:
+  id: 'system_menu_block:account-blue'
+  label: 'User account menu (blue)'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_blue: q8_blue
+    negate: false
+    context_mapping: {  }
