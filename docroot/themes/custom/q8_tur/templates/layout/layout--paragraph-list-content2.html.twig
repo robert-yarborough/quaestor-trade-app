@@ -11,9 +11,9 @@
  */
 #}
 {%
-  set classes = [
-  'layout',
-  'layout--onecol',
+set classes = [
+'layout',
+'layout--onecol',
 ]
 %}
 {% if content %}
@@ -26,13 +26,13 @@
               {{ content.content.field_title[0] }}
             </div>
           {% endif %}
-  
+          
           {% if content.content.field_subtitle[0] %}
             <div class="block-description block-center">
               {{ content.content.field_subtitle }}
             </div>
           {% endif %}
-
+          
           {% if content.content.field_twi_three_items %}
             <div class="finance-block__inner">
               <div class="swiper-container js-finance-block-slider">
@@ -44,7 +44,7 @@
               <div class="swiper-button-next js-fin-sl-btn-next"></div>
             </div>
           {% endif %}
-
+          
           {% if content.content.field_button[0] or content.content.field_button2[0] %}
             <div class="finance-block__btn">
               {{ content.content.field_button[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
@@ -55,5 +55,5 @@
       </div>
     </div>
   </div>
-  {{ attach_library('q8_blue/module-finance') }}
+  {{ attach_library('q8_tur/module-finance') }}
 {% endif %}
