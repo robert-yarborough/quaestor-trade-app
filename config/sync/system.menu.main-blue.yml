@@ -1,0 +1,8 @@
+uuid: de9a0034-b7ff-4677-b45b-65066c03f09a
+langcode: en
+status: true
+dependencies: {  }
+id: main-blue
+label: 'Main navigation (blue)'
+description: ''
+locked: false

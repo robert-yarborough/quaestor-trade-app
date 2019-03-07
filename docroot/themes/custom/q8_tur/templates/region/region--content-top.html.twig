@@ -13,11 +13,11 @@
  */
 #}
 {%
-  set classes = [
-  'navbar',
-  'navbar-default',
-  'region',
-  'region-' ~ region|clean_class,
+    set classes = [
+    'navbar',
+    'navbar-default',
+    'region',
+    'region-' ~ region|clean_class,
 ]
 %}
 
@@ -33,7 +33,7 @@
           <div class="header-toggle-btn js-h-toggle-btn" role="button"><span></span><b class="visually-hidden">{{ 'Menu'|t }}</b></div>
 
           <div class="menu--links js-h-menu-links">
-            {{ elements.q8_tur_supernav }}
+            {{ elements.supernavtur }}
           </div>
 
           <div class="header-search js-h-search">
@@ -48,9 +48,9 @@
         </div>
 
         <div class="navbar__bot--main js-h-menu-main">
-          {{ elements.q8_tur_main_menu }}
+          {{ elements.mainnavigationtur }}
           <div class="menu--user">
-            {{ elements.q8_tur_account_menu }}
+            {{ elements.useraccountmenutur }}
           </div>
         </div>
       </div>

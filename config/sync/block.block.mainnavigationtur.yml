@@ -1,26 +1,31 @@
-uuid: 4b32877e-af9c-4908-b9f7-3d1b8b60c260
+uuid: 6dbd94f5-7791-4245-9ecb-2c9bae781d87
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.main
   module:
+    - domain
     - system
   theme:
-    - q8_blue
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
-id: q8_blue_main_menu
-theme: q8_blue
+    - q8_tur
+id: mainnavigationtur
+theme: q8_tur
 region: content_top
 weight: -1
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Main navigation'
+  label: 'Main navigation (tur)'
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
-visibility: {  }
+  depth: 0
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_tur: q8_tur
+    negate: false
+    context_mapping: {  }

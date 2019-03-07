@@ -1,0 +1,32 @@
+uuid: e53c6a48-d8e7-48d9-9c5b-7b16dfe96210
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_paragraph:70dc81b9-87c8-47a6-9c2f-9c5bd194fbfe'
+  module:
+    - block_content
+    - domain
+  theme:
+    - q8_blue
+id: footerbannerblue_2
+theme: q8_blue
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:70dc81b9-87c8-47a6-9c2f-9c5bd194fbfe'
+settings:
+  id: 'block_content:70dc81b9-87c8-47a6-9c2f-9c5bd194fbfe'
+  label: 'Footer Banner (blue)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_blue: q8_blue
+    negate: false
+    context_mapping: {  }

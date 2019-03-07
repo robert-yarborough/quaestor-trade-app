@@ -1,0 +1,31 @@
+uuid: 589552d3-da3f-4251-b09a-0020f09fe759
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-blue
+  module:
+    - domain
+    - system
+  theme:
+    - q8_blue
+id: mainnavigationblue
+theme: q8_blue
+region: content_top
+weight: -1
+provider: null
+plugin: 'system_menu_block:main-blue'
+settings:
+  id: 'system_menu_block:main-blue'
+  label: 'Main navigation (blue)'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_blue: q8_blue
+    negate: false
+    context_mapping: {  }

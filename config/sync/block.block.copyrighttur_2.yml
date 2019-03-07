@@ -1,4 +1,4 @@
-uuid: 755e9ecd-7bb1-4dc5-92dc-1bb72dfd65b6
+uuid: 91fd096a-e843-4917-ad0d-186ff31b945d
 langcode: en
 status: true
 dependencies:
@@ -6,20 +6,27 @@ dependencies:
     - 'block_content:block_paragraph:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
   module:
     - block_content
+    - domain
   theme:
-    - q8_blue
-id: q8_blue_copyright_2
-theme: q8_blue
+    - q8_tur
+id: copyrighttur_2
+theme: q8_tur
 region: footer
 weight: -4
 provider: null
 plugin: 'block_content:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
 settings:
   id: 'block_content:66760d87-f2c1-4130-bd62-0ecd0ec6067e'
-  label: Copyright
+  label: 'Copyright (tur)'
   provider: block_content
   label_display: '0'
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_tur: q8_tur
+    negate: false
+    context_mapping: {  }

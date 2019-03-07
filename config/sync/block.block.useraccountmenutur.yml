@@ -1,26 +1,31 @@
-uuid: fa40b5b3-e7e5-46f3-8f25-b72c93ef7f53
+uuid: 09488a6b-e268-4cc7-815f-b94b5ecc201c
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.account
   module:
+    - domain
     - system
   theme:
-    - q8_base
-_core:
-  default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
-id: q8_base_account_menu
-theme: q8_base
+    - q8_tur
+id: useraccountmenutur
+theme: q8_tur
 region: content_top
 weight: 0
 provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
-  label: 'User account menu'
+  label: 'User account menu (tur)'
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
-visibility: {  }
+  depth: 0
+visibility:
+  domain:
+    id: domain
+    domains:
+      q8_tur: q8_tur
+    negate: false
+    context_mapping: {  }
