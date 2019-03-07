@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.options.field_style
     - field.field.paragraph.options.field_subtitle
     - field.field.paragraph.options.field_title
     - field.field.paragraph.options.field_twi_three_items
@@ -16,12 +15,6 @@ targetEntityType: paragraph
 bundle: options
 mode: default
 content:
-  field_style:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_subtitle:
     weight: 2
     settings:

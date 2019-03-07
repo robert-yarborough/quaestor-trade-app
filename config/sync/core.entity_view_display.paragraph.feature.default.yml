@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.feature.field_description
     - field.field.paragraph.feature.field_image
+    - field.field.paragraph.feature.field_style
     - field.field.paragraph.feature.field_title
     - image.style.215x215
     - paragraphs.paragraphs_type.feature
@@ -47,4 +48,5 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  field_style: true

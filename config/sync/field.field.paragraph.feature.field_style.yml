@@ -1,14 +1,14 @@
-uuid: 9aeeb7d6-71dd-47a0-8241-2de3b2637fe5
+uuid: 2dbc4f9e-4489-4c5d-8b5f-bf67b090397b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_style
-    - paragraphs.paragraphs_type.options
-id: paragraph.options.field_style
+    - paragraphs.paragraphs_type.feature
+id: paragraph.feature.field_style
 field_name: field_style
 entity_type: paragraph
-bundle: options
+bundle: feature
 label: Style
 description: ''
 required: false
