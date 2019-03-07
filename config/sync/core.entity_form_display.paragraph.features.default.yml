@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.features.field_paragraphs
+    - field.field.paragraph.features.field_style
     - paragraphs.paragraphs_type.features
   module:
     - paragraphs
@@ -13,7 +14,7 @@ bundle: features
 mode: default
 content:
   field_paragraphs:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -24,6 +25,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
