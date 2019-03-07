@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.options.field_style
     - field.field.paragraph.options.field_subtitle
     - field.field.paragraph.options.field_title
     - field.field.paragraph.options.field_twi_three_items
@@ -15,8 +16,14 @@ targetEntityType: paragraph
 bundle: options
 mode: default
 content:
+  field_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_subtitle:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -24,7 +31,7 @@ content:
     type: text_textarea
     region: content
   field_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -33,7 +40,7 @@ content:
     region: content
   field_twi_three_items:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -43,6 +50,11 @@ content:
       default_paragraph_type: text_with_image
     third_party_settings: {  }
     region: content
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

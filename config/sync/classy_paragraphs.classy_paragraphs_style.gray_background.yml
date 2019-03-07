@@ -1,0 +1,7 @@
+uuid: 69fda161-5759-43fe-889e-121af4120b39
+langcode: en
+status: true
+dependencies: {  }
+id: gray_background
+label: 'Gray background'
+classes: is-background
