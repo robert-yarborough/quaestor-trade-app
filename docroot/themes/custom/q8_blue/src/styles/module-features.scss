@@ -11,10 +11,10 @@
         padding: 40px 0;
     }
     &.is-background {
-        background-color: $c-str-3;
+        background-color: $c-str-9;
         position: relative;
         overflow: hidden;
-        padding-top: 165px!important;
+        padding-top: 120px!important;
         @include media('<tablet-l', '>=tablet') {
             padding-top: 50px!important;
         }
@@ -27,7 +27,7 @@
             background-repeat: no-repeat;
             background-position: left bottom;
             display: block;
-            bottom: -360px;
+            bottom: -510px;
             position: absolute;
             width: 717px;
             height: 1245px;
