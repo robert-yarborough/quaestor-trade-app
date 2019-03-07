@@ -1,13 +1,13 @@
-uuid: 975b8117-f044-41d4-8371-5f1adc35f662
+uuid: 1aede26e-134b-4516-804a-f9aa01e8ec9f
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.banner_app_stores
-id: paragraph.banner_app_stores.created
+    - paragraphs.paragraphs_type.gray_banner
+id: paragraph.gray_banner.created
 field_name: created
 entity_type: paragraph
-bundle: banner_app_stores
+bundle: gray_banner
 label: 'Authored on'
 description: 'The time that the Paragraph was created.'
 required: false

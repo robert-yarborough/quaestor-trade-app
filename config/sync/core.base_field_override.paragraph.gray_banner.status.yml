@@ -1,13 +1,13 @@
-uuid: 423acb07-ba42-459a-9828-112f38552490
+uuid: 1601503d-497e-432a-9473-f1ae70fc6197
 langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.banner_app_stores
-id: paragraph.banner_app_stores.status
+    - paragraphs.paragraphs_type.gray_banner
+id: paragraph.gray_banner.status
 field_name: status
 entity_type: paragraph
-bundle: banner_app_stores
+bundle: gray_banner
 label: Published
 description: ''
 required: false
