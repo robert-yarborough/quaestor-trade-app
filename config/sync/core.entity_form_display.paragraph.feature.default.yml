@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.feature.field_description
     - field.field.paragraph.feature.field_image
+    - field.field.paragraph.feature.field_style
     - field.field.paragraph.feature.field_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.feature
@@ -19,7 +20,7 @@ bundle: feature
 mode: default
 content:
   field_description:
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
@@ -28,7 +29,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_image:
-    weight: 0
+    weight: 1
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -40,14 +41,25 @@ content:
         remove_button: true
     type: image_image
     region: content
+  field_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
