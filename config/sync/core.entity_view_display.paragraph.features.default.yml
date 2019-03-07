@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.features.field_paragraphs
+    - field.field.paragraph.features.field_style
     - paragraphs.paragraphs_type.features
   module:
     - entity_reference_revisions
@@ -21,4 +22,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-hidden: {  }
+hidden:
+  field_style: true
