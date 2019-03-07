@@ -1,5 +1,5 @@
 .message-block {
-    background-color: $c-str-3;
+    background-color: $c-str-9;
     padding-top: 5.46875vw;
     padding-bottom: 7.03125vw;
     text-align: center;
@@ -66,7 +66,7 @@
         font-size: 22px;
         line-height: 32px;
         padding-top: 43px;
-        max-width: 520px;
+        //max-width: 520px;
         margin-left: auto;
         margin-right: auto;
         @include media('<tablet-l', '>=tablet') {
