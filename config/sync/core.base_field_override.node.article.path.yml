@@ -1,15 +1,15 @@
-uuid: b18484ec-aa4b-4535-9b42-b59ce9db5623
+uuid: a9139d34-9f53-4f62-885b-eb2acd9d65f3
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
+    - node.type.article
   module:
     - path
-id: node.page.path
+id: node.article.path
 field_name: path
 entity_type: node
-bundle: page
+bundle: article
 label: 'URL alias'
 description: ''
 required: false

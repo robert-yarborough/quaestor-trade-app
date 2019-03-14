@@ -17,7 +17,6 @@ module:
   consumers: 0
   contact: 0
   contact_storage: 0
-  content_moderation: 0
   contextual: 0
   crop: 0
   ctools: 0
@@ -73,8 +72,6 @@ module:
   lightning_media_twitter: 0
   lightning_media_video: 0
   lightning_page: 0
-  lightning_scheduler: 0
-  lightning_workflow: 0
   link: 0
   locale: 0
   media: 0
@@ -84,8 +81,6 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
-  moderation_dashboard: 0
-  moderation_sidebar: 0
   node: 0
   openapi: 0
   openapi_ui: 0

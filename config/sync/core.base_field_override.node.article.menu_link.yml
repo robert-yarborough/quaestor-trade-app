@@ -1,13 +1,13 @@
-uuid: 88a0edb7-035f-4a03-9dba-5a3d8c404dc1
+uuid: f3e202a1-888a-4ef4-8cd6-7f496013a6bd
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
-id: node.page.menu_link
+    - node.type.article
+id: node.article.menu_link
 field_name: menu_link
 entity_type: node
-bundle: page
+bundle: article
 label: 'Menu link'
 description: 'Computed menu link for the node (only available during node saving).'
 required: false
