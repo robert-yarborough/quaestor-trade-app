@@ -1,15 +1,15 @@
-uuid: b18484ec-aa4b-4535-9b42-b59ce9db5623
+uuid: c0811f80-83ed-4879-8550-b6977e52f1b4
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
+    - taxonomy.vocabulary.article_categories
   module:
     - path
-id: node.page.path
+id: taxonomy_term.article_categories.path
 field_name: path
-entity_type: node
-bundle: page
+entity_type: taxonomy_term
+bundle: article_categories
 label: 'URL alias'
 description: ''
 required: false
