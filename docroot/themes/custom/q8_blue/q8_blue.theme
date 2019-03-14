@@ -49,6 +49,7 @@ function q8_blue_get_node_background_title($node) {
 function q8_blue_preprocess_field__field_avaiability(&$variables) {
   foreach ($variables['items'] as $delta => &$item) {
     $value = $variables['element']['#items'][$delta]->getValue()['value'];
-    $item['content'] = ['#markup' => '<span class="' . $value . '">' . $value . '</span>'];
+    $item['content']['#prefix'] = '<span class="' . $value . '">';
+    $item['content']['#suffix'] = '</span>';
   }
 }
