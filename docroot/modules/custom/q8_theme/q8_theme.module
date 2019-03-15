@@ -79,7 +79,8 @@ function q8_theme_form_views_exposed_form_alter(&$form, FormStateInterface $form
  * Implements hook_block_access().
  */
 function q8_theme_block_access(Block $block, $operation, AccountInterface $account) {
-  if ($operation == 'view' && $block->id() == 'footerbanner') {
+  // ToDo. Revise when we will template for 404.
+  if ($operation == 'view' && in_array($block->id(), ['footerbannertur_2', 'footerbannerblue_2'])) {
     // Get Request Object.
     $request = \Drupal::request();
     if ($exception = $request->attributes->get('exception')) {
