@@ -5,24 +5,56 @@
  * Theming functions.
  */
 
-/**
- * Implements hook_preprocess_HOOK() for HTML document templates.
- *
- * Adds body classes if certain regions have content.
- */
-function q8_base_preprocess_html(&$variables) {
+use Drupal\Core\Entity\FieldableEntityInterface;
 
-  // Add information about the number of sidebars.
-  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['attributes']['class'][] = 'two-sidebars';
+/**
+ * @file
+ * Theming functions.
+ */
+
+/**
+ * Implements q8_base_preprocess_field__node__node_title__page().
+ */
+function q8_base_preprocess_field__node__node_title__page(array &$variables) {
+  $variables['bg_url'] = q8_base_get_node_background_title($variables['element']['#object']);
+}
+
+/**
+ * Implements q8_base_preprocess_layout__node_article_full().
+ */
+function q8_base_preprocess_layout__node_article_full(array &$variables) {
+  $variables['bg_url'] = q8_base_get_node_background_title($variables['content']['#node']);
+}
+
+/**
+ * Get background for node title.
+ */
+function q8_base_get_node_background_title($node) {
+  // Fallback element.
+  $bg_url = FALSE;
+
+  // Get the background field and check if it is an url.
+  if ($node instanceof FieldableEntityInterface
+    && $node->hasField('field_title_background') && !$node->get('field_title_background')->isEmpty()) {
+    $imageStyle = \Drupal::entityTypeManager()->getStorage('image_style')->load('crop_freeform');
+    $imageUri = $node->get('field_title_background')->referencedEntities()[0]->getFileUri();
+    $bg_url = $imageStyle ? $imageStyle->buildUrl($imageUri) : file_create_url($imageUri);
   }
-  elseif (!empty($variables['page']['sidebar_first'])) {
-    $variables['attributes']['class'][] = 'sidebar-first';
-  }
-  elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['attributes']['class'][] = 'sidebar-second';
-  }
-  else {
-    $variables['attributes']['class'][] = 'no-sidebars';
+
+  return $bg_url;
+}
+
+/**
+ * Implements q8_base_preprocess_field__field_avaiability().
+ */
+function q8_base_preprocess_field__field_avaiability(&$variables) {
+  foreach ($variables['items'] as &$item) {
+    $object = $variables['element']['#object'];
+
+    if ($object->hasField('field_avaiability') && !$object->field_avaiability->isEmpty()) {
+      $value = $object->field_avaiability->value;
+      $item['content']['#prefix'] = "<span class=$value>";
+      $item['content']['#suffix'] = "</span>";
+    }
   }
 }
