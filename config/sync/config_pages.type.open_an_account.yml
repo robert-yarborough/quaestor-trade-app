@@ -5,9 +5,10 @@ dependencies: {  }
 id: open_an_account
 label: 'Open an account'
 context:
-  show_warning: true
+  show_warning: false
   group:
     language: true
+    domain: true
 menu:
   path: /admin/content/account
   weight: 0
