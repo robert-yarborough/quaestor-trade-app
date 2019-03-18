@@ -31,9 +31,9 @@ services:
       - ./:/var/www/html
       - ./files:/mnt/files/
 
-  nginx_tur:
+  nginx:
     image: wodby/drupal-nginx:$NGINX_TAG
-    container_name: "${PROJECT_NAME}_nginx_tur"
+    container_name: "${PROJECT_NAME}_nginx"
     depends_on:
       - php
     environment:
@@ -46,24 +46,7 @@ services:
     labels:
       - 'traefik.backend=nginx'
       - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL_TUR}'
-
-  nginx_blue:
-    image: wodby/drupal-nginx:$NGINX_TAG
-    container_name: "${PROJECT_NAME}_nginx_blue"
-    depends_on:
-      - php
-    environment:
-      NGINX_STATIC_CONTENT_OPEN_FILE_CACHE: "off"
-      NGINX_ERROR_LOG_LEVEL: debug
-      NGINX_BACKEND_HOST: php
-      NGINX_SERVER_ROOT: $PROJECT_ROOT
-    volumes:
-      - ./:/var/www/html
-    labels:
-      - 'traefik.backend=nginx'
-      - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL_BLUE}'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL},${PROJECT_BASE_URL_TUR}'
 
 #  node:
 #    image: wodby/node:$NODE_TAG
@@ -72,7 +55,7 @@ services:
 #    labels:
 #      - 'traefik.backend=node'
 #      - 'traefik.port=3000'
-#      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL_BLUE}'
+#      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL}'
 #    expose:
 #      - "3000"
 #    volumes:
@@ -88,7 +71,7 @@ services:
     labels:
       - 'traefik.backend=mailhog'
       - 'traefik.port=8025'
-      - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL_BLUE}'
+      - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL}'
 
   portainer:
     image: portainer/portainer
@@ -99,7 +82,7 @@ services:
     labels:
       - 'traefik.backend=portainer'
       - 'traefik.port=9000'
-      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL_BLUE}'
+      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
   solr:
     image: wodby/solr:$SOLR_TAG
     container_name: "${PROJECT_NAME}_solr"
@@ -111,7 +94,7 @@ services:
     labels:
       - 'traefik.backend=solr'
       - 'traefik.port=8983'
-      - 'traefik.frontend.rule=Host:solr.${PROJECT_BASE_URL_BLUE}'
+      - 'traefik.frontend.rule=Host:solr.${PROJECT_BASE_URL}'
   traefik:
     image: traefik
     container_name: "${PROJECT_NAME}_traefik"
@@ -133,7 +116,7 @@ services:
     labels:
     - 'traefik.backend=pma'
     - 'traefik.port=80'
-    - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL_BLUE}'
+    - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL}'
 
 volumes:
   codebase:
