@@ -94,6 +94,7 @@ module:
   panels: 0
   panels_ipe: 0
   path: 0
+  q8_domain: 0
   q8_forms: 0
   q8_search: 0
   q8_theme: 0

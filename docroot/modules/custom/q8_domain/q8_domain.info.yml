@@ -1,0 +1,7 @@
+name: 'Q8 Domain'
+type: module
+description: 'Helper functions for the Domain'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:domain
