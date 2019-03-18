@@ -5,9 +5,10 @@ dependencies: {  }
 id: overview_page
 label: 'Overview page'
 context:
-  show_warning: true
+  show_warning: false
   group:
     language: true
+    domain: true
 menu:
   path: /admin/content/overview
   weight: 0
