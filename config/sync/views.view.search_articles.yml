@@ -473,7 +473,52 @@ display:
           content: '<p>There are no search results. Please try another query or contact us directly</p>'
           plugin_id: text_custom
       relationships: {  }
-      arguments: {  }
+      arguments:
+        field_domain_access:
+          id: field_domain_access
+          table: search_api_index_articles
+          field: field_domain_access
+          plugin_id: search_api
+        field_domain_access_1:
+          id: field_domain_access_1
+          table: search_api_index_articles
+          field: field_domain_access
+          plugin_id: search_api
+        field_domain_access_2:
+          id: field_domain_access_2
+          table: search_api_index_articles
+          field: field_domain_access
+          plugin_id: search_api
+        field_domain_access_3:
+          id: field_domain_access_3
+          table: search_api_index_articles
+          field: field_domain_access
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: current_domain
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options: {  }
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          plugin_id: search_api
       display_extenders: {  }
       use_ajax: true
       title: ''

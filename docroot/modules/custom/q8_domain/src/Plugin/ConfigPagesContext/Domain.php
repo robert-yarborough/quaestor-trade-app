@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\q8_theme\Plugin\ConfigPagesContext;
+namespace Drupal\q8_domain\Plugin\ConfigPagesContext;
 
 use Drupal\domain\DomainNegotiator;
 use Drupal\config_pages\ConfigPagesContextBase;
