@@ -219,13 +219,28 @@ class OpenAccountForm extends FormBase {
         // Validate if the user is already exists.
         $search = $contacts->search($formState->getValue('email'));
         if ($search->data->total) {
-//          $properties = $search->data->contacts;
-//          foreach ($properties as $property) {
-//            $property[] = '';
-//          }
-//
-//          // Update contact on HubSpot.
-//          $contacts->update($id, $properties);
+
+          // Update field "Site Lead Source" for HubSpot.
+          if (isset($search->data->contacts[0]->properties->site_lead_source)) {
+            $property = $search->data->contacts[0];
+            $site_leads = (!empty($property->properties->site_lead_source->value))
+              ? explode(';', $property->properties->site_lead_source->value)
+              : [];
+            $current_site_lead = $this->getSiteLeadSource();
+
+            if (!in_array($current_site_lead, $site_leads)) {
+              $site_leads[] = $current_site_lead;
+              $properties = [
+                [
+                  'property' => 'site_lead_source',
+                  'value' => implode(';', $site_leads),
+                ],
+              ];
+
+              // Update contact.
+              $contacts->update($property->vid, $properties);
+            }
+          }
 
           $response->addCommand($this->buildErrorDialog(
             $this->t('You are already registered'),
@@ -322,10 +337,6 @@ class OpenAccountForm extends FormBase {
       [
         'property' => 'phone_country_code',
         'value' => $values['country_code'],
-      ],
-      [
-        'property' => 'language_preference',
-        'value' => $values['language_preference'],
       ],
       [
         'property' => 'hs_language',
