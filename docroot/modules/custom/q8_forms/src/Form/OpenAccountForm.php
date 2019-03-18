@@ -11,6 +11,8 @@ use Drupal\hubspot_api\Manager;
 use SevenShores\Hubspot\Factory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Drupal\domain\DomainNegotiator;
+use Drupal\q8_theme\ThemeConstantsInterface;
 
 /**
  * Class AccountForm.
@@ -32,11 +34,19 @@ class OpenAccountForm extends FormBase {
   protected $hubspot;
 
   /**
+   * The domain negotiator.
+   *
+   * @var \Drupal\domain\DomainNegotiator
+   */
+  protected $domainNegotiator;
+
+  /**
    * Constructs a new HowCanWeHelpForm object.
    */
-  public function __construct(Request $request, Manager $hubspot) {
+  public function __construct(Request $request, Manager $hubspot, DomainNegotiator $domain_negotiator) {
     $this->requestStack = $request;
     $this->hubspot = $hubspot;
+    $this->domainNegotiator = $domain_negotiator;
   }
 
   /**
@@ -45,7 +55,8 @@ class OpenAccountForm extends FormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('request_stack')->getCurrentRequest(),
-      $container->get('hubspot_api.manager')
+      $container->get('hubspot_api.manager'),
+      $container->get('domain.negotiator')
     );
   }
 
@@ -131,6 +142,7 @@ class OpenAccountForm extends FormBase {
       '#default_value' => 'English',
       '#required' => TRUE,
     ];
+
     $form['interests'] = [
       '#type' => 'radios',
       '#title' => $this->t('What markets are you interested in?'),
@@ -207,6 +219,29 @@ class OpenAccountForm extends FormBase {
         // Validate if the user is already exists.
         $search = $contacts->search($formState->getValue('email'));
         if ($search->data->total) {
+
+          // Update field "Site Lead Source" for HubSpot.
+          if (isset($search->data->contacts[0]->properties->site_lead_source)) {
+            $property = $search->data->contacts[0];
+            $site_leads = (!empty($property->properties->site_lead_source->value))
+              ? explode(';', $property->properties->site_lead_source->value)
+              : [];
+            $current_site_lead = $this->getSiteLeadSource();
+
+            if (!in_array($current_site_lead, $site_leads)) {
+              $site_leads[] = $current_site_lead;
+              $properties = [
+                [
+                  'property' => 'site_lead_source',
+                  'value' => implode(';', $site_leads),
+                ],
+              ];
+
+              // Update contact.
+              $contacts->update($property->vid, $properties);
+            }
+          }
+
           $response->addCommand($this->buildErrorDialog(
             $this->t('You are already registered'),
             $this->t('You are already registered! Please use another email or contact us with another method')
@@ -276,6 +311,10 @@ class OpenAccountForm extends FormBase {
   public function buildProperties(array $values) {
     return [
       [
+        'property' => 'site_lead_source',
+        'value' => $this->getSiteLeadSource(),
+      ],
+      [
         'property' => 'email',
         'value' => $values['email'],
       ],
@@ -300,10 +339,6 @@ class OpenAccountForm extends FormBase {
         'value' => $values['country_code'],
       ],
       [
-        'property' => 'language_preference',
-        'value' => $values['language_preference'],
-      ],
-      [
         'property' => 'hs_language',
         'value' => $values['language_preference'] == 'English' ? 'en' : 'ar',
       ],
@@ -316,6 +351,21 @@ class OpenAccountForm extends FormBase {
         'value' => $values['interests'],
       ],
     ];
+  }
+
+  /**
+   * Helper function for building Site Lead Source on HabSpot.
+   */
+  public function getSiteLeadSource() {
+    $current_domain = $this->domainNegotiator->getActiveId();
+
+    switch ($current_domain) {
+      case ThemeConstantsInterface::BROKER_DOMAIN_ID:
+        return 'Broker';
+
+      case ThemeConstantsInterface::SECURITIES_DOMAIN_ID:
+        return 'Securities';
+    }
   }
 
   /**
