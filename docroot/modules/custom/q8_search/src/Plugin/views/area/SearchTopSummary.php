@@ -33,7 +33,7 @@ class SearchTopSummary extends AreaPluginBase implements ContainerFactoryPluginI
         ]
       );
     }
-    else{
+    else {
       $search_label = $this->t(
         '@total results',
         [
