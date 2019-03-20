@@ -363,8 +363,8 @@ class OpenAccountForm extends FormBase {
       case ThemeConstantsInterface::BROKER_DOMAIN_ID:
         return 'Broker';
 
-      case ThemeConstantsInterface::SECURITIES_DOMAIN_ID:
-        return 'Securities';
+      case ThemeConstantsInterface::PORTFOLIO_DOMAIN_ID:
+        return 'Portfolio';
     }
   }
 
