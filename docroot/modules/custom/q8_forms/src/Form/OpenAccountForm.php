@@ -12,7 +12,7 @@ use SevenShores\Hubspot\Factory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\domain\DomainNegotiator;
-use Drupal\q8_theme\ThemeConstantsInterface;
+use Drupal\q8_domain\DomainConstantsInterface;
 
 /**
  * Class AccountForm.
@@ -239,6 +239,15 @@ class OpenAccountForm extends FormBase {
 
               // Update contact.
               $contacts->update($property->vid, $properties);
+
+              $response->addCommand(
+                $this->buildSuccessDialog(
+                  $this->t('Success'),
+                  $formState->getValue('first_name') . ' ' . $formState->getValue('last_name'),
+                  $this->t('your request was submitted')
+                )
+              );
+              return $response;
             }
           }
 
@@ -360,10 +369,10 @@ class OpenAccountForm extends FormBase {
     $current_domain = $this->domainNegotiator->getActiveId();
 
     switch ($current_domain) {
-      case ThemeConstantsInterface::BROKER_DOMAIN_ID:
+      case DomainConstantsInterface::BROKER_DOMAIN_ID:
         return 'Broker';
 
-      case ThemeConstantsInterface::PORTFOLIO_DOMAIN_ID:
+      case DomainConstantsInterface::PORTFOLIO_DOMAIN_ID:
         return 'Portfolio';
     }
   }
