@@ -82,6 +82,7 @@
         font-size: 28px;
         line-height: 48px;
         margin-bottom: 10px;
+        font-weight: 300;
         @include media('<tablet-l') {
             font-size: 18px;
             line-height: normal;
