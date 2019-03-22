@@ -79,7 +79,7 @@
     }
     &.is-error {
         .oas--title {
-            color: $c-error;
+            color: white;
         }
         .item-list {
             @include media('>=tablet') {
@@ -103,7 +103,7 @@
                     top: 12px;
                     width: 18px;
                     height: 2px;
-                    background-color: $c-error;
+                    background-color: $c-bright;
                     @include media('<tablet') {
                         width: 14px;
                         top: 10px;
