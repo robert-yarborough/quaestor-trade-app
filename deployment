@@ -14,3 +14,4 @@ echo 'Preview and import drupal configs.'
 ../vendor/bin/drush updatedb -y
 ../vendor/bin/drush config-import -y
 ../vendor/bin/drush entity-updates -y
+../vendor/bin/drush cache-rebuild

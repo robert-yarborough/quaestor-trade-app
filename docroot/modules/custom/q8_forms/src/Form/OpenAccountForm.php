@@ -116,11 +116,15 @@ class OpenAccountForm extends FormBase {
 
     $label = $this->t('Phone');
     $form['phone'] = [
-      '#type' => 'tel',
       '#title' => $label,
       '#title_display' => 'invisible',
       '#required' => TRUE,
-      '#attributes' => [
+      '#type' => 'mobile_number',
+      '#mobile_number' => [
+        'allowed_countries' => [],
+        'verify' => 'none',
+        'tfa' => NULL,
+        'token_data' => [],
         'placeholder' => $label,
       ],
     ];
@@ -337,7 +341,7 @@ class OpenAccountForm extends FormBase {
       ],
       [
         'property' => 'phone',
-        'value' => $values['phone'],
+        'value' => $values['phone']['value'],
       ],
       [
         'property' => 'client_type',
