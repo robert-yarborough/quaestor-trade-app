@@ -115,21 +115,24 @@ class OpenAccountForm extends FormBase {
 
     $label = $this->t('Phone');
     $form['phone'] = [
-      '#type' => 'tel',
       '#title' => $label,
       '#title_display' => 'invisible',
       '#required' => TRUE,
-      '#attributes' => [
+      '#type' => 'mobile_number',
+      '#mobile_number' => [
+        'allowed_countries' => [],
+        'verify' => 'none',
+        'tfa' => NULL,
+        'token_data' => [],
         'placeholder' => $label,
       ],
     ];
 
-    $label = $this->t('Phone');
-    $form['phone'] = [
-      '#type' => 'tel',
+    $label = $this->t("Phone's Country Code");
+    $form['country_code'] = [
+      '#type' => 'textfield',
       '#title' => $label,
       '#title_display' => 'invisible',
-      '#required' => TRUE,
       '#attributes' => [
         'placeholder' => $label,
       ],

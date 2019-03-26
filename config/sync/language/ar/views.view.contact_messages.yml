@@ -4,6 +4,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Apply
           reset_button_label: 'إعادة الضبط'
           exposed_sorts_label: 'الترتيب حسب'
           sort_asc_label: تصاعدي
@@ -18,6 +19,8 @@ display:
       fields:
         subject:
           label: الموضوع
+        created:
+          label: الإنشاء
         operations:
           label: عمليات
   page_1:
