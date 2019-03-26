@@ -128,16 +128,6 @@ class OpenAccountForm extends FormBase {
       ],
     ];
 
-    $label = $this->t("Phone's Country Code");
-    $form['country_code'] = [
-      '#type' => 'textfield',
-      '#title' => $label,
-      '#title_display' => 'invisible',
-      '#attributes' => [
-        'placeholder' => $label,
-      ],
-    ];
-
     $form['language_preference'] = [
       '#type' => 'radios',
       '#title' => $this->t('Preferred language'),
@@ -339,16 +329,16 @@ class OpenAccountForm extends FormBase {
         'value' => $values['last_name'],
       ],
       [
+        'property' => 'country',
+        'value' => $values['phone']['country'],
+      ],
+      [
         'property' => 'phone',
         'value' => $values['phone']['value'],
       ],
       [
         'property' => 'client_type',
         'value' => $values['client_type'],
-      ],
-      [
-        'property' => 'phone_country_code',
-        'value' => $values['country_code'],
       ],
       [
         'property' => 'hs_language',
