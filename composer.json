@@ -100,7 +100,8 @@
             },
             "drupal/core":{
                 "Invalid translation language (und) specified. [#2995655]" : "https://www.drupal.org/files/issues/2018-09-04/invalid_translation_language-2995655-14.patch",
-                "Allow granular overriding of sql_mode options. [#2939760]" : "https://www.drupal.org/files/issues/2018-12-07/2939760-6.drupal.allow-granular-overriding-of-sqlmode-options.patch"
+                "Allow granular overriding of sql_mode options. [#2939760]" : "https://www.drupal.org/files/issues/2018-12-07/2939760-6.drupal.allow-granular-overriding-of-sqlmode-options.patch",
+                "IE 11 - Object doesn't support property or method 'contains'. [#3032680]" : "https://www.drupal.org/files/issues/2019-02-14/paragaphs_contains_issue_on_ie11_0.patch"
             }
         },
         "enable-patching": true
