@@ -18,6 +18,8 @@ display:
           admin_label: أيقونة
         type:
           label: النوع
+        timestamp:
+          label: التاريخ
         name:
           label: المستخدم
         link:
