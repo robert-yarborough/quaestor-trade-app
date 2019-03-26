@@ -113,11 +113,12 @@ class OpenAccountForm extends FormBase {
       ],
     ];
 
-    $label = $this->t("Phone's Country Code");
-    $form['country_code'] = [
-      '#type' => 'textfield',
+    $label = $this->t('Phone');
+    $form['phone'] = [
+      '#type' => 'tel',
       '#title' => $label,
       '#title_display' => 'invisible',
+      '#required' => TRUE,
       '#attributes' => [
         'placeholder' => $label,
       ],
@@ -336,7 +337,7 @@ class OpenAccountForm extends FormBase {
       ],
       [
         'property' => 'phone',
-        'value' => $values['phone'],
+        'value' => $values['phone']['value'],
       ],
       [
         'property' => 'client_type',
