@@ -74,7 +74,7 @@ class OpenAccountForm extends FormBase {
 
     $form['client_type'] = [
       '#type' => 'radios',
-      '#title' => $this->t('Are you an individual or institution'),
+      '#title' => $this->t('Are you an individual or institution?'),
       '#options' => ['Individual' => $this->t('Individual'), 'Institutional' => $this->t('Institution')],
       '#default_value' => 'Individual',
       '#required' => TRUE,
@@ -111,29 +111,25 @@ class OpenAccountForm extends FormBase {
       '#attributes' => [
         'placeholder' => $label,
       ],
-      '#description' => $this->t('Note: email should starts from letter'),
     ];
 
     $label = $this->t('Phone');
     $form['phone'] = [
+      '#type' => 'tel',
       '#title' => $label,
       '#title_display' => 'invisible',
       '#required' => TRUE,
-      '#type' => 'mobile_number',
-      '#mobile_number' => [
-        'allowed_countries' => [],
-        'verify' => 'none',
-        'tfa' => NULL,
-        'token_data' => [],
+      '#attributes' => [
         'placeholder' => $label,
       ],
     ];
 
-    $label = $this->t("Phone's Country Code");
-    $form['country_code'] = [
-      '#type' => 'textfield',
+    $label = $this->t('Phone');
+    $form['phone'] = [
+      '#type' => 'tel',
       '#title' => $label,
       '#title_display' => 'invisible',
+      '#required' => TRUE,
       '#attributes' => [
         'placeholder' => $label,
       ],
