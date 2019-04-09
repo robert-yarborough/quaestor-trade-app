@@ -1,0 +1,25 @@
+uuid: 416f3333-5887-498a-9647-93cb4f7585fb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_paragraph:cd1401fc-aa83-4b91-a841-9869f3f61487'
+  module:
+    - block_content
+  theme:
+    - q8_gray
+id: footerbannersecurities
+theme: q8_gray
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:cd1401fc-aa83-4b91-a841-9869f3f61487'
+settings:
+  id: 'block_content:cd1401fc-aa83-4b91-a841-9869f3f61487'
+  label: 'Footer Banner (securities)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
