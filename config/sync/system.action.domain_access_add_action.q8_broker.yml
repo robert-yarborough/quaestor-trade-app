@@ -1,0 +1,14 @@
+uuid: b353f538-8de1-414a-ae07-c7161a57945f
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_broker
+  module:
+    - domain_access
+id: domain_access_add_action.q8_broker
+label: 'Add selected content to the Q8 Broker domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: q8_broker

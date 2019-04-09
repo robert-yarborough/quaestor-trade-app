@@ -1,11 +1,11 @@
-uuid: 78b7ff65-2591-4b82-ae79-3aa76bc88945
+uuid: a54bd733-2967-42bc-b750-a335650cb303
 langcode: en
 status: true
 dependencies: {  }
-id: q8_blue
-domain_id: 4570803
+id: q8_broker
+domain_id: 8089199
 hostname: q8securities-blue.bfmdev1.com
-name: 'Q8 Blue'
+name: 'Q8 Broker'
 scheme: http
 weight: 1
 is_default: true

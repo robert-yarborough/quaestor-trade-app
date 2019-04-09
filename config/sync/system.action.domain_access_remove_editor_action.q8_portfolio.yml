@@ -1,0 +1,14 @@
+uuid: e9e73544-da33-43ad-bc42-7e788f8f0aa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_portfolio
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.q8_portfolio
+label: 'Remove editors from the Q8 Portfolio domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: q8_portfolio

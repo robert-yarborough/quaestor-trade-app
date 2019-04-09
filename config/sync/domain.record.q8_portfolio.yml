@@ -1,11 +1,11 @@
-uuid: 00b4a314-a585-43d0-b7bc-ebf65a038ff9
+uuid: c24b8f38-8b39-4fc7-ad38-d2f00d2334ce
 langcode: en
 status: true
 dependencies: {  }
-id: q8_tur
-domain_id: 5374323
+id: q8_portfolio
+domain_id: 16160045
 hostname: q8securities-tur.bfmdev1.com
-name: 'Q8 Turquoise'
+name: 'Q8 Portfolio'
 scheme: http
 weight: 2
 is_default: false

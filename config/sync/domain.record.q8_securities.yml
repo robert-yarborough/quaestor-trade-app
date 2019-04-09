@@ -1,0 +1,11 @@
+uuid: 8cc93ef2-8984-432c-8fa5-0822cbe29a59
+langcode: en
+status: true
+dependencies: {  }
+id: q8_securities
+domain_id: 14462785
+hostname: q8securities.bfmdev1.com
+name: 'Q8 Securities'
+scheme: http
+weight: 3
+is_default: false

@@ -1,0 +1,14 @@
+uuid: 488a9aad-9a1e-4c63-bbfd-3d15dda98210
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_portfolio
+  module:
+    - domain_access
+id: domain_access_add_action.q8_portfolio
+label: 'Add selected content to the Q8 Portfolio domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: q8_portfolio

@@ -46,7 +46,7 @@ services:
     labels:
       - 'traefik.backend=nginx'
       - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL},${PROJECT_BASE_URL_TUR}'
+      - 'traefik.frontend.rule=Host:portfolio.${PROJECT_BASE_URL},broker.${PROJECT_BASE_URL},securities.${PROJECT_BASE_URL}'
 
 #  node:
 #    image: wodby/node:$NODE_TAG
@@ -117,6 +117,23 @@ services:
     - 'traefik.backend=pma'
     - 'traefik.port=80'
     - 'traefik.frontend.rule=Host:pma.${PROJECT_BASE_URL}'
+
+#  jdk:
+#    image: anapsix/alpine-java
+#    container_name: "${PROJECT_NAME}_jdk"
+#    expose:
+#      - "8080"
+#    volumes:
+#      - ./:/var/www/html
+
+#    volumes:
+#        - $PROJECT_ROOT/java/home/batchuser/bin:/home/batchuser/bin
+#        - $PROJECT_ROOT/java/var_log/batchuser:/var/log/batchuser
+#        - $PROJECT_ROOT/mysftp/sshkeys/id_rsa:/home/batchuser/.ssh/id_rsa:ro
+#    working_dir: /var/www/html
+#    ports:
+#      - '8000:80'
+#    command: tail -f /dev/null
 
 volumes:
   codebase:
