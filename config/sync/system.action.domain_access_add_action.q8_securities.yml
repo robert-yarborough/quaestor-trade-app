@@ -1,0 +1,14 @@
+uuid: 66c93258-b2f7-451c-83d0-6acf78cffdac
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_securities
+  module:
+    - domain_access
+id: domain_access_add_action.q8_securities
+label: 'Add selected content to the Q8 Securities domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: q8_securities

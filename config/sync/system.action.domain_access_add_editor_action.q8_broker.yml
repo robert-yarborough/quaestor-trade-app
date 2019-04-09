@@ -1,0 +1,14 @@
+uuid: 0f62fd42-4cbe-4931-983e-dcb57c284086
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_broker
+  module:
+    - domain_access
+id: domain_access_add_editor_action.q8_broker
+label: 'Add editors to the Q8 Broker domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: q8_broker

@@ -1,0 +1,14 @@
+uuid: 11ed5b57-16b5-4bf9-8791-aac914986436
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_broker
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.q8_broker
+label: 'Remove editors from the Q8 Broker domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: q8_broker

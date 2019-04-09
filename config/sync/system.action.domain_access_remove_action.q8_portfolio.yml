@@ -1,0 +1,14 @@
+uuid: c5168b52-b4e7-4649-924a-bed674d2cd71
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_portfolio
+  module:
+    - domain_access
+id: domain_access_remove_action.q8_portfolio
+label: 'Remove selected content from the Q8 Portfolio domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: q8_portfolio

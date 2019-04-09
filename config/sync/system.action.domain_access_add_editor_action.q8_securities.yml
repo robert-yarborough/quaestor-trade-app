@@ -1,0 +1,14 @@
+uuid: 34df6f9d-e744-4e10-aac2-b2b494e5f665
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.q8_securities
+  module:
+    - domain_access
+id: domain_access_add_editor_action.q8_securities
+label: 'Add editors to the Q8 Securities domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: q8_securities
