@@ -27,6 +27,6 @@ visibility:
   domain:
     id: domain
     domains:
-      q8_tur: q8_tur
+      q8_portfolio: q8_portfolio
     negate: false
     context_mapping: {  }

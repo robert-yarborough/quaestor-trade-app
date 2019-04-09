@@ -1,0 +1,8 @@
+uuid: 21f284cb-804d-4337-a2f2-7c768df66314
+langcode: en
+status: true
+dependencies: {  }
+id: supernav-gray
+label: 'Supernav (securities)'
+description: 'Site information links'
+locked: false

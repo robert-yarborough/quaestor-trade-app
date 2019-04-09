@@ -5,7 +5,7 @@ dependencies: {  }
 id: open_an_account
 label: 'Open an account'
 context:
-  show_warning: false
+  show_warning: true
   group:
     language: true
     domain: true

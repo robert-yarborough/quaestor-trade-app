@@ -1,0 +1,22 @@
+uuid: bc11d703-d240-4687-9248-bd064b8e45bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - q8_gray
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: q8_gray_messages
+theme: q8_gray
+region: header
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

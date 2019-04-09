@@ -1,0 +1,24 @@
+uuid: c5c26179-c153-4a4f-a596-1522114483d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account-gray
+  module:
+    - system
+  theme:
+    - q8_gray
+id: useraccountmenusecurities
+theme: q8_gray
+region: content_top
+weight: 1
+provider: null
+plugin: 'system_menu_block:account-gray'
+settings:
+  id: 'system_menu_block:account-gray'
+  label: 'User account menu (securities)'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

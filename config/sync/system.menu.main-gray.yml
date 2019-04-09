@@ -1,0 +1,8 @@
+uuid: 65d50258-73ff-4bd0-b14d-fcb849769978
+langcode: en
+status: true
+dependencies: {  }
+id: main-gray
+label: 'Main navigation (securities)'
+description: 'Site section links'
+locked: false

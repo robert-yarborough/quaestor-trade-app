@@ -1,0 +1,37 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss",
+  ],
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "function",
+        "extend",
+        "include",
+        "mixin",
+        "define-mixin",
+        "if",
+        "else",
+        "return"
+      ]
+    }],
+    "number-leading-zero": null,
+    "no-invalid-double-slash-comments": null,
+    "property-case": "lower",
+    "selector-type-case": "lower",
+    "no-unknown-animations":true,
+    "selector-max-compound-selectors": 3,
+    "no-duplicate-selectors": true,
+    "shorthand-property-no-redundant-values": true,
+    "max-nesting-depth": 2,
+    "no-descending-specificity": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates"]
+      }
+    ]
+  }
+}

@@ -142,6 +142,7 @@ theme:
   q8_base: 0
   q8_blue: 0
   q8_tur: 0
+  q8_gray: 0
 profile: lightning
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

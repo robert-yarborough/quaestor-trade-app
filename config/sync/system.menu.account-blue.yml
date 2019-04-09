@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: account-blue
-label: 'User account menu (blue)'
-description: ''
+label: 'User account menu (broker)'
+description: 'Links related to the active user account'
 locked: false

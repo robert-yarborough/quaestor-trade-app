@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: main-blue
-label: 'Main navigation (blue)'
-description: ''
+label: 'Main navigation (broker)'
+description: 'Site section links'
 locked: false
