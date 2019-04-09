@@ -1,0 +1,25 @@
+uuid: f5c70544-f025-4568-b099-f7dc1483115c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_paragraph:a1838552-9cb4-4613-a2fa-e0add34a5514'
+  module:
+    - block_content
+  theme:
+    - q8_gray
+id: copyrightsecurities
+theme: q8_gray
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:a1838552-9cb4-4613-a2fa-e0add34a5514'
+settings:
+  id: 'block_content:a1838552-9cb4-4613-a2fa-e0add34a5514'
+  label: 'Copyright (securities)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
