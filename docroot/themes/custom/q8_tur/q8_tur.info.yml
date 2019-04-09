@@ -1,6 +1,6 @@
 name: 'Q8 turquoise theme'
 type: theme
-description: 'Turquoise theme Q8 Securities'
+description: 'Turquoise theme Q8 Portfolio'
 package: Custom
 core: 8.x
 base theme: q8_base

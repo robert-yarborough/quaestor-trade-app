@@ -1,0 +1,20 @@
+uuid: 55458276-9c53-4072-82ae-9e2bbc8124cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - q8_search
+  theme:
+    - q8_gray
+id: simplesearchblock
+theme: q8_gray
+region: content_top
+weight: -1
+provider: null
+plugin: simple_search_block
+settings:
+  id: simple_search_block
+  label: 'Simple search block'
+  provider: q8_search
+  label_display: '0'
+visibility: {  }

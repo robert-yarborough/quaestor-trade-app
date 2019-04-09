@@ -1,0 +1,24 @@
+uuid: 3de51bd7-1b17-42c2-a8a2-373a56cb0285
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-gray
+  module:
+    - system
+  theme:
+    - q8_gray
+id: mainnavigationsecurities
+theme: q8_gray
+region: content_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:main-gray'
+settings:
+  id: 'system_menu_block:main-gray'
+  label: 'Main navigation (securities)'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

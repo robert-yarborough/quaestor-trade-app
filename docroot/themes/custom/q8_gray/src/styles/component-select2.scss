@@ -1,0 +1,49 @@
+@import 'core/core';
+
+.select2-container--filter-q8 {
+    background-color: $c-str-1;
+    min-width: 130px;
+    .select2-selection {
+        font-size: 17px;
+    }
+    .select2-selection--single {
+        height: 37px;
+        line-height: 37px;
+        .select2-selection__rendered {
+            padding-left: 15px;
+            padding-right: 30px;
+        }
+    }
+    .select2-selection__arrow {
+        width: 8px;
+        height: 8px;
+        right: 12px;
+        margin-top: -6px;
+        &:after {
+            width: 8px;
+            height: 8px;
+            border: 0;
+            border-bottom: 2px solid $c-primary;
+            border-right: 2px solid $c-primary;
+            transform: rotate(45deg);
+        }
+    }
+    .select2-dropdown {
+        border-radius: 0;
+        box-shadow: none;
+        border: 0;
+    }
+    .select2-results__option {
+        padding: 7px 15px;
+        background-color: $c-str-1;
+        margin: 1px 0;
+        &[aria-selected=true] {
+            font-weight: 700;
+            color: $c-primary;
+        }
+    }
+    .select2-results__option--highlighted {
+        background-color: $c-str-1;
+        color: $c-primary;
+    }
+}

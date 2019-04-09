@@ -1,0 +1,8 @@
+uuid: 5756dcda-628d-4734-bfed-dbc05da11ba2
+langcode: en
+status: true
+dependencies: {  }
+id: account-gray
+label: 'User account menu (securities)'
+description: 'Links related to the active user account'
+locked: false

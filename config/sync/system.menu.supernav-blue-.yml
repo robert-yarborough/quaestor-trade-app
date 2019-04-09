@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: supernav-blue-
-label: 'Supernav (blue)'
-description: ''
+label: 'Supernav (broker)'
+description: 'Site information links'
 locked: false

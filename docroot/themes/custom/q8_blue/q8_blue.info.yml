@@ -1,6 +1,6 @@
 name: 'Q8 blue theme'
 type: theme
-description: 'Blue theme Q8 Securities'
+description: 'Blue theme Q8 Broker'
 package: Custom
 core: 8.x
 base theme: q8_base

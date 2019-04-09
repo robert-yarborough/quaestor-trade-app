@@ -1,0 +1,22 @@
+uuid: b07d96ab-a93c-43ea-93f0-33ab182b85a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - q8_gray
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: q8_gray_content
+theme: q8_gray
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

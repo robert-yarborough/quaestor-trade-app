@@ -26,6 +26,6 @@ visibility:
   domain:
     id: domain
     domains:
-      q8_blue: q8_blue
+      q8_broker: q8_broker
     negate: false
     context_mapping: {  }

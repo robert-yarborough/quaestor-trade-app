@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: supernav
-label: 'Supernav (tur)'
+label: 'Supernav (portfolio)'
 description: 'Site information links'
 locked: false

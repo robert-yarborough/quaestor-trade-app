@@ -5,5 +5,5 @@ q8_broker_site: q8_blue
 q8_broker_admin: seven
 q8_portfolio_site: q8_tur
 q8_portfolio_admin: seven
-q8_securities_site: q8_blue
+q8_securities_site: q8_gray
 q8_securities_admin: seven

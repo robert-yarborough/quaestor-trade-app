@@ -5,7 +5,7 @@ dependencies: {  }
 id: article_listing
 label: 'Article Listing'
 context:
-  show_warning: false
+  show_warning: true
   group:
     language: true
     domain: true
