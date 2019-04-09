@@ -12,7 +12,7 @@ use SevenShores\Hubspot\Factory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\domain\DomainNegotiator;
-use Drupal\q8_theme\ThemeConstantsInterface;
+use Drupal\q8_domain\DomainConstantsInterface;
 
 /**
  * Class AccountForm.
@@ -74,7 +74,7 @@ class OpenAccountForm extends FormBase {
 
     $form['client_type'] = [
       '#type' => 'radios',
-      '#title' => $this->t('Are you an individual or institution'),
+      '#title' => $this->t('Are you an individual or institution?'),
       '#options' => ['Individual' => $this->t('Individual'), 'Institutional' => $this->t('Institution')],
       '#default_value' => 'Individual',
       '#required' => TRUE,
@@ -111,26 +111,19 @@ class OpenAccountForm extends FormBase {
       '#attributes' => [
         'placeholder' => $label,
       ],
-      '#description' => $this->t('Note: email should starts from letter'),
     ];
 
     $label = $this->t('Phone');
     $form['phone'] = [
-      '#type' => 'tel',
       '#title' => $label,
       '#title_display' => 'invisible',
       '#required' => TRUE,
-      '#attributes' => [
-        'placeholder' => $label,
-      ],
-    ];
-
-    $label = $this->t("Phone's Country Code");
-    $form['country_code'] = [
-      '#type' => 'textfield',
-      '#title' => $label,
-      '#title_display' => 'invisible',
-      '#attributes' => [
+      '#type' => 'mobile_number',
+      '#mobile_number' => [
+        'allowed_countries' => [],
+        'verify' => 'none',
+        'tfa' => NULL,
+        'token_data' => [],
         'placeholder' => $label,
       ],
     ];
@@ -239,6 +232,15 @@ class OpenAccountForm extends FormBase {
 
               // Update contact.
               $contacts->update($property->vid, $properties);
+
+              $response->addCommand(
+                $this->buildSuccessDialog(
+                  $this->t('Success'),
+                  $formState->getValue('first_name') . ' ' . $formState->getValue('last_name'),
+                  $this->t('your request was submitted')
+                )
+              );
+              return $response;
             }
           }
 
@@ -327,16 +329,16 @@ class OpenAccountForm extends FormBase {
         'value' => $values['last_name'],
       ],
       [
+        'property' => 'country',
+        'value' => $values['phone']['country'],
+      ],
+      [
         'property' => 'phone',
-        'value' => $values['phone'],
+        'value' => $values['phone']['value'],
       ],
       [
         'property' => 'client_type',
         'value' => $values['client_type'],
-      ],
-      [
-        'property' => 'phone_country_code',
-        'value' => $values['country_code'],
       ],
       [
         'property' => 'hs_language',
@@ -360,10 +362,10 @@ class OpenAccountForm extends FormBase {
     $current_domain = $this->domainNegotiator->getActiveId();
 
     switch ($current_domain) {
-      case ThemeConstantsInterface::BROKER_DOMAIN_ID:
+      case DomainConstantsInterface::BROKER_DOMAIN_ID:
         return 'Broker';
 
-      case ThemeConstantsInterface::PORTFOLIO_DOMAIN_ID:
+      case DomainConstantsInterface::PORTFOLIO_DOMAIN_ID:
         return 'Portfolio';
 
       case DomainConstantsInterface::SECURITIES_DOMAIN_ID:

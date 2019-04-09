@@ -7,6 +7,7 @@ display:
           content: '<p>Welcome to [site:name]. No front page content has been created yet.</p><p>Would you like to <a href="/profiles/contrib/lightning/README.md">view the README</a>?</p>'
       exposed_form:
         options:
+          submit_button: Apply
           reset_button_label: 'إعادة الضبط'
           exposed_sorts_label: 'الترتيب حسب'
           sort_asc_label: تصاعدي

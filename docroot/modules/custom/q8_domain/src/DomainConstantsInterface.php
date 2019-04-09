@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\q8_theme;
+namespace Drupal\q8_domain;
 
 /**
  * Search constants.
  */
-interface ThemeConstantsInterface {
+interface DomainConstantsInterface {
 
   // Domains name.
   const BROKER_DOMAIN_ID = 'q8_broker';
