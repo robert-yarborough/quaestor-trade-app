@@ -24,6 +24,13 @@
     }
     &__cta {
         text-align: center;
+        .btn-primary__light {
+            &:hover {
+                color: white;
+                background-color: $c-secondary;
+                border-color: $c-secondary;
+            }
+        }
     }
     .available-links {
         &__inner {

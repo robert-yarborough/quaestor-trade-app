@@ -38,7 +38,7 @@
         flex-direction: column;
         position: relative;
         margin-top: 100px;
-        border-bottom: 7px solid $c-bright;
+        border-bottom: 7px solid $c-secondary;
         @include media('<tablet-l') {
             margin-top: 80px;
         }

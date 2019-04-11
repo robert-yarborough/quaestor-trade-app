@@ -150,8 +150,9 @@
                             transition: .3s;
                         }
                         &:hover {
-                            background-color: $c-bright;
-                            color: $c-base;
+                            box-shadow: inset 0 0 0 1px white;
+                            background-color: $c-secondary;
+                            color: white;
                         }
                         &:focus {
                             background-color: white;
@@ -167,7 +168,7 @@
                     a[data-drupal-link-system-path*='logout'] {
                         box-shadow: inset 0 0 0 1px white;
                         transition: .3s;
-                        background-color: $c-primary;
+                        background-color: transparent;
                         position: relative;
                         &:after {
                             content: '';
@@ -202,12 +203,9 @@
                             color: white;
                         }
                         &:hover {
-                            box-shadow: inset 0 0 0 1px $c-bright;
-                            color: $c-primary;
-                            background-color: white;
-                            &:after {
-                                background-image: url('../images/icons/svg/icon-login-blue.svg');
-                            }
+                            box-shadow: inset 0 0 0 1px white;
+                            color: white;
+                            background-color: $c-secondary;
                         }
                         &:focus {
                             color: white;
@@ -242,8 +240,9 @@
     }
     .header-search {
         position: relative;
-        width: 30px;
         height: 29px;
+        display: flex;
+        align-items: center;
         @include media('>tablet-l') {
             margin-left: 30px;
             top: -5px;
@@ -271,75 +270,55 @@
             position: relative;
             display: block;
             height: 100%;
+            width: 30px;
             .q-icon {
                 width: 100%;
                 height: 100%;
-                fill: $c-bright;
+                fill: $c-light;
                 transition: .3s fill;
-            }
-            &:before, &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 3px;
-                height: 32px;
-                background-color: $c-bright;
-                left: 12px;
-                top: 50%;
-                margin-top: -15px;
-                opacity: 0;
-            }
-            &:before {
-                transform: rotate(-45deg);
-            }
-            &:after {
-                transform: rotate(45deg);
             }
             &:hover {
                 .q-icon {
-                    fill: white;
-                }
-            }
-            &.is-active {
-                .q-icon {
-                    opacity: 0;
-                }
-                &:before, &:after {
-                    opacity: 1;
+                    fill: $c-secondary;
                 }
             }
         }
         &__box {
-            position: absolute;
+            //position: absolute;
             right: 100%;
             top: -5px;
-            margin-right: 10px;
-            min-width: 400px;
+            margin-top: 5px;
             transition: .5s;
             z-index: 5;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            width: 0;
+            max-width: 0;
             .q-icon {
                 width: 20px;
                 height: 19px;
                 fill: white;
                 transition: .3s fill;
             }
-            &:not(.is-opened) {
-                opacity: 0;
-                visibility: hidden;
-                transform: translateX(20px);
-                min-width: 20px;
+            &.is-opened {
+                width: 290px;
+                max-width: 290px;
+                opacity: 1;
+                visibility: visible;
             }
         }
         &__field {
             height: 40px;
-            background-color: $c-primary;
-            border-color: white;
-            box-shadow: inset 0 0 0 1px white, inset 0 0 0 1px white;
+            background-color: transparent;
+            box-shadow: none;
             color: white;
             width: 100%;
-            padding-right: 50px;
+            padding: 5px 15px;
+            font-weight: 400;
+            font-size: 18px;
             &:focus {
-                box-shadow: inset 0 0 0 1px white, inset 0 0 0 1px white;
+                box-shadow: none;
             }
             @include placeholder {
                 color: white;
@@ -357,7 +336,8 @@
                 pointer-events: none;
                 position: absolute;
                 right: 15px;
-                top: 9px;
+                top: 4px;
+                display: none;
             }
         }
         .form-item {
@@ -375,7 +355,7 @@
     }
     &:before, &:after, span {
         display: block;
-        background-color: $c-bright;
+        background-color: $c-secondary;
         width: 100%;
         height: 3px;
         transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -405,7 +385,7 @@
         position: absolute;
         width: 3px;
         height: 32px;
-        background-color: $c-bright;
+        background-color: $c-secondary;
         left: 19px;
         top: 50%;
         margin-top: -15px;

@@ -22,9 +22,9 @@
         display: block;
         &:hover {
             a {
-                color: $c-bright;
+                color: $c-secondary;
                 &:after {
-                    fill: $c-bright;
+                    fill: $c-secondary;
                 }
             }
         }
@@ -71,7 +71,7 @@
         &.is-active {
             li.is-current {
                 a {
-                    color: $c-bright;
+                    color: $c-secondary;
                     &:after {
                         top: 14px;
                         transform: rotate(-45deg);
@@ -226,7 +226,7 @@
         a {
             color: inherit;
             &:hover {
-                color: $c-bright;
+                color: $c-secondary;
             }
         }
     }
@@ -268,7 +268,7 @@
         a {
             color: inherit;
             &:hover {
-                color: $c-bright;
+                color: $c-secondary;
             }
         }
     }
@@ -290,9 +290,9 @@
         color: white;
         text-transform: uppercase;
         &:hover {
-            color: $c-bright;
+            color: $c-secondary;
             .q-icon {
-                fill: $c-bright;
+                fill: $c-secondary;
             }
         }
     }

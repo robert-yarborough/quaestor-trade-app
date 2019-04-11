@@ -89,15 +89,15 @@
 }
 %btn-light {
     @extend %btn-primary;
-    color: $c-bright;
-    border-color: $c-bright;
+    color: $c-light;
+    border-color: $c-light;
     &:hover  {
         color: $c-base;
-        background-color: $c-bright;
+        background-color: $c-light;
     }
     &:focus {
-        color: $c-bright;
-        border-color: $c-bright;
+        color: $c-light;
+        border-color: $c-light;
         background-color: transparent;
     }
 }
