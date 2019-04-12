@@ -101,3 +101,17 @@
         background-color: transparent;
     }
 }
+%btn-mediate {
+    @extend %btn-primary;
+    color: $c-secondary;
+    border-color: $c-secondary;
+    &:hover  {
+        color: white;
+        background-color: $c-secondary;
+    }
+    &:focus {
+        color: $c-secondary;
+        border-color: $c-secondary;
+        background-color: transparent;
+    }
+}

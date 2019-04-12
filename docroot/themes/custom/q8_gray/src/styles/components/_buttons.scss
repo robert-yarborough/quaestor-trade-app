@@ -8,6 +8,9 @@
         &__light {
             @extend %btn-light;
         }
+        &__mediate {
+            @extend %btn-mediate;
+        }
     }
 }
 .fancybox-button {

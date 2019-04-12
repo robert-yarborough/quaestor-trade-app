@@ -38,7 +38,6 @@
         flex-direction: column;
         position: relative;
         margin-top: 100px;
-        border-bottom: 7px solid $c-secondary;
         @include media('<tablet-l') {
             margin-top: 80px;
         }
@@ -68,8 +67,15 @@
         background-color: white;
         padding: 100px 20px 25px;
         flex-grow: 1;
+        transition: .4s;
+        border-bottom: 7px solid $c-primary;
         @include media('<tablet-l') {
             padding: 95px 15px 25px;
+        }
+        &:hover {
+            @include media('>=tablet-l') {
+                box-shadow: 0 0 12px rgba(0,0,0,.3);
+            }
         }
     }
     &__title {
