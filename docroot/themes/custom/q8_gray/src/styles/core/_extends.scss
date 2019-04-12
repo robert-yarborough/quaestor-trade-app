@@ -89,15 +89,29 @@
 }
 %btn-light {
     @extend %btn-primary;
-    color: $c-bright;
-    border-color: $c-bright;
+    color: $c-light;
+    border-color: $c-light;
     &:hover  {
         color: $c-base;
-        background-color: $c-bright;
+        background-color: $c-light;
     }
     &:focus {
-        color: $c-bright;
-        border-color: $c-bright;
+        color: $c-light;
+        border-color: $c-light;
+        background-color: transparent;
+    }
+}
+%btn-mediate {
+    @extend %btn-primary;
+    color: $c-secondary;
+    border-color: $c-secondary;
+    &:hover  {
+        color: white;
+        background-color: $c-secondary;
+    }
+    &:focus {
+        color: $c-secondary;
+        border-color: $c-secondary;
         background-color: transparent;
     }
 }

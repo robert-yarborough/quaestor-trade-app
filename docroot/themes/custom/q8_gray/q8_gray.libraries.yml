@@ -48,7 +48,7 @@ module-features:
     - core/jquery
     - core/jquery.once
     - core/drupal
-    - q8_blue/vendor-swiper
+    - q8_gray/vendor-swiper
 
 module-finance:
   css:
@@ -60,7 +60,7 @@ module-finance:
     - core/jquery
     - core/jquery.once
     - core/drupal
-    - q8_blue/vendor-swiper
+    - q8_gray/vendor-swiper
 
 module-rates:
   css:
@@ -72,7 +72,7 @@ module-rates:
     - core/jquery
     - core/jquery.once
     - core/drupal
-    - q8_blue/vendor-swiper
+    - q8_gray/vendor-swiper
 
 module-tabs-filters:
   css:

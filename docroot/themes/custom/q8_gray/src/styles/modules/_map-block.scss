@@ -142,13 +142,13 @@
             }
         }
         .q-icon {
-            fill: $c-primary;
+            fill: $c-secondary;
             vertical-align: middle;
         }
         a {
             color: $c-base;
             &:hover {
-                color: $c-primary;
+                color: $c-secondary;
             }
         }
     }

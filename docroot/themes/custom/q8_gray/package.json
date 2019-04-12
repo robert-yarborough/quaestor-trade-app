@@ -58,6 +58,6 @@
     "webpack-bundle-analyzer": "^2.9.0"
   },
   "dependencies": {
-    "del": "^4.0.0"
+    "del": "^4.1.0"
   }
 }

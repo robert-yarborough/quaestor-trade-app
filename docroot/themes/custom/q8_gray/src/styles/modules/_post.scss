@@ -8,7 +8,7 @@
     &__inner {
         background-color: white;
         padding: 40px 50px;
-        border-bottom: 5px solid $c-bright;
+        border-bottom: 5px solid $c-secondary;
         @include media('>=tablet') {
             display: flex;
         }
@@ -126,7 +126,7 @@
         }
         .abf-top {
             background-color: white;
-            border-bottom: 7px solid $c-bright;
+            border-bottom: 7px solid $c-secondary;
             display: flex;
             margin-bottom: 40px;
             @include media('<tablet-l') {
@@ -260,7 +260,7 @@
         }
         .views-row {
             border: 1px solid $c-str-8;
-            border-bottom: 4px solid $c-bright;
+            border-bottom: 4px solid $c-secondary;
             padding: 25px 40px;
             position: relative;
             background-color: white;
