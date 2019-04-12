@@ -273,7 +273,7 @@
     &.is-image--large {
         .info-block__content {
             @include media('>=tablet') {
-                padding-right: 0;
+                padding-right: 5vw;
             }
         }
         .info-block__image {
@@ -285,6 +285,18 @@
             &:not(.is-image) {
                 @include media('>=tablet-l') {
                     padding-left: 11.197vw;
+                }
+            }
+        }
+        &.is-image--left {
+            .info-block__col {
+                &:not(.is-image) {
+                    @include media('>=tablet-l') {
+                        padding-left: 0;
+                        .info-block__list {
+                            max-width: 600px;
+                        }
+                    }
                 }
             }
         }
@@ -327,12 +339,16 @@
     }
     &.is-image--contain {
         .info-block__image {
-            background-size: contain;
-            max-height: 720px;
+            background-size: cover;
         }
     }
     .block-title {
         font-weight: 300;
+        &.-diff-divide {
+            strong {
+                display: inline;
+            }
+        }
         @include media('>=tablet') {
             margin-bottom: 40px;
         }
