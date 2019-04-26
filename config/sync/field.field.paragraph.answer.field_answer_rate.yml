@@ -1,0 +1,19 @@
+uuid: 7c1bc812-4c33-485c-8306-85d37624be2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_answer_rate
+    - paragraphs.paragraphs_type.answer
+id: paragraph.answer.field_answer_rate
+field_name: field_answer_rate
+entity_type: paragraph
+bundle: answer
+label: Rate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,33 @@
+uuid: 1a61d181-5070-44e5-ae98-eec3d617f617
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.answer.field_answer
+    - field.field.paragraph.answer.field_answer_rate
+    - paragraphs.paragraphs_type.answer
+id: paragraph.answer.default
+targetEntityType: paragraph
+bundle: answer
+mode: default
+content:
+  field_answer:
+    weight: 0
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_answer_rate:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,27 @@
+uuid: 87d66b68-cdd1-4ede-9674-8d1907b6fe18
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_question_type
+field_name: field_question_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: multi
+      label: multi
+    -
+      value: single
+      label: single
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

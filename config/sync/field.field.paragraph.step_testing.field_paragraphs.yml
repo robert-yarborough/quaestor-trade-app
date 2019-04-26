@@ -1,0 +1,94 @@
+uuid: b27301c8-4634-42bc-ac2a-7774302d61df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.question
+    - paragraphs.paragraphs_type.step_testing
+  module:
+    - entity_reference_revisions
+id: paragraph.step_testing.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: step_testing
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      question: question
+    target_bundles_drag_drop:
+      step_testing:
+        weight: 21
+        enabled: false
+      2_columns_image_text:
+        weight: 22
+        enabled: false
+      answer:
+        weight: 23
+        enabled: false
+      app_stores:
+        weight: 23
+        enabled: false
+      application:
+        weight: 24
+        enabled: false
+      application_banners_block:
+        weight: 25
+        enabled: false
+      articles:
+        weight: 26
+        enabled: false
+      banner_app_stores:
+        weight: 27
+        enabled: false
+      copyright:
+        weight: 28
+        enabled: false
+      feature:
+        weight: 29
+        enabled: false
+      features:
+        weight: 30
+        enabled: false
+      gray_banner:
+        weight: 31
+        enabled: false
+      list_content:
+        weight: 32
+        enabled: false
+      list_content2:
+        weight: 33
+        enabled: false
+      map:
+        weight: 34
+        enabled: false
+      market_news:
+        weight: 35
+        enabled: false
+      options:
+        weight: 36
+        enabled: false
+      rate_item:
+        weight: 37
+        enabled: false
+      rates:
+        weight: 38
+        enabled: false
+      question:
+        enabled: true
+        weight: 39
+      text_with_image:
+        weight: 39
+        enabled: false
+      top_banner:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

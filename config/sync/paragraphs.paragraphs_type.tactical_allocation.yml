@@ -1,0 +1,9 @@
+uuid: e3f62b26-387b-43a2-bb9c-46a9d60e676f
+langcode: en
+status: true
+dependencies: {  }
+id: tactical_allocation
+label: 'Tactical Allocation'
+icon_uuid: null
+description: 'Testing: used to form the final result of the testing.'
+behavior_plugins: {  }

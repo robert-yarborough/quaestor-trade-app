@@ -1,0 +1,104 @@
+uuid: 4877ac34-2b4c-4290-9bfb-627fd6be45b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.quiz
+    - paragraphs.paragraphs_type.initial_allocation
+    - paragraphs.paragraphs_type.step_testing
+    - paragraphs.paragraphs_type.tactical_allocation
+  module:
+    - entity_reference_revisions
+id: node.quiz.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: quiz
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      initial_allocation: initial_allocation
+      tactical_allocation: tactical_allocation
+      step_testing: step_testing
+    target_bundles_drag_drop:
+      2_columns_image_text:
+        weight: 23
+        enabled: false
+      initial_allocation:
+        enabled: true
+        weight: 24
+      app_stores:
+        weight: 24
+        enabled: false
+      tactical_allocation:
+        enabled: true
+        weight: 25
+      application:
+        weight: 25
+        enabled: false
+      application_banners_block:
+        weight: 26
+        enabled: false
+      answer:
+        weight: 26
+        enabled: false
+      articles:
+        weight: 27
+        enabled: false
+      banner_app_stores:
+        weight: 28
+        enabled: false
+      copyright:
+        weight: 29
+        enabled: false
+      feature:
+        weight: 30
+        enabled: false
+      features:
+        weight: 31
+        enabled: false
+      gray_banner:
+        weight: 32
+        enabled: false
+      list_content:
+        weight: 33
+        enabled: false
+      list_content2:
+        weight: 34
+        enabled: false
+      map:
+        weight: 35
+        enabled: false
+      market_news:
+        weight: 36
+        enabled: false
+      options:
+        weight: 37
+        enabled: false
+      rate_item:
+        weight: 38
+        enabled: false
+      rates:
+        weight: 39
+        enabled: false
+      step_testing:
+        enabled: true
+        weight: 40
+      question:
+        weight: 41
+        enabled: false
+      text_with_image:
+        weight: 41
+        enabled: false
+      top_banner:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

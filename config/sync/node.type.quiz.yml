@@ -1,0 +1,17 @@
+uuid: 26a2bcfc-d3d2-47cb-81ef-bb3df936e018
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Quiz
+type: quiz
+description: 'Use Quiz pages for your create question/answer content.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

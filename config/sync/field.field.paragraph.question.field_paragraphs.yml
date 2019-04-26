@@ -1,0 +1,94 @@
+uuid: 8aae1ea4-abed-4808-a284-c495b819a853
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.answer
+    - paragraphs.paragraphs_type.question
+  module:
+    - entity_reference_revisions
+id: paragraph.question.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: question
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      answer: answer
+    target_bundles_drag_drop:
+      answer:
+        enabled: true
+        weight: 23
+      2_columns_image_text:
+        weight: 24
+        enabled: false
+      app_stores:
+        weight: 25
+        enabled: false
+      application:
+        weight: 26
+        enabled: false
+      application_banners_block:
+        weight: 27
+        enabled: false
+      articles:
+        weight: 28
+        enabled: false
+      banner_app_stores:
+        weight: 29
+        enabled: false
+      copyright:
+        weight: 30
+        enabled: false
+      feature:
+        weight: 31
+        enabled: false
+      features:
+        weight: 32
+        enabled: false
+      gray_banner:
+        weight: 33
+        enabled: false
+      list_content:
+        weight: 34
+        enabled: false
+      list_content2:
+        weight: 35
+        enabled: false
+      map:
+        weight: 36
+        enabled: false
+      market_news:
+        weight: 37
+        enabled: false
+      options:
+        weight: 38
+        enabled: false
+      question:
+        weight: 39
+        enabled: false
+      rate_item:
+        weight: 40
+        enabled: false
+      rates:
+        weight: 41
+        enabled: false
+      step_testing:
+        weight: 42
+        enabled: false
+      text_with_image:
+        weight: 43
+        enabled: false
+      top_banner:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: d474de52-53f2-4f35-8989-d5429b8b7349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.tactical_allocation
+  module:
+    - text
+id: paragraph.tactical_allocation.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: tactical_allocation
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
