@@ -26,13 +26,13 @@ class StepTesting extends BaseStep {
         ];
       }
 
-      if (isset($step_data['sub_steps'])) {
-        $form['question'] = [
-          '#type' => 'container',
-        ];
-
-        $form['question'] += $this->buildSubStepFormElements($step_data['sub_steps']);
-      }
+//      if (isset($step_data['sub_steps'])) {
+//        $form['question'] = [
+//          '#type' => 'container',
+//        ];
+//
+//        $form['question'] += $this->buildSubStepFormElements($step_data['sub_steps']);
+//      }
     }
 
     return $form;

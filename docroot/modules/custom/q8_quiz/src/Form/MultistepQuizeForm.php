@@ -2,15 +2,14 @@
 
 namespace Drupal\q8_quiz\Form;
 
-use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\HtmlCommand;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\q8_quiz\Manager\StepManager;
-use Drupal\q8_quiz\Step\StepsEnum;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides multi step ajax Quiz form.
@@ -29,8 +28,6 @@ class MultistepQuizeForm extends FormBase {
 
   /**
    * Step Id.
-   *
-   * @var \Drupal\q8_quiz\Step\StepsEnum
    */
   protected $stepId;
 
@@ -105,7 +102,8 @@ class MultistepQuizeForm extends FormBase {
       switch ($p->bundle()) {
         case 'step_testing':
           if ($p->hasField('field_paragraphs') && !$p->field_paragraphs->isEmpty()) {
-            $steps[$delta]['sub_steps'] = $p->field_paragraphs->referencedEntities();
+            $steps[$delta]['sub_steps']['paragraph'] = $p->field_paragraphs->referencedEntities();
+            $steps[$delta]['sub_steps']['class'] = 'StepQuestion';
           }
           $steps[$delta]['class'] = 'StepTesting';
           break;
@@ -227,6 +225,7 @@ class MultistepQuizeForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    ksm($form_state->getValues());
     // Save filled values to step. So we can use them as default_value later on.
     $values = [];
 //    foreach ($this->step->getFieldNames() as $name) {
