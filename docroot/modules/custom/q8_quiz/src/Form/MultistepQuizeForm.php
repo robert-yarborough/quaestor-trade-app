@@ -76,12 +76,22 @@ class MultistepQuizeForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state, $node_id = NULL) {
     $form = [];
 
+    // Initializing data for testing steps and Progress Bar from node content.
+    if (empty($this->stepManager->getAllSteps()) && ($this->stepId == 0)){
+      $node = $this->etm->getStorage('node')->load($node_id);
+      $paragraphs = $node->field_paragraph->referencedEntities();
+      $this->initStepsDataByParagraphs($paragraphs);
+    }
+
+    // Get step from step manager.
+    $this->step = $this->stepManager->getStep($this->stepId);
+
     $form['wrapper-messages'] = [
       '#type' => 'container',
       '#attributes' => [
         'id' => 'messages-wrapper',
       ],
-      '#weight' => 0
+      '#weight' => 0,
     ];
 
     $form['wrapper'] = [
@@ -89,46 +99,20 @@ class MultistepQuizeForm extends FormBase {
       '#attributes' => [
         'id' => 'form-wrapper',
       ],
-      '#weight' => 5
+      '#weight' => 5,
     ];
 
-    $steps = $step_list = [];
-    $node = $this->etm->getStorage('node')->load($node_id);
-    $paragraphs = $node->field_paragraph->referencedEntities();
-    foreach ($paragraphs as $delta => $p) {
-      $step_list[$delta]['#children'] = $p->field_title->value;
-
-      $steps[$delta]['paragraph'] = $p;
-      switch ($p->bundle()) {
-        case 'step_testing':
-          if ($p->hasField('field_paragraphs') && !$p->field_paragraphs->isEmpty()) {
-            $steps[$delta]['sub_steps']['paragraph'] = $p->field_paragraphs->referencedEntities();
-            $steps[$delta]['sub_steps']['class'] = 'StepQuestion';
-          }
-          $steps[$delta]['class'] = 'StepTesting';
-          break;
-        case 'initial_allocation':
-          $steps[$delta]['class'] = 'StepIntermediateResult';
-          break;
-        case 'tactical_allocation':
-          $steps[$delta]['class'] = 'StepResult';
-          break;
-      }
-    }
-    $this->stepManager->setAllSteps($steps);
-
-    $step_list[$this->stepId]['#wrapper_attributes']['style'] = 'color: red;';
-    $step_list[$this->stepId]['#wrapper_attributes']['class'][] = 'active';
-    $form['wrapper']['steps-list'] = [
+    // Set active item in progress bar.
+    $progress_bar = $this->stepManager->getProgressBar();
+    $current_progress_bar_id = $this->step->getStepData()['progress_bar_id'];
+    $progress_bar[$current_progress_bar_id]['#wrapper_attributes']['style'] = 'color: red;';
+    $progress_bar[$current_progress_bar_id]['#wrapper_attributes']['class'][] = 'active';
+    $form['wrapper']['progress_bar'] = [
       '#theme' => 'item_list',
-      '#items' => $step_list,
+      '#items' => $progress_bar,
       '#wrapper_attributes' => ['class' => 'steps-list'],
-      '#weight' => -5
+      '#weight' => -5,
     ];
-
-    // Get step from step manager.
-    $this->step = $this->stepManager->getStep($this->stepId);
-
 
     // Attach step form elements.
     $form['wrapper'] += $this->step->buildStepFormElements();
@@ -157,7 +141,66 @@ class MultistepQuizeForm extends FormBase {
     }
 
     return $form;
+  }
 
+  /**
+   * Form the steps data and progress bar by paragraphs from the node.
+   */
+  public function initStepsDataByParagraphs($paragraphs) {
+    $step_data =  [];
+    $progress_bar = [];
+
+    $step_id = 0;
+    foreach ($paragraphs as $delta => $p) {
+      $progress_bar[$delta]['#children'] = $p->field_title->value;
+
+      $step_data['paragraph'] = $p;
+      $step_data['progress_bar_id'] = $delta;
+      switch ($p->bundle()) {
+        case 'step_testing':
+          $step_data['class'] = 'StepTesting';
+          break;
+        case 'initial_allocation':
+          $step_data['class'] = 'StepIntermediateResult';
+          break;
+        case 'tactical_allocation':
+          $step_data['class'] = 'StepResult';
+          break;
+      }
+      $this->initStepData($step_data['class'], $step_id, $step_data);
+      $step_id++;
+
+      if ($p->hasField('field_paragraphs') && !$p->field_paragraphs->isEmpty()) {
+        $sub_paragraphs = $p->field_paragraphs->referencedEntities();
+
+        foreach ($sub_paragraphs as $sub_delta => $sub_p){
+          $step_data['paragraph'] = $sub_p;
+          $step_data['progress_bar_id'] = $delta;
+
+          switch ($sub_p->bundle()) {
+            case 'question':
+              $step_data['class'] = 'StepQuestion';
+              break;
+          }
+          $this->initStepData($step_data['class'], $step_id, $step_data);
+          $step_id++;
+        }
+      }
+    }
+    $this->stepManager->setProgressBar($progress_bar);
+  }
+
+  /**
+   * Init Step Data.
+   */
+  public function initStepData($className, $stepId, $stepData) {
+    // Init step.
+    $class = $this->stepManager->map($className);
+    $step = new $class($this->stepManager);
+    $step->setStep($stepId);
+    $step->setStepData($stepData);
+
+    $this->stepManager->addStep($step);
   }
 
   /**
@@ -225,15 +268,16 @@ class MultistepQuizeForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    ksm($form_state->getValues());
     // Save filled values to step. So we can use them as default_value later on.
     $values = [];
-//    foreach ($this->step->getFieldNames() as $name) {
-//      $values[$name] = $form_state->getValue($name);
-//    }
-//    $this->step->setValues($values);
-//    // Add step to manager.
-//    $this->stepManager->addStep($this->step);
+    foreach ($this->step->getFieldNames() as $name) {
+      $values[$name] = $form_state->getValue($name);
+    }
+    $this->step->setValues($values);
+
+    // Add step to manager.
+    $this->stepManager->addStep($this->step);
+
     // Set step to navigate to.
     $triggering_element = $form_state->getTriggeringElement();
     $this->stepId = $triggering_element['#goto_step'];

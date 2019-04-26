@@ -44,4 +44,11 @@ interface StepInterface {
    */
   public function buildStepFormElements();
 
+  /**
+   * All fields name.
+   *
+   * @returns array of all field names.
+   */
+  public function getFieldNames();
+
 }

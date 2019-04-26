@@ -77,4 +77,12 @@ abstract class BaseStep implements StepInterface {
     return $this->values;
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getFieldNames() {
+    return [];
+  }
+
+
 }

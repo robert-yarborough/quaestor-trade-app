@@ -16,50 +16,21 @@ class StepQuestion extends BaseStep {
     $step_data = $this->getStepData();
     $form = [];
 
+    // Create Question Item.
     if (isset($step_data['paragraph'])) {
       $p = $step_data['paragraph'];
-
-      if ($p->hasField('field_description') && !$p->field_description->isEmpty()) {
-        $form['description'] = [
-          '#type' => 'item',
-          '#markup' => $p->field_description->value,
-        ];
-      }
-
-      if (isset($step_data['sub_steps'])) {
-        $form['question'] = [
-          '#type' => 'container',
-        ];
-
-        $form['question'] += $this->buildSubStepFormElements($step_data['sub_steps']);
-      }
-    }
-
-    return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  private function buildSubStepFormElements($paragraphs) {
-    $form = [];
-
-    // Create Question Item.
-    foreach ($paragraphs as $question) {
-      $id = $question->id();
-
-      $form[$id] = [
-        '#type' => 'container',
-      ];
+      $pid = $p->id();
 
       // Create Answer Item.
-      if ($question->hasField('field_title') && !$question->field_title->isEmpty()) {
-        $form[$id]['answer'] = [
-          '#type' => 'container',
-        ];
+      if ($p->hasField('field_title') && !$p->field_title->isEmpty()) {
 
-        if ($question->hasField('field_paragraphs') && !$question->field_paragraphs->isEmpty()) {
-          $answers = $question->field_paragraphs->referencedEntities();
+        if ($p->hasField('field_paragraphs') && !$p->field_paragraphs->isEmpty()) {
+          $answers = $p->field_paragraphs->referencedEntities();
+
+          $form['answer'] = [
+            '#type' => 'container',
+            '#tree' => TRUE,
+          ];
 
           $answer_option = [];
           foreach ($answers as $answer) {
@@ -69,35 +40,32 @@ class StepQuestion extends BaseStep {
             }
           }
 
-          if ($question->hasField('field_question_type') && !$question->field_question_type->isEmpty() && $question->field_question_type->value == 'multi') {
-            $form[$id]['answer'] = [
-              '#type' => 'checkboxes',
-              '#title' => $question->field_title->value,
-              '#options' => $answer_option,
-              '#attributes' => [
-                'class' => [
-                  'quiz-multi-question'
-                ],
-              ],
-            ];
+          if ($p->hasField('field_question_type') && !$p->field_question_type->isEmpty() && $p->field_question_type->value == 'multi') {
+            $form['answer'][$pid]['#type'] = 'checkboxes';
+            $form['answer'][$pid]['#attributes']['class'][] = 'quiz-multi-question';
           }
           else {
-            $form[$id]['answer'] = [
-              '#type' => 'radios',
-              '#title' => $question->field_title->value,
-              '#options' => $answer_option,
-              '#attributes' => [
-                'class' => [
-                  'quiz-single-question'
-                ],
-              ],
-            ];
+            $form['answer'][$pid]['#type'] = 'radios';
+            $form['answer'][$pid]['#attributes']['class'][] = 'quiz-single-question';
           }
+
+          $form['answer'][$pid]['#title'] = $p->field_title->value;
+          $form['answer'][$pid]['#options'] = $answer_option;
+          $form['answer'][$pid]['#default_value'] = isset($this->getValues()['answer'][$pid]) ? $this->getValues()['answer'][$pid] : [];
         }
       }
     }
 
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFieldNames() {
+    return [
+      'answer',
+    ];
   }
 
 }
