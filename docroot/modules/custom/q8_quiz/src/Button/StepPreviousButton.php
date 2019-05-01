@@ -24,6 +24,7 @@ class StepPreviousButton extends BaseButton {
       '#type' => 'submit',
       '#value' => t('Previous'),
       '#goto_step' => $step_id - 1,
+      '#skip_validation' => TRUE,
     ];
   }
 

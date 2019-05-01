@@ -84,5 +84,11 @@ abstract class BaseStep implements StepInterface {
     return [];
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getFieldsValidators() {
+    return [];
+  }
 
 }

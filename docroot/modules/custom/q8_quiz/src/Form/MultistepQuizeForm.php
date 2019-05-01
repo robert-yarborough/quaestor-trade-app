@@ -6,6 +6,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Render\Element\StatusMessages;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
@@ -18,13 +19,6 @@ use Drupal\q8_quiz\Manager\StepManager;
  */
 class MultistepQuizeForm extends FormBase {
   use StringTranslationTrait;
-
-  /**
-   * Drupal\Core\Entity\EntityTypeManagerInterface definition.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected $etm;
 
   /**
    * Step Id.
@@ -44,6 +38,13 @@ class MultistepQuizeForm extends FormBase {
    * @var \Drupal\q8_quiz\Manager\StepManager
    */
   protected $stepManager;
+
+  /**
+   * Drupal\Core\Entity\EntityTypeManagerInterface definition.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $etm;
 
   /**
    * {@inheritdoc}
@@ -86,12 +87,18 @@ class MultistepQuizeForm extends FormBase {
     // Get step from step manager.
     $this->step = $this->stepManager->getStep($this->stepId);
 
+    $form['progress_bar'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'id' => 'progress-bar',
+      ],
+    ];
+
     $form['wrapper-messages'] = [
       '#type' => 'container',
       '#attributes' => [
         'id' => 'messages-wrapper',
       ],
-      '#weight' => 0,
     ];
 
     $form['wrapper'] = [
@@ -99,7 +106,6 @@ class MultistepQuizeForm extends FormBase {
       '#attributes' => [
         'id' => 'form-wrapper',
       ],
-      '#weight' => 5,
     ];
 
     // Set active item in progress bar.
@@ -107,11 +113,10 @@ class MultistepQuizeForm extends FormBase {
     $current_progress_bar_id = $this->step->getStepData()['progress_bar_id'];
     $progress_bar[$current_progress_bar_id]['#wrapper_attributes']['style'] = 'color: red;';
     $progress_bar[$current_progress_bar_id]['#wrapper_attributes']['class'][] = 'active';
-    $form['wrapper']['progress_bar'] = [
+    $form['progress_bar']['list'] = [
       '#theme' => 'item_list',
       '#items' => $progress_bar,
       '#wrapper_attributes' => ['class' => 'steps-list'],
-      '#weight' => -5,
     ];
 
     // Attach step form elements.
@@ -217,18 +222,8 @@ class MultistepQuizeForm extends FormBase {
   public function loadStep(array &$form, FormStateInterface $form_state) {
     $response = new AjaxResponse();
 
-    $messages = drupal_get_messages();
+    $messages = StatusMessages::renderMessages();
     if (!empty($messages)) {
-      // Form did not validate, get messages and render them.
-      $messages = [
-        '#theme' => 'status_messages',
-        '#message_list' => $messages,
-        '#status_headings' => [
-          'status' => $this->t('Status message'),
-          'error' => $this->t('Error message'),
-          'warning' => $this->t('Warning message'),
-        ],
-      ];
       $response->addCommand(new HtmlCommand('#messages-wrapper', $messages));
     }
     else {
@@ -240,28 +235,55 @@ class MultistepQuizeForm extends FormBase {
     $response->addCommand(new HtmlCommand('#form-wrapper',
       $form['wrapper']));
 
+    // Update ProgressBar.
+    $response->addCommand(new HtmlCommand('#progress-bar',
+      $form['progress_bar']));
+
     return $response;
+  }
+
+  /**
+   * Returns all messages that have been set with message().
+   */
+  public function getMessage($type = NULL, $clear_queue = TRUE) {
+    if ($messages = $this->messenger->all()) {
+      if ($type) {
+        if ($clear_queue) {
+          $this->messenger->deleteByType($type);
+        }
+        if (isset($messages[$type])) {
+          return [$type => $messages[$type]];
+        }
+      }
+      else {
+        if ($clear_queue) {
+          $this->messenger->deleteAll();
+        }
+        return $messages;
+      }
+    }
+    return [];
   }
 
   /**
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-//    $triggering_element = $form_state->getTriggeringElement();
-//    // Only validate if validation doesn't have to be skipped.
-//    // For example on "previous" button.
-//    if (empty($triggering_element['#skip_validation']) && $fields_validators = $this->step->getFieldsValidators()) {
-//      // Validate fields.
-//      foreach ($fields_validators as $field => $validators) {
-//        // Validate all validators for field.
-//        $field_value = $form_state->getValue($field);
-//        foreach ($validators as $validator) {
-//          if (!$validator->validates($field_value)) {
-//            $form_state->setErrorByName($field, $validator->getErrorMessage());
-//          }
-//        }
-//      }
-//    }
+    $triggering_element = $form_state->getTriggeringElement();
+    // Only validate if validation doesn't have to be skipped.
+    // For example on "previous" button.
+    if (empty($triggering_element['#skip_validation']) && $fields_validators = $this->step->getFieldsValidators()) {
+      // Validate fields.
+      foreach ($fields_validators as $field => $validators) {
+        // Validate all validators for field.
+        $field_value = $form_state->getValue($field);
+        foreach ($validators as $validator) {
+          if (!$validator->validates($field_value)) {
+            $form_state->setErrorByName($field, $validator->getErrorMessage());
+          }
+        }
+      }
+    }
   }
 
   /**

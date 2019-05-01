@@ -2,6 +2,8 @@
 
 namespace Drupal\q8_quiz\Step;
 
+use Drupal\ms_ajax_form_example\Validator\ValidatorRequired;
+
 /**
  * Class StepQuestion.
  *
@@ -65,6 +67,17 @@ class StepQuestion extends BaseStep {
   public function getFieldNames() {
     return [
       'answer',
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFieldsValidators() {
+    return [
+      'answer' => [
+        new ValidatorRequired("Answer the question."),
+      ],
     ];
   }
 

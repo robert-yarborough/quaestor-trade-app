@@ -45,6 +45,13 @@ interface StepInterface {
   public function buildStepFormElements();
 
   /**
+   * All field validators.
+   *
+   * @returns array of fields with their validation requirements.
+   */
+  public function getFieldsValidators();
+
+  /**
    * All fields name.
    *
    * @returns array of all field names.
