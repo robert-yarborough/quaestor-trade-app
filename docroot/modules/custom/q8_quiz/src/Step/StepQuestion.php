@@ -2,7 +2,7 @@
 
 namespace Drupal\q8_quiz\Step;
 
-use Drupal\ms_ajax_form_example\Validator\ValidatorRequired;
+use Drupal\q8_quiz\Validator\ValidatorRequired;
 
 /**
  * Class StepQuestion.
@@ -10,6 +10,13 @@ use Drupal\ms_ajax_form_example\Validator\ValidatorRequired;
  * @package Drupal\q8_quiz\Step
  */
 class StepQuestion extends BaseStep {
+
+  /**
+   * Id entity Question.
+   *
+   * @var int
+   */
+  private $questionId;
 
   /**
    * {@inheritdoc}
@@ -21,18 +28,14 @@ class StepQuestion extends BaseStep {
     // Create Question Item.
     if (isset($step_data['paragraph'])) {
       $p = $step_data['paragraph'];
-      $pid = $p->id();
 
       // Create Answer Item.
       if ($p->hasField('field_title') && !$p->field_title->isEmpty()) {
 
         if ($p->hasField('field_paragraphs') && !$p->field_paragraphs->isEmpty()) {
           $answers = $p->field_paragraphs->referencedEntities();
-
-          $form['answer'] = [
-            '#type' => 'container',
-            '#tree' => TRUE,
-          ];
+          $this->questionId = $p->id();
+          $values = $this->getValues();
 
           $answer_option = [];
           foreach ($answers as $answer) {
@@ -43,17 +46,18 @@ class StepQuestion extends BaseStep {
           }
 
           if ($p->hasField('field_question_type') && !$p->field_question_type->isEmpty() && $p->field_question_type->value == 'multi') {
-            $form['answer'][$pid]['#type'] = 'checkboxes';
-            $form['answer'][$pid]['#attributes']['class'][] = 'quiz-multi-question';
+            $form[$this->questionId]['#type'] = 'checkboxes';
+            $form[$this->questionId]['#attributes']['class'][] = 'quiz-multi-question';
           }
           else {
-            $form['answer'][$pid]['#type'] = 'radios';
-            $form['answer'][$pid]['#attributes']['class'][] = 'quiz-single-question';
+            $form[$this->questionId]['#type'] = 'radios';
+            $form[$this->questionId]['#attributes']['class'][] = 'quiz-single-question';
           }
 
-          $form['answer'][$pid]['#title'] = $p->field_title->value;
-          $form['answer'][$pid]['#options'] = $answer_option;
-          $form['answer'][$pid]['#default_value'] = isset($this->getValues()['answer'][$pid]) ? $this->getValues()['answer'][$pid] : [];
+          $form[$this->questionId]['#title'] = $p->field_title->value;
+          $form[$this->questionId]['#options'] = $answer_option;
+          $form[$this->questionId]['#default_value'] = (isset($values) && (isset($values[$this->questionId])))
+            ? $values[$this->questionId] : [];
         }
       }
     }
@@ -66,7 +70,7 @@ class StepQuestion extends BaseStep {
    */
   public function getFieldNames() {
     return [
-      'answer',
+      $this->questionId,
     ];
   }
 
@@ -75,8 +79,8 @@ class StepQuestion extends BaseStep {
    */
   public function getFieldsValidators() {
     return [
-      'answer' => [
-        new ValidatorRequired("Answer the question."),
+      $this->questionId => [
+        new ValidatorRequired("Answer the question. Select one or more values."),
       ],
     ];
   }

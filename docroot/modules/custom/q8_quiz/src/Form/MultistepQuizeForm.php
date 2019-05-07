@@ -22,6 +22,8 @@ class MultistepQuizeForm extends FormBase {
 
   /**
    * Step Id.
+   *
+   * @var int
    */
   protected $stepId;
 
@@ -78,7 +80,7 @@ class MultistepQuizeForm extends FormBase {
     $form = [];
 
     // Initializing data for testing steps and Progress Bar from node content.
-    if (empty($this->stepManager->getAllSteps()) && ($this->stepId == 0)){
+    if (empty($this->stepManager->getAllSteps()) && ($this->stepId == 0)) {
       $node = $this->etm->getStorage('node')->load($node_id);
       $paragraphs = $node->field_paragraph->referencedEntities();
       $this->initStepsDataByParagraphs($paragraphs);
@@ -152,7 +154,7 @@ class MultistepQuizeForm extends FormBase {
    * Form the steps data and progress bar by paragraphs from the node.
    */
   public function initStepsDataByParagraphs($paragraphs) {
-    $step_data =  [];
+    $step_data = [];
     $progress_bar = [];
 
     $step_id = 0;
@@ -165,9 +167,11 @@ class MultistepQuizeForm extends FormBase {
         case 'step_testing':
           $step_data['class'] = 'StepTesting';
           break;
+
         case 'initial_allocation':
           $step_data['class'] = 'StepIntermediateResult';
           break;
+
         case 'tactical_allocation':
           $step_data['class'] = 'StepResult';
           break;
@@ -178,7 +182,7 @@ class MultistepQuizeForm extends FormBase {
       if ($p->hasField('field_paragraphs') && !$p->field_paragraphs->isEmpty()) {
         $sub_paragraphs = $p->field_paragraphs->referencedEntities();
 
-        foreach ($sub_paragraphs as $sub_delta => $sub_p){
+        foreach ($sub_paragraphs as $sub_p) {
           $step_data['paragraph'] = $sub_p;
           $step_data['progress_bar_id'] = $delta;
 

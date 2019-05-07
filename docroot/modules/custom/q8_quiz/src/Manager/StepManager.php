@@ -22,7 +22,9 @@ class StepManager {
   protected $steps;
 
   /**
-   * @var
+   * Progress Bar data of the form.
+   *
+   * @var array
    */
   protected $progressBar;
 
@@ -51,8 +53,8 @@ class StepManager {
    *
    * @param \Drupal\q8_quiz\Step\StepInterface $step
    *   Step of the form.
-   * @param $step_id
-   *    Step ID.
+   * @param int $step_id
+   *   Step ID.
    */
   public function setStep(StepInterface $step, $step_id) {
     $this->steps[$step_id] = $step;
@@ -107,14 +109,14 @@ class StepManager {
       ];
     }
     // Last but one Item.
-    elseif($step_id == (count($this->steps) - 2)) {
+    elseif ($step_id == (count($this->steps) - 2)) {
       return [
         new StepPreviousButton(),
         new StepFinishButton(),
       ];
     }
     // Last Item.
-    elseif($step_id == (count($this->steps) - 1)) {
+    elseif ($step_id == (count($this->steps) - 1)) {
       return [];
     }
     else {
@@ -128,7 +130,7 @@ class StepManager {
   /**
    * Map steps for classes.
    *
-   * @param int $step
+   * @param int $step_class_name
    *   Step class name.
    *
    * @return bool
