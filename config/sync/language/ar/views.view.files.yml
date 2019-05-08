@@ -39,6 +39,8 @@ display:
       fields:
         entity_label:
           label: الكيان
+        type:
+          label: 'نوع الكيان'
       arguments:
         fid:
           exception:

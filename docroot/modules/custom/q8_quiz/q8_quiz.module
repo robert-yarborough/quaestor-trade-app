@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains q8_quiz.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function q8_quiz_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the q8_quiz module.
+    case 'help.page.q8_quiz':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Q8 Quiz Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

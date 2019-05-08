@@ -1,0 +1,68 @@
+uuid: 6187db13-da90-450a-a70c-019c096dd923
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.step_testing.field_description
+    - field.field.paragraph.step_testing.field_image
+    - field.field.paragraph.step_testing.field_paragraphs
+    - field.field.paragraph.step_testing.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.step_testing
+  module:
+    - image
+    - imce
+    - lightning_media
+    - paragraphs
+    - text
+id: paragraph.step_testing.default
+targetEntityType: paragraph
+bundle: step_testing
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
+    type: image_image
+    weight: 3
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+  field_paragraphs:
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

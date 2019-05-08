@@ -1,0 +1,30 @@
+uuid: a370fe04-6db6-4f26-8ffc-52d6c09fbb3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.initial_allocation.field_description
+    - field.field.paragraph.initial_allocation.field_title
+    - paragraphs.paragraphs_type.initial_allocation
+  module:
+    - text
+id: paragraph.initial_allocation.default
+targetEntityType: paragraph
+bundle: initial_allocation
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

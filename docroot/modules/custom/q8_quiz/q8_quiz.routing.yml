@@ -1,0 +1,7 @@
+q8_quiz.quiz_controller_hello:
+  path: 'quiz/{node_id}'
+  defaults:
+    _form: '\Drupal\q8_quiz\Form\MultistepQuizeForm'
+    _title: 'Quiz'
+  requirements:
+    _permission: 'access content'

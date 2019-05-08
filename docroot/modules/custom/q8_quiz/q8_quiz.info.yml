@@ -1,0 +1,7 @@
+name: 'q8_quiz'
+type: module
+description: 'Q8 Quiz Module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:paragraphs

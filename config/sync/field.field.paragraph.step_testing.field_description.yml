@@ -1,0 +1,22 @@
+uuid: 67b07687-450a-4155-9655-46a9a6b1c924
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.step_testing
+  module:
+    - text
+id: paragraph.step_testing.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: step_testing
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

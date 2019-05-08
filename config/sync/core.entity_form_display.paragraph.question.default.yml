@@ -1,0 +1,65 @@
+uuid: 65898204-9ebc-4832-9237-278ef72c8f61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question.field_image
+    - field.field.paragraph.question.field_paragraphs
+    - field.field.paragraph.question.field_question_type
+    - field.field.paragraph.question.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.question
+  module:
+    - image
+    - imce
+    - lightning_media
+    - paragraphs
+    - text
+id: paragraph.question.default
+targetEntityType: paragraph
+bundle: question
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 1
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings:
+      imce:
+        enabled: true
+      lightning_media:
+        file_links: true
+        remove_button: true
+  field_paragraphs:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: answer
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_question_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

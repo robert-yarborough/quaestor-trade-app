@@ -1,0 +1,41 @@
+uuid: 0bec6cee-906a-417a-a69e-acf0ac681c7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tactical_allocation.field_description
+    - field.field.paragraph.tactical_allocation.field_icon
+    - field.field.paragraph.tactical_allocation.field_title
+    - paragraphs.paragraphs_type.tactical_allocation
+  module:
+    - image
+    - text
+id: paragraph.tactical_allocation.default
+targetEntityType: paragraph
+bundle: tactical_allocation
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_icon:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

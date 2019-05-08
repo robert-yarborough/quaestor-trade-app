@@ -1,0 +1,22 @@
+uuid: 4d489ca4-5b87-44ca-9217-4d021338ad7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.initial_allocation
+  module:
+    - text
+id: paragraph.initial_allocation.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: initial_allocation
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
