@@ -273,7 +273,7 @@
             display: block;
             .form-item {
                 &:not(:last-child) {
-                    margin-bottom: 25px;
+                    margin-bottom: 20px;
                     padding: 0;
                     @include media('<tablet-l') {
                         margin-bottom: 10px;
@@ -313,7 +313,7 @@
                 margin: 0;
                 position: relative;
                 &:not(:last-child) {
-                    margin-bottom: 25px;
+                    margin-bottom: 20px;
                     @include media('<tablet-l') {
                         margin-bottom: 10px;
                     }
@@ -411,7 +411,7 @@
         right: 0;
         bottom: 0;
         pointer-events: none;
-        opacity: .05;
+        //opacity: .05;
         @include media('<tablet-l') {
             max-width: 320px;
         }
