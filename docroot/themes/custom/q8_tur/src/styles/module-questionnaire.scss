@@ -123,6 +123,9 @@
             @include media('<tablet-l') {
                 min-height: calc(100vh - 120px);
             }
+            @include media('<tablet-l') {
+                min-height: calc(100vh - 110px);
+            }
         }
     }
     [data-drupal-selector='q8-quiz'] {
@@ -148,6 +151,10 @@
             }
             @include media('<tablet') {
                 font-size: 28px;
+                line-height: 1.5;
+            }
+            h2, h3 {
+                line-height: 1.2;
             }
         }
         .form-actions {
@@ -188,6 +195,12 @@
                         background-image: url('../images/icons/svg/icon-arrow-right-white.svg');
                         color: white;
                         background-color: transparent;
+                    }
+                }
+                &[data-drupal-selector='edit-finish'] {
+                    @include media('<tablet') {
+                        transform-origin: left bottom;
+                        min-width: 210px;
                     }
                 }
                 &[data-drupal-selector='edit-previous'] {
@@ -337,10 +350,14 @@
                     font-size: 35px;
                     margin-bottom: 25px;
                 }
+                @include media('<tablet') {
+                    font-size: 28px;
+                }
             }
         }
     }
     &__messages {
+        line-height: 1.2;
         .messages--error {
             border-color: white;
             border-width: 1px;
@@ -356,9 +373,18 @@
     }
 }
 .qsa {
+    &--wrap {
+        @include media('<tablet') {
+            overflow: auto;
+        }
+    }
     &--list {
         display: flex;
         justify-content: center;
+        @include media('<tablet') {
+            padding: 25px 0 70px;
+
+        }
     }
     &--item {
         flex-basis: calc(20% - 1px);
@@ -370,6 +396,9 @@
         display: flex;
         margin-left: 0.5px;
         margin-right: 0.5px;
+        @include media('<tablet') {
+            min-width: 250px;
+        }
         &:before {
             content: '';
             display: block;
@@ -399,11 +428,13 @@
             transition: .5s;
         }
         &:hover {
-            z-index: 2;
-            &:before {
-                width: calc(100% + 50px);
-                height: calc(100% + 30px);
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+            @include media('>=tablet-l') {
+                z-index: 2;
+                &:before {
+                    width: calc(100% + 50px);
+                    height: calc(100% + 30px);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+                }
             }
         }
         .slider-line {
@@ -493,11 +524,6 @@
                 }
             }
         }
-        &.guardian,
-        &.thinker,
-        &.independet,
-        &.trendspotter,
-        &.adventurer,
         &[class*='-active']{
             &:after {
                 opacity: 1;
@@ -542,10 +568,17 @@
         padding: 0 22px 35px;
         background-color: white;
         pointer-events: all;
+        @include media('<tablet-l') {
+            padding: 0 12px 25px;
+        }
     }
     &--icon {
         margin-top: -30px;
         margin-bottom: 15px;
+        @include media('<tablet-l') {
+            margin-top: -25px;
+            margin-bottom: 10px;
+        }
         .image-holder {
             margin: 0 auto;
             height: 79px;
@@ -554,6 +587,10 @@
             background-size: contain;
             background-repeat: no-repeat;
             transition: .4s;
+            @include media('<tablet-l') {
+                height: 59px;
+                width: 59px;
+            }
         }
     }
     &--text {
@@ -561,6 +598,12 @@
         font-size: 16px;
         line-height: 1.4;
         font-weight: 500;
+        @include media('<tablet-l') {
+            font-size: 12px;
+        }
+        @include media('<tablet') {
+            font-size: 14px;
+        }
     }
     &--title {
         color: #414141;
@@ -568,17 +611,27 @@
         font-size: 28px;
         line-height: 1.2;
         margin-bottom: 5px;
+        @include media('<tablet-l') {
+            font-size: 20px;
+        }
     }
     &--subtitle {
         font-size: 18px;
+        line-height: 1.2;
         color: #2199a1;
         margin-bottom: 5px;
+        @include media('<tablet-l') {
+            font-size: 16px;
+        }
     }
     &--values {
         color: #333333;
         line-height: 1.2;
         li {
             font-size: 18px;
+            @include media('<tablet-l') {
+                font-size: 14px;
+            }
         }
     }
 }
