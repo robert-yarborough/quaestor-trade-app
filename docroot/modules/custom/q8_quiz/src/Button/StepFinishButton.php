@@ -22,7 +22,7 @@ class StepFinishButton extends BaseButton {
   public function build($steo_id) {
     return [
       '#type' => 'submit',
-      '#value' => t('Finish'),
+      '#value' => t('Start Investing'),
       '#goto_step' => $steo_id + 1,
     ];
   }
