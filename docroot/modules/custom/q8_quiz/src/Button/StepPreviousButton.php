@@ -22,7 +22,7 @@ class StepPreviousButton extends BaseButton {
   public function build($step_id) {
     return [
       '#type' => 'submit',
-      '#value' => t('Previous'),
+      '#value' => t('Back'),
       '#goto_step' => $step_id - 1,
       '#skip_validation' => TRUE,
     ];

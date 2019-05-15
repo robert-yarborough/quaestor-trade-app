@@ -94,6 +94,7 @@ class MultistepQuizeForm extends FormBase {
       '#type' => 'container',
       '#attributes' => [
         'id' => 'progress-bar',
+        'class' => 'questionnaire__progress-bar'
       ],
     ];
 
@@ -101,6 +102,7 @@ class MultistepQuizeForm extends FormBase {
       '#type' => 'container',
       '#attributes' => [
         'id' => 'messages-wrapper',
+        'class' => 'questionnaire__messages'
       ],
     ];
 
@@ -108,18 +110,18 @@ class MultistepQuizeForm extends FormBase {
       '#type' => 'container',
       '#attributes' => [
         'id' => 'form-wrapper',
+        'class' => 'questionnaire__form'
       ],
     ];
 
     // Set active item in progress bar.
     $progress_bar = $this->stepManager->getProgressBar();
     $current_progress_bar_id = $this->step->getStepData()['progress_bar_id'];
-    $progress_bar[$current_progress_bar_id]['#wrapper_attributes']['style'] = 'color: red;';
-    $progress_bar[$current_progress_bar_id]['#wrapper_attributes']['class'][] = 'active';
+    $progress_bar[$current_progress_bar_id]['#wrapper_attributes']['class'][] = 'is-active';
     $form['progress_bar']['list'] = [
       '#theme' => 'item_list',
       '#items' => $progress_bar,
-      '#wrapper_attributes' => ['class' => 'steps-list'],
+      '#wrapper_attributes' => ['class' => 'questionnaire__steps-list'],
     ];
 
     // Attach step form elements.
