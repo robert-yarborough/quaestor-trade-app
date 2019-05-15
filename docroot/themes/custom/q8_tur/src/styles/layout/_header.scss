@@ -407,6 +407,9 @@
 .secondary-header {
     background-color: $c-primary;
     min-height: 134px;
+    @include media('<tablet-l') {
+        min-height: 75px;
+    }
     &__wrap {
         height: 100%;
         padding: 20px 40px;
@@ -415,11 +418,39 @@
         max-width: 1920px;
         margin-left: auto;
         margin-right: auto;
+        @include media('<tablet-l') {
+            padding: 15px 15px;
+        }
+    }
+    .site-logo {
+        display: block;
+        @include media('<tablet-l') {
+            padding-left: 15px;
+            margin-left: 23px;
+            border-left: 1px solid white;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                width: 9px;
+                height: 9px;
+                border-top: 2px solid white;
+                border-right: 2px solid white;
+                transform: rotate(225deg);
+                position: absolute;
+                left: -22px;
+                top: 17px;
+            }
+        }
     }
     .main-logo {
         fill: white;
         width: 257px;
         height: 94px;
+        @include media('<tablet-l') {
+            width: 115px;
+            height: 45px;
+        }
     }
     .sh--menu {
         margin-left: auto;
@@ -431,10 +462,15 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin-bottom: 15px;
+        @include media('>=tablet-l') {
+            margin-bottom: 15px;
+        }
     }
     .sh--lang {
         margin-right: 35px;
+        @include media('<tablet-l') {
+            margin-right: 15px;
+        }
     }
     .sh--account {
         .is-open-account,
@@ -446,6 +482,9 @@
             font-size: 18px;
             text-transform: uppercase;
             font-weight: 700;
+            @include media('<tablet-l') {
+                font-size: 0;
+            }
             &:after {
                 content: '';
                 display: inline-block;
@@ -457,6 +496,12 @@
                 margin-left: 7px;
                 background-image: url('../images/icons/svg/icon-login-white.svg');
                 background-repeat: no-repeat;
+                @include media('<tablet-l') {
+                    margin-left: 0;
+                    width: 25px;
+                    height: 25px;
+                    top: -7px;
+                }
             }
             &:hover {
                 text-decoration: underline;
@@ -475,6 +520,9 @@
         font-weight: 700;
         font-size: 22px;
         line-height: 1.2;
+        @include media('<tablet-l') {
+            display: none;
+        }
         a {
             position: relative;
             display: inline-flex;
@@ -495,17 +543,30 @@
             }
         }
     }
+    .menu--lang__main {
+        margin-right: 0;
+        &:before {
+            display: none;
+        }
+    }
     .menu--lang__main-icon {
         display: none;
     }
     .menu--lang__main-list {
         position: relative;
         cursor: pointer;
+        @include media('<tablet-l') {
+            display: block;
+            margin-top: 0;
+        }
         &.is-active {
             li.is-active {
                 a:after {
                     transform: rotate(-45deg);
                     top: 8px;
+                    @include media('<tablet-l') {
+                        top: 6px;
+                    }
                 }
             }
         }
@@ -514,15 +575,23 @@
         font-size: 18px;
         font-weight: 700;
         cursor: pointer;
+        @include media('<tablet-l') {
+            font-size: 14px;
+        }
     }
     .menu--lang__main li {
-        margin-bottom: 5px;
+        &:after {
+            display: none;
+        }
         &.is-active {
             a {
                 text-decoration: none;
                 padding-right: 20px;
                 display: block;
                 pointer-events: none;
+                @include media('<tablet-l') {
+                    padding-right: 17px;
+                }
                 &:after {
                     content: '';
                     display: block;
@@ -535,6 +604,11 @@
                     top: 1px;
                     transform: rotate(135deg);
                     transition: .3s fill,.3s transform;
+                    @include media('<tablet-l') {
+                        width: 9px;
+                        height: 9px;
+                        top: 0;
+                    }
                 }
             }
         }
@@ -544,6 +618,11 @@
             right: calc(100% + 15px);
             top: 0;
             z-index: 10;
+            @include media('<tablet-l') {
+                top: 100%;
+                right: auto;
+                left: 0;
+            }
         }
         &:not(:last-child) {
             padding-right: 0;

@@ -4,23 +4,68 @@
     background-color: $c-primary;
     padding: 35px 0 55px;
     min-height: calc(100vh - 134px);
+    @include media('<tablet-l') {
+        min-height: calc(100vh - 75px);
+        padding: 20px 0 25px;
+    }
+    @include media('<tablet') {
+        padding-top: 10px;
+    }
+    .page-frame {
+        @include media('<tablet-l') {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
     &__steps-list {
         color: white;
-        margin-bottom: 4.6875vw;
+        margin-bottom: 4vw;
         border-bottom: 2px solid #c7e5e7;
+        @include media('<tablet-l') {
+            margin-bottom: 50px;
+        }
+        @include media('<tablet') {
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: linear-gradient(to right, rgba(34,153,161,0) 0%,rgba(34,153,161,1) 100%);
+                opacity: .7;
+                pointer-events: none;
+                z-index: 1;
+            }
+        }
         ul {
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include media('<tablet') {
+                overflow: auto;
+            }
         }
         li {
-            margin: 0 20px;
-            padding-bottom: 25px;
+            margin: 0 15px;
+            padding-bottom: 20px;
             text-align: center;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 16px;
             position: relative;
+            @include media('<tablet-l') {
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
+            @include media('<tablet') {
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                padding-bottom: 7px;
+            }
             &:first-child {
                 margin-left: 0;
             }
@@ -32,11 +77,21 @@
                 display: block;
                 width: 18px;
                 height: 18px;
-                margin: 0 auto 20px;
+                margin: 0 auto 17px;
                 border: 2px solid white;
                 opacity: .7;
                 border-radius: 50%;
                 transition: .4s;
+                @include media('<tablet-l') {
+                    margin-bottom: 9px;
+                    width: 15px;
+                    height: 15px;
+                }
+                @include media('<tablet') {
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                    margin-top: -2px;
+                }
             }
             &:after {
                 content: '';
@@ -65,6 +120,9 @@
             min-height: calc(100vh - 225px);
             display: flex;
             flex-direction: column;
+            @include media('<tablet-l') {
+                min-height: calc(100vh - 120px);
+            }
         }
     }
     [data-drupal-selector='q8-quiz'] {
@@ -85,6 +143,12 @@
             color: white;
             font-size: 70px;
             line-height: 1.3;
+            @include media('<tablet-l') {
+                font-size: 35px;
+            }
+            @include media('<tablet') {
+                font-size: 28px;
+            }
         }
         .form-actions {
             display: flex;
@@ -101,6 +165,9 @@
                 width: auto;
                 min-width: 133px;
                 letter-spacing: -0.03em;
+                @include media('<tablet-l') {
+                    transform: scale(.7);
+                }
                 &:before, &:after {
                     display: none;
                 }
@@ -109,10 +176,14 @@
                     background-color: white;
                     color: #414141;
                     margin-left: auto;
+                    margin-right: 0;
                     background-image: url('../images/icons/svg/icon-arrow-right-dark.svg');
                     background-repeat: no-repeat;
                     background-position: calc(100% - 30px) center;
                     padding: 11px 60px 9px 30px;
+                    @include media('<tablet-l') {
+                        transform-origin: right bottom;
+                    }
                     &:not(:disabled):hover {
                         background-image: url('../images/icons/svg/icon-arrow-right-white.svg');
                         color: white;
@@ -126,6 +197,9 @@
                     background-repeat: no-repeat;
                     background-position: 30px center;
                     padding: 11px 30px 9px 60px;
+                    @include media('<tablet-l') {
+                        transform-origin: left bottom;
+                    }
                     &:not(:disabled):hover {
                         background-image: url('../images/icons/svg/icon-arrow-left-dark.svg');
                         background-color: white;
@@ -134,7 +208,11 @@
                 }
             }
             .ajax-progress {
-                display: none;
+                left: 50%;
+                margin-left: -15px;
+                margin-top: -15px;
+                width: 30px;
+                height: 30px;
             }
         }
         .form-radios {
@@ -143,6 +221,9 @@
                 &:not(:last-child) {
                     margin-bottom: 25px;
                     padding: 0;
+                    @include media('<tablet-l') {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
@@ -150,8 +231,17 @@
             label {
                 color: white;
                 font-weight: 400;
+                display: inline-block;
+                padding-left: 35px;
+                @include media('<tablet-l') {
+                    font-size: 18px;
+                    padding-left: 25px;
+                }
                 &:before {
                     border-color: white;
+                    @include media('<tablet-l') {
+                        top: 3px;
+                    }
                 }
             }
             input {
@@ -170,15 +260,23 @@
                 position: relative;
                 &:not(:last-child) {
                     margin-bottom: 25px;
+                    @include media('<tablet-l') {
+                        margin-bottom: 10px;
+                    }
                 }
                 label {
                     margin: 0;
+                    display: inline-block;
                     padding-left: 65px;
                     position: relative;
                     color: white;
                     font-weight: 400;
                     font-size: 22px;
                     line-height: 1.2;
+                    @include media('<tablet-l') {
+                        font-size: 18px;
+                        padding-left: 55px;
+                    }
                     &:before, &:after {
                         content: '';
                         display: block;
@@ -191,6 +289,10 @@
                         height: 25px;
                         border-radius: 18px;
                         border: 2px solid white;
+                        @include media('<tablet-l') {
+                            width: 40px;
+                            height: 20px;
+                        }
                     }
                     &:after {
                         left: 4px;
@@ -200,6 +302,11 @@
                         height: 17px;
                         border: 2px solid white;
                         transition: .5s;
+                        @include media('<tablet-l') {
+                            width: 14px;
+                            height: 14px;
+                            top: 2px;
+                        }
                     }
                 }
                 input {
@@ -209,6 +316,9 @@
                             &:after {
                                 background-color: white;
                                 transform: translateX(20px);
+                                @include media('<tablet-l') {
+                                    transform: translateX(18px);
+                                }
                             }
                         }
                     }
@@ -223,12 +333,16 @@
                 font-weight: 500;
                 margin-bottom: 40px;
                 display: block;
+                @include media('<tablet-l') {
+                    font-size: 35px;
+                    margin-bottom: 25px;
+                }
             }
         }
     }
     &__messages {
         .messages--error {
-            border-color: #dc9797;
+            border-color: white;
             border-width: 1px;
             box-shadow: none;
             background-image: none;

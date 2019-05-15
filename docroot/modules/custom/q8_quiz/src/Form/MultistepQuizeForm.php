@@ -94,7 +94,7 @@ class MultistepQuizeForm extends FormBase {
       '#type' => 'container',
       '#attributes' => [
         'id' => 'progress-bar',
-        'class' => 'questionnaire__progress-bar'
+        'class' => 'questionnaire__progress-bar',
       ],
     ];
 
@@ -102,7 +102,7 @@ class MultistepQuizeForm extends FormBase {
       '#type' => 'container',
       '#attributes' => [
         'id' => 'messages-wrapper',
-        'class' => 'questionnaire__messages'
+        'class' => 'questionnaire__messages',
       ],
     ];
 
@@ -110,7 +110,7 @@ class MultistepQuizeForm extends FormBase {
       '#type' => 'container',
       '#attributes' => [
         'id' => 'form-wrapper',
-        'class' => 'questionnaire__form'
+        'class' => 'questionnaire__form',
       ],
     ];
 
