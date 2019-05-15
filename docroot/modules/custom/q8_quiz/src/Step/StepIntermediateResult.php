@@ -10,6 +10,13 @@ namespace Drupal\q8_quiz\Step;
 class StepIntermediateResult extends BaseStep {
 
   /**
+   * Id entity Question.
+   *
+   * @var int
+   */
+  private $steps;
+
+  /**
    * {@inheritdoc}
    */
   public function buildStepFormElements() {
@@ -27,7 +34,19 @@ class StepIntermediateResult extends BaseStep {
       }
     }
 
+    // Get intermediate result.
+    $service = \Drupal::service('q8_quiz.calculate');
+    $question_csv_data = $service->getQuestionCsvDataBySteps($this->steps);
+    //$result = $service->calculateQuizResult($question_csv, $first_answer_csv);
+
     return $form;
+  }
+
+  /**
+   * Set Steps.
+   */
+  public function setSteps($steps) {
+    $this->steps = $steps;
   }
 
 }

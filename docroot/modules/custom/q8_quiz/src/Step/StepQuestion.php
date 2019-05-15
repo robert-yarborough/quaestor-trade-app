@@ -19,6 +19,13 @@ class StepQuestion extends BaseStep {
   private $questionId;
 
   /**
+   * Number Question.
+   *
+   * @var int
+   */
+  private $questionNumber;
+
+  /**
    * {@inheritdoc}
    */
   public function buildStepFormElements() {
@@ -37,6 +44,16 @@ class StepQuestion extends BaseStep {
           $this->questionId = $p->id();
           $values = $this->getValues();
 
+          $form[$this->questionId] = [
+            '#type' => 'container',
+            '#tree' => TRUE,
+          ];
+
+          $form[$this->questionId]['question_set'] = [
+            '#type' => 'value',
+            '#value' => '5',
+          ];
+
           $answer_option = [];
           foreach ($answers as $answer) {
             if (($answer->hasField('field_answer') && !$answer->field_answer->isEmpty()) &&
@@ -46,18 +63,23 @@ class StepQuestion extends BaseStep {
           }
 
           if ($p->hasField('field_question_type') && !$p->field_question_type->isEmpty() && $p->field_question_type->value == 'multi') {
-            $form[$this->questionId]['#type'] = 'checkboxes';
-            $form[$this->questionId]['#attributes']['class'][] = 'quiz-multi-question';
+            $form[$this->questionId]['weight']['#type'] = 'checkboxes';
+            $form[$this->questionId]['weight']['#attributes']['class'][] = 'quiz-multi-question';
           }
           else {
-            $form[$this->questionId]['#type'] = 'radios';
-            $form[$this->questionId]['#attributes']['class'][] = 'quiz-single-question';
+            $form[$this->questionId]['weight']['#type'] = 'radios';
+            $form[$this->questionId]['weight']['#attributes']['class'][] = 'quiz-single-question';
           }
 
-          $form[$this->questionId]['#title'] = $p->field_title->value;
-          $form[$this->questionId]['#options'] = $answer_option;
-          $form[$this->questionId]['#default_value'] = (isset($values) && (isset($values[$this->questionId])))
-            ? $values[$this->questionId] : [];
+          $form[$this->questionId]['weight']['#title'] = $p->field_title->value;
+          $form[$this->questionId]['weight']['#options'] = $answer_option;
+          $form[$this->questionId]['weight']['#default_value'] = (isset($values) && (isset($values[$this->questionId]['weight'])))
+            ? $values[$this->questionId]['weight'] : [];
+
+          $form[$this->questionId]['total_number_answer'] = [
+            '#type' => 'value',
+            '#value' => count($answer_option),
+          ];
         }
       }
     }

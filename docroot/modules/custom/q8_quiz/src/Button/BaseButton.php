@@ -13,7 +13,7 @@ abstract class BaseButton implements ButtonInterface {
    * {@inheritdoc}
    */
   public function ajaxify() {
-    return TRUE;
+    return FALSE;
   }
 
   /**

@@ -11,6 +11,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\q8_quiz\Manager\StepManager;
+use Drupal\q8_quiz\Step\StepIntermediateResult;
 
 /**
  * Provides multi step ajax Quiz form.
@@ -138,12 +139,6 @@ class MultistepQuizeForm extends FormBase {
           'wrapper' => 'form-wrapper',
           'effect' => 'fade',
         ];
-      }
-
-      $callable = [$this, $button->getSubmitHandler()];
-      if ($button->getSubmitHandler() && is_callable($callable)) {
-        // Attach submit handler to button, so we can execute it later on..
-        $form['wrapper']['actions'][$button->getKey()]['#submit_handler'] = $button->getSubmitHandler();
       }
     }
 
@@ -312,6 +307,13 @@ class MultistepQuizeForm extends FormBase {
     // We already tested if it is callable before.
     if (isset($triggering_element['#submit_handler'])) {
       $this->{$triggering_element['#submit_handler']}($form, $form_state);
+    }
+
+    // Set steps for intermediate results.
+    $steps = $this->stepManager->getAllSteps();
+    $next_step = $steps[$this->stepId + 1];
+    if ($next_step instanceof StepIntermediateResult) {
+      $next_step->setSteps($steps);
     }
 
     $form_state->setRebuild(TRUE);
