@@ -84,3 +84,7 @@ module-tabs-filters:
     - core/jquery
     - core/jquery.once
     - core/drupal
+module-questionnaire:
+  css:
+    theme:
+      css/module-questionnaire.css: { minified: true }

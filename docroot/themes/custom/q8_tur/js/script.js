@@ -225,8 +225,8 @@ var setHeaderActions = function ($) {
 
 		// Language Toggle:
 
-		var $menu_lang_list = $('.js-menu-lang-list', context);
-		var $lang_drop = $('.js-menu-lang-list li:not(.is-current)', context);
+		var $menu_lang_list = $('.js-menu-lang-list, ' + '.js-sh--lang .js-h-lang-drop', context);
+		var $lang_drop = $('.js-menu-lang-list li:not(.is-current), ' + '.js-sh--lang .js-h-lang-drop li:not(.is-active)', context);
 
 		$menu_lang_list.on({
 			click: function click(e) {
