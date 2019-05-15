@@ -26,6 +26,17 @@ class StepTesting extends BaseStep {
         ];
       }
 
+      if ($p->hasField('field_image') && !$p->field_image->isEmpty()) {
+        $field_image = $p->field_image->referencedEntities();
+        $path = file_create_url($field_image[0]->getFileUri());
+
+        $form['image'] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'style' => 'background-image: url(' . $path .')',
+          ],
+        ];
+      }
     }
 
     return $form;

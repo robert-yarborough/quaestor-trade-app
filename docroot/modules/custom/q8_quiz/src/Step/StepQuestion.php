@@ -2,7 +2,7 @@
 
 namespace Drupal\q8_quiz\Step;
 
-use Drupal\q8_quiz\Validator\ValidatorRequired;
+use Drupal\q8_quiz\Validator\ValidatorQuestionRequired;
 
 /**
  * Class StepQuestion.
@@ -37,6 +37,18 @@ class StepQuestion extends BaseStep {
           $this->questionId = $p->id();
           $values = $this->getValues();
 
+          $form[$this->questionId] = [
+            '#type' => 'container',
+            '#tree' => TRUE,
+          ];
+
+          if ($p->hasField('field_question_set') && !$p->field_question_set->isEmpty()) {
+            $form[$this->questionId]['question_set'] = [
+              '#type' => 'value',
+              '#value' => $p->field_question_set->value,
+            ];
+          }
+
           $answer_option = [];
           foreach ($answers as $answer) {
             if (($answer->hasField('field_answer') && !$answer->field_answer->isEmpty()) &&
@@ -46,19 +58,43 @@ class StepQuestion extends BaseStep {
           }
 
           if ($p->hasField('field_question_type') && !$p->field_question_type->isEmpty() && $p->field_question_type->value == 'multi') {
-            $form[$this->questionId]['#type'] = 'checkboxes';
-            $form[$this->questionId]['#attributes']['class'][] = 'quiz-multi-question';
+            $form[$this->questionId]['weight']['#type'] = 'checkboxes';
+            $form[$this->questionId]['weight']['#attributes']['class'][] = 'quiz-multi-question';
           }
           else {
-            $form[$this->questionId]['#type'] = 'radios';
-            $form[$this->questionId]['#attributes']['class'][] = 'quiz-single-question';
+            $form[$this->questionId]['weight']['#type'] = 'radios';
+            $form[$this->questionId]['weight']['#attributes']['class'][] = 'quiz-single-question';
           }
 
-          $form[$this->questionId]['#title'] = $p->field_title->value;
-          $form[$this->questionId]['#options'] = $answer_option;
-          $form[$this->questionId]['#default_value'] = (isset($values) && (isset($values[$this->questionId])))
-            ? $values[$this->questionId] : [];
+          $form[$this->questionId]['weight']['#title'] = $p->field_title->value;
+          $form[$this->questionId]['weight']['#options'] = $answer_option;
+          $form[$this->questionId]['weight']['#default_value'] = (isset($values) && (isset($values[$this->questionId]['weight'])))
+            ? $values[$this->questionId]['weight'] : [];
+
+          $form[$this->questionId]['total_number_answer'] = [
+            '#type' => 'value',
+            '#value' => count($answer_option),
+          ];
+
+          if (isset($step_data['questionNumber'])) {
+            $form[$this->questionId]['question_number'] = [
+              '#type' => 'value',
+              '#value' => $step_data['questionNumber'],
+            ];
+          }
         }
+      }
+
+      if ($p->hasField('field_image') && !$p->field_image->isEmpty()) {
+        $field_image = $p->field_image->referencedEntities();
+        $path = file_create_url($field_image[0]->getFileUri());
+
+        $form['step_testing'] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'style' => 'background-image: url(' . $path .')',
+          ],
+        ];
       }
     }
 
@@ -80,7 +116,7 @@ class StepQuestion extends BaseStep {
   public function getFieldsValidators() {
     return [
       $this->questionId => [
-        new ValidatorRequired("Answer the question. Select one or more values."),
+        new ValidatorQuestionRequired("Answer the question. Select one or more values."),
       ],
     ];
   }

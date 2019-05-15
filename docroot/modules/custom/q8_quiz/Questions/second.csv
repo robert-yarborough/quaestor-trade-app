@@ -1,0 +1,104 @@
+﻿Type,10,11,12,13,14,15,16,17,18
+Simple1,1,1,1,1,1,1,1,1,1
+Simple2,2,2,2,2,2,2,2,2,2
+Simple3,3,3,3,3,3,3,3,3,3
+Simple4,4,4,4,4,4,4,4,4,4
+Simple5,5,5,5,5,5,5,5,5,5
+Extreme1,5,5,5,5,5,5,5,5,5
+Extreme1,4,4,4,4,4,4,4,4,4
+Extreme1,3,3,3,3,3,3,3,3,3
+Extreme1,2,2,2,2,2,2,2,2,2
+Extreme1,1,1,1,1,1,1,1,1,1
+Extreme2,1,1,1,1,1,1,1,1,1
+Extreme2,2,2,2,2,2,2,2,2,2
+Extreme2,3,3,3,3,3,3,3,3,3
+Extreme2,4,4,4,4,4,4,4,4,4
+Extreme2,5,5,5,5,5,5,5,5,5
+Serial1,5,4,3,2,1,5,4,3,2
+Serial1,4,3,2,1,2,4,3,2,1
+Serial1,3,2,1,5,3,3,2,1,5
+Serial1,2,1,5,4,4,2,1,5,4
+Serial1,1,5,4,3,5,1,5,4,3
+Serial2,1,2,3,4,5,1,2,3,4
+Serial2,2,3,4,5,1,2,3,4,5
+Serial2,3,4,5,1,2,3,4,5,1
+Serial2,4,5,1,2,3,4,5,1,2
+Serial2,5,1,2,3,5,5,1,2,3
+Counter1,5,1,2,3,4,5,1,2,3
+Counter1,4,5,1,2,3,4,5,1,2
+Counter1,3,4,5,1,2,3,4,5,1
+Counter1,2,3,4,5,1,2,3,4,5
+Counter1,1,2,3,4,5,1,2,3,4
+Counter2,1,5,4,3,2,1,5,4,3
+Counter2,2,1,5,4,3,2,1,5,4
+Counter2,3,2,1,5,4,3,2,1,5
+Counter2,4,3,2,1,5,4,3,2,1
+Counter2,5,4,3,2,1,5,4,3,2
+RCounter1,3,4,5,1,2,3,4,5,1
+RCounter1,4,5,1,2,3,4,5,1,2
+RCounter1,5,1,2,3,4,5,1,2,3
+RCounter1,1,2,3,4,5,1,2,3,4
+RCounter1,2,3,4,5,1,2,3,4,5
+RCounter2,5,4,3,2,1,5,4,3,2
+RCounter2,4,3,2,1,5,4,3,2,1
+RCounter2,3,2,1,5,4,3,2,1,5
+RCounter2,2,1,5,4,3,2,1,5,4
+RCounter2,1,5,4,3,2,1,5,4,3
+Serial1/ Counter1,5,1,2,3,4,5,1,2,3
+Serial1/ Counter1,4,5,1,2,3,4,5,1,2
+Serial1/ Counter1,3,4,5,1,2,3,4,5,1
+Serial1/ Counter1,2,3,4,5,1,2,3,4,5
+Serial1/ Counter1,1,2,3,4,5,1,2,3,4
+Counter1/Serial1,5,4,3,2,1,5,4,3,2
+Counter1/Serial1,4,3,2,1,2,4,3,2,1
+Counter1/Serial1,3,2,1,5,3,3,2,1,5
+Counter1/Serial1,2,1,5,4,4,2,1,5,4
+Counter1/Serial1,1,5,4,3,5,1,5,4,3
+Counter1/ RCounter2,5,4,3,2,1,5,4,3,2
+Counter1/ RCounter2,4,3,2,1,5,4,3,2,1
+Counter1/ RCounter2,3,2,1,5,4,3,2,1,5
+Counter1/ RCounter2,2,1,5,4,3,2,1,5,4
+Counter1/ RCounter2,1,5,4,3,2,1,5,4,3
+RCounter1/Counter2,1,5,4,3,2,1,5,4,3
+RCounter1/Counter2,2,1,5,4,3,2,1,5,4
+RCounter1/Counter2,3,2,1,5,4,3,2,1,5
+RCounter1/Counter2,4,3,2,1,5,4,3,2,1
+RCounter1/Counter2,5,4,3,2,1,5,4,3,2
+Serial2/RCounter1,3,4,5,1,2,3,4,5,1
+Serial2/RCounter1,4,5,1,2,3,4,5,1,2
+Serial2/RCounter1,5,1,2,3,4,5,1,2,3
+Serial2/RCounter1,1,2,3,4,5,1,2,3,4
+Serial2/RCounter1,2,3,4,5,1,2,3,4,5
+Serial1/Extreme1,5,5,5,5,5,5,5,5,5
+Serial1/Extreme1,4,4,4,4,4,4,4,4,4
+Serial1/Extreme1,3,3,3,3,3,3,3,3,3
+Serial1/Extreme1,2,2,2,2,2,2,2,2,2
+Serial1/Extreme1,1,1,1,1,1,1,1,1,1
+Extreme2/RCounter2,5,4,3,2,1,5,4,3,2
+Extreme2/RCounter2,4,3,2,1,5,4,3,2,1
+Extreme2/RCounter2,3,2,1,5,4,3,2,1,5
+Extreme2/RCounter2,2,1,5,4,3,2,1,5,4
+Extreme2/RCounter2,1,5,4,3,2,1,5,4,3
+Extreme1/RCounter1,3,4,5,1,2,3,4,5,1
+Extreme1/RCounter1,4,5,1,2,3,4,5,1,2
+Extreme1/RCounter1,5,1,2,3,4,5,1,2,3
+Extreme1/RCounter1,1,2,3,4,5,1,2,3,4
+Extreme1/RCounter1,2,3,4,5,1,2,3,4,5
+RCounter2/Serial2,1,2,3,4,5,1,2,3,4
+RCounter2/Serial2,2,3,4,5,1,2,3,4,5
+RCounter2/Serial2,3,4,5,1,2,3,4,5,1
+RCounter2/Serial2,4,5,1,2,3,4,5,1,2
+RCounter2/Serial2,5,1,2,3,5,5,1,2,3
+Counter1/Extreme1,5,5,5,5,5,5,5,5,5
+Counter1/Extreme1,4,4,4,4,4,4,4,4,4
+Counter1/Extreme1,3,3,3,3,3,3,3,3,3
+Counter1/Extreme1,2,2,2,2,2,2,2,2,2
+Counter1/Extreme1,1,1,1,1,1,1,1,1,1
+Counter2/Extreme2,1,1,1,1,1,1,1,1,1
+Counter2/Extreme2,2,2,2,2,2,2,2,2,2
+Counter2/Extreme2,3,3,3,3,3,3,3,3,3
+Counter2/Extreme2,4,4,4,4,4,4,4,4,4
+Counter2/Extreme2,5,5,5,5,5,5,5,5,5
+Counter3/Extreme3,5,5,5,5,5,5,5,3,3
+Counter3/Extreme4,5,5,5,5,4,3,4,4,3
+Simple11,1,1,1,1,1,1,1,1,1
