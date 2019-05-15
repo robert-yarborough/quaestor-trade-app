@@ -90,9 +90,12 @@ class StepQuestion extends BaseStep {
         $path = file_create_url($field_image[0]->getFileUri());
 
         $form['step_testing'] = [
-          '#type' => 'container',
+          '#type' => 'html_tag',
+          '#tag' => 'img',
           '#attributes' => [
-            'style' => 'background-image: url(' . $path .')',
+            'src' => ' '.$path .' ',
+            'class' => 'decor-image',
+            'alt' => 'Step',
           ],
         ];
       }
