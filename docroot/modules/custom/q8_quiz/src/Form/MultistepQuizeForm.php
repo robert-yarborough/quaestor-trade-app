@@ -11,6 +11,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\q8_quiz\Manager\StepManager;
+use Drupal\q8_quiz\Step\StepIntermediateResult;
 
 /**
  * Provides multi step ajax Quiz form.
@@ -141,12 +142,6 @@ class MultistepQuizeForm extends FormBase {
           'effect' => 'fade',
         ];
       }
-
-      $callable = [$this, $button->getSubmitHandler()];
-      if ($button->getSubmitHandler() && is_callable($callable)) {
-        // Attach submit handler to button, so we can execute it later on..
-        $form['wrapper']['actions'][$button->getKey()]['#submit_handler'] = $button->getSubmitHandler();
-      }
     }
 
     return $form;
@@ -156,13 +151,14 @@ class MultistepQuizeForm extends FormBase {
    * Form the steps data and progress bar by paragraphs from the node.
    */
   public function initStepsDataByParagraphs($paragraphs) {
-    $step_data = [];
     $progress_bar = [];
 
     $step_id = 0;
+    $question_number = 1;
     foreach ($paragraphs as $delta => $p) {
       $progress_bar[$delta]['#children'] = $p->field_title->value;
 
+      $step_data = [];
       $step_data['paragraph'] = $p;
       $step_data['progress_bar_id'] = $delta;
       switch ($p->bundle()) {
@@ -191,10 +187,13 @@ class MultistepQuizeForm extends FormBase {
           switch ($sub_p->bundle()) {
             case 'question':
               $step_data['class'] = 'StepQuestion';
+              $step_data['questionNumber'] = $question_number;
+
+              $this->initStepData($step_data['class'], $step_id, $step_data);
               break;
           }
-          $this->initStepData($step_data['class'], $step_id, $step_data);
           $step_id++;
+          $question_number++;
         }
       }
     }
@@ -314,6 +313,13 @@ class MultistepQuizeForm extends FormBase {
     // We already tested if it is callable before.
     if (isset($triggering_element['#submit_handler'])) {
       $this->{$triggering_element['#submit_handler']}($form, $form_state);
+    }
+
+    // Set steps for intermediate results.
+    $steps = $this->stepManager->getAllSteps();
+    $next_step = $steps[$this->stepId + 1];
+    if ($next_step instanceof StepIntermediateResult) {
+      $next_step->setSteps($steps);
     }
 
     $form_state->setRebuild(TRUE);

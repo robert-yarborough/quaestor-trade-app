@@ -7,13 +7,13 @@ namespace Drupal\q8_quiz\Validator;
  *
  * @package Drupal\ms_ajax_form_example\Validator
  */
-class ValidatorRequired extends BaseValidator {
+class ValidatorQuestionRequired extends BaseValidator {
 
   /**
    * {@inheritdoc}
    */
   public function validates($value) {
-    return is_array($value) ? !empty(array_filter($value)) : !empty($value);
+    return is_array($value['weight']) ? !empty(array_filter($value['weight'])) : !empty($value['weight']);
   }
 
 }

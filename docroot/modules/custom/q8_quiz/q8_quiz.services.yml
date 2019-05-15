@@ -1,0 +1,4 @@
+services:
+  q8_quiz.calculate:
+    class: Drupal\q8_quiz\Q8QuizCalculate
+    arguments: []
