@@ -21,23 +21,17 @@ class Q8QuizCalculate {
     if (isset($steps) && !empty($steps)) {
       $values = [];
 
-      $question_number = 1;
       foreach ($steps as $step) {
         if ($step instanceof StepQuestion) {
           $step_values = $step->getValues();
 
           if(isset($step_values)) {
             foreach ($step_values as $value) {
-              $value['question_number'] = $question_number;
-
               $values[] = $value;
             }
-
-            $question_number++;
           }
         }
       }
-      ksm($values);
     }
   }
 

@@ -2,7 +2,7 @@
 
 namespace Drupal\q8_quiz\Step;
 
-use Drupal\q8_quiz\Validator\ValidatorRequired;
+use Drupal\q8_quiz\Validator\ValidatorQuestionRequired;
 
 /**
  * Class StepQuestion.
@@ -17,13 +17,6 @@ class StepQuestion extends BaseStep {
    * @var int
    */
   private $questionId;
-
-  /**
-   * Number Question.
-   *
-   * @var int
-   */
-  private $questionNumber;
 
   /**
    * {@inheritdoc}
@@ -49,10 +42,12 @@ class StepQuestion extends BaseStep {
             '#tree' => TRUE,
           ];
 
-          $form[$this->questionId]['question_set'] = [
-            '#type' => 'value',
-            '#value' => '5',
-          ];
+          if ($p->hasField('field_question_set') && !$p->field_question_set->isEmpty()) {
+            $form[$this->questionId]['question_set'] = [
+              '#type' => 'value',
+              '#value' => $p->field_question_set->value,
+            ];
+          }
 
           $answer_option = [];
           foreach ($answers as $answer) {
@@ -80,7 +75,26 @@ class StepQuestion extends BaseStep {
             '#type' => 'value',
             '#value' => count($answer_option),
           ];
+
+          if (isset($step_data['questionNumber'])) {
+            $form[$this->questionId]['question_number'] = [
+              '#type' => 'value',
+              '#value' => $step_data['questionNumber'],
+            ];
+          }
         }
+      }
+
+      if ($p->hasField('field_image') && !$p->field_image->isEmpty()) {
+        $field_image = $p->field_image->referencedEntities();
+        $path = file_create_url($field_image[0]->getFileUri());
+
+        $form['step_testing'] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'style' => 'background-image: url(' . $path .')',
+          ],
+        ];
       }
     }
 
@@ -102,7 +116,7 @@ class StepQuestion extends BaseStep {
   public function getFieldsValidators() {
     return [
       $this->questionId => [
-        new ValidatorRequired("Answer the question. Select one or more values."),
+        new ValidatorQuestionRequired("Answer the question. Select one or more values."),
       ],
     ];
   }

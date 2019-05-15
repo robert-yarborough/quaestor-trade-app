@@ -151,13 +151,14 @@ class MultistepQuizeForm extends FormBase {
    * Form the steps data and progress bar by paragraphs from the node.
    */
   public function initStepsDataByParagraphs($paragraphs) {
-    $step_data = [];
     $progress_bar = [];
 
     $step_id = 0;
+    $question_number = 1;
     foreach ($paragraphs as $delta => $p) {
       $progress_bar[$delta]['#children'] = $p->field_title->value;
 
+      $step_data = [];
       $step_data['paragraph'] = $p;
       $step_data['progress_bar_id'] = $delta;
       switch ($p->bundle()) {
@@ -186,10 +187,13 @@ class MultistepQuizeForm extends FormBase {
           switch ($sub_p->bundle()) {
             case 'question':
               $step_data['class'] = 'StepQuestion';
+              $step_data['questionNumber'] = $question_number;
+
+              $this->initStepData($step_data['class'], $step_id, $step_data);
               break;
           }
-          $this->initStepData($step_data['class'], $step_id, $step_data);
           $step_id++;
+          $question_number++;
         }
       }
     }
