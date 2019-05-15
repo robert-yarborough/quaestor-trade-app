@@ -4,6 +4,8 @@
     background-color: $c-primary;
     padding: 35px 0 55px;
     min-height: calc(100vh - 134px);
+    position: relative;
+    overflow: hidden;
     @include media('<tablet-l') {
         min-height: calc(100vh - 75px);
         padding: 20px 0 25px;
@@ -17,12 +19,16 @@
             padding-right: 15px;
         }
     }
+    &__progress-bar {
+        position: relative;
+        z-index: 1;
+    }
     &__steps-list {
         color: white;
         margin-bottom: 4vw;
         border-bottom: 2px solid #c7e5e7;
         @include media('<tablet-l') {
-            margin-bottom: 50px;
+            margin-bottom: 70px;
         }
         @include media('<tablet') {
             position: relative;
@@ -123,6 +129,9 @@
             @include media('<tablet-l') {
                 min-height: calc(100vh - 120px);
             }
+            @include media('<tablet') {
+                min-height: calc(100vh - 110px);
+            }
         }
     }
     [data-drupal-selector='q8-quiz'] {
@@ -148,6 +157,10 @@
             }
             @include media('<tablet') {
                 font-size: 28px;
+                line-height: 1.5;
+            }
+            h2, h3 {
+                line-height: 1.2;
             }
         }
         .form-actions {
@@ -155,6 +168,7 @@
             justify-content: space-between;
             padding-top: 25px;
             cursor: auto!important;
+            position: static;
             &:before, &:after {
                 display: none;
             }
@@ -166,7 +180,14 @@
                 min-width: 133px;
                 letter-spacing: -0.03em;
                 @include media('<tablet-l') {
-                    transform: scale(.7);
+                    font-size: 16px;
+                    min-width: 120px;
+                }
+                @include media('<mobile-m') {
+                    font-size: 14px;
+                }
+                @include media('<tablet') {
+                    background-size: 10px;
                 }
                 &:before, &:after {
                     display: none;
@@ -182,12 +203,23 @@
                     background-position: calc(100% - 30px) center;
                     padding: 11px 60px 9px 30px;
                     @include media('<tablet-l') {
-                        transform-origin: right bottom;
+                        padding: 7px 50px 6px 25px;
+                        background-position: calc(100% - 20px) center;
+                    }
+                    @include media('<tablet') {
+                        padding: 7px 15px 6px 15px;
+                        justify-content: flex-start;
+                        background-position: calc(100% - 15px) center;
                     }
                     &:not(:disabled):hover {
                         background-image: url('../images/icons/svg/icon-arrow-right-white.svg');
                         color: white;
                         background-color: transparent;
+                    }
+                }
+                &[data-drupal-selector='edit-finish'] {
+                    @include media('<tablet') {
+                        padding: 7px 32px 6px 15px;
                     }
                 }
                 &[data-drupal-selector='edit-previous'] {
@@ -198,7 +230,13 @@
                     background-position: 30px center;
                     padding: 11px 30px 9px 60px;
                     @include media('<tablet-l') {
-                        transform-origin: left bottom;
+                        padding: 7px 25px 6px 50px;
+                        background-position: 20px center;
+                    }
+                    @include media('<tablet') {
+                        padding: 7px 15px 6px 15px;
+                        justify-content: flex-end;
+                        background-position: 15px center;
                     }
                     &:not(:disabled):hover {
                         background-image: url('../images/icons/svg/icon-arrow-left-dark.svg');
@@ -213,6 +251,22 @@
                 margin-top: -15px;
                 width: 30px;
                 height: 30px;
+                &:before {
+                    position: relative;
+                    z-index: 1;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    background-color: white;
+                    opacity: .1;
+                    transform: translate(-50%, -50%);
+                    width: 120vw;
+                    height: 200vh;
+                }
             }
         }
         .form-radios {
@@ -337,10 +391,14 @@
                     font-size: 35px;
                     margin-bottom: 25px;
                 }
+                @include media('<tablet') {
+                    font-size: 28px;
+                }
             }
         }
     }
     &__messages {
+        line-height: 1.2;
         .messages--error {
             border-color: white;
             border-width: 1px;
@@ -348,17 +406,45 @@
             background-image: none;
         }
     }
+    .decor-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        opacity: .05;
+        @include media('<tablet-l') {
+            max-width: 320px;
+        }
+        @include media('<tablet') {
+            display: none;
+        }
+    }
 }
 
 .questionnaire-step {
     &__assets {
         padding: 90px 0;
+        @include media('<tablet-l') {
+            padding: 40px 0;
+        }
     }
 }
 .qsa {
+    &--wrap {
+        @include media('<tablet') {
+            overflow: auto;
+        }
+    }
     &--list {
         display: flex;
         justify-content: center;
+        @include media('>=tablet') {
+            width: auto!important;
+        }
+        @include media('<tablet') {
+            padding: 25px 0 70px;
+
+        }
     }
     &--item {
         flex-basis: calc(20% - 1px);
@@ -370,6 +456,9 @@
         display: flex;
         margin-left: 0.5px;
         margin-right: 0.5px;
+        @include media('<tablet') {
+            min-width: 250px;
+        }
         &:before {
             content: '';
             display: block;
@@ -387,7 +476,7 @@
             display: block;
             position: absolute;
             left: 50%;
-            bottom: -59px;
+            bottom: -52px;
             margin-left: -10px;
             border-radius: 50%;
             width: 23px;
@@ -399,11 +488,13 @@
             transition: .5s;
         }
         &:hover {
-            z-index: 2;
-            &:before {
-                width: calc(100% + 50px);
-                height: calc(100% + 30px);
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+            @include media('>=tablet-l') {
+                z-index: 2;
+                &:before {
+                    width: calc(100% + 50px);
+                    height: calc(100% + 30px);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+                }
             }
         }
         .slider-line {
@@ -411,7 +502,7 @@
             width: calc(100% + 1px);
             height: 5px;
             position: absolute;
-            bottom: -50px;
+            bottom: -43px;
             left: 0;
             overflow: hidden;
             pointer-events: none;
@@ -444,12 +535,22 @@
                     background-color: #64dea2;
                 }
             }
+            .qsa--icon {
+                .image-holder {
+                    background-image: url('../images/icons/icon-guardian.png');
+                }
+            }
         }
         &:nth-child(2) {
             background-color: #ffab40;
             .slider-line {
                 &:before {
                     background-color: #91e332;
+                }
+            }
+            .qsa--icon {
+                .image-holder {
+                    background-image: url('../images/icons/icon-thinker.png');
                 }
             }
         }
@@ -460,6 +561,11 @@
                     background-color: #ffab40;
                 }
             }
+            .qsa--icon {
+                .image-holder {
+                    background-image: url('../images/icons/icon-independet.png');
+                }
+            }
         }
         &:nth-child(4) {
             background-color: #e64a19;
@@ -468,12 +574,22 @@
                     background-color: #e64a19;
                 }
             }
+            .qsa--icon {
+                .image-holder {
+                    background-image: url('../images/icons/icon-trendspotter.png');
+                }
+            }
         }
         &:nth-child(5) {
             background-color: #c1272d;
             .slider-line {
                 &:before {
                     background-color: #c1272d;
+                }
+            }
+            .qsa--icon {
+                .image-holder {
+                    background-image: url('../images/icons/icon-adventurer.png');
                 }
             }
         }
@@ -493,12 +609,7 @@
                 }
             }
         }
-        &.guardian,
-        &.thinker,
-        &.independet,
-        &.trendspotter,
-        &.adventurer,
-        &[class*='-active']{
+        &[class*='active']{
             &:after {
                 opacity: 1;
                 transform: scale(1);
@@ -539,28 +650,46 @@
     &--group {
         position: relative;
         z-index: 1;
-        padding: 0 22px 35px;
+        padding: 0 22px 38px;
         background-color: white;
         pointer-events: all;
+        display: flex;
+        flex-direction: column;
+        @include media('<tablet-l') {
+            padding: 0 12px 25px;
+        }
     }
     &--icon {
         margin-top: -30px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        @include media('<tablet-l') {
+            margin-top: -25px;
+            margin-bottom: 10px;
+        }
         .image-holder {
             margin: 0 auto;
             height: 79px;
             width: 79px;
-            background-image: url('../images/icons/icon-guardian.png');
             background-size: contain;
             background-repeat: no-repeat;
             transition: .4s;
+            @include media('<tablet-l') {
+                height: 59px;
+                width: 59px;
+            }
         }
     }
     &--text {
-        margin-bottom: 15px;
+        margin-bottom: 23px;
         font-size: 16px;
-        line-height: 1.4;
+        line-height: 1.5;
         font-weight: 500;
+        @include media('<tablet-l') {
+            font-size: 12px;
+        }
+        @include media('<tablet') {
+            font-size: 14px;
+        }
     }
     &--title {
         color: #414141;
@@ -568,17 +697,29 @@
         font-size: 28px;
         line-height: 1.2;
         margin-bottom: 5px;
+        @include media('<tablet-l') {
+            font-size: 20px;
+        }
     }
     &--subtitle {
         font-size: 18px;
+        line-height: 1.2;
         color: #2199a1;
-        margin-bottom: 5px;
+        margin-bottom: 12px;
+        margin-top: auto;
+        @include media('<tablet-l') {
+            font-size: 16px;
+        }
     }
     &--values {
         color: #333333;
         line-height: 1.2;
         li {
             font-size: 18px;
+            margin-bottom: 1px;
+            @include media('<tablet-l') {
+                font-size: 14px;
+            }
         }
     }
 }
