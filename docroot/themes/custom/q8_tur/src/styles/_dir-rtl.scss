@@ -640,5 +640,121 @@ html {
                 }
             }
         }
+        .secondary-header {
+            .sh--menu {
+                margin-left: 0;
+                margin-right: auto;
+            }
+            .sh--lang {
+                margin-right: 0;
+                margin-left: 35px;
+                @include media('<tablet-l') {
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+            .sh--account {
+                .is-login,
+                [href*='login'] {
+                    &:after {
+                        margin-left: 0;
+                        margin-right: 7px;
+                        @include media('<tablet-l') {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .sh--back {
+                a {
+                    &:before {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .menu--lang__main li {
+                &:before {
+                    display: none!important;
+                }
+                &:not(.is-active) {
+                    right: auto;
+                    left: calc(100% + 15px);
+                }
+                &:not(:last-child) {
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+        .questionnaire {
+            &__steps-list {
+                li {
+                    margin: 0 15px;
+                    &:first-child {
+                        margin-left: 15px;
+                        margin-right: 0;
+                    }
+                    &:last-child {
+                        margin-left: 0;
+                        margin-right: 15px;
+                    }
+                }
+            }
+            &__form {
+                .form-actions {
+                    .button {
+                        &[data-drupal-selector='edit-next'],
+                        &[data-drupal-selector='edit-finish'] {
+                            margin-left: 0;
+                            margin-right: auto;
+                        }
+                    }
+                }
+                .form-type-radio {
+                    label {
+                        padding-left: 0;
+                        padding-right: 35px;
+                        @include media('<tablet-l') {
+                            padding-left: 0;
+                            padding-right: 25px;
+                        }
+                    }
+                }
+                .form-checkboxes {
+                    .form-item {
+                        label {
+                            padding-left: 0;
+                            padding-right: 65px;
+                            @include media('<tablet-l') {
+                                padding-left: 0;
+                                padding-right: 55px;
+
+                            }
+                            &:before {
+                                left: auto;
+                                right: 0;
+                            }
+                            &:after {
+                                left: auto;
+                                right: 4px;
+                            }
+                        }
+                        input {
+                            &:checked {
+                                + label {
+                                    &:after {
+                                        transform: translateX(-20px);
+                                        @include media('<tablet-l') {
+                                            transform: translateX(-18px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
