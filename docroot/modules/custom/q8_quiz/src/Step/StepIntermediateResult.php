@@ -49,6 +49,9 @@ class StepIntermediateResult extends BaseStep {
     $this->steps = $steps;
   }
 
+  /**
+   * Static Card.
+   */
   public function getStaticResult() {
     return '<div class="page-frame">
   <div class="questionnaire-step__assets">

@@ -93,7 +93,7 @@ class StepQuestion extends BaseStep {
           '#type' => 'html_tag',
           '#tag' => 'img',
           '#attributes' => [
-            'src' => ' '.$path .' ',
+            'src' => ' ' . $path . ' ',
             'class' => 'decor-image',
             'alt' => 'Step',
           ],
