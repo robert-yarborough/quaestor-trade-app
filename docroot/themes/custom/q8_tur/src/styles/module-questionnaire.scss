@@ -421,10 +421,31 @@
     &__messages {
         line-height: 1.2;
         .messages--error {
-            border-color: white;
-            border-width: 1px;
+            border: 0;
+            background: none;
             box-shadow: none;
-            background-image: none;
+            font-size: 18px;
+            color: $c-bright;
+            padding: 0;
+            [role='alert'] {
+                padding-left: 40px;
+                position: relative;
+                &:before {
+                    content: '!';
+                    display: inline-block;
+                    width: 27px;
+                    height: 27px;
+                    line-height: 27px;
+                    text-align: center;
+                    border: 1px solid $c-bright;
+                    font-weight: 700;
+                    margin-right: 7px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: -6px;
+                }
+            }
         }
     }
     .decor-image {
