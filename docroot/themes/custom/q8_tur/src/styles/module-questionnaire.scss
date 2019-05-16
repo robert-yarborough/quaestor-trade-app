@@ -268,6 +268,7 @@
                 margin-top: -15px;
                 width: 30px;
                 height: 30px;
+                display: none;
                 &:before {
                     position: relative;
                     z-index: 1;
@@ -402,11 +403,11 @@
                 font-size: 50px;
                 line-height: 1.2;
                 font-weight: 500;
-                margin-bottom: 40px;
+                padding-bottom: 40px;
                 display: block;
                 @include media('<tablet-l') {
                     font-size: 35px;
-                    margin-bottom: 25px;
+                    padding-bottom: 25px;
                 }
                 @include media('<tablet') {
                     font-size: 28px;
@@ -503,6 +504,14 @@
             transform: scale(.5);
             pointer-events: none;
             transition: .5s;
+        }
+        &[class*='active'] {
+            z-index: 2;
+            &:before {
+                width: calc(100% + 50px);
+                height: calc(100% + 30px);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+            }
         }
         &:hover {
             @include media('>=tablet-l') {
