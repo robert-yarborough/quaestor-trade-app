@@ -150,6 +150,9 @@
         }
     }
     &__form {
+        .page-frame {
+            padding: 0;
+        }
         .form-item-description {
             color: white;
             font-size: 70px;
@@ -515,7 +518,7 @@
         }
         &:hover {
             @include media('>=tablet-l') {
-                z-index: 2;
+                z-index: 3;
                 &:before {
                     width: calc(100% + 50px);
                     height: calc(100% + 30px);

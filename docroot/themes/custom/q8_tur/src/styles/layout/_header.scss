@@ -581,6 +581,9 @@
         }
     }
     .menu--lang__main li {
+        @include media('<tablet-l') {
+            margin-bottom: 7px;
+        }
         &:after {
             display: none;
         }

@@ -683,6 +683,9 @@ html {
                 &:not(.is-active) {
                     right: auto;
                     left: calc(100% + 15px);
+                    @include media('<tablet-l') {
+                        left: 0;
+                    }
                 }
                 &:not(:last-child) {
                     padding-left: 0;
