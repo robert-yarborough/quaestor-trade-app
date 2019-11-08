@@ -30,7 +30,9 @@
 
           {{ elements.languageswitcher }}
 
+ {% if main_menu is not empty %} 
           <div class="header-toggle-btn js-h-toggle-btn" role="button"><span></span><b class="visually-hidden">{{ 'Menu'|t }}</b></div>
+          {% endif %}
 
           <div class="menu--links js-h-menu-links">
             {{ elements.supernavsecurities }}
