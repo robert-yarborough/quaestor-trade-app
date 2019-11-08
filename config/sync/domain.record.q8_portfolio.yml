@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: q8_portfolio
 domain_id: 16160045
-hostname: q8securities-tur.bfmdev1.com
+hostname: quaestor-dev-tur.bfmdev1.com
 name: 'Q8 Portfolio'
 scheme: http
 weight: 2

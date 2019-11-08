@@ -1,0 +1,18 @@
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+]
+%}
+{% if content %}
+  {% if content.content.field_article_categories[0] %}
+    {{ content.content.field_article_categories }}
+  {% endif %}
+  <div class="nb-item__group">
+    {{ content.content.node_post_date }}
+    {% set text = content.content.node_title|render %}
+          {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
+       
+  </div>
+  <span class="btn-primary__dark" >{{ content.content.node_link }}</span>
+{% endif %}

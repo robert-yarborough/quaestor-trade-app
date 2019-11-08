@@ -6,7 +6,7 @@ label {
 @include input-styles() {
     max-width: 100%;
     border: none;
-    color: $c-primary;
+    color: $c-base;
     background: white;
     vertical-align: middle;
     outline: none;
@@ -22,10 +22,10 @@ label {
         padding-left: 16px;
     }
     @include placeholder {
-        color: $c-str-8;
+        color: $c-base;
     }
     &:focus {
-        box-shadow: inset 0 0 0 1px $c-secondary;
+        box-shadow: inset 0 0 0 1px $c-bright, inset 0 0 0 1px $c-bright;
     }
     &:disabled,
     &[disabled] {
@@ -193,7 +193,7 @@ select {
         &:checked {
             + label {
                 &:before {
-                    background-color: $c-secondary;
+                    background-color: $c-bright;
                 }
             }
         }
@@ -227,7 +227,7 @@ select {
 }
 .base-form {
     background-color: white;
-    border-bottom: 7px solid $c-secondary;
+    border-bottom: 7px solid $c-bright;
     padding: 60px;
     @include media('<tablet') {
         padding: 30px;

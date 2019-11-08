@@ -2,13 +2,13 @@
 
 .features-block {
     @include media('>=tablet-l') {
-        padding: 175px 0 130px;
+        padding: 50px 0;
     }
     @include media('<tablet-l', '>=tablet') {
         padding: 50px 0;
     }
     @include media('<tablet') {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     &__grid {
         max-width: $sw-site-l;
@@ -28,7 +28,7 @@
         text-align: center;
         @include media('>=tablet') {
             width: calc(100% / 3);
-            max-width: 275px;
+            max-width: 355px;
             flex-shrink: 1;
             height: auto;
         }
@@ -37,21 +37,26 @@
                 margin-bottom: 50px;
             }
         }
-        &:first-child {
-            margin-left: 0;
+        &:first-child:last-child{
+          margin-left: auto;
+          margin-right: auto;
         }
-        &:last-child {
-            margin-right: 0;
+    }
+    .block-title{
+        margin-bottom: 55px;
+        @include media('<tablet') {
+            margin-bottom: 0px;
         }
     }
     .block-description {
         margin-bottom: 0;
     }
     .fb-icon {
-        margin-bottom: 35px;
+        margin-bottom: 55px;
         margin-left: auto;
         margin-right: auto;
         width: 215px;
+        height: 150px;
         @include media('<tablet-m', '>=tablet') {
             width: 180px;
         }
@@ -69,13 +74,12 @@
         }
     }
     .fb-title {
-        font-size: 22px;
-        line-height: 26px;
-        margin-bottom: 30px;
-        max-width: 185px;
+        font-size: 28px;
+        line-height: 37px;
+        margin-bottom: 20px;
         margin-left: auto;
         margin-right: auto;
-        font-weight: 600;
+        font-family: $f-secondary-b;
         @include media('>=tablet-l') {
             //min-height: 52px;
         }

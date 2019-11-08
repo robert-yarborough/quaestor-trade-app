@@ -35,7 +35,7 @@
           <div class="menu--links js-h-menu-links">
             {{ elements.supernavblue }}
           </div>
-
+          {% if elements.q8_blue_simplesearchblock %}
           <div class="header-search js-h-search">
             <a href="#" class="header-search__toggle js-h-search-toggle">
               <span class="visually-hidden">{{ 'Search Button'|t }}</span>
@@ -45,6 +45,7 @@
               {{ elements.q8_blue_simplesearchblock }}
             </div>
           </div>
+            {% endif %}
         </div>
 
         <div class="navbar__bot--main js-h-menu-main">

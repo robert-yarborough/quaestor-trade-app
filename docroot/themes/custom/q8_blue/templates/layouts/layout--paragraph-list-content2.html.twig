@@ -21,18 +21,28 @@ set classes = [
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
       <div class="finance-block block-section" data-1000-bottom="@fadeAttr: 0;" data-500-top="@fadeAttr: 1;">
         <div class="page-frame">
+            <div class="finance-block-left">
           {% if content.content.field_title[0] %}
-            <div class="block-title block-center">
+            <div class="block-title">
               {{ content.content.field_title[0] }}
             </div>
           {% endif %}
           
           {% if content.content.field_subtitle[0] %}
-            <div class="block-description block-center">
+            <div class="block-description">
               {{ content.content.field_subtitle }}
             </div>
           {% endif %}
-          
+            <div class="swiper-button-prev js-fin-sl-btn-prev"></div>
+              <div class="swiper-button-next js-fin-sl-btn-next"></div>
+          {% if content.content.field_button[0] or content.content.field_button2[0] %}
+            <div class="finance-block__btn">
+              {{ content.content.field_button[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
+              {{ content.content.field_button2[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
+            </div>
+          {% endif %}
+          </div>
+          <div class="finance-block-right">
           {% if content.content.field_twi_three_items %}
             <div class="finance-block__inner">
               <div class="swiper-container js-finance-block-slider">
@@ -40,17 +50,9 @@ set classes = [
                   {{ content.content.field_twi_three_items }}
                 </div>
               </div>
-              <div class="swiper-button-prev js-fin-sl-btn-prev"></div>
-              <div class="swiper-button-next js-fin-sl-btn-next"></div>
             </div>
           {% endif %}
-          
-          {% if content.content.field_button[0] or content.content.field_button2[0] %}
-            <div class="finance-block__btn">
-              {{ content.content.field_button[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
-              {{ content.content.field_button2[0]|merge({ '#attributes': { 'class': [ 'btn-primary__light' ] } }) }}
             </div>
-          {% endif %}
         </div>
       </div>
     </div>

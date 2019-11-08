@@ -1,0 +1,297 @@
+.post-full {
+    padding: 70px 0 80px;
+    width: 100%;
+    background-color: $c-str-1;
+    @include media('<tablet') {
+        padding: 40px 0;
+    }
+    &__inner {
+        background-color: white;
+        padding: 40px 50px;
+        border-bottom: 5px solid $c-secondary;
+        @include media('>=tablet') {
+            display: flex;
+        }
+        @include media('<tablet') {
+            padding: 30px 25px;
+        }
+    }
+    &__left {
+        text-align: center;
+        @include media('>=tablet') {
+            flex-basis: 150px;
+            max-width: 150px;
+        }
+        @include media('<tablet') {
+            padding-bottom: 30px;
+        }
+    }
+    &__right {
+        @include media('>=tablet') {
+            flex-basis: calc(100% - 150px);
+            max-width: calc(100% - 150px);
+            padding-left: 40px;
+        }
+        .field--type-text-with-summary {
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    &__category {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: $c-primary;
+        .q-icon {
+            fill: currentColor;
+            width: 30px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .field__label {
+            display: none;
+        }
+    }
+    &__date {
+        color: $c-primary;
+        font-size: 14px;
+        .field__label {
+            display: none;
+        }
+    }
+    &__author {
+        padding-top: 10px;
+        //max-width: 130px;
+        .layout__region {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .field--type-image {
+            overflow: hidden;
+            border-radius: 50%;
+            min-width: 100px;
+            max-width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: -1;
+        }
+        .field--type-ds {
+            font-size: 18px;
+            padding-top: 8px;
+            h2, h3, h4 {
+                font-size: inherit;
+            }
+        }
+    }
+}
+.node--type-article {
+    .front-banner--main {
+        .front-banner__inner {
+            @include media('>=tablet-l') {
+                padding-top: 170px;
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
+.article-block {
+    &__featured {
+        background-color: $c-str-1;
+        padding-bottom: 4.5vw;
+        position: relative;
+        .view-filters {
+            margin-bottom: 4.5vw;
+            @include media('<tablet') {
+                margin-bottom: 30px;
+                padding-top: 30px;
+            }
+        }
+        .news-block__list--item {
+            border: 0;
+            @include media('>=tablet-l') {
+                max-width: calc(100%/3 - 10px);
+                flex-basis: calc(100%/3 - 10px);
+            }
+        }
+        .view-content,
+        .view-empty {
+            @extend .page-frame;
+        }
+        .abf-top {
+            background-color: white;
+            border-bottom: 7px solid $c-secondary;
+            display: flex;
+            margin-bottom: 40px;
+            @include media('<tablet-l') {
+                margin-bottom: 20px;
+            }
+            @include media('<tablet') {
+                flex-direction: column;
+            }
+            &--item {
+                @include media('>=tablet') {
+                    flex-basis: 50%;
+                    max-width: 50%;
+                }
+                @include media('<tablet') {
+                    &:not(.abf-top--content) {
+                        order: -1;
+                    }
+                }
+            }
+            &--content {
+                padding: 40px 45px;
+                display: flex;
+                flex-direction: column;
+                @include media('<tablet-l') {
+                    padding: 25px 23px;
+                }
+            }
+            .field--name-field-image {
+                + .no-image {
+                    display: none;
+                }
+            }
+        }
+        .no-image {
+            height: 100%;
+        }
+        .nb-item__name {
+            @include media('>=tablet-l') {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        .nb-item__link {
+            padding-top: 20px;
+        }
+    }
+    &__all {
+        padding: 4.5vw 0 6vw;
+        position: relative;
+        &--wrap {
+            position: relative;
+        }
+        .module-title {
+            font-size: 50px;
+            color: black;
+            line-height: normal;
+            font-weight: 300;
+            @include media('>=tablet') {
+                max-width: 40%;
+                padding-right: 20px;
+            }
+            @include media('<tablet-l') {
+                font-size: 28px;
+            }
+            @include media('<tablet') {
+                margin-bottom: 15px;
+            }
+            h1, h2, h3 {
+                font-size: inherit;
+                line-height: normal;
+                font-weight: inherit;
+            }
+            strong, b {
+                font-weight: 700;
+            }
+        }
+        .contextual-region {
+            position: static;
+        }
+        .view-filters {
+            @include media('<tablet-l') {
+                top: 0;
+            }
+            @include media('>=tablet') {
+                position: absolute;
+                right: 0;
+                top: 15px;
+                max-width: 60%;
+            }
+            label {
+                display: none;
+            }
+            .form-actions {
+                display: none;
+            }
+            .form--inline {
+                display: flex;
+                align-items: center;
+                @include media('<tablet') {
+                    justify-content: space-between;
+                }
+                .form-item {
+                    margin-bottom: 0;
+                    margin-right: 0;
+                    min-width: 220px;
+                    @include media('<tablet-l') {
+                        min-width: 195px;
+                    }
+                    @include media('<tablet') {
+                        min-width: 1px;
+                        flex-basis: calc(50% - 5px);
+                    }
+                    &:not(:first-of-type) {
+                        @include media('>=tablet') {
+                            margin-left: 15px;
+                        }
+                        @include media('<tablet') {
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .view-content {
+            padding-top: 40px;
+            padding-bottom: 75px;
+            @include media('<tablet') {
+                padding-top: 30px;
+                padding-bottom: 20px;
+            }
+        }
+        .views-row {
+            border: 1px solid $c-str-8;
+            border-bottom: 4px solid $c-secondary;
+            padding: 25px 40px;
+            position: relative;
+            background-color: white;
+            @include media('<=tablet-l') {
+                padding: 24px 23px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+        .nb-item__topic {
+            margin-bottom: 12px;
+        }
+        .nb-item__name {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 15px;
+            @include media('<tablet-l') {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+        .nb-item__link {
+            padding-top: 20px;
+            position: absolute;
+            right: 40px;
+            bottom: 25px;
+            @include media('<tablet') {
+                right: 23px;
+                bottom: 23px;
+            }
+        }
+    }
+}

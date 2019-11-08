@@ -1,357 +1,403 @@
-.info-block {
-    &__row {
-        display: flex;
-        @include media('<tablet') {
-            flex-direction: column;
-        }
-    }
-    &__col {
-        @include media('>=tablet') {
-            width: 50%;
-        }
-        &.is-image {
-            @include media('<tablet') {
-                order: -1;
-            }
-        }
-    }
-    &__image {
-        height: 100%;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        padding: 30px 30px 0 0;
-        overflow: hidden;
-        @include media('<tablet') {
-            min-height: 315px;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-        img {
-            @include media('<tablet') {
-                //display: none;
-                //max-width: 250px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    }
-    &__content {
-        background-color: $c-str-1;
-        @include media('>=tablet-l') {
-            padding: 8.7vw 10vw 9.7vw 6.2vw;
-        }
-        @include media('<tablet-l', '>=tablet') {
-            padding: 45px 27px;
-        }
-        @include media('<tablet') {
-            padding: 40px 20px;
-            //width: calc(100% - 20px);
-            margin: 0 auto;
-        }
-    }
-    &__icon {
-        margin-bottom: 40px;
-        @include media('<tablet-l') {
-            margin-bottom: 15px;
-        }
-        @include media('<tablet') {
-            display: none;
-        }
-        .q-icon {
-            height: 70px;
-            width: 45px;
-            fill: $c-primary;
-            @include media('<tablet-l', '>=tablet') {
-                width: 21px;
-                height: 35px;
-            }
-            @include media('<tablet') {
-                height: 38px;
-                width: 22px;
-            }
-        }
-    }
-    &__list {
-        li, p {
-            font-size: 22px;
-            line-height: 26px;
-            position: relative;
-            @include media('<tablet-l', '>=tablet') {
-                font-size: 16px;
-                line-height: 24px;
-            }
-            @include media('<tablet') {
-                font-size: 16px;
-                line-height: 20px;
-            }
-            &:not(:last-child) {
-                margin-bottom: 50px;
-                @include media('<tablet-l') {
-                    margin-bottom: 20px;
-                }
-            }
+.layout-main-wrapper{
+  .is-image--right{
+    .info-block{
+      &__list {
+        ul{
+          padding-top: 25px;
         }
         li {
-            padding-left: 45px;
-            @include media('<tablet') {
-                //padding-left: 17px;
-            }
-            &:before {
-                content: '';
-                background-image: url('../images/icons/svg/icon-checkmark-alt.svg');
-                background-repeat: no-repeat;
-                width: 26px;
-                height: 23px;
-                fill: $c-primary;
-                position: absolute;
-                left: 0;
-                top: -1px;
-            }
-            .q-icon {
-                width: 26px;
-                height: 23px;
-                fill: $c-primary;
-                position: absolute;
-                left: 0;
-                top: -1px;
-                @include media('<tablet') {
-                    //width: 11px;
-                    //height: 10px;
-                    //top: 2px;
-                }
-            }
+          padding-left: 45px;
+          @include media('<tablet') {
+            //padding-left: 17px;
+          }
+          &:before {
+            content: '';
+            background-image: url('../images/radio-tick.png');
+            background-repeat: no-repeat;
+            width: 31px;
+            height: 31px;
+            fill: $c-primary;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            background-color: transparent;
+          }
         }
-        h3 {
-            font-size: 26px;
-            line-height: 36px;
-            font-weight: 700;
-            display: flex;
-            max-width: 400px;
-            margin-bottom: 15px;
-            @include media('<tablet-l') {
-                font-size: 18px;
-                line-height: 24px;
-                margin-bottom: 10px;
-            }
-            .q-icon {
-                max-width: 55px;
-                max-height: 55px;
-                min-width: 50px;
-                fill: $c-base;
-                margin-right: 17px;
-                @include media('<tablet-l') {
-                    transform: scale(.7);
-                    margin-right: 10px;
-                    margin-top: -10px;
-                    margin-left: -10px;
-                }
-                img {
-                    width: auto;
-                }
-            }
-            .q-icon-lock {
-                width: 48px;
-                height: 49px;
-            }
-            .q-icon-reward {
-                width: 48px;
-                height: 55px;
-            }
-            .q-icon-bank {
-                width: 50px;
-                height: 50px;
-            }
-            .q-icon-privacy {
-                width: 52px;
-                height: 52px;
-            }
-            + p {
-                max-width: 450px;
-                line-height: 28px;
-                padding-bottom: 40px;
-                padding-left: 65px;
-                @include media('<tablet-l') {
-                    padding-bottom: 20px;
-                    padding-left: 57px;
-                }
-            }
+      }  
+    }
+  }
+  .is-image--left{
+    .info-block{
+      &__list {
+        li {
+          &:before {
+            top: 11px;
+          }
         }
-        + .info-block__list {
-            padding-top: 50px;
-            @include media('<tablet') {
-                padding-top: 20px;
-            }
+      }
+    }
+  }
+}
+.layout-main-wrapper{
+  .info-block {
+    &.layout{
+      background-color: #f2f0f0;
+    }
+    &__row {
+      display: flex;
+      background-color: $c-str-1;
+      @include media('<tablet') {
+        flex-direction: column;
+      }
+    }
+    &:last-child {
+      .info-block__col {
+        &.is-image {
+          padding: 6vw 0;
         }
+      }
+    }
+    &__col {
+      @include media('>=tablet-l') {
+        margin: 0;
+      }
+      @include media('>=tablet') {
+        width: 50%;
+        margin: 40px 0 0;
+        align-self: center;
+      }
+      &.is-image {
+        padding: 3vw 0;
+        @include media('<tablet') {
+          order: -1;
+          padding: 30px 0;
+        }
+      }
+    }
+    &__image {
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      /*      padding: 30px 30px 0 0;*/
+      overflow: hidden;
+      background-color: $c-str-1;
+      @include media('<tablet') {
+        min-height: 315px;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      img {
+        visibility: hidden;
+        @include media('<tablet') {
+          //display: none;
+          //max-width: 250px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    &.is-image--left{
+      .info-block__image {
+        background-position: left center;
+      }
+    }
+    &__list {
+      .q-icon {
+        width: 26px;
+        height: 23px;
+        fill: $c-primary;
+        /*position: absolute;*/
+        left: 0;
+        top: -1px;
+        @include media('<tablet') {
+          //width: 11px;
+          //height: 10px;
+          //top: 2px;
+        }
+      }
+    }
+    &__content {
+      @include media('>=tablet-l') {
+        /*padding: 8.7vw 10vw 130px 6.2vw;*/
+        padding: 7vw 10vw 7vw 6.2vw;
+      }
+      @include media('<tablet-l') {
+        padding: 30px;
+      }
+      @include media('<tablet') {
+        padding: 0 20px 40px;
+        margin: 0 auto;
+      }
+      .block-title {
+        @include media('>=tablet') {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    &__icon {
+      margin-bottom: 40px;
+      @include media('<tablet-l') {
+        margin-bottom: 15px;
+      }
+      @include media('<tablet') {
+        display: none;
+      }
+      .q-icon {
+        height: 70px;
+        width: 45px;
+        fill: $c-primary;
+        @include media('<tablet-l', '>=tablet') {
+          width: 21px;
+          height: 35px;
+        }
+        @include media('<tablet') {
+          height: 38px;
+          width: 22px;
+        }
+      }
+    }
+    &__list {
+      li, p {
+        font-size: 22px;
+        line-height: 32px;
+        position: relative;
+        @include media('<tablet-l', '>=tablet') {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        @include media('<tablet') {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        &:not(:last-child) {
+          margin-bottom: 10px;
+          @include media('<tablet-l'){
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+      h3 {
+        font-size: 28px;
+        line-height: 36px;
+        font-family: $f-secondary-b;
+        display: flex;
+        max-width: 400px;
+        margin-bottom: 25px;
+        @include media('<tablet-l') {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 10px;
+        }
+        .q-icon {
+          max-width: 55px;
+          max-height: 55px;
+          min-width: 50px;
+          fill: $c-base;
+          margin-right: 17px;
+          margin-top: 8px;
+          @include media('<tablet-l') {
+            transform: scale(.7);
+            margin-right: 10px;
+            margin-top: -3px;
+            margin-left: -10px;
+          }
+          img {
+            width: 41px;
+          }
+        }
+        .q-icon-lock {
+          width: 48px;
+          height: 49px;
+        }
+        .q-icon-reward {
+          width: 48px;
+          height: 55px;
+        }
+        .q-icon-bank {
+          width: 50px;
+          height: 50px;
+        }
+        .q-icon-privacy {
+          width: 52px;
+          height: 52px;
+        }
+        + p {
+          max-width: 450px; 
+          padding-bottom: 65px;
+          padding-left: 65px;
+          @include media('<tablet-l') {
+            padding-bottom: 20px;
+            padding-left: 57px;
+          }
+        }
+      }
+      + .info-block__list {
+        padding-top: 50px;
+        @include media('<tablet') {
+          padding-top: 20px;
+        }
+      }
     }
     &__description {
-        font-size: 22px;
-        line-height: 26px;
-        margin-bottom: 30px;
-        @include media('<tablet') {
-            font-size: 16px;
-            line-height: 18px;
-        }
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 30px;
+      @include media('<tablet') {
+        font-size: 16px;
+        line-height: 18px;
+      }
     }
     &__btn {
-        padding-top: 50px;
-        @include media('<tablet-l') {
-            padding-top: 15px;
+      padding-top: 50px;
+      @include media('<tablet-l') {
+        padding-top: 30px;
+      }
+      a {
+        @include media('<mobile-m') {
+          width: 100%;
         }
-        a {
-            @include media('<mobile-m') {
-                width: 100%;
-            }
-        }
+      }
     }
     &__actions {
-        padding-top: 50px;
-        display: flex;
-        align-items: center;
-        @include media('<tablet') {
-            padding-top: 30px;
-            max-width: 70%;
+      padding-top: 50px;
+      display: flex;
+      align-items: center;
+      @include media('<tablet') {
+        padding-top: 30px;
+        max-width: 70%;
+      }
+      a {
+        transition: .3s opacity;
+        display: block;
+        &:first-child {
+          margin-right: 15px;
         }
-        a {
-            transition: .3s opacity;
-            display: block;
-            &:first-child {
-                margin-right: 15px;
-            }
-            &:hover {
-                opacity: .8;
-            }
+        &:hover {
+          opacity: .8;
         }
+      }
     }
     &__white {
-        .info-block__content {
-            background-color: transparent;
+      .info-block__row {
+        background-color: transparent;
+      }
+      .info-block__image {
+        background-color: transparent;
+        @include media('<tablet') {
+          //min-height: 1px;
         }
+      }
+      + .info-block__white {
         .info-block__image {
-            @include media('<tablet') {
-                //min-height: 1px;
-            }
+          padding-top: 0;
         }
-        + .info-block__white {
-            .info-block__image {
-                padding-top: 0;
-            }
-            .info-block__content {
-                @include media('>=tablet-l') {
-                    padding-top: 110px;
-                }
-            }
+        .info-block__content {
+          @include media('>=tablet-l') {
+            /*padding-top: 110px;*/
+          }
         }
+      }
+      + .features-block {
+        padding-top: 0;
+      }
     }
     &.is-image--right {
-        .info-block__col {
-            &:not(.is-image) {
-                @include media('>=tablet') {
-                    order: -1;
-                }
-            }
+      .info-block__col {
+        &:not(.is-image) {
+          @include media('>=tablet') {
+            order: -1;
+          }
         }
+        .info-block__content{
+          /*padding: 7.7vw 9vw 130px 14.2vw;*/
+          padding: 7vw 9vw 7vw 14.2vw;
+          @include media('<=tablet-l') {
+            padding: 30px;
+            margin: 0 auto;
+          }
+          @include media('<tablet') {
+            padding: 0 30px 30px;
+          }
+        }
+      }
     }
     &.is-image--left {
-        .info-block__col {
-             &.is-image {
-                 @include media('>=tablet') {
-                     order: -1;
-                 }
-             }
+      .info-block__col {
+        &.is-image {
+          @include media('>=tablet') {
+            order: -1;
+          }
         }
-        .info-block__image {
-            background-position: center left;
-        }
-    }
-
-    &.is-image--large {
+      }
+      &.is-image--large {
         .info-block__content {
-            @include media('>=tablet') {
-                padding-right: 5vw;
-            }
+          @include media('>=tablet') {
+            /*padding-right: 0;*/
+          }
         }
         .info-block__image {
-            @include media('>=tablet') {
-                padding-right: 0;
-            }
+          @include media('>=tablet') {
+            padding-right: 0;
+          }
         }
         .info-block__col {
-            &:not(.is-image) {
-                @include media('>=tablet-l') {
-                    padding-left: 11.197vw;
-                }
+          &:not(.is-image) {
+            @include media('>=tablet-l') {
+              /*padding-left: 11.197vw;*/
             }
-        }
-        &.is-image--left {
-            .info-block__col {
-                &:not(.is-image) {
-                    @include media('>=tablet-l') {
-                        padding-left: 0;
-                        .info-block__list {
-                            max-width: 600px;
-                        }
-                    }
-                }
-            }
+          }
         }
 
-    }
-    &.is-image--small {
+      }
+      &.is-image--small {
         justify-content: flex-end;
         .info-block__image {
-            justify-content: flex-end;
-            align-items: flex-start;
-            @include media('>=tablet') {
-                background-position: top right;
-            }
-            @include media('<tablet') {
-                padding-right: 0;
-                background-position: top center;
-            }
-        }
-        .info-block__content {
-            @include media('>=tablet') {
-                padding-right: 85px;
-            }
+          justify-content: flex-end;
+          align-items: flex-start;
+          @include media('>=tablet-l') {
+            background-position: top right;
+          }
+          @include media('<=tablet-l') {
+            background-position: top left;
+          }
+          @include media('<tablet') {
+            padding-right: 0;
+            background-position: top center;
+          }
         }
         .info-block__col {
-            &:not(.is-image) {
-                @include media('>=tablet-l') {
-                    padding-left: 7vw;
-                }
+          &:not(.is-image) {
+            @include media('>=tablet-l') {
+              padding-left: 7vw;
             }
+          }
         }
-    }
-    &.is-not-top-space {
+      }
+      &.is-not-top-space {
         .info-block__image {
-            padding-top: 0;
-            background-position: top center;
+          padding-top: 0;
+          background-position: top center;
         }
         .info-block__content {
-            padding-top: 0;
+          padding-top: 0;
         }
-    }
-    &.is-image--contain {
+      }
+      &.is-image--contain {
         .info-block__image {
-            background-size: cover;
+          background-size: contain;
         }
-    }
-    .block-title {
+      }
+      .block-title {
         font-weight: 300;
-        &.-diff-divide {
-            strong {
-                display: inline;
-            }
-        }
-        @include media('>=tablet') {
-            margin-bottom: 40px;
-        }
         b, .strong {
-            font-weight: 700;
-            display: inline-block;
+          font-weight: 700;
+          display: inline-block;
         }
+      }
     }
+  }
 }

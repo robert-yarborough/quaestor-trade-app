@@ -1,0 +1,163 @@
+.front-banner {
+    color: white;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    &--large {
+        @include media('>=tablet') {
+            height: 100vh;
+        }
+        @include media('>=tablet-l') {
+            margin-top: -143px;
+        }
+        @include media('<tablet-l', '>=tablet') {
+            margin-top: -124px;
+        }
+        @include media('<tablet') {
+            margin-top: -105px;
+            height: 395px;
+        }
+    }
+    &--main {
+        @include media('>tablet-l') {
+            margin-top: -151px;
+            //height: 730px;
+        }
+        @include media('<=tablet-l') {
+            //height: 480px;
+            margin-top: -105px;
+        }
+        .front-banner__inner {
+            padding-top: 230px;
+            padding-bottom: 100px;
+            @include media('<=tablet-l') {
+                padding-top: 100px;
+                padding-bottom: 80px;
+            }
+        }
+        .front-banner__description {
+            max-width: 700px;
+        }
+        .front-banner__title {
+            @include media('<tablet') {
+                font-size: 32px;
+                line-height: 35px;
+            }
+        }
+    }
+    &.is-center {
+        text-align: center;
+        .front-banner__description {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $c-primary;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 295px;
+            height: 515px;
+            left: 0;
+            bottom: 0;
+            opacity: .03;
+            pointer-events: none;
+            background-image: url('../images/icons/svg/icon-logo-large-light.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &[style*='background'] {
+            &:after {
+                display: none;
+                content: normal;
+            }
+        }
+    }
+    &__inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        @include media('<tablet') {
+            padding-top: 75px;
+        }
+    }
+    &__title,
+    .field--name-node-title {
+        margin-bottom: 20px;
+        font-weight: 300;
+        color: white;
+        @include media('>=tablet-l') {
+            font-size: 68px;
+            line-height: 70px;
+        }
+        @include media('<tablet-l', '>=tablet') {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        @include media('<tablet') {
+            font-size: 24px;
+            line-height: 26px;
+        }
+        &:only-child {
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+        }
+        b, strong {
+            font-weight: 700;
+            @include media('>=tablet') {
+                display: block;
+            }
+        }
+    }
+    &__description {
+        font-size: 28px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        @include media('<tablet-l') {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 5px;
+        }
+        + .front-banner__btn {
+            padding-top: 20px;
+        }
+    }
+    &__note {
+        font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        @include media('<tablet-l') {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 25px;
+        }
+    }
+    &__btn {
+        a {
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
+    input[type=text] {
+        box-shadow: none;
+    }
+}

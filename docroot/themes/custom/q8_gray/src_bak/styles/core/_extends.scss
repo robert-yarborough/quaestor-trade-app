@@ -1,0 +1,117 @@
+%btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+    &:disabled {
+        opacity: 0.7;
+        box-shadow: none;
+    }
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+}
+%btn-primary {
+    @extend %btn;
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 10px 50px 10px 30px;
+    transition: all .5s;
+    min-width: 200px;
+    letter-spacing: .07em;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    position: relative;
+    background-color: transparent;
+    font-weight: 700;
+    &:after {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-top: 1px solid currentColor;
+        border-right: 1px solid currentColor;
+        position: absolute;
+        right: 20px;
+        top: 17px;
+        transform: rotate(45deg);
+        transition: .3s border;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        transform: translate(-50%, -50%);
+        border: 1px dotted currentColor;
+        opacity: 0;
+        transition: .3s;
+    }
+    &:focus {
+        outline: none;
+        background-color: transparent;
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+%btn-dark {
+    @extend %btn-primary;
+    color: $c-primary;
+    border-color: $c-primary;
+    &:hover {
+        color: white;
+        background-color: $c-primary;
+    }
+    &:focus {
+        color: $c-primary;
+        border-color: $c-primary;
+        background-color: transparent;
+    }
+}
+%btn-light {
+    @extend %btn-primary;
+    color: $c-light;
+    border-color: $c-light;
+    &:hover  {
+        color: $c-base;
+        background-color: $c-light;
+    }
+    &:focus {
+        color: $c-light;
+        border-color: $c-light;
+        background-color: transparent;
+    }
+}
+%btn-mediate {
+    @extend %btn-primary;
+    color: $c-secondary;
+    border-color: $c-secondary;
+    &:hover  {
+        color: white;
+        background-color: $c-secondary;
+    }
+    &:focus {
+        color: $c-secondary;
+        border-color: $c-secondary;
+        background-color: transparent;
+    }
+}

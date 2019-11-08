@@ -3,21 +3,26 @@
     position: relative;
     margin-bottom: 20px;
     max-width: 600px;
+    font-family: $f-secondary-b;
     @include media('>=tablet-l') {
-        font-size: 48px;
-        line-height: 55px;
+        font-size: 50px;
+        line-height: 52px;
     }
     @include media('<tablet-l', '>=tablet') {
         font-size: 28px;
-        line-height: 28px;
+        line-height: 37px;
     }
     @include media('<tablet') {
-        font-size: 24px;
-        line-height: 24px;
+        font-size: 28px;
+        line-height: 32px;
     }
     b, strong {
+        font-weight: normal;
         @include media('>=tablet-l') {
             display: block;
         }
     }
+}
+.field__label{
+    margin-bottom: 5px;
 }

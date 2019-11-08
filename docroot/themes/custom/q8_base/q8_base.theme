@@ -47,14 +47,19 @@ function q8_base_get_node_background_title($node) {
 /**
  * Implements q8_base_preprocess_field__field_avaiability().
  */
-function q8_base_preprocess_field__field_avaiability(&$variables) {
-  foreach ($variables['items'] as &$item) {
-    $object = $variables['element']['#object'];
+// function q8_base_preprocess_field__field_avaiability(&$variables) {
+//   foreach ($variables['items'] as &$item) {
+//    kint($variables['items']);
 
-    if ($object->hasField('field_avaiability') && !$object->field_avaiability->isEmpty()) {
-      $value = $object->field_avaiability->value;
-      $item['content']['#prefix'] = "<span class=$value>";
-      $item['content']['#suffix'] = "</span>";
-    }
-  }
-}
+//    //  $object = $variables['element']['#object'];
+//    // // print_r($object);
+
+//    //  if ($object->hasField('field_avaiability') && !$object->field_avaiability->isEmpty()) {
+//    //    $value = $object->field_avaiability->value;
+//    //    //print_r($value);
+//    //    kint($value);
+//    //    $item['content']['#prefix'] = "<span class=$value>";
+//    //    $item['content']['#suffix'] = "</span>";
+//    // }
+//   }
+// }

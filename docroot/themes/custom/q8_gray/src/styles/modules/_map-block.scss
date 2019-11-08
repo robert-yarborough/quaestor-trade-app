@@ -1,155 +1,190 @@
 .map-block {
-    position: relative;
-    min-height: 780px;
-    @include media('<tablet-l') {
-        min-height: 530px;
-    }
-    &--alt {
-        @include media('<tablet') {
-            background-color: $c-str-1;
-            min-height: 1px;
-        }
-        iframe {
-            @include media('<tablet') {
-                display: none;
-            }
-        }
-        .map-block__inner,
-        .map-block__contact {
-            @include media('<tablet') {
-                position: static;
-                transform: none;
-                width: auto;
-            }
-        }
-        .map-block__contact {
-            @include media('<tablet') {
-                background-color: transparent;
-            }
-        }
-    }
-    .simple-gmap-address {
-        display: none;
+  position: relative;
+  min-height: 925px;
+  @include media('<tablet-l') {
+    min-height: 530px;
+  }
+  &--alt {
+    @include media('<tablet') {
+      background-color: $c-str-1;
+      min-height: 1px;
     }
     iframe {
-        height: 100%;
+      @include media('<tablet') {
+        display: none;
+      }
+    }
+    .map-block__inner,
+    .map-block__contact {
+      @include media('<tablet') {
+        position: static;
+        transform: none;
+        width: auto;
+      }
+    }
+    .map-block__contact {
+      @include media('<tablet') {
+        background-color: transparent;
+      }
+    }
+  }
+  .simple-gmap-address {
+    display: none;
+  }
+  iframe {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include media('>=tablet-l') {
+      width: calc(100% + 710px);
+      margin-left: -710px;
+    }
+    @include media('<tablet-l') {
+      width: calc(100% + 500px);
+      margin-left: -500px;
+    }
+    @include media('<tablet') {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  &__inner {
+    @extend .page-frame;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+  }
+  &__contact {
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    pointer-events: auto;
+    border-radius: 100%;
+    width: 650px;
+    height: 650px;
+    @include media('>=tablet') {
+      right: 0;
+      transform: translateY(-50%);
+    }
+    @include media('>=tablet-l') {
+      padding: 100px 90px 80px;
+    }
+    @include media('<tablet-l', '>=tablet') {
+      padding: 50px 40px;
+      right: 70px;
+      width: 440px;
+      height: 440px;
+    }
+    @include media('<tablet') {
+      padding: 50px 15px;
+      width: calc(100% - 30px);
+      height: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__icon {
+    @include media('>=tablet-l') {
+      margin-bottom: 40px;
+    }
+    @include media('<tablet-l', '>=tablet') {
+      margin-bottom: 30px;
+    }
+    @include media('<tablet-l') {
+      margin-bottom: 20px;
+      display: none;
+    }
+    .q-icon {
+      width: 37px;
+      height: 72px;
+      fill: $c-primary;
+      @include media('<tablet') {
+        width: 24px;
+        height: 47px;
+      }
+    }
+  }
+  &__title {
+    font-family: $f-base-m;
+    width: 70%;
+    margin: 0 auto;
+    @include media('>=tablet-l') {
+      font-size: 50px;
+      line-height: 48px;
+      margin-bottom: 50px;
+    }
+    @include media('<tablet-l', '>=tablet') {
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 30px;
+      padding-left: 5%;
+    }
+    @include media('<tablet') {
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+  }
+  &__info {
+    font-size: 22px;
+    line-height: 26px;
+    width: 70%;
+    margin: 0 auto;
+    @include media('<tablet-l', '>=tablet') {
+      padding-left: 5%;
+    }
+    @include media('<tablet-l') {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include media('<tablet') {
+      width: 100%;
+    }
+    p {
+      position: relative;
+      padding-left: 37px;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+      &:not(:first-child) {
+        white-space: nowrap;
+      }
+      i {
+        display: inline-block;
+        width: 20px;
         position: absolute;
         left: 0;
-        top: 0;
-        @include media('>=tablet-l') {
-            width: calc(100% + 710px);
-            margin-left: -710px;
-        }
-        @include media('<tablet-l') {
-            width: calc(100% + 500px);
-            margin-left: -500px;
-        }
-        @include media('<tablet') {
-            width: 100%;
-            margin-left: 0;
-        }
+        top: -2px;
+      }
+      strong {
+        font-family: $f-secondary-b;
+      }
     }
-    &__inner {
-        @extend .page-frame;
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        pointer-events: none;
+    .q-icon {
+      stroke: $c-primary;
+      fill: none;
+      vertical-align: middle;
+      width: 25px;
+      height: 25px;
+      &.q-icon-email{
+        font-style: normal;
+      }
+      &.q-icon-postal{
+        width: 22px;
+        height: 22px;
+      }
     }
-    &__contact {
-        position: absolute;
-        top: 50%;
-        background-color: white;
-        pointer-events: auto;
-        @include media('>=tablet') {
-            right: 0;
-            transform: translateY(-50%);
-        }
-        @include media('>=tablet-l') {
-            padding: 70px 60px 80px;
-        }
-        @include media('<tablet-l', '>=tablet') {
-            padding: 50px 40px;
-            right: 70px;
-        }
-        @include media('<tablet') {
-            padding: 50px 15px;
-            width: calc(100% - 30px);
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    a {
+      color: $c-base;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-    &__icon {
-        @include media('>=tablet-l') {
-            margin-bottom: 50px;
-        }
-        @include media('<tablet-l', '>=tablet') {
-            margin-bottom: 30px;
-        }
-        @include media('<tablet-l') {
-            margin-bottom: 20px;
-            display: none;
-        }
-        .q-icon {
-            width: 37px;
-            height: 72px;
-            fill: $c-primary;
-            @include media('<tablet') {
-                width: 24px;
-                height: 47px;
-            }
-        }
-    }
-    &__title {
-        @include media('>=tablet-l') {
-            font-size: 50px;
-            line-height: 48px;
-            margin-bottom: 50px;
-        }
-        @include media('<tablet-l', '>=tablet') {
-            font-size: 28px;
-            line-height: 28px;
-            margin-bottom: 30px;
-        }
-        @include media('<tablet') {
-            font-size: 24px;
-            line-height: 26px;
-            margin-bottom: 25px;
-        }
-    }
-    &__info {
-        font-size: 22px;
-        line-height: 26px;
-        @include media('<tablet-l') {
-            font-size: 16px;
-            line-height: 20px;
-        }
-        p {
-            position: relative;
-            padding-left: 30px;
-            &:not(:last-child) {
-                margin-bottom: 25px;
-            }
-            i {
-                display: inline-block;
-                width: 20px;
-                position: absolute;
-                left: 0;
-                top: -2px;
-            }
-        }
-        .q-icon {
-            fill: $c-secondary;
-            vertical-align: middle;
-        }
-        a {
-            color: $c-base;
-            &:hover {
-                color: $c-secondary;
-            }
-        }
-    }
+  }
 }

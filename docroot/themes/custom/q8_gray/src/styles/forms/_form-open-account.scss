@@ -28,7 +28,7 @@
     }
 }
 .open-account-dialog {
-    background-image: linear-gradient(-66deg, #3953a4 0%, #152c6f 100%);
+    background-color: $c-primary;
     color: white;
     text-align: center;
     position: relative;
@@ -103,7 +103,7 @@
                     top: 12px;
                     width: 18px;
                     height: 2px;
-                    background-color: $c-secondary;
+                    background-color: $c-bright;
                     @include media('<tablet') {
                         width: 14px;
                         top: 10px;
@@ -172,5 +172,5 @@
 @keyframes checkbox-check {
     0% { height: 0; width: 0; border-color: transparent;}
     25% { height: 0; width: 10px; border-color: transparent;}
-    100% { width: 18px;  height: 52px; border-color: $c-secondary;}
+    100% { width: 18px;  height: 52px; border-color: $c-bright;}
 }

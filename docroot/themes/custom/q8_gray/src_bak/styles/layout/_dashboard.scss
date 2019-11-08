@@ -1,0 +1,24 @@
+.moderation-dashboard {
+    padding-bottom: 70px;
+    @include media('<tablet') {
+        padding-bottom: 40px;
+    }
+    .moderation-dashboard-block {
+        background-color: white;
+        border-radius: 0;
+        border-bottom: 4px solid $c-secondary;
+    }
+    h5 {
+        line-height: 20px;
+    }
+    .views-field-revision-uid,
+    .views-field-uid {
+        font-size: 14px;
+    }
+    .views-field-revision-timestamp {
+        font-size: 14px;
+    }
+    .views-field-created {
+        font-size: 14px;
+    }
+}

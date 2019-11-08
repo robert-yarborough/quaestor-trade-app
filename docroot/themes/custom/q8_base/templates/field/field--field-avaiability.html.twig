@@ -41,7 +41,10 @@
 {% if items %}
     <ul class="sb__links--list">
         {% for item in items %}
-            <li{{ item.attributes }}>{{ item.content }}</li>
+            <li{{ item.attributes }}>
+            <span class={{ item.content | render | lower | replace({' ': ''}) }}>{{ item.content }}
+             </span>    
+            </li>
         {% endfor %}
     </ul>
 {% endif %}

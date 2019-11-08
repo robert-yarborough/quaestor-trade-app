@@ -6,7 +6,7 @@ label {
 @include input-styles() {
     max-width: 100%;
     border: none;
-    color: $c-primary;
+    color: $c-base;
     background: white;
     vertical-align: middle;
     outline: none;
@@ -22,10 +22,10 @@ label {
         padding-left: 16px;
     }
     @include placeholder {
-        color: $c-str-8;
+        color: $c-base;
     }
     &:focus {
-        box-shadow: inset 0 0 0 1px $c-primary, inset 0 0 0 1px $c-primary;
+        box-shadow: inset 0 0 0 1px $c-bright, inset 0 0 0 1px $c-bright;
     }
     &:disabled,
     &[disabled] {

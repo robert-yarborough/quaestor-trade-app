@@ -41,12 +41,13 @@
             <style>
               {{ style_bg }}
             </style>
-            <div class="info-block__image info-block__image_{{ entity_id }}"></div>
+            <div class="info-block__image info-block__image_{{ entity_id }}">
+              <img src="{{ url_bg_image }}" />
+            </div>
           </div>
         {% endif %}
         <div class="info-block__col">
             <div class="info-block__content">
-                <div class="info-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
                 <div class="block-title -diff-divide">
                     {{ content.left.field_title }}
                 </div>
@@ -65,7 +66,7 @@
             <style>
               {{ style_bg }}
             </style>
-            <div class="info-block__image info-block__image_{{ entity_id }}"></div>
+            <div class="info-block__image info-block__image_{{ entity_id }}"><img src="{{ url_bg_image }}" /></div>
           </div>
         {% endif %}
     </div>

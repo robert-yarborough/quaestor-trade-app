@@ -17,6 +17,7 @@
   'investing-block',
 ]
 %}
+{% set icon_path = '/' ~ directory ~ '/images' %}
 {% set style  = 'background-image: url(' ~ content.content.field_image[0]|render  ~ ')' %}
 {% if content %}
   <div{{ attributes.addClass(classes).setAttribute('style', style) }}>
@@ -44,6 +45,34 @@
           {{ content.content.field_app_stores }}
         {% endif %}
       </div>
+    </div>
+    <div class="available-links__inner">
+        <div class="investing__footer"></div>
+        <div class="investing__footer">
+            <div class="investing__footer__icon"><img src="{{ icon_path }}/clock2.png"></div>
+            <div class="investing__footer__text">
+                <div class="investing__footer__text__title">WORKING HOURS</div>
+                <div class="investing__footer__text__content">
+                    <p>Sun to Thu: 08:30 - 19:00</p>
+                    <p>Friday: 08:30 - 18:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="investing__footer">
+            <div class="investing__footer__icon"><img src="{{ icon_path }}/phone.png"></div>
+            <div class="investing__footer__text">
+                <div class="investing__footer__text__title">OFFICE PHONE</div>
+                <div class="investing__footer__text__content"><a href="tel:+96522265541">+965 222 655 41</a></div>
+            </div>
+        </div>
+        <div class="investing__footer">
+            <div class="investing__footer__icon"><img src="{{ icon_path }}/mail.png"></div>
+            <div class="investing__footer__text">
+                <div class="investing__footer__text__title">SERVICE SUPPORT</div>
+                <div class="investing__footer__text__content"><a href="mailto:support@quaestor.com">support@quaestor.com</a></div>
+            </div>
+        </div>
+        <div class="investing__footer"></div>
     </div>
   </div>
 {% endif %}

@@ -1,5 +1,5 @@
 .available-links {
-    padding: 60px 0 100px;
+    padding: 141px 0 60px;
     @include media('<tablet-l', '>=tablet') {
         padding: 30px 0 60px;
     }
@@ -16,12 +16,11 @@
         @include media('>=tablet-l') {
             font-size: 24px;
             font-weight: 600;
-            padding-right: 20px;
-            min-width: 235px;
+            padding-right: 30px;
         }
         @include media('<tablet-l', '>=tablet') {
             font-size: 14px;
-            min-width: 180px;
+            min-width: 100px;
             padding-right: 15px;
         }
         @include media('<tablet') {
@@ -41,30 +40,63 @@
             margin-right: -7px;
         }
         a {
-            @include media('<tablet') {
-                flex-basis: calc(50% - 14px);
-                margin-left: 7px;
-                margin-right: 7px;
-                text-align: center;
-                &:not(:nth-child(1)):not(:nth-child(2)) {
-                    margin-top: 12px;
-                }
-            }
+            background: $c-base;
+            color: $c-white;
+            font-size: 20px;
+            line-height: 25px;
+            font-family: $f-secondary-b;
+            flex-basis: 24%;
+            max-width: 250px;
+            text-align: center;
+            padding: 21px 0;
+            border-radius: 40px;
             @include media('>=tablet') {
                 &:not(:last-child) {
                     margin-right: 20px;
                 }
             }
-            &:hover {
-                img {
-                    transform: scale(1.01);
-                    opacity: 1;
+            @include media('<tablet-l') {
+                flex-basis: calc(25% - 14px);
+                margin: 0 auto;
+                font-size: 12px;
+                padding: 12px 0;
+                &:not(:nth-child(1)),&:not(:nth-child(2)) {
+                    margin-top: 12px;
+                    margin-right: auto;
                 }
             }
-        }
-        img {
-            transition: .3s;
-            opacity: .5;
+            @include media('<tablet') {
+                flex-basis: calc(50% - 14px);
+                margin: 0 auto;
+                &:not(:nth-child(1)) {
+                    margin-top: 12px;
+                }
+            }
+            
+            svg{
+                vertical-align: bottom;
+                fill: $c-white;
+                @include media('<tablet-l') {
+                    width: 18px;
+                }
+            }
+            img{
+                @include media('<tablet-l') {
+                    width: 18px;
+                }
+            }
+            &:hover{
+                background: $c-bright;
+                color: $c-base;
+                svg{
+                    fill: $c-base;
+                }
+            }
+            span{
+                &:first-child{
+                    margin-right: 5px;
+                }
+            }
         }
     }
 }

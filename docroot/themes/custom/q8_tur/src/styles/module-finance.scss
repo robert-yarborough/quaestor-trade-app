@@ -1,15 +1,27 @@
 @import 'core/core';
-
 .finance-block {
     background-color: $c-primary;
+    background-image: url('../images/callout-bg.png');
+    background-size: contain;
     @include media('>=tablet-l') {
-        padding: 110px 0 120px;
+        height: 862px;
+        display: flex;
+        align-items: center;
     }
     @include media('<tablet-l', '>=tablet') {
         padding: 90px 0;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     @include media('<tablet') {
         padding: 50px 0;
+        background-size: auto;
+    }
+    .page-frame{
+        display: flex;
+        @include media('<tablet') {
+            flex-wrap: wrap;
+        }
     }
     .block-title {
         color: white;
@@ -17,7 +29,7 @@
     .block-description {
         color: white;
         @include media('>=tablet') {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         @include media('<tablet') {
             margin-bottom: 25px;
@@ -30,13 +42,13 @@
         }
     }
     &__grid {
-        display: flex;
+        display: block;
         @include media('>=tablet') {
             justify-content: center;
         }
     }
     &__col {
-        text-align: center;
+        margin-bottom: 30px;
         @include media('>=tablet') {
             flex-basis: 0;
             flex-grow: 1;
@@ -50,16 +62,17 @@
         }
         @include media('<tablet') {
             padding: 0 7px;
+            margin-bottom: 0;
         }
     }
     &__icon {
-        margin-bottom: 30px;
-        height: 92px;
         display: flex;
         align-items: center;
         justify-content: center;
         @include media('<tablet') {
             margin-bottom: 15px;
+            flex-basis: 30%;
+            place-items: flex-end;
         }
         .q-icon {
             fill: white;
@@ -72,9 +85,8 @@
         color: white;
         font-size: 22px;
         line-height: 26px;
-        max-width: 190px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 230px;
+        margin-left: 30px;
         @include media('<tablet-l', '>=tablet') {
             font-size: 18px;
             line-height: 24px;
@@ -82,20 +94,30 @@
         @include media('<tablet') {
             font-size: 17px;
             line-height: 20px;
+            flex-basis: calc(70% - 30px);
         }
     }
     &__btn {
         text-align: center;
-        @include media('>=tablet') {
-            padding-top: 50px;
-        }
-        @include media('<tablet') {
+        display: flex;
+        @include media('>=tablet-l') {
             padding-top: 30px;
+            flex-basis: calc(70% - 30px);
+        }
+        @include media('<tablet-l') {
+            padding-top: 0px;
+            flex-wrap: wrap;
         }
         a {
             min-width: 250px;
-            @include media('>=tablet') {
+            @include media('>=tablet-l') {
                 margin: 0 12px;
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+            @include media('<tablet-l') {
+                margin-bottom: 20px;
             }
             @include media('<tablet') {
                 width: 100%;
@@ -127,5 +149,21 @@
     }
     .swiper-button-prev {
         left: 0;
+    }
+    .finance-block-right{
+        margin: 0 auto;
+        .layout__region{
+            display: flex;
+            place-items: center;
+        }
+        @include media('<tablet') {
+            margin-top: 30px;
+        }
+    }
+    .finance-block-left{
+        @include media('<tablet-l') {
+            flex-basis: 50%;
+            margin: 0 auto;
+        }
     }
 }

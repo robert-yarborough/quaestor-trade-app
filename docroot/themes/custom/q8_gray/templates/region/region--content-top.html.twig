@@ -27,26 +27,25 @@
       {{ elements.sitebranding }}
       <div class="navbar__group">
         <div class="navbar__top--main">
-
           {{ elements.languageswitcher }}
-
+          {% if main_menu is not empty %}
           <div class="header-toggle-btn js-h-toggle-btn" role="button"><span></span><b class="visually-hidden">{{ 'Menu'|t }}</b></div>
-
+           {% endif %}
           <div class="menu--links js-h-menu-links">
             {{ elements.supernavsecurities }}
           </div>
-
-          <div class="header-search js-h-search">
-            <a href="#" class="header-search__toggle js-h-search-toggle">
-              <span class="visually-hidden">{{ 'Search Button'|t }}</span>
-              <svg class="q-icon"><use xlink:href="#icon-search"></use></svg>
-            </a>
-            <div class="header-search__box js-h-search-box">
-              {{ elements.simplesearchblock }}
+          {% if elements.simplesearchblock %}
+            <div class="header-search js-h-search">
+              <a href="#" class="header-search__toggle js-h-search-toggle">
+                <span class="visually-hidden">{{ 'Search Button'|t }}</span>
+                <svg class="q-icon"><use xlink:href="#icon-search"></use></svg>
+              </a>
+              <div class="header-search__box js-h-search-box">
+                {{ elements.simplesearchblock }}
+              </div>
             </div>
-          </div>
+          {% endif %}
         </div>
-
         <div class="navbar__bot--main js-h-menu-main">
           {{ elements.mainnavigationsecurities }}
           <div class="menu--user">

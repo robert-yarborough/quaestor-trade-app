@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#ffffff" d="M11.257 11.257a.57.57 0 0 0 .002-.806L.976.167a.572.572 0 0 0-.809.81l9.878 9.877-9.878 9.88a.572.572 0 0 0 .809.808z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="11.293" height="20.565" viewBox="0 0 11.293 20.565">
+  <g id="Icon-ARROW" transform="translate(0.5 20.004) rotate(-90)">
+    <path id="Path_14" data-name="Path 14" d="M9.361,10.141a.509.509,0,0,0,.361.152.515.515,0,0,0,.361-.15L19.293.879a.517.517,0,0,0,0-.729.51.51,0,0,0-.724,0L9.722,9.05.874.151a.51.51,0,0,0-.724,0,.517.517,0,0,0,0,.729Z" transform="translate(0 0)" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+  </g>
+</svg>

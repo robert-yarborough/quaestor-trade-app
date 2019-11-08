@@ -1,0 +1,168 @@
+.news-block  {
+    padding: 165px 0;
+    @include media('<tablet-l') {
+        padding: 50px 0;
+    }
+    &__title {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 300;
+        margin-bottom: 50px;
+        @include media('<tablet-l') {
+            margin-bottom: 20px;
+            font-size: 28px;
+            line-height: 28px;
+        }
+        b {
+            font-weight: 700;
+        }
+    }
+    &__list {
+        @include media('>=tablet') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        &--item {
+            border: 1px solid $c-str-7;
+            position: relative;
+            padding: 40px 35px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            @include media('>=tablet-l') {
+                flex-basis: calc(25% - 10px);
+                max-width: calc(25% - 10px);
+                &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+                    margin-top: 10px;
+                }
+            }
+            @include media('<tablet-l') {
+                padding: 25px;
+            }
+            @include media('<tablet-l', '>=tablet') {
+                flex-basis: calc(100%/3 - 10px);
+                max-width: calc(100%/3 - 10px);
+                &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+                    margin-top: 10px;
+                }
+                &:nth-child(4),
+                &:nth-child(4) ~ .news-block__list--item{
+                    //display: none;
+                }
+            }
+            @include media('>=tablet') {
+                margin-left: 5px;
+                margin-right: 5px;
+                flex-grow: 1;
+            }
+            @include media('<tablet') {
+                &:not(:nth-child(1)) {
+                    margin-top: 10px;
+                }
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 7px;
+                left: 0;
+                bottom: 0;
+                background-color: $c-secondary;
+            }
+        }
+    }
+    &__cta {
+        text-align: center;
+        padding-top: 60px;
+        @include media('<tablet-l') {
+            padding-top: 30px;
+        }
+        a {
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
+}
+.nb-item {
+    &__topic {
+        display: flex;
+        align-items: center;
+        color: $c-primary;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        @include media('<tablet-l') {
+            margin-bottom: 20px;
+        }
+        .q-icon {
+            fill: currentColor;
+            width: 30px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    }
+    &__date {
+        font-size: 11px;
+        color: $c-primary;
+        font-weight: 500;
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: black;
+        @include media('<tablet-l') {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        a {
+            color: inherit;
+            &:hover {
+                color: $c-primary;
+            }
+        }
+        h2, h3, h4 {
+            font-size: inherit;
+        }
+    }
+    &__link {
+        font-size: 11px;
+        text-transform: uppercase;
+        margin-top: auto;
+        @include media('<tablet-l', '>=tablet') {
+            font-size: 14px;
+        }
+        a {
+            display: inline-block;
+            position: relative;
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-top: 1px solid currentColor;
+                border-right: 1px solid currentColor;
+                transform: rotate(45deg);
+                margin-left: 2px;
+                position: relative;
+                top: -1px;
+                white-space: nowrap;
+            }
+            &:hover {
+                color: $c-secondary;
+            }
+        }
+    }
+    &__group {
+        padding-bottom: 45px;
+        @include media('<tablet-l') {
+            padding-bottom: 20px;
+        }
+    }
+}

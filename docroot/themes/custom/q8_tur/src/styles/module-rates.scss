@@ -9,9 +9,9 @@
     &__title {
         text-align: center;
         font-size: 50px;
-        line-height: 48px;
-        margin-bottom: 20px;
-        font-weight: 300;
+        line-height: 42px;
+        margin-bottom: 50px;
+        font-family: $f-secondary-b;
         @include media('<tablet-l') {
             font-size: 28px;
         }
@@ -22,14 +22,14 @@
     &__desc {
         text-align: center;
         font-size: 22px;
-        line-height: 26px;
+        line-height: 32px;
         max-width: 915px;
         margin-left: auto;
         margin-right: auto;
         padding-bottom: 50px;
         @include media('<tablet-l') {
             font-size: 16px;
-            line-height: 24px;
+            line-height: 22px;
             padding-bottom: 30px;
         }
     }
@@ -37,7 +37,7 @@
         position: relative;
     }
     &__list {
-        @include media('>=tablet') {
+        @include media('>tablet') {
             display: flex;
             justify-content: center;
             margin-left: -12px;
@@ -47,7 +47,7 @@
     &__item {
         text-align: center;
         position: relative;
-        @include media('>=tablet') {
+        @include media('>tablet') {
             margin-left: 6px;
             margin-right: 6px;
             flex-basis: 0;
@@ -59,36 +59,44 @@
     }
     &__icon {
         .q-icon {
-            width: 215px;
-            height: 215px;
-            fill: $c-bright;
+            width: 300px;
+            height: 300px;
+            fill: $c-white;
             @include media('<tablet-l') {
-                width: 137px;
-                height: 137px;
+                width: 240px;
+                height: 240px;
+            }
+            @include media('<tablet') {
+                width: 240px;
+                height: 240px;
             }
         }
     }
     &__content {
         position: absolute;
         width: 100%;
-        top: 60px;
+        top: 62px;
         left: 50%;
         transform: translateX(-50%);
         @include media('<tablet-l') {
-            top: 20px
+            top: 40px
         }
     }
     &__text {
         font-size: 22px;
-        line-height: 26px;
+        line-height: 32px;
+        font-family: $f-secondary-b;
+        width: 60%;
+        margin: 0 auto;
         @include media('<tablet-l') {
             font-size: 18px;
             line-height: 24px;
+            max-width: 170px;
         }
     }
     &__rate {
         color: $c-primary;
-        font-weight: 700;
+        font-family: $f-secondary-b;
         font-size: 68px;
         line-height: 70px;
         margin-bottom: 10px;
@@ -109,7 +117,7 @@
         }
     }
     .swiper-container  {
-        @include media('>=tablet') {
+        @include media('>tablet') {
             overflow: visible;
         }
     }
@@ -123,7 +131,7 @@
     }
     .swiper-button-prev,
     .swiper-button-next {
-        @include media('>=tablet') {
+        @include media('>tablet') {
             display: none;
         }
     }

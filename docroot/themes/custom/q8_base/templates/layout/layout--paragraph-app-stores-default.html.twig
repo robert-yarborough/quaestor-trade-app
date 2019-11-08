@@ -25,19 +25,43 @@
         <div class="available-links__label">{{ "Available on:"|t }}</div>
         <div class="available-links__list">
           {% if content.content.field_appstore[0]['#plain_text'] %}
-            <a href="{{ content.content.field_appstore[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/app-store-badge-1.png" alt="app-store-badge" width="173" height="58"></a>
+            <a href="{{ content.content.field_appstore[0]['#plain_text'] }}" rel="nofollow" target="_blank">
+{#                <img src="{{ icon_path }}/app-store-badge-1.png" alt="app-store-badge" width="173" height="58">#}
+                <span class="q-icon-apple">
+                    <svg width="25" height="28" class="q-icon q-icon-phone"><use xlink:href="#icon-apple1"></use></svg>
+                </span>
+                <span class="q-icon-text">App Store</span>
+            </a>
           {% endif %}
 
           {% if content.content.field_google_play[0]['#plain_text'] %}
-            <a href="{{ content.content.field_google_play[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/google-play-badge.png" alt="google-play-badge" width="203" height="79"></a>
+            <a href="{{ content.content.field_google_play[0]['#plain_text'] }}" rel="nofollow" target="_blank">
+{#                <img src="{{ icon_path }}/google-play-badge.png" alt="google-play-badge" width="203" height="79">#}
+                <span class="q-icon-apple">
+                    <img src="{{ icon_path }}/google-play-store.png" alt="google-play-badge">
+                </span>
+                <span class="q-icon-text">Google Play</span>
+            </a>
           {% endif %}
 
           {% if content.content.field_macos_store[0]['#plain_text'] %}
-            <a href="{{ content.content.field_macos_store[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/app-macos-badge.png" alt="app-store-badge" width="171" height="56"></a>
+            <a href="{{ content.content.field_macos_store[0]['#plain_text'] }}" rel="nofollow" target="_blank">
+{#                <img src="{{ icon_path }}/app-macos-badge.png" alt="app-store-badge" width="171" height="56">#}
+                <span class="q-icon-apple">
+                    <svg width="25" height="28" class="q-icon q-icon-phone"><use xlink:href="#icon-apple1"></use></svg>
+                </span>
+                <span class="q-icon-text">MacOS</span>
+            </a>
           {% endif %}
 
           {% if content.content.field_windows_store[0]['#plain_text'] %}
-            <a href="{{ content.content.field_windows_store[0]['#plain_text'] }}" target="_blank"><img src="{{ icon_path }}/app-windows-badge.png" alt="app-store-badge" width="180" height="55"></a>
+            <a href="{{ content.content.field_windows_store[0]['#plain_text'] }}" rel="nofollow" target="_blank">
+{#                <img src="{{ icon_path }}/app-windows-badge.png" alt="app-store-badge" width="180" height="55">#}
+                <span class="q-icon-windows">
+                    <svg width="25" height="28" class="q-icon q-icon-phone"><use xlink:href="#icon-windows1"></use></svg>
+                </span>
+                <span class="q-icon-text">Windows Store</span>
+            </a>
           {% endif %}
         </div>
       </div>

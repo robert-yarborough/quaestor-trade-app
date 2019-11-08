@@ -39,6 +39,9 @@
                     @include media('<=tablet-l') {
                         padding: 2px 11px;
                     }
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
                 &.is-active {
                     a {

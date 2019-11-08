@@ -78,12 +78,12 @@
 			var $selectFilter = $('.view-filters select', context);
 			$selectDefault.once('selectsStyle').select2({
 				minimumResultsForSearch: -1,
-				theme: 'default-q8',
+				theme: 'default-q8_tur',
 				width: '100%'
 			});
 			$selectFilter.once('selectsStyle').select2({
 				minimumResultsForSearch: -1,
-				theme: 'filter-q8',
+				theme: 'filter-q8_tur',
 				width: '100%'
 			});
 		}
