@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+  'map-block',
+  'map-block--alt',
+  'block-section'
+]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'map-block__inner') }}>
+      <div class="map-block__contact">
+        <div class="map-block__icon"><svg class="q-icon"><use xlink:href="#simple-logo"></use></svg></div>
+        {% if content.content.field_title[0] %}
+          <div class="map-block__title">
+            {{ content.content.field_title[0] }}
+          </div>
+        {% endif %}
+        <div class="map-block__info">
+          {% if content.content.field_address[0] %}
+            <p><i><svg width="14" height="20" class="q-icon q-icon-gps"><use xlink:href="#icon-gps"></use></svg></i>
+              {{ content.content.field_address[0]['#address_text'] }}
+            </p>
+          {% endif %}
+
+          {% if content.content.field_zip_code[0] %}
+            <p><i><svg width="20" height="16" class="q-icon q-icon-postal"><use xlink:href="#icon-postal"></use></svg></i>
+              {{ "Postal Code"|t }} {{ content.content.field_zip_code[0] }}</p>
+          {% endif %}
+
+          {% if content.content.field_phone[0] %}
+            <p><i><svg width="14" height="22" class="q-icon q-icon-phone"><use xlink:href="#icon-phone"></use></svg></i>
+              {{ "Tel:"|t }} <a href="tel:{{ content.content.field_phone[0] }}">{{ content.content.field_phone[0] }}</a></p>
+          {% endif %}
+
+          {% if content.content.field_fax[0] %}
+            <p><i><svg width="19" height="18" class="q-icon q-icon-fax"><use xlink:href="#icon-fax"></use></svg></i>
+              {{ "Fax:"|t }} {{ content.content.field_fax[0] }}</p>
+          {% endif %}
+
+          {% if content.content.field_email[0] %}
+            <p><i><svg width="18" height="18" class="q-icon q-icon-email"><use xlink:href="#icon-email"></use></svg></i>
+              {{ "email:"|t }} <a href="mailto:{{ content.content.field_email[0] }}">{{ content.content.field_email[0] }}</a></p>
+          {% endif %}
+          
+          {% if content.content.field_working_hours[0] %}
+            <p><i><svg width="18" height="18" class="q-icon q-icon-clock"><use xlink:href="#icon-clock"></use></svg></i>
+              {{ "working hours:"|t }} {{ content.content.field_working_hours[0] }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% if content.content.field_address[0] %}
+      {{ content.content.field_address[0] }}
+    {% endif %}
+  </div>
+{% endif %}
