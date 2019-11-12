@@ -1,0 +1,6 @@
+name: 'Q8 Questionnaire'
+type: module
+description: 'Questionnaire forms'
+core: 8.x
+package: 'Custom'
+
