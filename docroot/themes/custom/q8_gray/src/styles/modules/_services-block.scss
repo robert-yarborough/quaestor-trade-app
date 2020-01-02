@@ -39,6 +39,9 @@
       flex-direction: column;
       position: relative;
       margin-top: 100px;
+      @include media('<tablet-l','>=tablet') {
+        max-width: 230px; 
+      }
       @include media('<tablet-l') {
         margin-top: 60px;
       }
@@ -56,22 +59,28 @@
       top: 0;
       left: 0;
       width: 100%;
-      transform: translateY(-25%);
+      transform: translateY(-50%);
       padding: 0 10px;
       position: absolute;
       z-index: 1;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      @include media('<tablet') {
+        transform: translateY(-25%);
+      }
     }
     &__content {
       background-color: white;
-      padding: 160px 20px 25px;
+      padding: 120px 20px 25px;
       flex-grow: 1;
       transition: .4s;
       border-bottom: 7px solid $c-bright;
       @include media('<tablet-l') {
-        padding: 100px 15px 25px;
+        padding: 80px 15px 25px;
+      }
+      @include media('<tablet') {
+        padding: 140px 20px 25px;
       }
       &:hover {
         @include media('>=tablet-l') {
@@ -124,6 +133,18 @@
         @include media('<tablet-l') {
           font-size: 14px;
           padding: 10px 35px 10px 15px;
+        }
+        @include media('<tablet'){
+          width: 80%;
+          height: 54px;
+          font-size: 15px;
+        }
+      }
+      .btn-primary__dark{
+        &:after{
+          @include media('<tablet'){
+            top: 15px;
+          }
         }
       }
     }
