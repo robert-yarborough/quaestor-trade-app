@@ -51,7 +51,7 @@
     ul {
       margin: 0;
       display: flex;
-      align-items: center;
+      /*align-items: center;*/
       justify-content: space-between;
       @include media('<tablet') {
         overflow: auto;
@@ -75,9 +75,11 @@
         }
         &:first-child {
           margin-left: 0;
+          padding-left: 0;
         }
         &:last-child {
           margin-right: 0;
+          padding-right: 0;
         }
         &:before {
           content: '';
@@ -471,7 +473,7 @@
 
 .questionnaire-step {
   &__assets {
-    padding: 90px 0;
+    padding: 45px 0 90px;
     @include media('<tablet-l') {
       padding: 40px 0;
     }
@@ -763,6 +765,7 @@
     color: #2199a1;
     margin-bottom: 12px;
     margin-top: auto;
+    font-weight: 700;
     @include media('<tablet-l') {
       font-size: 16px;
     }
@@ -770,11 +773,22 @@
   &--values {
     color: #333333;
     line-height: 1.2;
-    li {
-      font-size: 18px;
-      margin-bottom: 1px;
-      @include media('<tablet-l') {
-        font-size: 14px;
+    ul{
+      list-style-type: none;
+      li {
+        font-size: 18px;
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 1px;
+        b{
+          font-weight: 700;
+        }
+        &:before{
+          display: none;
+        }
+        @include media('<tablet-l') {
+          font-size: 14px;
+        }
       }
     }
   }
