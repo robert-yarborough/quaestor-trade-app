@@ -1,3 +1,209 @@
+.graphs-output{
+  background-image: url(../images/graphsbg.png); 
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  .sec-logo{
+    padding: 50px;
+  }
+  .sec-graph{
+    width: 85%;
+    margin: 0 auto;
+    .graph-header{
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      border: 1px solid #7d7d7d;
+      .graph-image-wraper{
+        width: 15%;
+        text-transform: uppercase;
+        margin: 0 auto;
+        position: relative;
+        border-right: 1px solid #7d7d7d;
+        padding: 20px 30px;
+        position: relative;
+        .header-image{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .title{
+          margin-left: 15px;
+          font-weight: 700;
+          display: inline-block;
+          top: 50%;
+          position: absolute;
+          transform: translateY(-50%);
+          &:after{
+            content: "";
+            display: block;
+            border: 6px solid #69f0ae;
+            width: 100%;
+            border-radius: 30px;
+          }
+        }
+      }
+      .header-title{
+        width: 25%;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 22px;
+        text-align: center;
+        display: flex;
+        border-right: 1px solid #7d7d7d;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+      }
+      .header-description{
+        width: 60%;
+        padding: 20px 30px;
+      }
+    }
+    .graph-body{
+      display: flex;
+      background-color: #fff;
+      .line-chart{
+        width: 55%;
+        padding: 30px;
+        border-right: 1px solid #000;
+        canvas{
+          width: 100%;
+        }
+      }
+      .pie-chart{
+        width: 45%;
+        padding: 30px;
+        background-image: url(../images/pie_bg.svg);
+        background-position: 80px -25px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        canvas{
+          width: 100%;
+        }
+        .pie-legend{
+          margin: 20px 0;
+          ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            flex-direction: column;
+            height: 250px;
+            li{
+              display: flex;
+              width: 31%;
+              min-height: 44px;
+              .color{
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                content: "";
+                align-self: center;
+              }
+              .title{
+                font-size: 16px;
+                align-self: center;
+                padding-left: 12px;
+                width: calc(100% - 20px);
+                line-height: 18px;
+              }
+            }
+          }
+        }
+      }
+      .initial-investment{
+        margin: 4% 11%;
+        label{
+          font-size: 18px;
+          font-weight: 600;
+          padding: 5px 15px;
+        }
+        .input-group{
+          border: 1px solid #000;
+          border-radius: 50px;
+          width: 75%;
+          .input-controls{
+            border-right: 1px solid #000;
+            div{
+              cursor: pointer;
+              padding-left: 15px;
+              padding-right: 10px;
+              font-weight: 700;
+              font-size: 22px;
+              text-align: center;
+              line-height: 25px;
+              &:first-child{
+                border-bottom: 1px solid #000;
+              }
+              &:last-child{
+                font-size: 28px
+              }
+            }
+          }
+          input{
+            height: 51px;
+            font-size: 34px;
+            font-weight: 400;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+    .graph-footer{
+      display: flex;
+      background-color: #2199a1; 
+      .footer-title{
+        width: 37%;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .footer-description{
+        padding: 20px;
+        color: #fff;
+      }
+      .footer-button{
+        padding: 20px;
+        width: 35%;
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+        a{
+          width: 100%;
+          color: #000;
+          background: #fff;
+          display: block;
+          text-decoration: none;
+          padding: 15px 20px;
+          margin: 0 10px;
+          border-radius: 50px;
+          font-weight: 700;
+          line-height: 16px;
+          position: relative;
+          &:after{
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-color: #000;
+            border-width: 2px 2px 0 0;
+            border-style: solid;
+            transform: rotate(45deg) translateY(-50%);
+            position: absolute;
+            top: 50%;
+            right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
 #cursor,#tooltip{
   position: absolute;
 }
@@ -5,7 +211,10 @@
   position: relative;
   margin: 0 auto;
 }
-.linechart__container,#cursor{
+.linechart__container{
+  position: relative;
+}
+#cursor{
   display: inline-block;
   height: 600px;
   position: relative;
@@ -34,32 +243,34 @@
   cursor: pointer;
   .left{
     position: absolute;
-    left: 30;
+    left: 10%;
     padding: 10px;
+    top: 10px;
     &:after{
-     content: "";
-     display: block;
-     width: 15px;
-     height: 15px;
-     border-color: #000;
-     border-width: 0 0 1px 1px;
-     border-style: solid;
-     transform: rotate(45deg);
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-color: #000;
+      border-width: 0 0 1px 1px;
+      border-style: solid;
+      transform: rotate(45deg);
     }
   }
   .right{
     position: absolute;
     right: 0;
     padding: 10px;
+    top: 10px;
     &:after{
-    content: "";
-     display: block;
-     width: 15px;
-     height: 15px;
-     border-color: #000;
-     border-width: 1px 1px 0 0;
-     border-style: solid;
-     transform: rotate(45deg);
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-color: #000;
+      border-width: 1px 1px 0 0;
+      border-style: solid;
+      transform: rotate(45deg);
     }
   }
 }
