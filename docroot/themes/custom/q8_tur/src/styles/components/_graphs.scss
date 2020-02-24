@@ -1,0 +1,65 @@
+#cursor,#tooltip{
+  position: absolute;
+}
+#linechart{
+  position: relative;
+  margin: 0 auto;
+}
+.linechart__container,#cursor{
+  display: inline-block;
+  height: 600px;
+  position: relative;
+}
+#chartjs-tooltip {
+  opacity: 0;
+  position: absolute;
+  color: #2199a1;
+  border-radius: 3px;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  pointer-events: none;
+  text-align: center;
+  background: #fff;
+  .title{
+    font-size: 18px;
+  }
+  .value{
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+.actions-buttons{
+  position: relative;
+  bottom: 30px;
+  cursor: pointer;
+  .left{
+    position: absolute;
+    left: 30;
+    padding: 10px;
+    &:after{
+     content: "";
+     display: block;
+     width: 15px;
+     height: 15px;
+     border-color: #000;
+     border-width: 0 0 1px 1px;
+     border-style: solid;
+     transform: rotate(45deg);
+    }
+  }
+  .right{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    &:after{
+    content: "";
+     display: block;
+     width: 15px;
+     height: 15px;
+     border-color: #000;
+     border-width: 1px 1px 0 0;
+     border-style: solid;
+     transform: rotate(45deg);
+    }
+  }
+}
