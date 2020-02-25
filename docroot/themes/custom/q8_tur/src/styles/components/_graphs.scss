@@ -122,6 +122,10 @@
           border: 1px solid #000;
           border-radius: 50px;
           width: 75%;
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: stretch;
           .input-controls{
             border-right: 1px solid #000;
             div{
