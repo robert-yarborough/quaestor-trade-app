@@ -33,6 +33,7 @@
           top: 50%;
           position: absolute;
           transform: translateY(-50%);
+          font-size: 16px;
           &:after{
             content: "";
             display: block;
@@ -57,6 +58,7 @@
       .header-description{
         width: 60%;
         padding: 20px 30px;
+        font-size: 16px;
       }
     }
     .graph-body{
@@ -93,6 +95,9 @@
               display: flex;
               width: 31%;
               min-height: 44px;
+              &:before{
+                content: none;
+              }
               .color{
                 width: 20px;
                 height: 20px;
@@ -106,6 +111,7 @@
                 padding-left: 12px;
                 width: calc(100% - 20px);
                 line-height: 18px;
+                color: #000;
               }
             }
           }
@@ -117,6 +123,7 @@
           font-size: 18px;
           font-weight: 600;
           padding: 5px 15px;
+          color: #000;
         }
         .input-group{
           border: 1px solid #000;
@@ -136,6 +143,7 @@
               font-size: 22px;
               text-align: center;
               line-height: 25px;
+              color: #000;
               &:first-child{
                 border-bottom: 1px solid #000;
               }
@@ -149,6 +157,8 @@
             font-size: 34px;
             font-weight: 400;
             padding: 0 10px;
+            width: 80%;
+            box-shadow: none;
           }
         }
       }
@@ -171,6 +181,7 @@
       .footer-description{
         padding: 20px;
         color: #fff;
+        font-size: 16px;
       }
       .footer-button{
         padding: 20px;
@@ -190,6 +201,7 @@
           font-weight: 700;
           line-height: 16px;
           position: relative;
+          font-size: 16px;
           &:after{
             content: '';
             display: block;
