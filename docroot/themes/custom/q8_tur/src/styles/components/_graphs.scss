@@ -93,8 +93,10 @@
             height: 250px;
             li{
               display: flex;
-              width: 31%;
+              width: 32%;
               min-height: 44px;
+              margin: 0;
+              padding: 0;
               &:before{
                 content: none;
               }
