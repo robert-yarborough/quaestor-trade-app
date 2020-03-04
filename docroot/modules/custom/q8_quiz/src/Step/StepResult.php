@@ -68,7 +68,7 @@ $xx = ['', '1 year', '2 years', '3 years', '4 years', '5 years', '6 years', '7 y
   foreach ($data as $results) {
     $node = $results->_relationship_entities;
     //print_r($node);
-    $chart_name[] = $node['field_final_chart_data_values']->get('field_name')->value;
+    $chart_name[] = $node['field_final_chart_data_values']->get('field_chart_name')->value;
     $chart_number[] = $node['field_final_chart_data_values']->get('field_chart_number')->value;
     $chart_color[] = $node['field_final_chart_data_values']->get('field_chart_color')->value;
   }
