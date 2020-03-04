@@ -1,0 +1,5 @@
+name: Q8 Questionnaire Customization
+type: module
+description: Q8 Settings Module
+core: 8.x
+package: Custom

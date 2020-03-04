@@ -4,6 +4,7 @@ base:
     theme:
       css/main.css: {}
   js:
+    https://www.chartjs.org/dist/2.9.3/Chart.js: { type: external, minified: true }
     js/script.js: {}
   dependencies:
     - core/jquery

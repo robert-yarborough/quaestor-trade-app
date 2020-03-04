@@ -1,0 +1,7 @@
+q8_questionnaire_customization.algorithm_settings_form:
+  title: 'Q8 Algorithm Settings Form'
+  route_name: q8_questionnaire_customization.algorithm_settings_form
+  description: 'Change algorithm form data'
+  parent: system.admin_config_system
+  weight: 99
+

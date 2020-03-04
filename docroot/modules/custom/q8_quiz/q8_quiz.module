@@ -22,3 +22,12 @@ function q8_quiz_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+// Implements hook_theme()
+function q8_quiz_theme( $existing, $type, $theme, $path ){
+  return [
+    'final-result' => [
+      'variables' => ['items' => NULL],
+    ],
+  ];
+}
