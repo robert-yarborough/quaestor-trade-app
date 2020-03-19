@@ -2,16 +2,30 @@
  * @file
  * Custom scripts.
  */
+var defaultValue = 100000;
+var formater = Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 0
+});
+
 (function($, Drupal, drupalSettings) {
   Drupal.behaviors.d8base = {
     attach: function(context, settings) {
       var chart_name = drupalSettings.chart_name;
       var chart_number = drupalSettings.chart_number;
       var chart_color = drupalSettings.chart_color;
-      var project_value = drupalSettings.projected_values;
-      //console.log(project_value);
+      var target_return = drupalSettings.target_return;
+      var projected_value = drupalSettings.projected_values;
+      var initalValue = defaultValue;
+      var values = [];
+      values.push(initalValue);
+      var i;
+      for(i=0;i<20;i++){
+      initalValue = initalValue * (1 + target_return / 100);
+      values.push(Math.round(initalValue));
+      }
 
-      // Write your custom scripts here.
       //pie chart
       var config = {
         type: "pie",
@@ -34,7 +48,6 @@
             easing: "easeOutQuart",
             onComplete: function() {
               var ctx = this.chart.ctx;
-              //              ctx.font = Chart.helpers.fontString('18px', Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
               ctx.font = "18px Verdana";
               ctx.textAlign = "center";
               ctx.textBaseline = "bottom";
@@ -119,7 +132,7 @@
       };
       //line chart
       var xx = ['', '1 year', '2 years', '3 years', '4 years', '5 years', '6 years', '7 years', '8 years', '9 years', '10 years', '11 years', '12 years', '13 years', '14 years', '15 years', '16 years', '17 years', '18 years', '19 years', '20 years'];
-      var yy = drupalSettings.projected_values || [];
+      var yy = projected_value || [];
       var yya = [];
       var yyb = [];
       var yyaa = [];
@@ -380,50 +393,99 @@
         config1.options.scales.yAxes[0].ticks.max = yyaa[rindex - 1] + (10000 - yyaa[rindex - 1] % 10000);
         window.myLine.update();
       });
+      var incrementValue = 5000;
+      jQuery(".initial-investment .increment", context).click(function() {
+        var input = jQuery(this)
+          .parents(".input-group")
+          .find("input");
+        var value =
+          Number(
+            input
+              .val()
+              .replace("$", "")
+              .replace(/\./g, "")
+          ) + incrementValue;
+        input.val(formater.format(value).replace(/,/g, "."));
+        var stepValue = 1500;
+        var intervel = 0;
+        var intervel2 = 0;
+        var yy = projected_value;
+        for (i = 0; i < yy.length; i++) {
+          yy[i] = yy[i] + incrementValue;
+          if (i != 0) {
+            intervel += stepValue;
+            intervel2 += stepValue - 750;
+          }
+          yya[i] = yy[i] + intervel;
+          yyb[i] = yy[i] - intervel;
+          yyaa[i] = yya[i] + intervel2;
+          yybb[i] = yyb[i] - intervel2;
+        }
+        config1.data.labels = getXXvalue(xx, 0, 9);
+        config1.data.datasets[0].data = getXXvalue(yy, 0, 9);
+        config1.data.datasets[1].data = getXXvalue(yya, 0, 9);
+        config1.data.datasets[2].data = getXXvalue(yyb, 0, 9);
+        config1.data.datasets[3].data = getXXvalue(yyaa, 0, 9);
+        config1.data.datasets[4].data = getXXvalue(yybb, 0, 9);
+        config1.options.scales.yAxes[0].ticks.min = yybb[0] - (yybb[0] % 10000);
+        config1.options.scales.yAxes[0].ticks.max =
+          yyaa[9 - 1] + (10000 - (yyaa[9 - 1] % 10000));
+        window.myLine.update();
+      });
+
+      jQuery(".initial-investment .decrement", context).click(function() {
+          var input = jQuery(this)
+            .parents(".input-group")
+            .find("input");
+          if (
+            Number(
+              input
+                .val()
+                .replace("$", "")
+                .replace(/\./g, "")
+            ) > incrementValue
+          ) {
+            var value =
+              Number(
+                input
+                  .val()
+                  .replace("$", "")
+                  .replace(/\./g, "")
+              ) - incrementValue;
+            input.val(formater.format(value).replace(/,/g, "."));
+            var stepValue = 1500;
+            var intervel = 0;
+            var intervel2 = 0;
+            yy = projected_value;
+            for (i = 0; i < yy.length; i++) {
+              yy[i] = yy[i] - incrementValue;
+              if (i != 0) {
+                intervel += stepValue;
+                intervel2 += stepValue - 750;
+              }
+              yya[i] = yy[i] + intervel;
+              yyb[i] = yy[i] - intervel;
+              yyaa[i] = yya[i] + intervel2;
+              yybb[i] = yyb[i] - intervel2;
+            }
+            config1.data.labels = getXXvalue(xx, 0, 9);
+            config1.data.datasets[0].data = getXXvalue(yy, 0, 9);
+            config1.data.datasets[1].data = getXXvalue(yya, 0, 9);
+            config1.data.datasets[2].data = getXXvalue(yyb, 0, 9);
+            config1.data.datasets[3].data = getXXvalue(yyaa, 0, 9);
+            config1.data.datasets[4].data = getXXvalue(yybb, 0, 9);
+            config1.options.scales.yAxes[0].ticks.min =
+              yybb[0] - (yybb[0] % 10000);
+            config1.options.scales.yAxes[0].ticks.max =
+              yyaa[9 - 1] + (10000 - (yyaa[9 - 1] % 10000));
+            window.myLine.update();
+          }
+        }
+      );
 
     }
   };
 
 })(jQuery, Drupal, drupalSettings);
 
-var defaultValue = 100000;
-var formater = Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 0
-});
-jQuery(document).on("click", ".initial-investment .increment", function() {
-  var input = jQuery(this)
-    .parents(".input-group")
-    .find("input");
-  var value =
-    Number(
-      input
-        .val()
-        .replace("$", "")
-        .replace(/\./g, "")
-    ) + defaultValue;
-  input.val(formater.format(value).replace(/,/g, "."));
-});
-jQuery(document).on("click", ".initial-investment .decrement", function() {
-  var input = jQuery(this)
-    .parents(".input-group")
-    .find("input");
-  if (
-    Number(
-      input
-        .val()
-        .replace("$", "")
-        .replace(/\./g, "")
-    ) > defaultValue
-  ) {
-    var value =
-      Number(
-        input
-          .val()
-          .replace("$", "")
-          .replace(/\./g, "")
-      ) - defaultValue;
-    input.val(formater.format(value).replace(/,/g, "."));
-  }
-});
+
