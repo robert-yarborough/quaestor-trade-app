@@ -300,6 +300,9 @@ class MultistepQuizeForm extends FormBase {
     foreach ($this->step->getFieldNames() as $name) {
       $values[$name] = $form_state->getValue($name);
     }
+    // Save values in session
+    $_SESSION['multistep'][] = $values;
+
     $this->step->setValues($values);
 
     // Add step to manager.
