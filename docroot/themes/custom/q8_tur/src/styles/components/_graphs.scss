@@ -1,5 +1,5 @@
 .graphs-output{
-  background-image: url(../images/graphsbg.png); 
+  background-image: url(/pages/images/graphsbg.png); 
   background-repeat: no-repeat;
   background-size: 100vw 100%;
   .sec-logo{
@@ -33,7 +33,6 @@
           top: 50%;
           position: absolute;
           transform: translateY(-50%);
-          font-size: 16px;
           &:after{
             content: "";
             display: block;
@@ -58,7 +57,6 @@
       .header-description{
         width: 60%;
         padding: 20px 30px;
-        font-size: 16px;
       }
     }
     .graph-body{
@@ -66,7 +64,7 @@
       background-color: #fff;
       .line-chart{
         width: 55%;
-        padding: 30px;
+        padding: 30px 40px;
         border-right: 1px solid #000;
         canvas{
           width: 100%;
@@ -75,7 +73,7 @@
       .pie-chart{
         width: 45%;
         padding: 30px;
-        background-image: url(../images/pie_bg.svg);
+        background-image: url(/pages/images/pie_bg.svg);
         background-position: 80px -25px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -93,13 +91,8 @@
             height: 250px;
             li{
               display: flex;
-              width: 32%;
+              width: 31%;
               min-height: 44px;
-              margin: 0;
-              padding: 0;
-              &:before{
-                content: none;
-              }
               .color{
                 width: 20px;
                 height: 20px;
@@ -113,7 +106,6 @@
                 padding-left: 12px;
                 width: calc(100% - 20px);
                 line-height: 18px;
-                color: #000;
               }
             }
           }
@@ -125,7 +117,6 @@
           font-size: 18px;
           font-weight: 600;
           padding: 5px 15px;
-          color: #000;
         }
         .input-group{
           border: 1px solid #000;
@@ -145,7 +136,6 @@
               font-size: 22px;
               text-align: center;
               line-height: 25px;
-              color: #000;
               &:first-child{
                 border-bottom: 1px solid #000;
               }
@@ -158,9 +148,7 @@
             height: 51px;
             font-size: 34px;
             font-weight: 400;
-            padding: 0 10px;
-            width: 80%;
-            box-shadow: none;
+            padding: 0 0 0 10px;
           }
         }
       }
@@ -183,7 +171,6 @@
       .footer-description{
         padding: 20px;
         color: #fff;
-        font-size: 16px;
       }
       .footer-button{
         padding: 20px;
@@ -203,7 +190,6 @@
           font-weight: 700;
           line-height: 16px;
           position: relative;
-          font-size: 16px;
           &:after{
             content: '';
             display: block;
@@ -263,7 +249,7 @@
     position: absolute;
     left: 10%;
     padding: 10px;
-    top: 10px;
+    top: -22px;
     &:after{
       content: "";
       display: block;
@@ -277,9 +263,9 @@
   }
   .right{
     position: absolute;
-    right: 0;
+    right: -24px;
     padding: 10px;
-    top: 10px;
+    top: -22px;
     &:after{
       content: "";
       display: block;
