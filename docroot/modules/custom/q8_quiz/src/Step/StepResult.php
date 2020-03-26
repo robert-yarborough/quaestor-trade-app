@@ -32,8 +32,8 @@ class StepResult extends BaseStep {
     ];
 
     // Questionarie Alogorithm
-    $data = array_values(array_filter($_SESSION['multistep']));
-    unset($_SESSION['multistep']);
+    $data = array_values(array_filter($_SESSION['q8_quiz_questionnaire']));
+    unset($_SESSION['q8_quiz_questionnaire']);
 
     foreach($data as $key=>$result){
       $answers[] = (int) array_column($result, 'weight')[0];
