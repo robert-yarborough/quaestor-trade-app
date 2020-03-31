@@ -1,3 +1,66 @@
+.contact-us-block{
+  background-color: #F2F0F0;
+  padding: 100px 0;
+  .general-cms{
+    .h2-component{
+      h2{
+        margin: 0;
+        padding: 0px 140px 32px;
+      }
+      .input-group{
+        padding: 0 140px;
+        display: flex;
+        flex-wrap: wrap;
+        .input-col:not(.w-100){
+          flex-basis: calc(50% - 10px);
+          &:first-child{
+            margin-right: 20px;
+          }
+        }
+        input,select,textArea{
+          width: 100%;
+          margin-bottom: 16px;
+          border: 1px solid #D1D1D1;
+          font-size: 20px;
+          font-family: "quicksand-regular";
+          color: #575757;
+        }
+        input,select{
+          height: 60px;
+          padding: 0 20px;
+        }
+        textarea{
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+.quote{
+  background-color: #3A54A4;
+  padding: 50px 0;
+  .general-cms{
+    padding: 0 140px;
+    p{
+      font-size: 24px;
+      line-height: 32px;
+      font-family: "quicksand-bold";
+      color: #fff;
+      text-align: center;
+      padding: 0 30px;
+      &:before{
+        content: url(/pages/images/first-quote.png);
+        display: block;
+        padding-bottom: 30px;
+      }
+      &:after{
+        content: url(/pages/images/last-quote.png);
+        display: block;
+        padding-top: 35px;
+      }
+    } 
+  }
+}
 .general-cms{
   max-width: 1220px;
   margin: 0 auto;
@@ -97,17 +160,21 @@
       }
       .video-component{
         position: relative;
-        img{
-          padding: 25px 0 60px 0;
-        }
+        padding: 25px 0 60px 0;
         .play-btn{
           position: absolute;  
           left: 50%;
           top: 50%;
           transform: translateX(-50%) translateY(-50%);
+          cursor: pointer;
           img{
             padding: 0;
           }
+        }
+        iframe{
+          width: 100%;
+          height: 680px;
+          display: none;
         }
       }
     }
@@ -120,6 +187,7 @@
     border-bottom: 2px solid #B7B7B7;
     padding-bottom: 30px;
     margin-bottom: 40px;
+    background-color: #fff;
     thead{
       td{
         padding: 30px 10px 20px 10px;
@@ -139,6 +207,32 @@
         font-size: 18px;
         line-height: 24px;
         font-family: "quicksand-regular";
+      }
+    }
+  }
+  .two-col-image{
+    padding: 40px 140px;
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      flex-basis: calc(50% - 20px);
+      h3,p{
+        padding: 0;
+      }
+      &.h3-component{
+        margin-right: 40px;
+        h3{
+          margin-top: 5px;
+        }
+      }
+    }
+    &.swap{
+      flex-direction: row-reverse;
+      > div {
+        &.h3-component{
+          margin-left: 40px;
+          margin-right: 0px;
+        }
       }
     }
   }

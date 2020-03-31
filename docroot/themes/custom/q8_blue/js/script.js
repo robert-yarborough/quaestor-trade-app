@@ -329,92 +329,101 @@ exports.default = setHeaderActions;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 var moduleIsInited = false;
 
 var setMain = function ($) {
-	return function (context) {
-		if (moduleIsInited) {
-			return;
-		}
-		moduleIsInited = true;
-		var $root = $('html, body', context);
+  return function (context) {
+    if (moduleIsInited) {
+      return;
+    }
+    moduleIsInited = true;
+    var $root = $('html, body', context);
 
-		var $next_scroll_link = $('.js-scroll-next-link', context);
+    var $next_scroll_link = $('.js-scroll-next-link', context);
 
-		$next_scroll_link.on({
-			click: function click(e) {
-				e.preventDefault();
-				var $next = $(this).closest('.block-section').next().offset().top;
-				$root.animate({ scrollTop: $next }, 'slow');
-			}
-		});
+    $next_scroll_link.on({
+      click: function click(e) {
+        e.preventDefault();
+        var $next = $(this).closest('.block-section').next().offset().top;
+        $root.animate({ scrollTop: $next }, 'slow');
+      }
+    });
 
-		var $chat_widget = $('#chat-widget-container', context);
-		setTimeout(function () {
-			if ($chat_widget.length) {
-				$root.addClass('is-cart');
-			}
-		}, 3000);
+    var $chat_widget = $('#chat-widget-container', context);
+    setTimeout(function () {
+      if ($chat_widget.length) {
+        $root.addClass('is-cart');
+      }
+    }, 3000);
 
-		// Animate forms placeholder:
+    // Animate forms placeholder:
 
-		var $animate_placeholder = $('.js-animate-placeholder', context);
-		var $fields = 'input[type="text"],' + 'input[type="password"],' + 'input[type="email"],' + 'input[type="number"],' + 'input[type="month"],' + 'input[type="date"],' + 'input[type="time"],' + 'input[type="search"],' + 'input[type="tel"], ' + 'textarea';
-		var $field = $animate_placeholder.find($fields);
-		if ($animate_placeholder.length) {
-			$field.each(function () {
-				var $that = $(this);
-				var $holder = $that.attr('placeholder');
-				var $value = $that.val();
-				if ($holder.length) {
-					$('<div class="placeholder-label">' + $holder + '</div>').insertBefore($that);
-					if ($value) {
-						$that.prev('.placeholder-label').addClass('is-active');
-						return;
-					}
-					$that.prev('.placeholder-label').removeClass('is-active');
-				}
-			});
-		}
+    var $animate_placeholder = $('.js-animate-placeholder', context);
+    var $fields = 'input[type="text"],' + 'input[type="password"],' + 'input[type="email"],' + 'input[type="number"],' + 'input[type="month"],' + 'input[type="date"],' + 'input[type="time"],' + 'input[type="search"],' + 'input[type="tel"], ' + 'textarea';
+    var $field = $animate_placeholder.find($fields);
+    if ($animate_placeholder.length) {
+      $field.each(function () {
+        var $that = $(this);
+        var $holder = $that.attr('placeholder');
+        var $value = $that.val();
+        if ($holder.length) {
+          $('<div class="placeholder-label">' + $holder + '</div>').insertBefore($that);
+          if ($value) {
+            $that.prev('.placeholder-label').addClass('is-active');
+            return;
+          }
+          $that.prev('.placeholder-label').removeClass('is-active');
+        }
+      });
+    }
 
-		$field.on('keydown keyup', function () {
-			var $that = $(this);
-			var $value = $that.val();
-			var $holder = $that.prev('.placeholder-label');
-			if ($holder.length) {
-				if ($value) {
-					$holder.addClass('is-active');
-					return;
-				}
-				$holder.removeClass('is-active');
-			}
-		});
+    $field.on('keydown keyup', function () {
+      var $that = $(this);
+      var $value = $that.val();
+      var $holder = $that.prev('.placeholder-label');
+      if ($holder.length) {
+        if ($value) {
+          $holder.addClass('is-active');
+          return;
+        }
+        $holder.removeClass('is-active');
+      }
+    });
 
-		var animate_init = function animate_init() {
-			skrollr.init();
-		};
-		var animate_destroy = function animate_destroy() {
-			skrollr.init().destroy();
-		};
+    var animate_init = function animate_init() {
+      skrollr.init();
+    };
+    var animate_destroy = function animate_destroy() {
+      skrollr.init().destroy();
+    };
 
-		// Mobile:
-		addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
-			if (match) {} else if (match == false) {}
-		});
+    // Mobile:
+    addMediaQueryListener(devicesMQ.mobileMQ, function (match) {
+      if (match) {} else if (match == false) {}
+    });
 
-		// Tablet:
-		addMediaQueryListener(devicesMQ.desktopMMQ, function (match) {
-			if (match) {
-				animate_destroy();
-			} else if (match == false) {
-				animate_init();
-			}
-		});
-	};
+    // Tablet:
+    addMediaQueryListener(devicesMQ.desktopMMQ, function (match) {
+      if (match) {
+        animate_destroy();
+      } else if (match == false) {
+        animate_init();
+      }
+    });
+  };
 }(window.jQuery);
 exports.default = setMain;
+
+
+jQuery(document).on('click', '.video-component .play-btn', function (e) {
+  e.preventDefault();
+  jQuery(this).parent().find('iframe')[0].src += "?autoplay=1";
+  jQuery(this).parent().find('iframe').show();
+  jQuery(this).parent().find('img').hide();
+  jQuery(this).hide();
+});
 
 /***/ })
 /******/ ]);
