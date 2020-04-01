@@ -56,15 +56,15 @@ class StepIntermediateResult extends BaseStep {
     //$path =  drupal_get_path('module', 'q8_quiz');
     //$fquestions = $path."/Questions/Questions.csv";
     // Get the questionarie data
-    $data = array_values(array_filter($_SESSION['multistep']));
-    unset($_SESSION['multistep']);
+    $data = array_values(array_filter($_SESSION['q8_quiz_questionnaire']));
+    unset($_SESSION['q8_quiz_questionnaire']);
 
-    // Select Alogorithm in backend
+    // Select algorithm in backend
     // Todo select multiple algorithm
     $config = \Drupal::config('q8_questionnaire_customization.settings');
     $algorithm=  $config->get('algorithm');
 
-    // Questionarie Alogorithm
+    // Questionarie algorithm
     foreach($data as $key=>$result){
       $answers[] = (int) array_column($result, 'weight')[0];
     }

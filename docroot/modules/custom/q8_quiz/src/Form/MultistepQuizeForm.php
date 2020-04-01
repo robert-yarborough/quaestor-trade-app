@@ -301,7 +301,7 @@ class MultistepQuizeForm extends FormBase {
       $values[$name] = $form_state->getValue($name);
     }
     // Save values in session
-    $_SESSION['multistep'][] = $values;
+    $_SESSION['q8_quiz_questionnaire'][] = $values;
 
     $this->step->setValues($values);
 
