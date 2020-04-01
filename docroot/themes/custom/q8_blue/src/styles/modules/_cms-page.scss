@@ -11,27 +11,97 @@
         padding: 0 140px;
         display: flex;
         flex-wrap: wrap;
-        .input-col:not(.w-100){
-          flex-basis: calc(50% - 10px);
-          &:first-child{
-            margin-right: 20px;
+        .input-col{
+          position: relative;
+          margin-bottom: 16px;
+          &.center{
+            text-align: center; 
+          }
+          button[type="submit"]{
+            border: 1px solid #3A54A4;
+            color: #3A54A4;
+            border-radius: 50px;
+            height: auto;
+            padding: 15px 70px 15px 50px;
+            line-height: 1;
+            font-size: 16px;
+            text-transform: uppercase;
+            position: relative;
+            margin-top: 30px;
+            &:after{
+              content: "";
+              width: 11px;
+              height: 11px;
+              border-width: 1px 1px 0 0;
+              border-style: solid;
+              border-color: #3A54A4;
+              display: inline-block;
+              position: absolute;
+              right: 20px;
+              top: 50%;
+              transform: translateY(-58%) rotate(45deg);
+            }
           }
         }
-        input,select,textArea{
-          width: 100%;
-          margin-bottom: 16px;
-          border: 1px solid #D1D1D1;
+      }
+      .input-col:not(.w-100){
+        flex-basis: calc(50% - 10px);
+        &:first-child{
+          margin-right: 20px;
+        }
+      }
+      input,select,textArea{
+        width: 100%;
+        border: 1px solid #D1D1D1;
+        font-size: 20px;
+        font-family: "quicksand-regular";
+        color: #575757;
+        +label{
           font-size: 20px;
           font-family: "quicksand-regular";
-          color: #575757;
-        }
-        input,select{
-          height: 60px;
+          position: absolute;
+          left: 0;
+          top: 30px;
+          transform: translateY(-50%);
           padding: 0 20px;
+          color: #575757;
+          line-height: 0;
+          transition: all 200ms;
         }
-        textarea{
-          padding: 20px;
+        &:focus{
+          border-color: #3A54A4;
+          + label{
+            font-size: 14px;
+            font-family: "quicksand-bold";
+            top: 1px;
+            background: linear-gradient(to bottom, #f2f0f0 0%,#f2f0f0 50%,#ffffff 50%, #ffffff 100%);
+            line-height: 1;
+            padding: 0;
+            left: 20px;
+            transition: all 200ms;
+            color: #3A54A4;
+          }
         }
+        &:valid{
+          + label{
+            font-size: 14px;
+            font-family: "quicksand-bold";
+            top: 1px;
+            background: linear-gradient(to bottom, #f2f0f0 0%,#f2f0f0 50%,#ffffff 50%, #ffffff 100%);
+            line-height: 1;
+            padding: 0;
+            left: 20px;
+            transition: all 200ms;
+            color: #3A54A4;
+          }
+        }
+      }
+      input,select{
+        height: 60px;
+        padding: 0 20px;
+      }
+      textarea{
+        padding: 20px;
       }
     }
   }
