@@ -179,48 +179,49 @@ var formater = Intl.NumberFormat("en-US", {
       lindex = 0;
       rindex = 9;
       var config1 = {
-        type: 'LineWithLine',
+        type: "LineWithLine",
         data: {
           labels: getXXvalue(xx, lindex, rindex),
-          datasets: [{
-              borderColor: '#b6ff62',
+          datasets: [
+            {
+              borderColor: "#b6ff62",
               data: getXXvalue(yy, lindex, rindex),
-              pointHoverBackgroundColor: '#fff',
-              pointHoverBorderColor: '#000',
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "#000",
               fill: false,
               borderDash: [5],
-              pointHoverRadius: 10,
+              pointHoverRadius: 10
             },
             {
-              backgroundColor: '#e5ffc7',
-              borderColor: '#e5ffc7',
+              backgroundColor: "#e5ffc7",
+              borderColor: "#e5ffc7",
               data: getXXvalue(yya, lindex, rindex),
-              fill: '2',
+              fill: "2",
               borderWidth: 0,
-              pointHoverRadius: 0,
+              pointHoverRadius: 0
             },
             {
-              backgroundColor: '#f2ffe3',
-              borderColor: '#f2ffe3',
+              backgroundColor: "#f2ffe3",
+              borderColor: "#f2ffe3",
               data: getXXvalue(yyb, lindex, rindex),
-              fill: '4',
+              fill: "4",
               borderWidth: 0,
-              pointHoverRadius: 0,
+              pointHoverRadius: 0
             },
             {
-              backgroundColor: '#f2ffe3',
-              borderColor: '#fff',
+              backgroundColor: "#f2ffe3",
+              borderColor: "#fff",
               data: getXXvalue(yyaa, lindex, rindex),
-              fill: '1',
+              fill: "1",
               borderWidth: 0,
-              pointHoverRadius: 0,
+              pointHoverRadius: 0
             },
             {
-              borderColor: '#fff',
+              borderColor: "#fff",
               data: getXXvalue(yybb, lindex, rindex),
               fill: false,
               borderWidth: 0,
-              pointHoverRadius: 0,
+              pointHoverRadius: 0
             }
           ]
         },
@@ -228,52 +229,60 @@ var formater = Intl.NumberFormat("en-US", {
           responsive: false,
           title: {
             display: false,
-            text: 'Chart.js Line Chart'
+            text: "Chart.js Line Chart"
           },
           legend: {
-            display: false,
+            display: false
           },
           tooltips: {
             enabled: false,
-            mode: 'index',
+            mode: "index",
             intersect: false,
-            yAlign: 'center',
-            xAlign: 'right',
-            filter: function (tooltipItem) {
+            yAlign: "center",
+            xAlign: "right",
+            filter: function(tooltipItem) {
               return tooltipItem.datasetIndex === 0;
             },
-            custom: function (tooltip) {
+            custom: function(tooltip) {
               // Tooltip Element
-              var tooltipEl = $('#chartjs-tooltip');
+              var tooltipEl = $("#chartjs-tooltip");
               if (!tooltipEl[0]) {
-                $('body').append('<div id="chartjs-tooltip"><div class="title">Projected Value</div><div class="value"></div></div>');
-                tooltipEl = $('#chartjs-tooltip');
+                $("body").append(
+                  '<div id="chartjs-tooltip"><div class="title">Projected Value</div><div class="value"></div></div>'
+                );
+                tooltipEl = $("#chartjs-tooltip");
               }
               // Hide if no tooltip
               if (!tooltip.opacity) {
                 tooltipEl.css({
                   opacity: 0
                 });
-                $('#linechart').each(function (index, el) {
-                  $(el).css('cursor', 'default');
+                $("#linechart").each(function(index, el) {
+                  $(el).css("cursor", "default");
                 });
                 return;
               }
-              $(this._chart.canvas).css('cursor', 'pointer');
+              $(this._chart.canvas).css("cursor", "pointer");
               // Set caret Position
-              tooltipEl.removeClass('above below no-transform');
+              tooltipEl.removeClass("above below no-transform");
               if (tooltip.yAlign) {
                 tooltipEl.addClass(tooltip.yAlign);
               } else {
-                tooltipEl.addClass('no-transform');
+                tooltipEl.addClass("no-transform");
               }
               // Set Text
               if (tooltip.body) {
                 var value = tooltip.body.pop().lines.pop();
                 var innerHtml = [
-                  '$' + parseInt(value).toLocaleString('en-IN', {style: 'decimal', currency: 'USD', maximumFractionDigits: 0, minimumFractionDigits: 0})
+                  "$" +
+                    parseInt(value).toLocaleString("en-IN", {
+                      style: "decimal",
+                      currency: "USD",
+                      maximumFractionDigits: 0,
+                      minimumFractionDigits: 0
+                    })
                 ];
-                tooltipEl.find('.value').html(innerHtml.join('\n'));
+                tooltipEl.find(".value").html(innerHtml.join("\n"));
               }
               // Find Y Location on page
               var top = 0;
@@ -281,25 +290,25 @@ var formater = Intl.NumberFormat("en-US", {
               // Display, position, and set styles for font
               tooltipEl.css({
                 opacity: 1,
-                width: 'auto',
-                left: tooltip.x + 'px',
-                top: '0px',
+                width: "auto",
+                left: tooltip.x + "px",
+                top: "0px",
                 fontFamily: tooltip._fontFamily,
                 fontSize: tooltip.fontSize,
-                fontStyle: tooltip._fontStyle,
+                fontStyle: tooltip._fontStyle
               });
-            },
+            }
           },
           hover: {
-            mode: 'index',
-            intersect: false,
+            mode: "index",
+            intersect: false
           },
           elements: {
             point: {
-              radius: 0,
+              radius: 0
             },
             line: {
-              fill: '2'
+              fill: "2"
             }
           },
           plugins: {
@@ -308,7 +317,8 @@ var formater = Intl.NumberFormat("en-US", {
             }
           },
           scales: {
-            xAxes: [{
+            xAxes: [
+              {
                 display: true,
                 scaleLabel: {
                   display: true
@@ -316,21 +326,29 @@ var formater = Intl.NumberFormat("en-US", {
                 gridLines: {
                   drawOnChartArea: false
                 }
-              }],
-            yAxes: [{
+              }
+            ],
+            yAxes: [
+              {
                 display: true,
                 scaleLabel: {
                   display: true
                 },
                 ticks: {
                   min: yybb[lindex] - (yybb[lindex] % 10000),
-                  max: yyaa[rindex - 1] + (10000 - yyaa[rindex - 1] % 10000),
-                  stepSize: 10000
+                  max: yyaa[rindex - 1] + (10000 - (yyaa[rindex - 1] % 10000)),
+                  stepSize: 10000,
+                  fontColor: "#2199a1",
+                  callback: function(label, index, labels) {
+                    var value = label.toLocaleString("en");
+                    return "$" + value + "k";
+                  }
                 },
                 gridLines: {
                   drawOnChartArea: false
                 }
-              }]
+              }
+            ]
           }
         }
       };
@@ -403,9 +421,9 @@ var formater = Intl.NumberFormat("en-US", {
             input
               .val()
               .replace("$", "")
-              .replace(/\./g, "")
+              .replace(/\,/g, "")
           ) + incrementValue;
-        input.val(formater.format(value).replace(/,/g, "."));
+        input.val(formater.format(value).replace(/,/g, ","));
         var stepValue = 1500;
         var intervel = 0;
         var intervel2 = 0;
@@ -442,17 +460,17 @@ var formater = Intl.NumberFormat("en-US", {
               input
                 .val()
                 .replace("$", "")
-                .replace(/\./g, "")
-            ) > incrementValue
+                .replace(/\,/g, "")
+            ) > 100000
           ) {
             var value =
               Number(
                 input
                   .val()
                   .replace("$", "")
-                  .replace(/\./g, "")
+                  .replace(/\,/g, "")
               ) - incrementValue;
-            input.val(formater.format(value).replace(/,/g, "."));
+            input.val(formater.format(value).replace(/,/g, ","));
             var stepValue = 1500;
             var intervel = 0;
             var intervel2 = 0;
