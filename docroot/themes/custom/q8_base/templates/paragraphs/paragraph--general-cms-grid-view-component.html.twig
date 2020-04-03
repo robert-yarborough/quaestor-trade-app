@@ -38,9 +38,9 @@
  * @ingroup themeable
  */
 #}
-<div class="general-cms">{{ content.field_image_style }}
-	{% if content.field_image_style == 'Left' %}
-  test1
+<div class="general-cms">
+{% set align = content.field_image_style|render|striptags|trim %}
+{% if align == 'Left' %}
 		<div class="two-col-image swap">
 		{% else %}
 			<div class="two-col-image">
