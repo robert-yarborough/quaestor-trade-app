@@ -26,10 +26,6 @@ class StepResult extends BaseStep {
         ];
       }
     }
-    $form['final_card'] = [
-      '#type' => 'item',
-      '#markup' => $this->getfinalStaticResult(),
-    ];
 
     // Questionarie Alogorithm
     $data = array_values(array_filter($_SESSION['q8_quiz_questionnaire']));
@@ -112,14 +108,24 @@ class StepResult extends BaseStep {
     $form['#attached']['drupalSettings']['chart_name'] = $chart_name;
     $form['#attached']['drupalSettings']['chart_number'] = $chart_number;
     $form['#attached']['drupalSettings']['chart_color'] = $chart_color;
+
+    //Get profile name,description and icon
+    $name = $data[0]->_entity->get('name')->value;
+    $description = $data[0]->_entity->get('description')->value;
+    $fid = $data[0]->_entity->get('field_icon')->getValue()[0]['target_id'];
+    $file = \Drupal\file\Entity\File::load($fid); // load File entity object
+    $file_url = $file->url(); // get the URL.
+    $final_profile_data = array($name,$description,$file_url);
+    $form['final_card'] = [
+      '#type' => 'item',
+      '#markup' => $this->getfinalStaticResult($final_profile_data),
+    ];
     return $form;
   }
-  public function getfinalStaticResult() {
+  public function getfinalStaticResult($final_profile_data) {
     $step_data = $this->getStepData();
-
     if (isset($step_data['paragraph'])) {
       $p = $step_data['paragraph'];
-
       if ($p->hasField('field_description') && !$p->field_description->isEmpty()) {
         $description = $p->field_description->value;
       }
@@ -128,7 +134,7 @@ class StepResult extends BaseStep {
     $page = [
       'data' => [
         '#theme' => 'final-result',
-        '#items' => $description,
+        '#items' => $final_profile_data,
       ],
     ];
     return render($page);
