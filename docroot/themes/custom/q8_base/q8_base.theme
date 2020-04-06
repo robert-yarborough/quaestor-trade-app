@@ -19,6 +19,9 @@ function q8_base_preprocess_field__node__node_title__page(array &$variables) {
   $variables['bg_url'] = q8_base_get_node_background_title($variables['element']['#object']);
 }
 
+function q8_base_preprocess_field__node__node_title__general_cms_page(array &$variables) {
+  $variables['bg_url'] = q8_base_get_node_background_title($variables['element']['#object']);
+}
 /**
  * Implements q8_base_preprocess_layout__node_article_full().
  */
