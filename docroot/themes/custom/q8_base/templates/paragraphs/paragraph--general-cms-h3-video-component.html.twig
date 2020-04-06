@@ -38,16 +38,18 @@
  * @ingroup themeable
  */
 #}
-<div class="general-cms">
-	<div class="h3-component video">
-		<h3>{{ content.field_h3_title|render|striptags }}</h3>
-		{{ content.field_h3_description }}
-		{% set video_url = content.field_video[0]['#media'].field_media_video_embed_field.value %}
-		{% set video_id = video_url|replace({'https://www.youtube.com/watch?v=': ''}) %}
-		<div class="video-component">
-			<img src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg" alt="youtube video" title="youtube video">
-			<iframe src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<span class="play-btn"><img src="/themes/custom/q8_base/images/play-btn.png"/></span>
+{% set video_url = content.field_video[0]['#media'].field_media_video_embed_field.value %}
+{% set video_id = video_url|replace({'https://www.youtube.com/watch?v=': ''}) %}
+{% if video_url %}
+	<div class="general-cms">
+		<div class="h3-component video">
+			<h3>{{ content.field_h3_title|render|striptags }}</h3>
+			{{ content.field_h3_description }}
+			<div class="video-component">
+				<img src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg" alt="youtube video" title="youtube video">
+				<iframe src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<span class="play-btn"><img src="/themes/custom/q8_base/images/play-btn.png"/></span>
+			</div>
 		</div>
 	</div>
-</div>
+{% endif %}
