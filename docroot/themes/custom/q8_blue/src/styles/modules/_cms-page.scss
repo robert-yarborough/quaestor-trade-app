@@ -11,6 +11,10 @@
         margin: 0 auto;
         width: 20%;
         display: block;
+        &:after{
+          top: 44%;
+          transform: translateY(-50%);
+        }
       }
       .input-group{
         padding: 0 140px;
