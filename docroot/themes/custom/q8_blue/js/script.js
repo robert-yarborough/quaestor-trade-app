@@ -427,6 +427,7 @@ jQuery(document).on('click', '.video-component .play-btn', function (e) {
 jQuery(document).ready(function () {
   jQuery(document).find('.general-cms table .check').html('');
   jQuery(document).find('.general-cms table .cross').html('<span></span>');
+  jQuery(document).find('.form-type-textarea label').appendTo('.form-type-textarea .form-textarea-wrapper');
 });
 
 /***/ })
