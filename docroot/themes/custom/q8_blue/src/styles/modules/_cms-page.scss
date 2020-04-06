@@ -7,6 +7,11 @@
         margin: 0;
         padding: 0px 140px 32px;
       }
+      .webform-actions{
+        margin: 0 auto;
+        width: 20%;
+        display: block;
+      }
       .input-group{
         padding: 0 140px;
         display: flex;
@@ -73,6 +78,7 @@
           margin-right: 20px;
         }
       }
+
       input:not(.webform-button--submit),select,textArea{
         width: 100%;
         border: 1px solid #D1D1D1;
