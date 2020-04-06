@@ -438,6 +438,8 @@ jQuery(document).ready(function () {
 function addclasses(el) {
   if (!jQuery(el).val()) {
     jQuery(el).addClass('notvalid');
+  } else {
+    jQuery(el).removeClass('notvalid');
   }
 }
 
