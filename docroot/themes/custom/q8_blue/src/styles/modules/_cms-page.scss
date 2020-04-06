@@ -11,6 +11,17 @@
         padding: 0 140px;
         display: flex;
         flex-wrap: wrap;
+        &.form-item-name,&.form-item-email{
+          padding-right: 0;
+          width: calc(50% - 10px);
+          margin-right: 20px;
+          float: left;
+        }
+        &.form-item-name,&.form-item-phone-number{
+          width: calc(50% - 10px);
+          padding-left: 0;
+          display: inline-block;
+        }
         .input-col{
           position: relative;
           margin-bottom: 16px;

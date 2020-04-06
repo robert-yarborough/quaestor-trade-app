@@ -105,3 +105,7 @@ jQuery(document).on('click', '.video-component .play-btn', function (e) {
   jQuery(this).parent().find('img').hide();
   jQuery(this).hide();
 });
+jQuery(document).ready(function(){
+  jQuery(document).find('.general-cms table .check').html('');
+  jQuery(document).find('.general-cms table .cross').html('<span></span>');
+});
