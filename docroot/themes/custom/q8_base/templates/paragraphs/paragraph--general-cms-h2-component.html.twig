@@ -40,11 +40,10 @@
 #}
 <div class="general-cms">
 	<div class="h2-component">
-		<h2>{{ content.field_title }}
-			</h2>
-				{{ content.field_h2_headline }}
-				{{ content.field_h2_description }}
-				{{ content.field_h2_image }}
-				{{ content.field_h2_sub_description }}
-			</div>
-		</div>
+		<h2>{{ content.field_title }}</h2>
+		<strong>{{ content.field_h2_headline|render|striptags }}</strong>
+		{{ content.field_h2_description }}
+		{{ content.field_h2_image }}
+		{{ content.field_h2_sub_description }}
+	</div>
+</div>
