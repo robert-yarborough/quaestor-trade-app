@@ -428,7 +428,20 @@ jQuery(document).ready(function () {
   jQuery(document).find('.general-cms table .check').html('');
   jQuery(document).find('.general-cms table .cross').html('<span></span>');
   jQuery(document).find('.form-type-textarea label').appendTo('.form-type-textarea .form-textarea-wrapper');
+  jQuery('.webform-submission-contact-add-form find').find('input:not(.webform-button--submit):not([required="required"]),textarea').each(function () {
+    addclasses(this);
+  });
+  jQuery('.webform-submission-contact-add-form find').find('input:not(.webform-button--submit):not([required="required"]),textarea').blur(function () {
+    addclasses(this);
+  });
 });
+function addclasses(el) {
+  if (jQuery(el).val()) {
+    jQuery(el).addClass('valid');
+  } else {
+    jQuery(el).addClass('notvalid');
+  }
+}
 
 /***/ })
 /******/ ]);
