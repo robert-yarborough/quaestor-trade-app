@@ -437,9 +437,9 @@ jQuery(document).ready(function () {
 });
 function addclasses(el) {
   if (!jQuery(el).val()) {
-    jQuery(el).addClass('notvalid');
+    jQuery(el).addClass('notvalid').removeClass('valid');
   } else {
-    jQuery(el).removeClass('notvalid');
+    jQuery(el).addClass('valid').removeClass('notvalid');
   }
 }
 
