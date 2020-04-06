@@ -130,7 +130,7 @@
         }
       }
       .form-item-last-name,.form-item-phone-number{
-        input{
+        input.valid{
           +label{
             left: 0px;
           }
