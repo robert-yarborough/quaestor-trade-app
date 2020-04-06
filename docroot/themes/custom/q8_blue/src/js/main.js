@@ -117,9 +117,7 @@ jQuery(document).ready(function () {
   });
 });
 function addclasses(el) {
-  if (jQuery(el).val()) {
-    jQuery(el).addClass('valid');
-  } else {
+  if (!jQuery(el).val()) {
     jQuery(el).addClass('notvalid');
   }
 }
