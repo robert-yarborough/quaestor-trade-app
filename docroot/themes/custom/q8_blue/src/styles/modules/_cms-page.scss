@@ -17,17 +17,18 @@
         }
       }
       .input-group{
-        margin: 0 140px;
+        padding: 0 140px;
         display: flex;
         flex-wrap: wrap;
         &.form-item-name,&.form-item-email{
+          padding-right: 0;
           width: calc(50% - 10px);
           margin-right: 20px;
           float: left;
         }
         &.form-item-last-name,&.form-item-phone-number{
           width: calc(50% - 10px);
-          margin-left: 0;
+          padding-left: 0;
           display: inline-block;
         }
         &.form-item-message{
