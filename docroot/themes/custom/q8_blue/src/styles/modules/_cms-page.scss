@@ -17,10 +17,15 @@
           margin-right: 20px;
           float: left;
         }
-        &.form-item-name,&.form-item-phone-number{
+        &.form-item-last-name,&.form-item-phone-number{
           width: calc(50% - 10px);
           padding-left: 0;
           display: inline-block;
+        }
+        &.form-item-message{
+          .form-textarea-wrapper{
+            width: 100%;
+          }
         }
         .input-col{
           position: relative;
