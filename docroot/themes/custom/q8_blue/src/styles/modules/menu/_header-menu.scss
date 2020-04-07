@@ -282,9 +282,18 @@
       .menu--main{
         display: none;
         position: absolute;
-        width: 250px;
+        width: 300px;
+        background: #fff;
+        color: #282828;
+        padding: 20px;
         ul{
           margin: 0;
+          li{
+            margin: 0;
+            &:not(:last-child){
+              margin-bottom: 10px;
+            }
+          }
         }
       }
       &:hover{
