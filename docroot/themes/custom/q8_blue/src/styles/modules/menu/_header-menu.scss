@@ -307,6 +307,10 @@
             &:not(:last-child){
               margin-bottom: 10px;
             }
+            a:hover{
+              color: #282828;
+              padding-bottom: 1px;
+            }
           }
         }
       }
