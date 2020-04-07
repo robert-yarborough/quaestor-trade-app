@@ -166,6 +166,7 @@
 .quote{
   background-color: #3A54A4;
   padding: 50px 0;
+  margin-top: 40px;
   .general-cms{
     padding: 0 140px;
     p{
@@ -246,6 +247,7 @@
       list-style-type: none;
       padding: 0 140px;
       margin-bottom: 35px;
+      margin-left: 45px;
       li{
         font-size: 22px;
         line-height: 32px;
@@ -316,7 +318,7 @@
     border-collapse: separate;
     border-bottom: 2px solid #B7B7B7;
     padding-bottom: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     background-color: #fff;
     &.no-border{
       border: none;
@@ -419,7 +421,7 @@
     }
   }
   .two-col-image{
-    padding: 40px 140px;
+    padding: 20px 140px;
     display: flex;
     flex-wrap: wrap;
     > div {
