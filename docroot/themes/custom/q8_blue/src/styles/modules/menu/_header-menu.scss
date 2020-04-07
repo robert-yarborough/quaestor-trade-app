@@ -264,7 +264,7 @@
     }
     li {
       &.menu-item--expanded,&.menu-item--collapsed{
-        list-style-type: none;
+        list-style: none;
       }
       padding-top: 0;
       &:not(:last-child) {
