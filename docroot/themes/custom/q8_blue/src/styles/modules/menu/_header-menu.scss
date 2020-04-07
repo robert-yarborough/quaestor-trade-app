@@ -283,6 +283,8 @@
       color: inherit;
       &:hover {
         color: $c-bright;
+        border-bottom: 3px solid;
+        padding-bottom: 3px;
       }
     }
     .menu--main{
