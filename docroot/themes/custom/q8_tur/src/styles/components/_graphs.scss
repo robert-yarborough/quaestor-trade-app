@@ -21,11 +21,6 @@
         border-right: 1px solid #7d7d7d;
         padding: 20px 30px;
         position: relative;
-        .header-image{
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
         .title{
           margin-left: 15px;
           font-weight: 700;
@@ -57,6 +52,8 @@
       .header-description{
         width: 60%;
         padding: 20px 30px;
+        display: flex;
+        align-items: center;
       }
     }
     .graph-body{
@@ -87,12 +84,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
-            flex-direction: column;
-            height: 250px;
             li{
               display: flex;
               width: 31%;
               min-height: 44px;
+              &:before{
+                content: none;
+              }
               .color{
                 width: 20px;
                 height: 20px;
@@ -149,6 +147,9 @@
             font-size: 34px;
             font-weight: 400;
             padding: 0 0 0 10px;
+            width: auto;
+            border: none;
+            box-shadow: none;
           }
         }
       }
