@@ -278,6 +278,14 @@
       @include media('<tablet') {
         margin-bottom: 30px;
       }
+      .menu--main{
+        display: none;
+      }
+      &:hover{
+        .menu--main{
+          display: block;
+        }
+      }
     }
     a {
       color: inherit;
@@ -286,9 +294,6 @@
         border-bottom: 3px solid;
         padding-bottom: 3px;
       }
-    }
-    .menu--main{
-      display: none;
     }
   }
 }
