@@ -283,11 +283,12 @@
         display: none;
         position: absolute;
         width: 300px;
-        background: #fff;
-        color: #282828;
-        padding: 20px;
+        padding-top: 30px;
         ul{
           margin: 0;
+          background: #fff;
+          color: #282828;
+          padding: 20px;
           li{
             margin: 0;
             &:not(:last-child){
