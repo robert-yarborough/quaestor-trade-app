@@ -313,6 +313,35 @@
     .table-title{
       padding: 0 10px;
     }
+    .cards{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 140px;
+      p{
+        padding: 0;
+        flex-basis: 50%;
+        margin-bottom: 24px;
+        &:first-child{
+          flex-basis: 100%;
+        }
+        a{
+          color: #414141;
+          border: 1px solid #E6ECF1;
+          padding: 16px;
+          align-self: stretch;
+          box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+          min-width: 360px;
+          display: inline-block;
+          transition: color 250ms ease;
+          font-weight: 700;
+          &:hover{
+            border-color: #3953a4;
+            color: #3953a4;
+            transition: color 250ms ease;
+          }
+        }
+      }
+    }
   }
   table{
     width: 100%;
