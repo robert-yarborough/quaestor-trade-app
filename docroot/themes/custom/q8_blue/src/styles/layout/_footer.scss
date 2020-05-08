@@ -84,6 +84,13 @@
         color: #414141;
       }
     }
+    .field__items{
+      display: flex;
+      flex-wrap: wrap;
+      .field__item:not(:last-child){
+        margin-right: 40px;
+      }
+    }
   }
   .powered-title {
     @include media('<tablet') {
