@@ -399,12 +399,12 @@
     justify-content: space-between;
   }
 }
-.header-toggle-close {
+div.header-toggle-close {
   position: absolute;
   cursor: pointer;
   width: 40px;
   height: 40px;
-  right: 80px;
+  right: 17px;
   top: 17px;
   @include media('<tablet') {
     right: 15px;
