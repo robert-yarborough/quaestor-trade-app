@@ -116,6 +116,10 @@ jQuery(document).ready(function () {
     addclasses(this);
   });
 });
+jQuery(document).on('click', '.menu--main__list li.menu-item--expanded .js-h-toggle-close',function(e){
+  e.preventDefault();
+  jQuery(this).parents('.menu-item--expanded').toggleClass('active');
+});
 function addclasses(el) {
   if (!jQuery(el).val()) {
     jQuery(el).addClass('notvalid').removeClass('valid');
