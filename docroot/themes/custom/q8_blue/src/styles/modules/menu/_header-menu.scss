@@ -286,6 +286,22 @@
         width: 250px;
         padding-top: 27px;
         left: -30px;
+        @include media('<=tablet'){
+          position: initial;
+          width: auto;
+          &:before{
+            content: none;
+          }
+          .menu{
+            background: transparent;
+            .menu-item{
+              a{
+                font-size: 25px;
+                color: #fff;
+              }
+            }
+          }
+        }
         &:before{
           content: "";
           border-color: transparent;
