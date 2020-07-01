@@ -267,6 +267,9 @@
         list-style: none;
         position: relative;
         text-align: center;
+        @include media('<=tablet-l') {
+          margin-bottom: 20px;
+        }
       }
       padding-top: 0;
       &:not(:last-child) {
@@ -286,7 +289,7 @@
         width: 250px;
         padding-top: 27px;
         left: -30px;
-        @include media('<=tablet'){
+        @include media('<=tablet-l'){
           position: initial;
           width: auto;
           &:before{
@@ -294,12 +297,17 @@
           }
           .menu{
             background: transparent;
+            text-align: center;
             .menu-item{
               a{
                 font-size: 25px;
                 color: #fff;
               }
             }
+          }
+          > nav{
+            overflow: auto;
+            max-height: 685px;
           }
         }
         &:before{
