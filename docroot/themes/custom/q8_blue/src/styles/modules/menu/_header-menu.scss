@@ -320,6 +320,7 @@
               a{
                 font-size: 25px;
                 color: #fff;
+                text-decoration: none;
               }
             }
           }
@@ -362,6 +363,14 @@
       &:hover,&.active{
         .menu--main{
           display: block;
+        }
+        @include media('<=tablet-l') {
+          .js-h-toggle-close{
+            &:after{
+              transform: rotate(-135deg) translateY(-6px);
+              -webkit-transform: rotate(-135deg) translateY(-6px);
+            }
+          }
         }
       }
     }
