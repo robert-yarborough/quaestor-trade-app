@@ -360,7 +360,14 @@
           }
         }
       }
-      &:hover,&.active{
+      &:hover{
+        .menu--main{
+          @include media('>=tablet-l') {
+            display: block;
+          }
+        }
+      }
+      &.active{
         .menu--main{
           display: block;
         }

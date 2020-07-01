@@ -118,7 +118,7 @@ jQuery(document).ready(function () {
 });
 jQuery(document).on('click', '.menu--main__list li.menu-item--expanded .js-h-toggle-close',function(e){
   e.preventDefault();
-  jQuery(this).parents('.menu-item--expanded').toggleClass('active');
+  jQuery(this).parent().toggleClass('active');
 });
 function addclasses(el) {
   if (!jQuery(el).val()) {
