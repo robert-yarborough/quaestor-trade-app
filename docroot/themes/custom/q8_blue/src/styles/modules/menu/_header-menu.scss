@@ -268,7 +268,7 @@
         position: relative;
         text-align: center;
         @include media('<=tablet-l') {
-          &:hover,&.active{
+          &.active{
             margin-bottom: 20px;
           }
           .js-h-toggle-close{
