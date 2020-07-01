@@ -343,7 +343,7 @@
           }
         }
       }
-      &:hover,.active{
+      &:hover,&.active{
         .menu--main{
           display: block;
         }
