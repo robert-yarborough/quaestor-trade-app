@@ -1,0 +1,15 @@
+uuid: b876781a-95d6-46f6-a732-1dc432274e11
+langcode: en
+status: true
+dependencies: {  }
+name: 126x126
+label: 126x126
+effects:
+  b5280d14-b6d3-4bd2-aa51-1c0d28034118:
+    uuid: b5280d14-b6d3-4bd2-aa51-1c0d28034118
+    id: image_scale
+    weight: 1
+    data:
+      width: 126
+      height: 126
+      upscale: false

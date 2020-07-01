@@ -16,7 +16,7 @@ settings:
       label: Web
     -
       value: macos
-      label: 'Mac OS'
+      label: Mac
     -
       value: windows
       label: Windows

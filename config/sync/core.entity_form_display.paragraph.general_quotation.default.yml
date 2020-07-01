@@ -1,0 +1,27 @@
+uuid: 137989bb-ad75-4cf4-b295-0b071a288581
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_quotation.field_quotation
+    - paragraphs.paragraphs_type.general_quotation
+  module:
+    - text
+id: paragraph.general_quotation.default
+targetEntityType: paragraph
+bundle: general_quotation
+mode: default
+content:
+  field_quotation:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,40 @@
+uuid: f0d4190d-9d3f-4c61-8e17-7d547f8a8ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question_group.field_items_qg
+    - field.field.paragraph.question_group.field_title_qg
+    - paragraphs.paragraphs_type.question_group
+  module:
+    - paragraphs
+    - text
+id: paragraph.question_group.default
+targetEntityType: paragraph
+bundle: question_group
+mode: default
+content:
+  field_items_qg:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_title_qg:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

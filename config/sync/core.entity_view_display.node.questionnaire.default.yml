@@ -1,0 +1,51 @@
+uuid: b047bb0d-3f3c-467c-8f4f-c09790532e2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.questionnaire.body
+    - field.field.node.questionnaire.field_domain_access
+    - field.field.node.questionnaire.field_domain_all_affiliates
+    - field.field.node.questionnaire.field_question_groups
+    - node.type.questionnaire
+  module:
+    - entity_reference_revisions
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.questionnaire.default
+targetEntityType: node
+bundle: questionnaire
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_question_groups:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  langcode: true

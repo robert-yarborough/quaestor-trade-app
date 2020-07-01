@@ -28,6 +28,7 @@ third_party_settings:
         - field_title
         - field_text
         - field_button
+        - field_style
       right:
         - field_image
         - field_mobile_image
@@ -59,8 +60,15 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: ''
-    third_party_settings: {  }
+      image_style: 796x796
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: image_url
     region: right
   field_mobile_image:
@@ -78,7 +86,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
+    region: left
   field_text:
     weight: 1
     label: hidden

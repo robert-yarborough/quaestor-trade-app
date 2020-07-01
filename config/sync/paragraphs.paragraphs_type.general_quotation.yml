@@ -1,0 +1,9 @@
+uuid: 4acbcf3b-6a26-4742-834d-11f93c77b8af
+langcode: en
+status: true
+dependencies: {  }
+id: general_quotation
+label: 'General Quotation'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -5,11 +5,11 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: themes/custom/q8_gray/logo.svg
+  path: 'public://LOGO_0.png'
 favicon:
   use_default: 0
-  path: themes/custom/q8_gray/favicon.ico
-  mimetype: image/vnd.microsoft.icon
+  path: 'public://global-fav_2.png'
+  mimetype: image/png
 browsersync_enabled: 0
 browsersync_host: localhost
 browsersync_port: '9000'

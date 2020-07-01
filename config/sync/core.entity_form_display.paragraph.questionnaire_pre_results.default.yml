@@ -1,0 +1,36 @@
+uuid: fe80f593-7689-4bc5-ad92-bdfbf9852c1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.questionnaire_pre_results.field_text_
+    - field.field.paragraph.questionnaire_pre_results.field_title
+    - paragraphs.paragraphs_type.questionnaire_pre_results
+  module:
+    - text
+id: paragraph.questionnaire_pre_results.default
+targetEntityType: paragraph
+bundle: questionnaire_pre_results
+mode: default
+content:
+  field_text_:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,9 @@
+uuid: 7ec02108-df3d-490e-b334-34ec50d8d7d1
+langcode: en
+status: true
+dependencies: {  }
+id: question_group
+label: 'Question Group'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,140 @@
+uuid: 0ff9ea82-5eff-4127-91cf-46685128b1b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.general_cms_page
+  module:
+    - entity_reference_revisions
+id: node.general_cms_page.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: general_cms_page
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      2_columns_image_text:
+        weight: 29
+        enabled: false
+      answer:
+        weight: 30
+        enabled: false
+      application:
+        weight: 31
+        enabled: false
+      application_banners_block:
+        weight: 32
+        enabled: false
+      app_stores:
+        weight: 33
+        enabled: false
+      articles:
+        weight: 34
+        enabled: false
+      banner_app_stores:
+        weight: 35
+        enabled: false
+      copyright:
+        weight: 36
+        enabled: false
+      feature:
+        weight: 37
+        enabled: false
+      features:
+        weight: 38
+        enabled: false
+      gray_banner:
+        weight: 39
+        enabled: false
+      webform:
+        weight: 39
+        enabled: false
+      initial_allocation:
+        weight: 40
+        enabled: false
+      list_content:
+        weight: 41
+        enabled: false
+      list_content2:
+        weight: 42
+        enabled: false
+      map:
+        weight: 43
+        enabled: false
+      market_news:
+        weight: 44
+        enabled: false
+      options:
+        weight: 45
+        enabled: false
+      question:
+        weight: 46
+        enabled: false
+      questionnaire_intro_:
+        weight: 47
+        enabled: false
+      questionnaire_pre_results:
+        weight: 48
+        enabled: false
+      questionnaire_question_:
+        weight: 49
+        enabled: false
+      question_group:
+        weight: 50
+        enabled: false
+      final_chart_data_values:
+        weight: 50
+        enabled: false
+      rates:
+        weight: 51
+        enabled: false
+      general_cms_grid_view_component:
+        weight: 51
+        enabled: false
+      rate_item:
+        weight: 52
+        enabled: false
+      general_cms_h2_component:
+        weight: 52
+        enabled: false
+      general_cms_h3_component:
+        weight: 53
+        enabled: false
+      step_testing:
+        weight: 53
+        enabled: false
+      general_cms_h3_video_component:
+        weight: 54
+        enabled: false
+      tactical_allocation:
+        weight: 54
+        enabled: false
+      general_cms_trade_table_componen:
+        weight: 55
+        enabled: false
+      text_with_image:
+        weight: 55
+        enabled: false
+      general_quotation:
+        weight: 56
+        enabled: false
+      top_banner:
+        weight: 56
+        enabled: false
+      pie_chart_data:
+        weight: 64
+        enabled: false
+      total_asset_allocation:
+        weight: 76
+        enabled: false
+field_type: entity_reference_revisions

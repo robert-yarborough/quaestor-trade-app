@@ -1,0 +1,9 @@
+uuid: 7ae3a7bf-e725-4d59-9f72-620c20d33572
+langcode: en
+status: true
+dependencies: {  }
+id: general_cms_h2_component
+label: 'General CMS H2 component'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: e6a36d4e-43be-43be-8455-27dbda71a7bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - taxonomy
+id: taxonomy_term.field_final_chart_data_values
+field_name: field_final_chart_data_values
+entity_type: taxonomy_term
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

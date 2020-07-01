@@ -1,0 +1,59 @@
+uuid: 57c5f605-78d1-4f9d-acac-526cd5bcf7a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_cms_grid_view_component.field_general_image
+    - field.field.paragraph.general_cms_grid_view_component.field_h3_description
+    - field.field.paragraph.general_cms_grid_view_component.field_h3_title
+    - field.field.paragraph.general_cms_grid_view_component.field_image_style
+    - paragraphs.paragraphs_type.general_cms_grid_view_component
+  module:
+    - ds
+    - image
+    - options
+    - text
+id: paragraph.general_cms_grid_view_component.default
+targetEntityType: paragraph
+bundle: general_cms_grid_view_component
+mode: default
+content:
+  field_general_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_h3_description:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 500
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: text_trimmed
+    region: content
+  field_h3_title:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_style:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

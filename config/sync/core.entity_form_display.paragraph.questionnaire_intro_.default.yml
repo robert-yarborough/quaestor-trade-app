@@ -1,0 +1,44 @@
+uuid: f7a194c1-f407-44d1-97f2-145a8f419c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.questionnaire_intro_.field_background_image
+    - field.field.paragraph.questionnaire_intro_.field_text_
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.questionnaire_intro_
+  module:
+    - image
+    - text
+id: paragraph.questionnaire_intro_.default
+targetEntityType: paragraph
+bundle: questionnaire_intro_
+mode: default
+content:
+  field_background_image:
+    type: entity_browser_file
+    weight: 1
+    settings:
+      entity_browser: image_browser
+      field_widget_edit: true
+      field_widget_remove: true
+      view_mode: default
+      preview_image_style: thumbnail
+      open: true
+      field_widget_replace: false
+      selection_mode: selection_append
+    region: content
+    third_party_settings: {  }
+  field_text_:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

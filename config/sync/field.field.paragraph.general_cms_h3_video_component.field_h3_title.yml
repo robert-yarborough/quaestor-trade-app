@@ -1,0 +1,21 @@
+uuid: 27dd3dd4-ea1c-40aa-ad8b-8c4700e5a95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h3_title
+    - paragraphs.paragraphs_type.general_cms_h3_video_component
+  module:
+    - text
+id: paragraph.general_cms_h3_video_component.field_h3_title
+field_name: field_h3_title
+entity_type: paragraph
+bundle: general_cms_h3_video_component
+label: 'H3 Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,33 @@
+uuid: 502c9970-1ba8-4292-a08b-857557e54886
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question_group.field_items_qg
+    - field.field.paragraph.question_group.field_title_qg
+    - paragraphs.paragraphs_type.question_group
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.question_group.default
+targetEntityType: paragraph
+bundle: question_group
+mode: default
+content:
+  field_items_qg:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title_qg:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

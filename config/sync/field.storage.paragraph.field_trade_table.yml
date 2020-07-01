@@ -1,0 +1,19 @@
+uuid: 22194435-20cf-4cf4-9af5-6d07e534539e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_trade_table
+field_name: field_trade_table
+entity_type: paragraph
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

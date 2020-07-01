@@ -1,0 +1,139 @@
+uuid: a4359a91-ff31-4f2d-91e5-c48237618825
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_chart_data
+    - paragraphs.paragraphs_type.pie_chart_data
+    - taxonomy.vocabulary.profile
+  module:
+    - entity_reference_revisions
+id: taxonomy_term.profile.field_chart_data
+field_name: field_chart_data
+entity_type: taxonomy_term
+bundle: profile
+label: 'Line Chart data values'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      pie_chart_data: pie_chart_data
+    target_bundles_drag_drop:
+      total_asset_allocation:
+        weight: 38
+        enabled: false
+      2_columns_image_text:
+        weight: 39
+        enabled: false
+      answer:
+        weight: 40
+        enabled: false
+      app_stores:
+        weight: 41
+        enabled: false
+      application:
+        weight: 42
+        enabled: false
+      application_banners_block:
+        weight: 43
+        enabled: false
+      articles:
+        weight: 44
+        enabled: false
+      banner_app_stores:
+        weight: 45
+        enabled: false
+      copyright:
+        weight: 46
+        enabled: false
+      feature:
+        weight: 47
+        enabled: false
+      features:
+        weight: 48
+        enabled: false
+      final_chart_data_values:
+        weight: 49
+        enabled: false
+      general_cms_grid_view_component:
+        weight: 50
+        enabled: false
+      general_cms_h2_component:
+        weight: 51
+        enabled: false
+      general_cms_h3_component:
+        weight: 52
+        enabled: false
+      general_cms_h3_video_component:
+        weight: 53
+        enabled: false
+      general_cms_trade_table_componen:
+        weight: 54
+        enabled: false
+      general_quotation:
+        weight: 55
+        enabled: false
+      gray_banner:
+        weight: 56
+        enabled: false
+      initial_allocation:
+        weight: 57
+        enabled: false
+      list_content:
+        weight: 58
+        enabled: false
+      list_content2:
+        weight: 59
+        enabled: false
+      map:
+        weight: 60
+        enabled: false
+      market_news:
+        weight: 61
+        enabled: false
+      options:
+        weight: 62
+        enabled: false
+      pie_chart_data:
+        enabled: true
+        weight: 63
+      question:
+        weight: 64
+        enabled: false
+      question_group:
+        weight: 65
+        enabled: false
+      questionnaire_intro_:
+        weight: 66
+        enabled: false
+      questionnaire_pre_results:
+        weight: 67
+        enabled: false
+      questionnaire_question_:
+        weight: 68
+        enabled: false
+      rate_item:
+        weight: 69
+        enabled: false
+      rates:
+        weight: 70
+        enabled: false
+      step_testing:
+        weight: 71
+        enabled: false
+      tactical_allocation:
+        weight: 72
+        enabled: false
+      text_with_image:
+        weight: 73
+        enabled: false
+      top_banner:
+        weight: 74
+        enabled: false
+field_type: entity_reference_revisions

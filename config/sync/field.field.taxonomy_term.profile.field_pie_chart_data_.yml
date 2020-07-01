@@ -1,0 +1,21 @@
+uuid: 57c485c8-11d4-4ea3-a75e-97c6e96e2e89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pie_chart_data_
+    - taxonomy.vocabulary.profile
+  module:
+    - text
+id: taxonomy_term.profile.field_pie_chart_data_
+field_name: field_pie_chart_data_
+entity_type: taxonomy_term
+bundle: profile
+label: 'Pie Chart Data '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

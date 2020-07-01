@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_image
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_title
-    - image.style.thumbnail
+    - image.style.90x90
     - paragraphs.paragraphs_type.text_with_image
   module:
     - image
@@ -22,7 +22,7 @@ content:
     type: image_image
     weight: 2
     settings:
-      preview_image_style: thumbnail
+      preview_image_style: 90x90
       progress_indicator: throbber
     region: content
     third_party_settings:
@@ -47,6 +47,11 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

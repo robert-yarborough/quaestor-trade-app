@@ -1,0 +1,19 @@
+uuid: 6b77e752-97d9-4687-be61-7d6a04d63e5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_asset_value
+    - paragraphs.paragraphs_type.total_asset_allocation
+id: paragraph.total_asset_allocation.field_asset_value
+field_name: field_asset_value
+entity_type: paragraph
+bundle: total_asset_allocation
+label: 'Asset Value'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

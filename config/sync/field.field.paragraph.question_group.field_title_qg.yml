@@ -1,0 +1,21 @@
+uuid: b9e83051-08d1-4e28-a9f0-30dfd6733520
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_qg
+    - paragraphs.paragraphs_type.question_group
+  module:
+    - text
+id: paragraph.question_group.field_title_qg
+field_name: field_title_qg
+entity_type: paragraph
+bundle: question_group
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
