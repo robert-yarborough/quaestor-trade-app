@@ -253,7 +253,7 @@ var setHeaderActions = function ($) {
         // Mobile Toggle:
 
         var $h_toggle_btn = $('.js-h-toggle-btn', context);
-        var $h_toggle_close = $('.js-h-toggle-close', context);
+        var $h_toggle_close = $('.menu--main-blue > .js-h-toggle-close', context);
         var $h_toggle_drop = $('.js-h-menu-main', context);
         var $h_search = $('.js-h-search', context);
         var $h_logo = $('div.logo', context);

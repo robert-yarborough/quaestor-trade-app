@@ -54,7 +54,7 @@ const setHeaderActions = (($) => {
         // Mobile Toggle:
 
         let $h_toggle_btn = $('.js-h-toggle-btn', context);
-        let $h_toggle_close = $('.js-h-toggle-close', context);
+        let $h_toggle_close = $('.menu--main-blue > .js-h-toggle-close', context);
         let $h_toggle_drop = $('.js-h-menu-main', context);
         let $h_search = $('.js-h-search', context);
         let $h_logo = $('div.logo', context);
