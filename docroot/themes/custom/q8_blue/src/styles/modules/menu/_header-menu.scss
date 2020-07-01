@@ -268,7 +268,9 @@
         position: relative;
         text-align: center;
         @include media('<=tablet-l') {
-          margin-bottom: 20px;
+          &:hover{
+            margin-bottom: 20px;
+          }
         }
       }
       padding-top: 0;
