@@ -1,0 +1,52 @@
+uuid: e7e12dfe-9d61-4aa8-8b04-7f7032386730
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser
+    - field.field.paragraph.questionnaire_question_.field_answers_qq
+    - field.field.paragraph.questionnaire_question_.field_background_image
+    - field.field.paragraph.questionnaire_question_.field_title_qq
+    - paragraphs.paragraphs_type.questionnaire_question_
+  module:
+    - entity_browser
+    - text
+id: paragraph.questionnaire_question_.default
+targetEntityType: paragraph
+bundle: questionnaire_question_
+mode: default
+content:
+  field_answers_qq:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_background_image:
+    type: entity_browser_file
+    weight: 2
+    settings:
+      entity_browser: image_browser
+      field_widget_edit: true
+      field_widget_remove: true
+      view_mode: default
+      preview_image_style: thumbnail
+      open: true
+      field_widget_replace: false
+      selection_mode: selection_append
+    region: content
+    third_party_settings: {  }
+  field_title_qq:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

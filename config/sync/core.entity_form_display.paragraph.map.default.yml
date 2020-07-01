@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.map.field_fax
     - field.field.paragraph.map.field_phone
     - field.field.paragraph.map.field_title
+    - field.field.paragraph.map.field_working_hours
     - field.field.paragraph.map.field_zip_code
     - paragraphs.paragraphs_type.map
   module:
@@ -18,7 +19,7 @@ bundle: map
 mode: default
 content:
   field_address:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -26,38 +27,14 @@ content:
     type: string_textfield
     region: content
   field_email:
-    weight: 5
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
-  field_fax:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_phone:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_title:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_zip_code:
     weight: 2
     settings:
       size: 60
@@ -65,7 +42,37 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_title:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_working_hours:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_zip_code:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
+  field_fax: true
   status: true
   uid: true

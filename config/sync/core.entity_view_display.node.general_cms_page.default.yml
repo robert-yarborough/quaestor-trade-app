@@ -1,0 +1,81 @@
+uuid: 66f0e089-d29e-4709-bffc-0f54903e9b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.general_cms_page.field_domain_access
+    - field.field.node.general_cms_page.field_domain_all_affiliates
+    - field.field.node.general_cms_page.field_paragraph
+    - field.field.node.general_cms_page.field_title_background
+    - node.type.general_cms_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - links
+        - field_paragraph
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.general_cms_page.default
+targetEntityType: node
+bundle: general_cms_page
+mode: default
+content:
+  field_paragraph:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: ds_content
+  links:
+    weight: 1
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_title_background: true
+  langcode: true

@@ -1,0 +1,9 @@
+uuid: 74ed8770-cecc-4d8b-9ef7-afb0682a5190
+langcode: en
+status: true
+dependencies: {  }
+id: pie_chart_data
+label: 'Pie Chart Data'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

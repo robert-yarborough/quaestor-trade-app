@@ -1,0 +1,72 @@
+uuid: bcf3bd53-9aa8-4352-86c1-d35dd5b9b762
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser
+    - field.field.paragraph.general_cms_h2_component.field_h2_description
+    - field.field.paragraph.general_cms_h2_component.field_h2_headline
+    - field.field.paragraph.general_cms_h2_component.field_h2_image
+    - field.field.paragraph.general_cms_h2_component.field_h2_sub_description
+    - field.field.paragraph.general_cms_h2_component.field_title
+    - paragraphs.paragraphs_type.general_cms_h2_component
+  module:
+    - entity_browser
+    - text
+id: paragraph.general_cms_h2_component.default
+targetEntityType: paragraph
+bundle: general_cms_h2_component
+mode: default
+content:
+  field_h2_description:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_h2_headline:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_h2_image:
+    type: entity_browser_file
+    weight: 3
+    settings:
+      entity_browser: image_browser
+      field_widget_edit: true
+      field_widget_remove: true
+      view_mode: default
+      preview_image_style: thumbnail
+      open: true
+      field_widget_replace: false
+      selection_mode: selection_append
+    region: content
+    third_party_settings: {  }
+  field_h2_sub_description:
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

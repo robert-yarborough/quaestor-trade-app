@@ -1,0 +1,21 @@
+uuid: da4050a5-76f2-48f3-8483-8799b36d8c4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.general_cms_h2_component
+  module:
+    - text
+id: paragraph.general_cms_h2_component.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: general_cms_h2_component
+label: 'H2 Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,19 @@
+uuid: 53346bd1-33a1-459e-8e8c-a364eeab87c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart_color
+    - paragraphs.paragraphs_type.final_chart_data_values
+id: paragraph.final_chart_data_values.field_chart_color
+field_name: field_chart_color
+entity_type: paragraph
+bundle: final_chart_data_values
+label: 'Chart Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

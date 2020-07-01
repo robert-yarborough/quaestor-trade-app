@@ -1,0 +1,33 @@
+uuid: 9fcb1083-091c-433d-91ae-3c2267fb2748
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.questionnaire_intro_.field_background_image
+    - field.field.paragraph.questionnaire_intro_.field_text_
+    - paragraphs.paragraphs_type.questionnaire_intro_
+  module:
+    - image
+    - text
+id: paragraph.questionnaire_intro_.default
+targetEntityType: paragraph
+bundle: questionnaire_intro_
+mode: default
+content:
+  field_background_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_text_:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

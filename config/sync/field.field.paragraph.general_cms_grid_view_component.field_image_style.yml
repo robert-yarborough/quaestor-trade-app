@@ -1,0 +1,21 @@
+uuid: d1733666-fe15-4835-86d1-ffd392617565
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_style
+    - paragraphs.paragraphs_type.general_cms_grid_view_component
+  module:
+    - options
+id: paragraph.general_cms_grid_view_component.field_image_style
+field_name: field_image_style
+entity_type: paragraph
+bundle: general_cms_grid_view_component
+label: 'Image style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

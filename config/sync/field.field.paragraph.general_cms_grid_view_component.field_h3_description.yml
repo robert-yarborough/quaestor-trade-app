@@ -1,0 +1,22 @@
+uuid: 448e4100-d5a9-4200-8cb4-37289bd1c52c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h3_description
+    - paragraphs.paragraphs_type.general_cms_grid_view_component
+  module:
+    - text
+id: paragraph.general_cms_grid_view_component.field_h3_description
+field_name: field_h3_description
+entity_type: paragraph
+bundle: general_cms_grid_view_component
+label: 'H3 Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

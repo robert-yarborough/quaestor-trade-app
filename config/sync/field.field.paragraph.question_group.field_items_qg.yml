@@ -1,0 +1,116 @@
+uuid: cad1cd8d-48e4-443a-9ff4-1b4d906a4ccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items_qg
+    - paragraphs.paragraphs_type.question_group
+    - paragraphs.paragraphs_type.questionnaire_intro_
+    - paragraphs.paragraphs_type.questionnaire_pre_results
+    - paragraphs.paragraphs_type.questionnaire_question_
+  module:
+    - entity_reference_revisions
+id: paragraph.question_group.field_items_qg
+field_name: field_items_qg
+entity_type: paragraph
+bundle: question_group
+label: 'Items '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      questionnaire_intro_: questionnaire_intro_
+      questionnaire_question_: questionnaire_question_
+      questionnaire_pre_results: questionnaire_pre_results
+    target_bundles_drag_drop:
+      questionnaire_intro_:
+        enabled: true
+        weight: -57
+      questionnaire_question_:
+        enabled: true
+        weight: -56
+      questionnaire_pre_results:
+        enabled: true
+        weight: -55
+      2_columns_image_text:
+        weight: -54
+        enabled: false
+      answer:
+        weight: -53
+        enabled: false
+      app_stores:
+        weight: -52
+        enabled: false
+      application:
+        weight: -51
+        enabled: false
+      application_banners_block:
+        weight: -50
+        enabled: false
+      articles:
+        weight: -49
+        enabled: false
+      banner_app_stores:
+        weight: -48
+        enabled: false
+      copyright:
+        weight: -47
+        enabled: false
+      feature:
+        weight: -46
+        enabled: false
+      features:
+        weight: -45
+        enabled: false
+      gray_banner:
+        weight: -44
+        enabled: false
+      initial_allocation:
+        weight: -43
+        enabled: false
+      list_content:
+        weight: -42
+        enabled: false
+      list_content2:
+        weight: -41
+        enabled: false
+      map:
+        weight: -40
+        enabled: false
+      market_news:
+        weight: -39
+        enabled: false
+      options:
+        weight: -38
+        enabled: false
+      question:
+        weight: -37
+        enabled: false
+      question_group:
+        weight: -36
+        enabled: false
+      rate_item:
+        weight: -35
+        enabled: false
+      rates:
+        weight: -34
+        enabled: false
+      step_testing:
+        weight: -33
+        enabled: false
+      tactical_allocation:
+        weight: -32
+        enabled: false
+      text_with_image:
+        weight: -31
+        enabled: false
+      top_banner:
+        weight: -30
+        enabled: false
+field_type: entity_reference_revisions

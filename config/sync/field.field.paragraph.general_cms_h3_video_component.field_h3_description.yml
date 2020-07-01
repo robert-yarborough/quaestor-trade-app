@@ -1,0 +1,22 @@
+uuid: 79817e86-75b1-42ed-a6a3-eb17c552f774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h3_description
+    - paragraphs.paragraphs_type.general_cms_h3_video_component
+  module:
+    - text
+id: paragraph.general_cms_h3_video_component.field_h3_description
+field_name: field_h3_description
+entity_type: paragraph
+bundle: general_cms_h3_video_component
+label: 'H3 Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

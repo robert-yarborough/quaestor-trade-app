@@ -97,6 +97,7 @@ module:
   path: 0
   q8_domain: 0
   q8_forms: 0
+  q8_questionnaire: 0
   q8_quiz: 0
   q8_search: 0
   q8_theme: 0
@@ -114,6 +115,7 @@ module:
   simple_oauth_extras: 0
   slick: 0
   slick_entityreference: 0
+  smtp: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -127,6 +129,10 @@ module:
   views_infinite_scroll: 0
   views_ui: 0
   viewsreference: 0
+  webform: 0
+  webform_access: 0
+  webform_node: 0
+  webform_ui: 0
   workflows: 0
   ds: 1
   menu_link_content: 1

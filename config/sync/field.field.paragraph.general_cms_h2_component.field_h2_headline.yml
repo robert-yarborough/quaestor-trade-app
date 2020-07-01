@@ -1,0 +1,21 @@
+uuid: 14b4345f-0f39-4739-b55b-74cb17be4167
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h2_headline
+    - paragraphs.paragraphs_type.general_cms_h2_component
+  module:
+    - text
+id: paragraph.general_cms_h2_component.field_h2_headline
+field_name: field_h2_headline
+entity_type: paragraph
+bundle: general_cms_h2_component
+label: 'H2 Headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

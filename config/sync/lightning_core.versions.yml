@@ -152,3 +152,9 @@ domain_path: 1.0.0-beta2
 q8_domain: 0.0.0
 mobile_number: 1.0.0-alpha5
 q8_quiz: 0.0.0
+q8_questionnaire: 0.0.0
+webform: 5.4.0
+webform_node: 5.4.0
+webform_access: 5.4.0
+webform_ui: 5.4.0
+smtp: 1.0.0-beta6

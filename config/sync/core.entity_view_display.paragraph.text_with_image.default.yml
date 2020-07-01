@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_image
     - field.field.paragraph.text_with_image.field_subtitle
     - field.field.paragraph.text_with_image.field_title
+    - image.style.180_x_150
     - paragraphs.paragraphs_type.text_with_image
   module:
     - ds
@@ -33,9 +34,16 @@ content:
     weight: 2
     label: hidden
     settings:
-      image_style: ''
+      image_style: 180_x_150
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: image
     region: content
   field_subtitle:

@@ -1,0 +1,20 @@
+uuid: d3d32a44-fd27-478b-9490-701ac2c50e7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_title_qg
+field_name: field_title_qg
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 8d5197e9-577f-4560-9dcc-80d7c079b7c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.questionnaire
+id: node.questionnaire
+target_entity_type_id: node
+target_bundle: questionnaire
+default_langcode: site_default
+language_alterable: false

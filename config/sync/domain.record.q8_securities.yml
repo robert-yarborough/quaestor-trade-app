@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: q8_securities
 domain_id: 14462785
-hostname: quaestor-dev.bfmdev1.com
-name: 'Q8 Securities'
+hostname: quaestor-stage.bfmdev1.com
+name: 'Quaestor Global'
 scheme: http
 weight: 3
 is_default: false

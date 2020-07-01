@@ -1,0 +1,21 @@
+uuid: d649a403-6d3c-432f-b1bb-6372e27d5198
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h3_title
+    - paragraphs.paragraphs_type.general_cms_grid_view_component
+  module:
+    - text
+id: paragraph.general_cms_grid_view_component.field_h3_title
+field_name: field_h3_title
+entity_type: paragraph
+bundle: general_cms_grid_view_component
+label: 'H3 Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

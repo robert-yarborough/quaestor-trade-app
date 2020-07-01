@@ -1,0 +1,22 @@
+uuid: 2e46b9b1-bb3b-457c-83b3-3206560d1088
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_
+    - paragraphs.paragraphs_type.questionnaire_pre_results
+  module:
+    - text
+id: paragraph.questionnaire_pre_results.field_text_
+field_name: field_text_
+entity_type: paragraph
+bundle: questionnaire_pre_results
+label: 'Text '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: q8_broker
 domain_id: 8089199
-hostname: quaestor-dev-blue.bfmdev1.com
-name: 'Q8 Broker'
+hostname: quaestorblue-stage.bfmdev1.com
+name: 'Quaestor Broker'
 scheme: http
 weight: 1
 is_default: true

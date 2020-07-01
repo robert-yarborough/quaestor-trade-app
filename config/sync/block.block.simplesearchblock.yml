@@ -1,6 +1,6 @@
 uuid: 55458276-9c53-4072-82ae-9e2bbc8124cd
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - q8_search

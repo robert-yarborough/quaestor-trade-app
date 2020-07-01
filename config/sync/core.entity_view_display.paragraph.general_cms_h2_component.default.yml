@@ -1,0 +1,57 @@
+uuid: df8ef96a-4789-4d4b-b3ac-e2467d57e7d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_cms_h2_component.field_h2_description
+    - field.field.paragraph.general_cms_h2_component.field_h2_headline
+    - field.field.paragraph.general_cms_h2_component.field_h2_image
+    - field.field.paragraph.general_cms_h2_component.field_h2_sub_description
+    - field.field.paragraph.general_cms_h2_component.field_title
+    - paragraphs.paragraphs_type.general_cms_h2_component
+  module:
+    - image
+    - text
+id: paragraph.general_cms_h2_component.default
+targetEntityType: paragraph
+bundle: general_cms_h2_component
+mode: default
+content:
+  field_h2_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_h2_headline:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_h2_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_h2_sub_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

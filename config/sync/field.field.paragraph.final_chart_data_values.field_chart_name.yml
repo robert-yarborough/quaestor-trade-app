@@ -1,0 +1,19 @@
+uuid: 5f398730-d0f0-4759-893f-4b832b02aa85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chart_name
+    - paragraphs.paragraphs_type.final_chart_data_values
+id: paragraph.final_chart_data_values.field_chart_name
+field_name: field_chart_name
+entity_type: paragraph
+bundle: final_chart_data_values
+label: 'Chart Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

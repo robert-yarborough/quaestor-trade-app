@@ -1,0 +1,21 @@
+uuid: e8b356c9-d7cf-4400-98de-56175754633e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_answers_qq
+    - paragraphs.paragraphs_type.questionnaire_question_
+  module:
+    - text
+id: paragraph.questionnaire_question_.field_answers_qq
+field_name: field_answers_qq
+entity_type: paragraph
+bundle: questionnaire_question_
+label: 'Answers '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

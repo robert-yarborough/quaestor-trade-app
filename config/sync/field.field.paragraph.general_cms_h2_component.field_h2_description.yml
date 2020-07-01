@@ -1,0 +1,22 @@
+uuid: 628d36bd-9256-49d4-97f0-1d08da39cc61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h2_description
+    - paragraphs.paragraphs_type.general_cms_h2_component
+  module:
+    - text
+id: paragraph.general_cms_h2_component.field_h2_description
+field_name: field_h2_description
+entity_type: paragraph
+bundle: general_cms_h2_component
+label: 'H2 Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

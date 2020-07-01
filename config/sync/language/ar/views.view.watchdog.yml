@@ -20,6 +20,8 @@ display:
           label: النوع
         timestamp:
           label: التاريخ
+        message:
+          label: الرسالة
         name:
           label: المستخدم
         link:
@@ -28,5 +30,9 @@ display:
         type:
           expose:
             label: النوع
+      empty:
+        area:
+          admin_label: 'لا توجد رسائل سجل.'
+          content: 'لا توجد رسائل سجل.'
   page:
     display_title: الصفحة

@@ -1,0 +1,22 @@
+uuid: 4fbaeae0-1bc7-47f0-9fb1-5513ab0bbc44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h2_sub_description
+    - paragraphs.paragraphs_type.general_cms_h2_component
+  module:
+    - text
+id: paragraph.general_cms_h2_component.field_h2_sub_description
+field_name: field_h2_sub_description
+entity_type: paragraph
+bundle: general_cms_h2_component
+label: 'H2 Sub Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

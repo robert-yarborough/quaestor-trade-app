@@ -1,0 +1,9 @@
+uuid: 977e24f6-622c-475c-9dff-825cd6b158e9
+langcode: en
+status: true
+dependencies: {  }
+id: general_cms_grid_view_component
+label: 'General CMS grid view component'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

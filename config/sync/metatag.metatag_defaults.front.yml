@@ -8,4 +8,5 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  title: '[current-page:title] | [site:name]'
   shortlink: '[site:url]'

@@ -1,0 +1,54 @@
+uuid: 00f0b5d9-282e-4ed6-9b5b-4a33e024e6d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_cms_grid_view_component.field_general_image
+    - field.field.paragraph.general_cms_grid_view_component.field_h3_description
+    - field.field.paragraph.general_cms_grid_view_component.field_h3_title
+    - field.field.paragraph.general_cms_grid_view_component.field_image_style
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.general_cms_grid_view_component
+  module:
+    - image
+    - text
+id: paragraph.general_cms_grid_view_component.default
+targetEntityType: paragraph
+bundle: general_cms_grid_view_component
+mode: default
+content:
+  field_general_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_h3_description:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_h3_title:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image_style:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

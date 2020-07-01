@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.map.field_fax
     - field.field.paragraph.map.field_phone
     - field.field.paragraph.map.field_title
+    - field.field.paragraph.map.field_working_hours
     - field.field.paragraph.map.field_zip_code
     - paragraphs.paragraphs_type.map
   module:
@@ -26,17 +27,17 @@ third_party_settings:
       content:
         - field_email
         - field_phone
-        - field_fax
         - field_address
         - field_zip_code
         - field_title
+        - field_working_hours
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
 mode: default
 content:
   field_address:
-    weight: 4
+    weight: 2
     label: hidden
     settings:
       include_map: true
@@ -62,22 +63,14 @@ content:
     type: simple_gmap
     region: content
   field_email:
-    weight: 1
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_fax:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_phone:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -85,18 +78,27 @@ content:
     type: string
     region: content
   field_title:
-    weight: 6
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_zip_code:
+  field_working_hours:
+    type: text_trimmed
     weight: 5
+    region: content
+    label: above
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_zip_code:
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_fax: true

@@ -1,0 +1,42 @@
+uuid: 4c4413c1-c372-466c-a16e-b908fb0c09c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.final_chart_data_values.field_chart_color
+    - field.field.paragraph.final_chart_data_values.field_chart_name
+    - field.field.paragraph.final_chart_data_values.field_chart_number
+    - paragraphs.paragraphs_type.final_chart_data_values
+id: paragraph.final_chart_data_values.default
+targetEntityType: paragraph
+bundle: final_chart_data_values
+mode: default
+content:
+  field_chart_color:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_chart_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_chart_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

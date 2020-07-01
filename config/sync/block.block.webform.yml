@@ -1,0 +1,40 @@
+uuid: f2b6a297-d9d9-487f-9e00-1d982480af41
+langcode: en
+status: false
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - ctools
+    - domain
+    - webform
+  theme:
+    - q8_blue
+id: webform
+theme: q8_blue
+region: footer
+weight: -6
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  provider: webform
+  label_display: '0'
+  webform_id: contact
+  default_data: ''
+  redirect: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      general_cms_page: general_cms_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  domain:
+    id: domain
+    domains:
+      q8_broker: q8_broker
+    negate: false
+    context_mapping: {  }
