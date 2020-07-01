@@ -257,7 +257,7 @@ var setHeaderActions = function ($) {
         var $h_toggle_drop = $('.js-h-menu-main', context);
         var $h_search = $('.js-h-search', context);
         var $h_logo = $('div.logo', context);
-        var $h_logo_branding = $('#block-q8-tur-branding', context);
+        var $h_logo_branding = $('#block-q8-blue-branding', context);
         $h_toggle_btn.on({
             click: function click(e) {
                 e.preventDefault();

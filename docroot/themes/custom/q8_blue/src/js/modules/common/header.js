@@ -58,7 +58,7 @@ const setHeaderActions = (($) => {
         let $h_toggle_drop = $('.js-h-menu-main', context);
         let $h_search = $('.js-h-search', context);
         let $h_logo = $('div.logo', context);
-        let $h_logo_branding = $('#block-q8-tur-branding', context);
+        let $h_logo_branding = $('#block-q8-blue-branding', context);
         $h_toggle_btn.on({
             click: function (e) {
                 e.preventDefault();
