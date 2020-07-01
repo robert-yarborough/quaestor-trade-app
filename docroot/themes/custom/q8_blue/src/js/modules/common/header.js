@@ -94,7 +94,7 @@ const setHeaderActions = (($) => {
 
         let $h_menu_links = $('.js-h-menu-links', context);
         let $h_menu_main = $('.js-h-menu-main', context);
-        let $h_menu_main_menu = $('.js-h-menu-main div.menu--main', context);
+        let $h_menu_main_menu = $('.js-h-menu-main > .block-menu > div.menu--main', context);
 
         const header_relocate_m = () => {
             if ($h_menu_links.length) {

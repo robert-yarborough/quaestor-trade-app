@@ -293,7 +293,7 @@ var setHeaderActions = function ($) {
 
         var $h_menu_links = $('.js-h-menu-links', context);
         var $h_menu_main = $('.js-h-menu-main', context);
-        var $h_menu_main_menu = $('.js-h-menu-main div.menu--main', context);
+        var $h_menu_main_menu = $('.js-h-menu-main > .block-menu > div.menu--main', context);
 
         var header_relocate_m = function header_relocate_m() {
             if ($h_menu_links.length) {
