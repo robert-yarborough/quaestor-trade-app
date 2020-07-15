@@ -329,6 +329,15 @@
             max-height: 685px;
           }
         }
+        @include media('<tablet'){
+          .menu{
+            .menu-item{
+              a{
+                font-size: 20px;
+              }
+            }
+          }
+        }
         &:before{
           content: "";
           border-color: transparent;
