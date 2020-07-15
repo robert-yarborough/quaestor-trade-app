@@ -1,0 +1,112 @@
+uuid: 5e52c361-b395-43f1-8389-714fba65967b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_question_groups
+    - node.type.questionnaire
+    - paragraphs.paragraphs_type.question_group
+  module:
+    - entity_reference_revisions
+id: node.questionnaire.field_question_groups
+field_name: field_question_groups
+entity_type: node
+bundle: questionnaire
+label: 'Question Groups'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      question_group: question_group
+    target_bundles_drag_drop:
+      2_columns_image_text:
+        weight: 29
+        enabled: false
+      answer:
+        weight: 30
+        enabled: false
+      app_stores:
+        weight: 31
+        enabled: false
+      application:
+        weight: 32
+        enabled: false
+      application_banners_block:
+        weight: 33
+        enabled: false
+      articles:
+        weight: 34
+        enabled: false
+      banner_app_stores:
+        weight: 35
+        enabled: false
+      copyright:
+        weight: 36
+        enabled: false
+      feature:
+        weight: 37
+        enabled: false
+      features:
+        weight: 38
+        enabled: false
+      gray_banner:
+        weight: 39
+        enabled: false
+      initial_allocation:
+        weight: 40
+        enabled: false
+      list_content:
+        weight: 41
+        enabled: false
+      list_content2:
+        weight: 42
+        enabled: false
+      map:
+        weight: 43
+        enabled: false
+      market_news:
+        weight: 44
+        enabled: false
+      options:
+        weight: 45
+        enabled: false
+      question:
+        weight: 46
+        enabled: false
+      question_group:
+        enabled: true
+        weight: 47
+      questionnaire_intro_:
+        weight: 48
+        enabled: false
+      questionnaire_pre_results:
+        weight: 49
+        enabled: false
+      questionnaire_question_:
+        weight: 50
+        enabled: false
+      rate_item:
+        weight: 51
+        enabled: false
+      rates:
+        weight: 52
+        enabled: false
+      step_testing:
+        weight: 53
+        enabled: false
+      tactical_allocation:
+        weight: 54
+        enabled: false
+      text_with_image:
+        weight: 55
+        enabled: false
+      top_banner:
+        weight: 56
+        enabled: false
+field_type: entity_reference_revisions

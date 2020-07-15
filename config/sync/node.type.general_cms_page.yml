@@ -1,0 +1,18 @@
+uuid: 4a5eed39-06cf-443a-9af3-b4d29bb4e90d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'General CMS Page'
+type: general_cms_page
+description: 'Use General CMS Pages for your static content.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

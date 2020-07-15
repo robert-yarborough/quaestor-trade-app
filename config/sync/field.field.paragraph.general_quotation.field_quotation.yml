@@ -1,0 +1,22 @@
+uuid: 2d9c1a7f-9539-4ae1-a66d-df583e13175a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quotation
+    - paragraphs.paragraphs_type.general_quotation
+  module:
+    - text
+id: paragraph.general_quotation.field_quotation
+field_name: field_quotation
+entity_type: paragraph
+bundle: general_quotation
+label: Quotation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

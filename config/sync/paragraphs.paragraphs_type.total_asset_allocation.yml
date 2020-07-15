@@ -1,0 +1,9 @@
+uuid: b81960dd-ad58-4ecc-b09e-75f44c9786d9
+langcode: en
+status: true
+dependencies: {  }
+id: total_asset_allocation
+label: 'Total Asset Allocation'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

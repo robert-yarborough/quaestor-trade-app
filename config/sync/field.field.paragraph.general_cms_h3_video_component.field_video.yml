@@ -1,0 +1,30 @@
+uuid: bb8328c1-de0c-4c7b-97ee-911ae7a6a2d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video
+    - media.type.video
+    - media.type.video_file
+    - paragraphs.paragraphs_type.general_cms_h3_video_component
+id: paragraph.general_cms_h3_video_component.field_video
+field_name: field_video
+entity_type: paragraph
+bundle: general_cms_h3_video_component
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+      video_file: video_file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: video
+field_type: entity_reference

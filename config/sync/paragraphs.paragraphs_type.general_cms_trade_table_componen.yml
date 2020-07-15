@@ -1,0 +1,9 @@
+uuid: e951e71f-8e5a-4e97-81cc-32a502a5f214
+langcode: en
+status: true
+dependencies: {  }
+id: general_cms_trade_table_componen
+label: 'General CMS trade table component'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

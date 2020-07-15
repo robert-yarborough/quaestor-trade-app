@@ -1,0 +1,30 @@
+uuid: cbbc07f9-3147-48ff-91c7-3c3832ac2603
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_cms_h3_component.field_h3_description
+    - field.field.paragraph.general_cms_h3_component.field_h3_title
+    - paragraphs.paragraphs_type.general_cms_h3_component
+  module:
+    - text
+id: paragraph.general_cms_h3_component.default
+targetEntityType: paragraph
+bundle: general_cms_h3_component
+mode: default
+content:
+  field_h3_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_h3_title:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

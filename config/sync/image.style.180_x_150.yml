@@ -1,0 +1,14 @@
+uuid: a7679123-74f8-462b-9a33-7cfcae7f58f6
+langcode: en
+status: true
+dependencies: {  }
+name: 180_x_150
+label: '180 X 150'
+effects:
+  5e3a150d-1e93-4b41-8921-a331a3a59758:
+    uuid: 5e3a150d-1e93-4b41-8921-a331a3a59758
+    id: image_resize
+    weight: 1
+    data:
+      width: 180
+      height: 150

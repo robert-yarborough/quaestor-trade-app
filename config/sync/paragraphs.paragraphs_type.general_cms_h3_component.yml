@@ -1,0 +1,9 @@
+uuid: 5c59c7af-3dd1-4fd5-a51c-e9e6c1abf360
+langcode: en
+status: true
+dependencies: {  }
+id: general_cms_h3_component
+label: 'General CMS H3 component'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

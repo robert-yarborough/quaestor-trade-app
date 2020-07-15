@@ -1,0 +1,33 @@
+uuid: 37a0d408-fe79-4236-a844-6e40acc0a63d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pie_chart_data.field_chart_number
+    - field.field.paragraph.pie_chart_data.field_name
+    - paragraphs.paragraphs_type.pie_chart_data
+id: paragraph.pie_chart_data.default
+targetEntityType: paragraph
+bundle: pie_chart_data
+mode: default
+content:
+  field_chart_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

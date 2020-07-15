@@ -1,0 +1,21 @@
+uuid: ab43213b-d4f5-4e23-b46c-b2503035f767
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_working_hours
+    - paragraphs.paragraphs_type.map
+  module:
+    - text
+id: paragraph.map.field_working_hours
+field_name: field_working_hours
+entity_type: paragraph
+bundle: map
+label: 'working hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

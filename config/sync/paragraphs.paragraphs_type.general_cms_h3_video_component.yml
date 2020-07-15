@@ -1,0 +1,9 @@
+uuid: 090a39a8-a9ec-44ca-9426-348946bc4f82
+langcode: en
+status: true
+dependencies: {  }
+id: general_cms_h3_video_component
+label: 'General CMS H3 + video component'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

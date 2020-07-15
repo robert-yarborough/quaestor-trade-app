@@ -29,12 +29,6 @@ settings:
       banner_app_stores:
         weight: 13
         enabled: false
-      content_block_left:
-        weight: 14
-        enabled: false
-      content_block_right:
-        weight: 15
-        enabled: false
       copyright:
         weight: 16
         enabled: false
@@ -55,5 +49,92 @@ settings:
         enabled: false
       top_banner:
         weight: 22
+        enabled: false
+      webform:
+        weight: 39
+        enabled: false
+      2_columns_image_text:
+        weight: 40
+        enabled: false
+      answer:
+        weight: 41
+        enabled: false
+      application:
+        weight: 43
+        enabled: false
+      application_banners_block:
+        weight: 44
+        enabled: false
+      articles:
+        weight: 45
+        enabled: false
+      feature:
+        weight: 48
+        enabled: false
+      features:
+        weight: 49
+        enabled: false
+      final_chart_data_values:
+        weight: 50
+        enabled: false
+      general_cms_grid_view_component:
+        weight: 51
+        enabled: false
+      general_cms_h2_component:
+        weight: 52
+        enabled: false
+      general_cms_h3_component:
+        weight: 53
+        enabled: false
+      general_cms_h3_video_component:
+        weight: 54
+        enabled: false
+      general_cms_trade_table_componen:
+        weight: 55
+        enabled: false
+      general_quotation:
+        weight: 56
+        enabled: false
+      gray_banner:
+        weight: 57
+        enabled: false
+      initial_allocation:
+        weight: 58
+        enabled: false
+      market_news:
+        weight: 62
+        enabled: false
+      pie_chart_data:
+        weight: 64
+        enabled: false
+      question:
+        weight: 65
+        enabled: false
+      question_group:
+        weight: 66
+        enabled: false
+      questionnaire_intro_:
+        weight: 67
+        enabled: false
+      questionnaire_pre_results:
+        weight: 68
+        enabled: false
+      questionnaire_question_:
+        weight: 69
+        enabled: false
+      rate_item:
+        weight: 70
+        enabled: false
+      rates:
+        weight: 71
+        enabled: false
+      step_testing:
+        weight: 72
+        enabled: false
+      tactical_allocation:
+        weight: 73
+        enabled: false
+      total_asset_allocation:
+        weight: 76
         enabled: false
 field_type: entity_reference_revisions

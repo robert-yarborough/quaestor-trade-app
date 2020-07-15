@@ -1,0 +1,22 @@
+uuid: 19560a33-d855-4d4b-9c4f-58664cc0018f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_
+    - paragraphs.paragraphs_type.questionnaire_intro_
+  module:
+    - text
+id: paragraph.questionnaire_intro_.field_text_
+field_name: field_text_
+entity_type: paragraph
+bundle: questionnaire_intro_
+label: 'Text '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

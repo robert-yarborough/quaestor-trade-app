@@ -1,0 +1,21 @@
+uuid: 86db669b-4948-4d45-9a97-ff44dc78a1f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.general_cms_trade_table_componen
+  module:
+    - text
+id: paragraph.general_cms_trade_table_componen.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: general_cms_trade_table_componen
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

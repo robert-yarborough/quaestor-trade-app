@@ -1,0 +1,9 @@
+uuid: dbc08789-2c73-4cd5-9ec8-9836ab0568c7
+langcode: en
+status: true
+dependencies: {  }
+id: questionnaire_question_
+label: 'Questionnaire Question'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

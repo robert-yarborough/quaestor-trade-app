@@ -8,6 +8,8 @@
 /docroot/profiles/contrib
 /docroot/themes/contrib
 /docroot/sites/default/files
+/docroot/sites/sites.php
+docroot/sites/questorsite.dd/
 /docroot/sites/development.services.yml
 /docroot/sites/*/settings*.php
 

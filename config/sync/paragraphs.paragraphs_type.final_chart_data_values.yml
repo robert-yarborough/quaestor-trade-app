@@ -1,0 +1,9 @@
+uuid: 80db1647-d64e-4df2-8253-19863131aafa
+langcode: en
+status: true
+dependencies: {  }
+id: final_chart_data_values
+label: 'Final Chart data values'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

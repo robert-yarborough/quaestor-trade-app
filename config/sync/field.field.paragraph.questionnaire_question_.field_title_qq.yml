@@ -1,0 +1,21 @@
+uuid: 358b7c13-fb7b-4b29-acf4-59e7c0a2ae57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_qq
+    - paragraphs.paragraphs_type.questionnaire_question_
+  module:
+    - text
+id: paragraph.questionnaire_question_.field_title_qq
+field_name: field_title_qq
+entity_type: paragraph
+bundle: questionnaire_question_
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

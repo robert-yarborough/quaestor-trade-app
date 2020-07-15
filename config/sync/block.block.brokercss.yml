@@ -1,0 +1,25 @@
+uuid: e55b42d7-b3bf-4d1c-be32-ca3b26adf15a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d5d29b32-2b4f-40c1-a689-854d67a1a431'
+  module:
+    - block_content
+  theme:
+    - q8_blue
+id: brokercss
+theme: q8_blue
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:d5d29b32-2b4f-40c1-a689-854d67a1a431'
+settings:
+  id: 'block_content:d5d29b32-2b4f-40c1-a689-854d67a1a431'
+  label: 'Broker css'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

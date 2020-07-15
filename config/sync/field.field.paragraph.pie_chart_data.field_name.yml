@@ -1,0 +1,19 @@
+uuid: b7ad340e-9652-4255-b397-5317dc5ffa80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.pie_chart_data
+id: paragraph.pie_chart_data.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: pie_chart_data
+label: 'Chart Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

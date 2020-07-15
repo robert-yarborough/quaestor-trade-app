@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.question.field_image
     - field.field.paragraph.question.field_paragraphs
+    - field.field.paragraph.question.field_question_set
     - field.field.paragraph.question.field_question_type
     - field.field.paragraph.question.field_title
     - image.style.thumbnail
@@ -34,7 +35,7 @@ content:
         file_links: true
         remove_button: true
   field_paragraphs:
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -45,8 +46,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
-  field_question_type:
+  field_question_set:
     weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_question_type:
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -25,9 +25,9 @@ third_party_settings:
     regions:
       content:
         - field_subtitle
-        - field_twi_three_items
         - field_button
         - field_button2
+        - field_twi_three_items
         - field_title
 id: paragraph.list_content2.default
 targetEntityType: paragraph
@@ -73,7 +73,7 @@ content:
     type: text_default
     region: content
   field_twi_three_items:
-    weight: 1
+    weight: 4
     label: hidden
     settings:
       view_mode: finance

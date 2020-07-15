@@ -1,0 +1,45 @@
+uuid: 86505a65-3598-4e7c-b9d2-4b6f7ab9307a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_cms_trade_table_componen.field_subtitle
+    - field.field.paragraph.general_cms_trade_table_componen.field_title
+    - field.field.paragraph.general_cms_trade_table_componen.field_trade_table
+    - paragraphs.paragraphs_type.general_cms_trade_table_componen
+  module:
+    - text
+id: paragraph.general_cms_trade_table_componen.default
+targetEntityType: paragraph
+bundle: general_cms_trade_table_componen
+mode: default
+content:
+  field_subtitle:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_trade_table:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

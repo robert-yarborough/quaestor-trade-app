@@ -1,0 +1,30 @@
+uuid: 0552f499-9510-45c6-8d84-b695ad059c02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.total_asset_allocation.field_asset_name
+    - field.field.paragraph.total_asset_allocation.field_asset_value
+    - paragraphs.paragraphs_type.total_asset_allocation
+id: paragraph.total_asset_allocation.default
+targetEntityType: paragraph
+bundle: total_asset_allocation
+mode: default
+content:
+  field_asset_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_asset_value:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

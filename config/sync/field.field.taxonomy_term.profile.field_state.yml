@@ -1,0 +1,23 @@
+uuid: 9b84cbd8-f63c-4b43-9ece-66553c95aebf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_state
+    - taxonomy.vocabulary.profile
+id: taxonomy_term.profile.field_state
+field_name: field_state
+entity_type: taxonomy_term
+bundle: profile
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer
